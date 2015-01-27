@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+non-ASCII characters must be DOUBLE-escaped;
+you can use Hixie's converter to get the entity codes
+http://www.damowmow.com/portal/ (use the "Indentify" field)
+-->
+
+<site title="Bugzilla organization" url="https://www.bugzilla.org">
+  <page url="index.html" title="Home">
+    <page url="about/index.html" title="About" />
+    <page url="developers/index.html" title="Developers">
+      <page url="developers/profiles.html" title="Developer Profiles" />
+      <page url="developers/reporting_bugs.html" title="Reporting Bugs" />
+    </page>
+    <page url="docs/index.html" title="Documentation">
+      <page url="docs/contributor.html" title="Contributors' Guide" />
+      <page url="docs/developer.html" title="Developer's Guide" />
+      <page url="docs/documentor.html" title="Documentors' Guide" />
+      <page url="docs/localizer.html" title="Localizers' Guide" />
+      <page url="docs/qacontact.html" title="QA Contact Guide" />
+      <page url="docs/queries.html" title="Query Cookbook" />
+      <page url="docs/release.html" title="How to Release Bugzilla" />
+      <page url="docs/releasenote.html" title="Release Noting Guide" />
+      <page url="docs/reviewer-list.html" title="Bugzilla Reviewers, By File" />
+      <page url="docs/reviewer.html" title="Reviewers' Guide" />
+      <page url="docs/win32install.html" title="Installing Bugzilla on Microsoft Windows" />
+    </page>
+    <page url="download/index.html" title="Download" />
+    <page url="features/index.html" title="Features" />
+    <page url="installation-list/index.html" title="Installation List" />
+    <page url="news/index.html" title="News">
+      <page url="news/old.html" title="News Archive" />
+    </page>
+    <page url="releases/index.html" title="Release Information">
+      <page url="releases/2.12/index.html" title="Bugzilla 2.12">
+        <page url="releases/2.12/release-notes.html" title="2.12 Release Notes" />
+      </page>
+      <page url="releases/2.14/index.html" title="Bugzilla 2.14">
+        <page url="releases/2.14/release-notes.html" title="2.14 Release Notes" />
+      </page>	  
+      <page url="releases/2.14.1/index.html" title="Bugzilla 2.14.1">
+        <page url="releases/2.14.1/release-notes.html" title="2.14.1 Release Notes" />
+      </page>
+      <page url="releases/2.14.2/index.html" title="Bugzilla 2.14.2">
+        <page url="releases/2.14.2/release-notes.html" title="2.14.2 Release Notes" />
+      </page>
+      <page url="releases/2.14.3/index.html" title="Bugzilla 2.14.3">
+        <page url="releases/2.14.3/release-notes.html" title="2.14.3 Release Notes" />
+      </page>
+      <page url="releases/2.14.4/index.html" title="Bugzilla 2.14.4">
+        <page url="releases/2.14.4/release-notes.html" title="2.14.4 Release Notes" />
+      </page>
+      <page url="releases/2.14.5/index.html" title="Bugzilla 2.14.5">
+        <page url="releases/2.14.5/release-notes.html" title="2.14.5 Release Notes" />
+      </page>
+      <page url="releases/2.16/index.html" title="Bugzilla 2.16">
+        <page url="releases/2.16/release-notes.html" title="2.16 Release Notes" />
+      </page>
+      <page url="releases/2.16.1/index.html" title="Bugzilla 2.16.1">
+        <page url="releases/2.16.1/release-notes.html" title="2.16.1 Release Notes" />
+      </page>
+      <page url="releases/2.16.10/index.html" title="Bugzilla 2.16.10">
+        <page url="releases/2.16.10/release-notes.html" title="2.16.10 Release Notes" />
+      </page>
+      <page url="releases/2.16.11/index.html" title="Bugzilla 2.16.11">
+        <page url="releases/2.16.11/release-notes.html" title="2.16.11 Release Notes" />
+      </page>
+      <page url="releases/2.16.2/index.html" title="Bugzilla 2.16.2">
+        <page url="releases/2.16.2/release-notes.html" title="2.16.2 Release Notes" />
+      </page>
+      <page url="releases/2.16.3/index.html" title="Bugzilla 2.16.3">
+        <page url="releases/2.16.3/release-notes.html" title="2.16.3 Release Notes" />
+      </page>
+      <page url="releases/2.16.4/index.html" title="Bugzilla 2.16.4">
+        <page url="releases/2.16.4/release-notes.html" title="2.16.4 Release Notes" />
+      </page>
+      <page url="releases/2.16.5/index.html" title="Bugzilla 2.16.5">
+        <page url="releases/2.16.5/release-notes.html" title="2.16.5 Release Notes" />
+      </page>
+      <page url="releases/2.16.6/index.html" title="Bugzilla 2.16.6">
+        <page url="releases/2.16.6/release-notes.html" title="2.16.6 Release Notes" />
+      </page>
+      <page url="releases/2.16.7/index.html" title="Bugzilla 2.16.7">
+        <page url="releases/2.16.7/release-notes.html" title="2.16.7 Release Notes" />
+      </page>
+      <page url="releases/2.16.8/index.html" title="Bugzilla 2.16.8">
+        <page url="releases/2.16.8/release-notes.html" title="2.16.8 Release Notes" />
+      </page>
+      <page url="releases/2.16.9/index.html" title="Bugzilla 2.16.9">
+        <page url="releases/2.16.9/release-notes.html" title="2.16.9 Release Notes" />
+      </page>
+      <page url="releases/2.18/index.html" title="Bugzilla 2.18">
+        <page url="releases/2.18/new-features.html" title="New Features in 2.18" />
+        <page url="releases/2.18/release-notes.html" title="2.18 Release Notes" />
+      </page>
+      <page url="releases/2.18.1/index.html" title="Bugzilla 2.18.1">
+        <page url="releases/2.18.1/release-notes.html" title="2.18.1 Release Notes" />
+      </page>
+      <page url="releases/2.18.2/index.html" title="Bugzilla 2.18.2">
+        <page url="releases/2.18.2/release-notes.html" title="2.18.2 Release Notes" />
+      </page>
+      <page url="releases/2.18.3/index.html" title="Bugzilla 2.18.3">
+        <page url="releases/2.18.3/release-notes.html" title="2.18.3 Release Notes" />
+      </page>
+      <page url="releases/2.18.4/index.html" title="Bugzilla 2.18.4">
+        <page url="releases/2.18.4/release-notes.html" title="Bugzilla 2.18.4 Release Notes" />
+      </page>
+      <page url="releases/2.18.5/index.html" title="Bugzilla 2.18.5">
+        <page url="releases/2.18.5/release-notes.html" title="Bugzilla 2.18.5 Release Notes" />
+      </page>
+      <page url="releases/2.20/index.html" title="Bugzilla 2.20">
+        <page url="releases/2.20/new-features.html" title="New Features in 2.20" />
+        <page url="releases/2.20/release-notes.html" title="Bugzilla 2.20 Release Notes" />
+      </page>
+      <page url="releases/2.20.1/index.html" title="Bugzilla 2.20.1">
+        <page url="releases/2.20.1/release-notes.html" title="Bugzilla 2.20.1 Release Notes" />
+      </page>
+      <page url="releases/2.20.2/index.html" title="Bugzilla 2.20.2">
+        <page url="releases/2.20.2/release-notes.html" title="Bugzilla 2.20.2 Release Notes" />
+      </page>
+      <page url="releases/2.22/index.html" title="Bugzilla 2.22">
+        <page url="releases/2.22/new-features.html" title="New Features in 2.22" />
+        <page url="releases/2.22/release-notes.html" title="Bugzilla 2.22 Release Notes" />
+      </page>
+      <page url="releases/2.24/index.html" title="Bugzilla 2.24" />
+    </page>
+    <page url="security/index.html" title="Security Advisories">
+      <page url="security/2.10/index.html" title="2.10 Security Advisory" />
+      <page url="security/2.12/index.html" title="2.12 Bugzilla Security Advisory" />
+      <page url="security/2.14/index.html" title="2.14 Security Advisory" />
+      <page url="security/2.14.1/index.html" title="2.14.1 Security Advisory" />
+      <page url="security/2.14.2/index.html" title="2.14.2, 2.16rc2 Security Advisory" />
+      <page url="security/2.16/index.html" title="2.16 Security Advisory" />
+      <page url="security/2.16.1/index.html" title="2.14.4, 2.16.1 Security Advisory" />
+      <page url="security/2.16.1-nr/index.html" title="2.14.4, 2.16.1 (upgraded from 2.10 or earlier) Security Advisory" />
+      <page url="security/2.16.10-nr/index.html" title="2.16.10 Security Advisory" />
+      <page url="security/2.16.2/index.html" title="2.16.2, 2.17.3 Security Advisory" />
+      <page url="security/2.16.3/index.html" title="2.16.3, 2.17.4 Security Advisory" />
+      <page url="security/2.16.5/index.html" title="2.16.5, 2.17.7 Security Advisory" />
+      <page url="security/2.16.6/index.html" title="2.16.6, 2.18rc2, 2.19 Security Advisory" />
+      <page url="security/2.16.7-nr/index.html" title="2.16.7, 2.18rc3, 2.19.1 Security Advisory" />
+      <page url="security/2.16.8/index.html" title="2.16.8, 2.18, 2.19.2 Security Advisory" />
+      <page url="security/2.17.5/index.html" title="2.17.5 Security Advisory" />
+      <page url="security/2.18.1/index.html" title="2.18.1 and 2.19.3 Security Advisory" />
+      <page url="security/2.18.3/index.html" title="2.18.3, 2.20rc2, and 2.21 Security Advisory" />
+      <page url="security/2.18.4/index.html" title="2.18.4, 2.20, and 2.21.1 Security Advisory" />
+    </page>
+    <page url="status/index.html" title="Status">
+      <page url="status/2001-10-19.html" title="Bugzilla Status Update :: October 19, 2001" />
+      <page url="status/2002-01-18.html" title="Bugzilla Status Update :: January 18, 2002" />
+      <page url="status/2002-02-13.html" title="Bugzilla Status Update :: February 13, 2002" />
+      <page url="status/2002-03-03.html" title="Bugzilla Status Update, March 3, 2002" />
+      <page url="status/2002-05-10.html" title="Bugzilla Status Update, May 10, 2002" />
+      <page url="status/2002-07-28.html" title="Bugzilla Status Update, July 28, 2002" />
+      <page url="status/2002-10-01.html" title="Bugzilla Status Update, October 1, 2002" />
+      <page url="status/2002-11-18.html" title="Bugzilla Status Update, November 18, 2002" />
+      <page url="status/2003-01-02.html" title="Bugzilla Status Update, January 2, 2003" />
+      <page url="status/2003-04-24.html" title="Bugzilla Status Update, April 24, 2003" />
+      <page url="status/2003-11-02.html" title="Bugzilla Status Update, November 2, 2003" />
+      <page url="status/2004-03-03.html" title="2004-03-03 Status Update" />
+      <page url="status/2004-07-10.html" title="2004-07-10 Status Update" />
+      <page url="status/2004-10-24.html" title="2004-10-24 Status Update" />
+      <page url="status/2005-01-15.html" title="Status Update :: 15 January 2005" />
+      <page url="status/2005-05-11.html" title="2005-05-11 Status Update" />
+      <page url="status/2005-07-07.html" title="Status Update :: 7 July 2005" />
+      <page url="status/2005-09-30.html" title="Status Update :: 30 September 2005" />
+      <page url="status/2006-02-20.html" title="Status Update :: 20 February 2006" />
+      <page url="status/2006-04-22.html" title="Status Update :: 22 April 2006" />
+      <page url="status/2006-07-09.html" title="Status Update :: 09 July 2006" />
+      <page url="status/changes.html" title="Changelog" />
+      <page url="status/roadmap.html" title="Development Roadmap" />
+    </page>
+    <page url="support/index.html" title="Support">
+      <page url="support/consulting.html" title="Bugzilla Consulting Resources" />
+    </page>
+  </page>
+</site>
+

@@ -1,0 +1,39 @@
+[% USE site = XML::Simple( 
+       'sitemap.xml'
+       ForceArray = ['page']
+       KeyAttr = ['' ]
+   )
+%]
+
+[%  INCLUDE explore node=site;
+    BLOCK explore;
+      node == site ?  "<ul \id=\"nav\">" : "\n<ul>";
+      "\n";
+      FOREACH page IN node.page;
+        # add page id to current path to get page path
+        page.path = "$path/$page.id";
+
+        # add suffix for a section (/index.html) or page (.html)
+        suffix    = page.page ? '/index.html' : '.html';
+        page.url  = "${page.path}${suffix}";
+
+        # add complete URL to sitemap lookup table
+        site.url2page.${page.url} = page;
+
+        # print some debugging info
+        # "page: $page.id\n  path: $page.path\n   url: $page.url\n" | stderr;
+        "\t<li><a href=\"/en$page.path\">$page.title</a>";
+
+        u = "/${template.name}";
+        # process and child nodes
+        INCLUDE explore node=page path=page.path 
+           IF page.page AND (u.match("^/en$page.path"));
+
+        "</li>\n";
+      END;
+      "</ul>\n";
+    END
+%]
+</ul>
+
+[%- # vim: set expandtab tabstop=2 shiftwidth=2 textwidth=76 autoindent: -%]

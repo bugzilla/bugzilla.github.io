@@ -1,0 +1,129 @@
+[%-# USE MetaExtractor -%]
+[%-# DEFAULT sidebar = "lib/nav.tmpl"-%]
+[%-# Can't use DEFAULT for wrap, since DEFAULT overwrites a false value. -%]
+[%- wrap = wrap.defined ? wrap : true -%]
+[%- IF wrap -%]
+[%-# document = MetaExtractor.extract(content) -%]
+[%-# English Strings -%]
+[%- 
+    strings.listsep       = ", "
+    strings.listand       = ", and "
+
+    strings.Home          = "Home"
+    strings.About         = "About"
+    strings.Community     = "Community"
+    strings.Download      = "Download"
+    strings.Contribute    = "Contribute"
+    strings.Next          = "Next"
+    strings.Previous      = "Previous"
+    strings.ToC           = "Table of Contents"
+    strings.WrittenBy     = "Written by"
+    strings.MaintainedBy  = "Maintained by"
+    strings.Contributors  = "Contributing Writers"
+    strings.TranslationBy = "Translation by"
+    strings.LicenseIs     = "This page is licensed under the"
+    strings.History       = "Document History"
+    strings.Edit          = "Edit"
+-%]
+[%- PROCESS header.tmpl title = title -%]
+[%- PROCESS nav.tmpl -%]
+      <div id="mainContent">
+        [% IF document.links.next || document.links.prev || document.links.toc -%]
+        <ul id="tNavTop">
+          [% IF document.links.prev -%]
+          <li><a href="[% document.links.prev.0.href %]" rel="prev">[% strings.Previous %]: [% document.links.prev.0.title %]</a>
+          [%- END -%]
+          [%- IF document.links.next -%]
+          <li><a href="[% document.links.next.0.href %]" rel="next">[% strings.Next %]: [% document.links.next.0.title %]</a>
+          [%- END -%]
+          [%- IF document.links.toc -%]
+          <li><a href="[% document.links.toc.0.href %]" rel="toc">[% strings.ToC %]</a>
+          [%- END %]
+        </ul>
+        [%- END -%]
+
+        [%- content -%]
+
+        [%- IF document.links.author || document.links.maintainer || document.links.contributor || document.links.translator %]
+        <address>
+        [%- IF document.links.author %]
+          [% strings.WrittenBy %] <a href="[% document.links.author.0.href %]">[% document.links.author.0.title %]</a>
+          [%- SET lastIndex = document.links.author.size - 1 -%]
+          [%- IF lastIndex > 0 -%]
+            [%- SET almostLastIndex = lastIndex - 1 -%]
+            [%- FOREACH i = [ 1 .. almostLastIndex ] -%]
+              [%- strings.listsep -%]
+              <a href="[% document.links.author.$i.href %]">[% document.links.author.$i.title %]</a>
+              [%- SET i = i + 1 -%]
+            [%- END -%]
+              [%- strings.listand -%]
+              <a href="[% document.links.author.$lastIndex.href %]">[% document.links.author.$lastIndex.title %]</a>
+          [%- END -%]
+        [%- END -%]
+        [% IF document.links.maintainer %]
+          <br>
+          [% strings.MaintainedBy %] <a href="[% document.links.maintainer.0.href %]">[% document.links.maintainer.0.title %]</a>
+          [%- SET lastIndex = document.links.maintainer.size - 1 -%]
+          [%- IF lastIndex > 0 -%]
+            [%- SET almostLastIndex = lastIndex - 1 -%]
+            [%- FOREACH i = [ 1 .. almostLastIndex ] -%]
+              [%- strings.listsep -%]
+              <a href="[% document.links.maintainer.$i.href %]">[% document.links.maintainer.$i.title %]</a>
+              [%- SET i = i + 1 -%]
+            [%- END -%]
+              [%- strings.listand -%]
+              <a href="[% document.links.maintainer.$lastIndex.href %]">[% document.links.maintainer.$lastIndex.title %]</a>
+          [%- END -%]
+        [%- END -%]
+        [%- IF document.links.contributor %]
+          <br>
+          [% strings.Contributors %] <a href="[% document.links.contributor.0.href %]">[% document.links.contributor.0.title %]</a>
+          [%- SET lastIndex = document.links.contributor.size - 1 -%]
+          [%- IF lastIndex > 0 -%]
+            [%- SET almostLastIndex = lastIndex - 1 -%]
+            [%- FOREACH i = [ 1 .. almostLastIndex ] -%]
+              [%- strings.listsep -%]
+              <a href="[% document.links.contributor.$i.href %]">[% document.links.contributor.$i.title %]</a>
+              [%- SET i = i + 1 -%]
+            [%- END -%]
+              [%- strings.listand -%]
+              <a href="[% document.links.contributor.$lastIndex.href %]">[% document.links.contributor.$lastIndex.title %]</a>
+          [%- END -%]
+        [%- END -%]
+        [% IF document.links.translator %]
+          <br>
+          [% strings.TranslationBy %] <a href="[% document.links.translator.0.href %]">[% document.links.translator.0.title %]</a>
+          [%- SET lastIndex = document.links.translator.size - 1 -%]
+          [%- IF lastIndex > 0 -%]
+            [%- SET almostLastIndex = lastIndex - 1 -%]
+            [%- FOREACH i = [ 1 .. almostLastIndex ] -%]
+              [%- strings.listsep -%]
+              <a href="[% document.links.translator.$i.href %]">[% document.links.translator.$i.title %]</a>
+              [%- SET i = i + 1 -%]
+            [%- END -%]
+              [%- strings.listand -%]
+              <a href="[% document.links.translator.$lastIndex.href %]">[% document.links.translator.$lastIndex.title %]</a>
+          [%- END -%]
+        [%- END %]
+        </address>
+        [%- END %]
+        
+        [%- IF document.links.next || document.links.prev || document.links.toc -%]
+        <ul id="tNavBottom">
+          [% IF document.links.prev -%]
+          <li><a href="[% document.links.prev.0.href %]" rel="prev">[% strings.previous %]: [% document.links.prev.0.title %]</a>
+          [%- END -%]
+          [%- IF document.links.next -%]
+          <li><a href="[% document.links.next.0.href %]" rel="next">[% strings.next %]: [% document.links.next.0.title %]</a>
+          [%- END -%]
+          [%- IF document.links.toc -%]
+          <li><a href="[% document.links.toc.0.href %]" rel="toc">[% strings.toc %]: [% document.links.toc.0.title %]</a>
+          [%- END -%]
+        </ul>
+        [%- END %]
+      </div>
+    </div>
+[%- PROCESS "footer.tmpl" -%]
+[%- ELSE -%]
+[% content %]
+[%- END -%]

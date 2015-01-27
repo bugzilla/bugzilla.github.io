@@ -1,0 +1,276 @@
+[%# Download %]
+[% 
+    title = "Download"
+    release = {
+        stable => { branch => '4.4', current => '4.4.6',  },
+        old    => { branch => '4.2', current => '4.2.11', },
+        legacy => { branch => '4.0', current => '4.0.15', },
+        dev    => { branch => '5.0', current => '4.5.6', 
+                    devbranch => '4.5', branched => 0, rc => 0 },
+    }
+%]
+
+<h1>Download</h1>
+<ul>
+  <li><a href="#howtoget">How To Get Bugzilla</a></li>
+  <li><a href="#addons">Bugzilla Addons</a></li>
+  <li><a href="#localizations">Localized Templates</a></li>
+  <li><a href="#stable">Stable Release</a></li>
+  [% IF release.dev.rc %]
+  <li><a href="#candidate">Stable Release Candidate</a></li> 
+  [% ELSIF release.dev %]
+  <li><a href="#devel">Development Snapshot</a></li>
+  [% END %]
+  <li><a href="#oldstable">Old Stable Release</a></li>
+  <li><a href="#legacy">Legacy Release</a></li>
+  <li><a href="#archives">Archives</a></li>
+</ul>
+
+
+<a name="howtoget"></a>
+<h2>How To Get Bugzilla</H2>
+
+<p>Instructions on how to obtain, install and configure Bugzilla are in the
+   <a href="http://bugzilla.readthedocs.org/en/latest/installing/">Installation
+   and Maintenance Guide</a>. That document also explains how to upgrade
+   Bugzilla to a new version, move a Bugzilla installation between machines,
+   and migrate from other bug-tracking systems.</p>
+
+<p>If you are installing a new Bugzilla, the latest stable release series (and
+   so the one you should choose unless you have a good reason for doing
+   otherwise) is the <b>[% release.stable.branch %]</b> series. You will need
+   this information when following the installation instructions.</p>
+
+<p>If you are upgrading, note that you can upgrade directly from <em>any</em>
+   old Bugzilla version to any new release&mdash;you do not have to go via
+   the releases in between. You should upgrade to the latest stable series,
+   <b>[% release.stable.branch %]</b>, and read the
+   <a href="../releases/[% release.stable.current %]/release-notes.html">Release
+   Notes</a>. If you want to know exactly what's changed from one version to
+   the next, you can <a href="../status/changes.html">view the changelogs</a>.
+   </p>
+
+<p>Bugzilla is licensed under the
+   <a href="http://www.mozilla.org/MPL/2.0">Mozilla Public License 2.0</a>,
+   and is thus both
+   <a href="http://www.gnu.org/philosophy/free-sw.html">free</a> and
+   <a href="http://opensource.org/osd">open source</a> software.</p>
+
+
+<a name="addons"></a>
+<h2>Bugzilla Addons</h2>
+
+<p>For a list of programs that can enhance and interact with Bugzilla in
+  various ways, see our 
+  <a href="http://wiki.mozilla.org/Bugzilla:Addons">Addons list</a>.</p>
+
+  
+<a name="localizations"></a>
+<h2>Localized Templates</h2>
+
+<p>This is a list of currently-known localizations of the Bugzilla UI. These
+are third-party contributions, so if you need help with any of them, please contact
+the maintainer of the particular localization.</p>
+
+<p>The short version of how to install/use these is at the end of the <a href="../docs/localizer.html#using">Localization Guide</a>.</p>
+
+<table class="languagetable" border=1>
+  <tr><th rowspan=2>Tag</th>
+      <th rowspan=2>Language</th>
+      <th colspan=3 width=200>Available versions</th>
+      <th rowspan=2>Maintainer</th>
+  </tr>
+  <tr><th align=left>4.0</th>
+      <th align=left>4.2</th>
+      <th align=left>4.4</th>
+  </tr>
+  <tr><th>bg</th>
+      <td><a href="ftp://sotirov-bg.net/pub/contrib/mozilla/bugzilla/l10n/">Български език /
+       Bulgarian</a></td>
+      <td>4.0.14</td>
+      <td>4.2.10</td>
+      <td>4.4.5</td>
+      <td>Георги Д. Сотиров (Georgi D. Sotirov)</td>
+  </tr>
+  <tr><th>cs</th>
+      <td><a href="http://www.bugzilla.cz/">Čeština/Czech</a></td>
+      <td>4.0.x</td>
+      <td>4.2.x</td>
+      <td>4.4</td>
+      <td>Norbert Volf</td>
+  </tr>
+  <tr><th>de</th>
+      <td>
+        <a href="http://bugzilla-de.sourceforge.net/">Deutsch / German</a><br>
+      </td>
+      <td>4.0.15</td>
+      <td>4.2.11</td>
+      <td>4.4.6</td>
+      <td>Marc Schumann</td>
+  </tr>
+  <tr><th>es</th>
+      <td><a href="http://sourceforge.net/projects/bugzilla-es/">Español / Spanish</a></td>
+      <td>4.0.10</td>
+      <td>4.2.5</td>
+      <td>&nbsp;</td>
+      <td>Oscar Manuel Gómez Senovilla</td>
+  </tr>
+  <tr><th>fr</th>
+      <td><a href="http://cedric.corazza.pagesperso-orange.fr/">Français / French</a></td>
+      <td>4.0.15</td>
+      <td>4.2.11</td>
+      <td>4.4.6</td>
+      <td>Cédric Corazza</td>
+  </tr>
+  <tr><th>ja</th>
+      <td><a href="http://bug-ja.org/">日本語 / Japanese</a></td>
+      <td>4.0.15</td>
+      <td>4.2.11</td>
+      <td>4.4.6</td>
+      <td>Atsushi Shimono</td>
+  </tr>
+  <tr><th>pl</th>
+      <td><a href="http://www.aviary.pl/projekty/bugzilla/">Polski / Polish</a></td>
+      <td>4.0.10</td>
+      <td>4.2.6</td>
+      <td>&nbsp;</td>
+      <td>Aviary.pl team</td>
+  </tr>
+  <tr><th>ru</th>
+      <td><a href="http://sourceforge.net/projects/bugzilla-ru/">Русский / Russian</a></td>
+      <td>4.0.13</td>
+      <td>4.2.9</td>
+      <td>4.4.4</td>
+      <td>Виталий Федрушков (Vitaly Fedrushkov), Alexander L. Slovesnik, Alexey Gladkov</td>
+  </tr>
+  <tr><th>zh_TW</th>
+      <td><a href="http://code.google.com/p/bugzilla-tw/">繁體中文/ Chinese (Traditional)</a></td>
+      <td>4.0.15</td>
+      <td>4.2.11</td>
+      <td>4.4.6</td>
+      <td>&nbsp;</td>
+  </tr>
+</table>
+
+<br>
+
+<p>If you have additions or corrections for this list, please contact the <a href="https://wiki.mozilla.org/Bugzilla:L10n">Bugzilla l10n team</a>.</p>
+
+<p>If your language is not listed here, do not give up. Look at the <a href="https://wiki.mozilla.org/Bugzilla:L10n:Localization_Teams">list of all known localization efforts</a>.  Listed there are works in progress, older releases for unsupported Bugzilla versions, and orphaned projects. We don't advise using unsupported releases, but it may be a good
+place to start if you want to bring a localization up to date.</p>
+
+<a name="stable"></a>
+<a name="v[% release.stable.branch.replace('\.', '') %]"></a>
+<h2>Stable Release ([% release.stable.current %])</h2>
+
+<p>Bugzilla [% release.stable.current %] is the latest stable release
+  [% IF release.stable.branch != release.stable.current %] in the 
+  [%+ release.stable.branch %] series[% END -%].</p>
+
+<p>A look at the new features in [% release.stable.branch %] can be found 
+  in the <a href="../releases/[% release.stable.branch %]/release-notes.html#v[% release.stable.branch.replace('\.', '') %]_feat">[% release.stable.branch %]
+  Release Notes</a>.</p>
+
+<p>We encourage all users, <em>especially</em> upgraders, to read the 
+  <a href="../releases/[% release.stable.current %]/release-notes.html">Release
+  Notes</a> before installing Bugzilla [% release.stable.current %].</p>
+
+[% INCLUDE dl mode = 'stable' release = release.stable %]
+
+<a name="candidate"></a>
+<a name="devel"></a>
+<a name="v[% release.dev.branch.replace('\.', '') %]"></a>
+
+[% IF release.dev.rc %]
+  <h2>Stable Release Candidate ([% release.dev.current %])</h2>
+  
+  <p>Bugzilla [% release.dev.current %] is our latest release candidate
+    for <a href="../releases/[% release.dev.branch %]/">Bugzilla 
+    [% release.dev.branch %]</a>.</p>
+  
+  <p>Release candidates receive full QA testing, and should be considerably
+    more stable than development releases. They have not been thoroughly
+    tested in the real world, but should be safe for most production
+    environments, particularly small ones.</p>
+  
+  <p>Note, however, that many Bugzilla extensions (such as 
+    <a href="http://www.mozilla.org/projects/testopia/">Testopia</a>)
+    do not support Release Candidates.</p>
+  
+  <p>If you do use a Release Candidate, make sure to upgrade to the final
+    release when it comes out.</p>
+  
+  <p>A look at the new features in Bugzilla [% release.dev.current %]
+    can be found in the 
+    <a href="../releases/[% release.dev.branch %]/release-notes.html#v
+      [%- release.dev.branch.replace('\.', '') %]_feat">Release Notes</a>.
+    Also make sure to read the
+    <a href="../releases/[% release.dev.branch %]/release-notes.html">Release
+    Notes</a>.</p>
+  
+  [% INCLUDE dl mode = 'rc' release = release.dev %]
+[% ELSIF release.dev %]
+  <h2>Development Snapshot ([% release.dev.current %])</h2>
+  
+  <p>Bugzilla [% release.dev.current %] is our latest development snapshot
+    leading to Bugzilla [% release.dev.branch %].</p>
+  
+  <p>Use of a development branch is <strong>at your own risk</strong>.
+    They receive very little testing, so expect this release to be
+    unstable. Users of [% release.stable.branch %] or older 
+    [%+ release.dev.devbranch %] releases are encouraged to try out new
+    [%+ release.dev.devbranch %] releases in a testing environment 
+    and let us know of any problems that are found with the release.</p>
+  
+  <p>A look at the new features that will be in Bugzilla [% release.dev.branch %]
+     can be found in our latest <a href="../status/">Status Updates</a>.</p>
+  
+  [% INCLUDE dl mode = 'dev' release = release.dev %]
+[% END %]
+
+<a name="oldstable"></a>
+<a name="v[% release.old.branch.replace('\.', '') %]"></a>
+<h2>Old Stable Release ([% release.old.current %])</h2>
+
+<p>[% release.old.current %] is the old stable version of Bugzilla. 
+  If you are doing a new installation of Bugzilla, we recommend that you 
+  use the <a href="#stable">latest stable version</a> instead of a 
+  [% release.old.branch %] version.</p>
+
+<p>An overview of the new features in [% release.old.branch %] can be found in
+  the <a href="../releases/[% release.old.branch %]/release-notes.html#v
+    [%- release.old.branch.replace('\.', '') %]_feat">[% release.old.branch %]
+  Release Notes</a>.</p>
+
+<p>We encourage all users, <em>especially</em> upgraders, to
+  read the 
+  <a href="../releases/[% release.old.current %]/release-notes.html">Release
+  Notes</a> before installing Bugzilla [% release.old.current %].</p>
+
+[% INCLUDE dl mode = '' release = release.old %]
+
+<a name="v[% release.legacy.branch.replace('\.', '') %]"></a>
+<a name="legacy"></a>
+<h2>Legacy Release ([% release.legacy.current %])</h2>
+
+<p>Bugzilla [% release.legacy.current %] is the legacy release of Bugzilla.
+   It is kept here for sites still running the [% release.legacy.branch %]
+   codebase to enable them to pick up security updates. All users are 
+   recommended to use <a href="#stable">Bugzilla [% release.stable.current %]</a>
+   instead, and users of Bugzilla [% release.legacy.branch %] are encouraged 
+   to upgrade to [% release.stable.current %] as soon as possible.</p>
+
+[% INCLUDE dl mode = '' release = release.legacy %]
+
+
+<a name="archives"></a>
+<a name="v212"></a><a name="v214"></a><a name="v216"></a>
+<a name="v218"></a><a name="v220"></a><a name="v222"></a>
+<a name="v224"></a>
+<a name="v30"></a><a name="v32"></a><a name="v34"></a>
+<a name="v36"></a>
+<h2>Archives</h2>
+
+<p>If for some reason you need a very old version of Bugzilla,
+  you can download tarballs from the 
+  <a href="http://ftp.mozilla.org/pub/mozilla.org/webtools/">Bugzilla FTP site</a>.</p>

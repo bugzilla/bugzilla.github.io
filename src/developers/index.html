@@ -1,0 +1,123 @@
+[%# How to Help %]
+[%
+	title = "Developers"
+%]
+<h1>Developers</h1>
+<h2>Guides</h2>
+<ul>
+    <li><a href="https://wiki.mozilla.org/Bugzilla:Developers"><strong>How to
+      Contribute to Bugzilla</strong></a></li>
+    <li><a href="../docs/developer.html">Developers' Guide</a></li>
+    <li><a href="../docs/reviewer-list.html">List of Reviewers</a></li>
+    <li><a href="../docs/reviewer.html">Reviewers' Guide</a></li>
+    <li><a href="../docs/approver.html">Approvers' Guide</a></li>
+    <li><a href="../docs/localizer.html">Localizers' Guide</a></li>
+    <li><a href="../docs/documentor.html">Documentor's Guide</a></li>
+    <li><a href="../docs/releasenote.html">Release Noting Guide</a></li>
+    <li><a href="../docs/release.html">How To Release a Bugzilla Version</a></li>
+    <li><a href="http://www.ravenbrook.com/project/p4dti/tool/cgi/bugzilla-schema/"
+         >Database Schema Documentation</a></li>
+    <li><a href="../docs/tip/html/api/">The Bugzilla API Documentation</a></li>
+
+</ul>
+<h2>SQL References</h2>
+<ul>
+    <li><a href="https://dev.mysql.com/doc/">MySQL</a></li>
+    <li><a href="http://www.postgresql.org/docs/">PostgreSQL</a></li>
+    <li><a href="http://www.oracle.com/technology/documentation/database.html">Oracle</a></li>
+    <li><a href="http://manuals.sybase.com/onlinebooks/group-as/asg1250e/sqlug/@Generic__BookView">Sybase</a></li>
+    <li><a href="http://savage.net.au/SQL/">ANSI SQL</a>
+        (Bugzilla attempts to conform to SQL-99, when possible).</li>
+</ul>
+<h2>Other References</h2>
+<ul>
+    <li><a href="reporting_bugs.html">How to Report a Bug</a></li>
+    <li><a href="http://rf.net/~james/perli18n.html">Perl, Unicode,
+         and Internationalization FAQ</a></li>
+</ul>
+<h2>Mailing List</h2>
+<p><b><a href="https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&amp;extra=developers"
+ >developers<!-- blah -->&#x40;<!-- blah -->bugzilla.org</a></b> -
+ This mailing list is for discussion among people who are assisting with the development of Bugzilla.
+ Discussion on this list tends to get quite technical.
+ If you're interested in contributing code to Bugzilla, you should subscribe to this list.
+ <a href="https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&amp;extra=developers"
+  >Subscribe / Browse Archives</a></p>
+<h2>IRC</h2>
+<a name="irc"></a>
+<p>Much Bugzilla development discussion happens in real time on IRC.
+   We hang out on the <a href="ircs://irc.mozilla.org:6697/bugzilla">#bugzilla</a>
+    channel on <a href="https://wiki.mozilla.org/IRC">irc.mozilla.org</a>.
+   Feel free to drop in there anytime to discuss Bugzilla
+    (both development and support discussion happens there).</p>
+
+<p>The easiest way to get on IRC is to use the 
+  <a href="https://landfill.bugzilla.org/irc/">Bugzilla IRC Gateway</a>,
+  which lets you chat with us through your browser, without installing
+  anything.</p>
+
+<h2>How to Help</h2>
+<ul>
+  <li><p><b>Patches to Fix Bugs/Implement New Features.</b> These are very welcome,
+      especially if they are targetted for the <a href="../releases/">upcoming release</a>! They need
+      to be appropriately generic for all Bugzilla installations and conform
+      to our other requirements (see the <a href="../docs/developer.html">Developers' Guide</a>)
+      before they can appear in our repository, but if you don't wish to do this, anything
+      is better than nothing, and we can use your work as a base. Read our <a
+       href="https://wiki.mozilla.org/Bugzilla:Developers">step-by-step process</a>
+      for information on how to get your patch submitted to us.</p>
+      <p>Some good places to start:</p>
+      <ul>
+        <li><a href="https://bugzilla.mozilla.org/buglist.cgi?quicksearch=prod%3ABugzilla+whiteboard%3A%22%5BGood+Intro+Bug%5D%22"
+          >Open bugs/requests that are good introductions to the Bugzilla code</a></li>
+      </ul>
+</li>
+  <li><p><b>New documentation.</b>  If you are an aspiring technical writer and are
+      familiar with (or willing to learn) DocBook, the Bugzilla documentation
+      needs a lot of love.  There are a lot of features in Bugzilla that have
+      still never been documented, and Bugzilla is a rapidly moving target.
+      Besides the never-ending battle to keep the cvs tip documentation up to
+      date, we have documentation on two supported stable branches which is
+      still somewhat incomplete.  Patches against the source xml using
+      <code>diff -u</code> are the prefered method of submitting changes.</p>
+      <p>Some good places to start:</p>
+      <ul>
+        <li><a href="https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla&amp;component=Documentation&amp;resolution=---"
+          >Open documentation bugs/requests</a></li>
+        <li><a href="https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla&amp;field0-0-0=flagtypes.name&amp;type0-0-0=regexp&amp;value0-0-0=documentation.*%5C%3F"
+          >Fixed bugs requiring documentation changes that haven't been made yet</a>.
+          Patches for these can be attached to the same bug.</li>
+        <li><a href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla&amp;component=Documentation&amp;rep_platform=All&amp;op_sys=All"
+          >File a new bug</a> for additions to the documentation not listed in either
+          of the above two links, then attach your patch to the bug.</li>
+      </ul>
+  </li>
+  <li><b>Localisation.</b> Localise Bugzilla into your language and make a localisation
+      pack available. <a href="../docs/localizer.html">More details</a>.</li>
+  <li><b>Testing.</b> Search for bugs in the Bugzilla software, as well as trying
+      out pending patches in the bug system.</li>
+  <li><b>Review.</b> If you have experience with Perl and Bugzilla code, it would
+      be very useful if you look over pending patches in the bug system
+      and see if there are any problems with them. As we are coming off the tail
+      end of a templatization effort which put tons of little patches on hold for
+      over a year, review and testing of those remaining patches is especially important.
+      Generally we expect reviewers to have submitted some patches first
+      so we can evaluate their ability. If you fit into this category, please
+      contact <a href="mailto:justdave&#64;bugzilla.org">Dave Miller</a> about
+      this.  We are currently in particular need of reviewers with expertise in
+      the following areas:<ul>
+          <li>Javascript</li>
+          <li>LDAP authentication</li>
+          <li>Installation on Windows</li>
+      </ul>
+  <li><b>Automatic Problem Finding.</b> If you have ideas for automatically detecting
+      problems, please let the team know by filing a bug in the <a
+      href="https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla&amp;component=Testing+Suite"
+      >Testing Suite</a> component.</li>
+</ul>
+<p>The Bugzilla team mainly communicates through the 
+  <a href="https://wiki.mozilla.org/Bugzilla:Communicate">IRC channel 
+  #bugzilla on irc.mozilla.org</a>. All are welcome on this channel,
+  whether you are an administrator of a Bugzilla installation or wish to
+  contribute. The more the merrier.</p>
+

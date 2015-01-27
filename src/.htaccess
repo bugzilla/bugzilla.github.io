@@ -1,0 +1,6 @@
+ErrorDocument 403 /error403.html
+ErrorDocument 404 /error404.html
+Redirect permanent /docs/contributor.html https://wiki.mozilla.org/Bugzilla:Developers
+RewriteEngine On
+RewriteRule ^docs/tip/en/html/api/ - [L]
+RewriteRule ^docs/tip/en/html/ https://bugzilla.readthedocs.org/en/latest/ [R=302]
