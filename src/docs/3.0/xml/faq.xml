@@ -262,7 +262,7 @@ C:\mysql\bin\replace "#!/usr/bin/perl" "#!C:\perl\bin\perl" -- *.cgi *.pl
           <para>
             If using Apache on Windows, you can avoid the whole problem
             by setting the <ulink
-            url="http://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">
+            url="https://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">
             ScriptInterpreterSource</ulink> directive to 'Registry'.
             (If using Apache 2 or higher, set it to 'Registry-Strict'.)
             ScriptInterperterSource requires a registry entry
@@ -517,7 +517,7 @@ C:\mysql\bin\replace "#!/usr/bin/perl" "#!C:\perl\bin\perl" -- *.cgi *.pl
           <para>
             You should use the backup options supplied by your database platform.  
             Vendor documentation for backing up a MySQL database can be found at 
-            <ulink url="http://www.mysql.com/doc/B/a/Backup.html"/>. 
+            <ulink url="https://www.mysql.com/doc/B/a/Backup.html"/>. 
             PostgreSQL backup documentation can be found at
             <ulink url="http://www.postgresql.org/docs/8.0/static/backup.html"/>.
           </para>
@@ -643,7 +643,7 @@ C:\mysql\bin\replace "#!/usr/bin/perl" "#!C:\perl\bin\perl" -- *.cgi *.pl
             Refer to your database platform documentation for details on how to do hot
             backups.  
             Vendor documentation for backing up a MySQL database can be found at 
-            <ulink url="http://www.mysql.com/doc/B/a/Backup.html"/>. 
+            <ulink url="https://www.mysql.com/doc/B/a/Backup.html"/>. 
             PostgreSQL backup documentation can be found at
             <ulink url="http://www.postgresql.org/docs/8.0/static/backup.html"/>.
           </para>
@@ -762,7 +762,7 @@ C:\mysql\bin\replace "#!/usr/bin/perl" "#!C:\perl\bin\perl" -- *.cgi *.pl
             Reference your database vendor's documentation for information on 
             backing up and restoring your Bugzilla database on to a different server.
             Vendor documentation for backing up a MySQL database can be found at 
-            <ulink url="http://dev.mysql.com/doc/mysql/en/mysqldump.html"/>.
+            <ulink url="https://dev.mysql.com/doc/mysql/en/mysqldump.html"/>.
             PostgreSQL backup documentation can be found at
             <ulink url="http://www.postgresql.org/docs/8.0/static/backup.html"/>.
           </para>

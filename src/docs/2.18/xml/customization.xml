@@ -843,7 +843,7 @@
       <quote>tinyint</quote>
 
       entry in MySQL. I recommend you refer to the
-      <ulink url="http://www.mysql.com/documentation/">MySQL documentation</ulink>
+      <ulink url="https://www.mysql.com/documentation/">MySQL documentation</ulink>
       . Below are the basics you need to know about the Bugzilla database.
       Check the chart above for more details.</para>
 
@@ -867,7 +867,7 @@
             instructions told you to. You can find details on locking down
             your database in the Bugzilla FAQ in this directory (under
             "Security"), or more robust security generalities in the 
-            <ulink url="http://www.mysql.com/php/manual.php3?section=Privilege_system">MySQL
+            <ulink url="https://www.mysql.com/php/manual.php3?section=Privilege_system">MySQL
             searchable documentation</ulink>.
             </para>
           </listitem>

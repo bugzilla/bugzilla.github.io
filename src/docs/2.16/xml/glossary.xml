@@ -46,14 +46,14 @@
           <title>Useful Directives when configuring Bugzilla</title>
 
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#addhandler">AddHandler</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#addhandler">AddHandler</ulink></computeroutput></term>
             <listitem>
               <para>Tell Apache that it's OK to run CGI scripts.</para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#allowoverride">AllowOverride</ulink></computeroutput></term>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#options">Options</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#allowoverride">AllowOverride</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#options">Options</ulink></computeroutput></term>
             <listitem>
               <para>These directives are used to tell Apache many things about
               the directory they apply to. For Bugzilla's purposes, we need
@@ -63,7 +63,7 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/mod_dir.html#directoryindex">DirectoryIndex</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/mod_dir.html#directoryindex">DirectoryIndex</ulink></computeroutput></term>
             <listitem>
               <para>Used to tell Apache what files are indexes. If you can
               not add <filename>index.cgi</filename> to the list of valid files,
@@ -76,7 +76,7 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink></computeroutput></term>
             <listitem>
               <para>Used when running Apache on windows so the shebang line
               doesn't have to be changed in every Bugzilla script.
@@ -237,13 +237,13 @@
       <glossdef>
         <para>MySQL is currently the required
         <glossterm linkend="gloss-rdbms">RDBMS</glossterm> for Bugzilla. MySQL
-        can be downloaded from <ulink url="http://www.mysql.com"/>. While you
+        can be downloaded from <ulink url="https://www.mysql.com"/>. While you
         should familiarize yourself with all of the documentation, some high
         points are:
         </para>
         <itemizedlist>
           <listitem>
-            <para><ulink url="http://www.mysql.com/doc/P/r/Privilege_system.html">MySQL
+            <para><ulink url="https://www.mysql.com/doc/P/r/Privilege_system.html">MySQL
             Privilege System</ulink> - Much more detailed information about
             the suggestions in <xref linkend="security-mysql"/>.
             </para>

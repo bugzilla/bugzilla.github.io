@@ -42,14 +42,14 @@
           <title>Useful Directives when configuring Bugzilla</title>
 
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#addhandler">AddHandler</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#addhandler">AddHandler</ulink></computeroutput></term>
             <listitem>
               <para>Tell Apache that it's OK to run CGI scripts.</para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#allowoverride">AllowOverride</ulink></computeroutput></term>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#options">Options</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#allowoverride">AllowOverride</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#options">Options</ulink></computeroutput></term>
             <listitem>
               <para>These directives are used to tell Apache many things about
               the directory they apply to. For Bugzilla's purposes, we need
@@ -59,7 +59,7 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/mod_dir.html#directoryindex">DirectoryIndex</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/mod_dir.html#directoryindex">DirectoryIndex</ulink></computeroutput></term>
             <listitem>
               <para>Used to tell Apache what files are indexes. If you can
               not add <filename>index.cgi</filename> to the list of valid files,
@@ -72,7 +72,7 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><computeroutput><ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink></computeroutput></term>
+            <term><computeroutput><ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink></computeroutput></term>
             <listitem>
               <para>Used when running Apache on windows so the shebang line
               doesn't have to be changed in every Bugzilla script.
@@ -283,20 +283,20 @@
       <glossdef>
         <para>MySQL is one of the supported
         <glossterm linkend="gloss-rdbms">RDBMS</glossterm> for Bugzilla. MySQL
-        can be downloaded from <ulink url="http://www.mysql.com"/>. While you
+        can be downloaded from <ulink url="https://www.mysql.com"/>. While you
         should familiarize yourself with all of the documentation, some high
         points are:
         </para>
         <variablelist>
           <varlistentry>
-            <term><ulink url="http://www.mysql.com/doc/en/Backup.html">Backup</ulink></term>
+            <term><ulink url="https://www.mysql.com/doc/en/Backup.html">Backup</ulink></term>
             <listitem>
               <para>Methods for backing up your Bugzilla database.
               </para>
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><ulink url="http://www.mysql.com/doc/en/Option_files.html">Option Files</ulink></term>
+            <term><ulink url="https://www.mysql.com/doc/en/Option_files.html">Option Files</ulink></term>
             <listitem>
               <para>Information about how to configure MySQL using
               <filename>my.cnf</filename>.
@@ -304,7 +304,7 @@
             </listitem>
           </varlistentry>
           <varlistentry>
-            <term><ulink url="http://www.mysql.com/doc/en/Privilege_system.html">Privilege System</ulink></term>
+            <term><ulink url="https://www.mysql.com/doc/en/Privilege_system.html">Privilege System</ulink></term>
             <listitem>
               <para>Information about how to protect your MySQL server.
               </para>

@@ -1777,7 +1777,7 @@ Enter Password: ********
    The easiest way to get a lot of these is with a program called Fink,
    which is similar in nature to the CPAN installer, but installs common
    GNU utilities. Fink is available from
-   <http://sourceforge.net/projects/fink/>.
+   <https://sourceforge.net/projects/fink/>.
 
    Follow the instructions for setting up Fink. Once it's installed,
    you'll want to run the following as root: fink install gd
@@ -3844,7 +3844,7 @@ Appendix A. The Bugzilla FAQ
 
    MySQL, the database back-end for Bugzilla, allows hot-backup of data.
    You can find strategies for dealing with backup considerations at
-   http://www.mysql.com/doc/B/a/Backup.html
+   https://www.mysql.com/doc/B/a/Backup.html
 
    A.2.17. Can users be on the system while a backup is in progress?
 
@@ -4699,7 +4699,7 @@ D.1. Red Hat Bugzilla
    could be integrated back into the main tree. Bug 98304 exists to track
    this integration.
 
-   URL: http://bugzilla.redhat.com/bugzilla/
+   URL: https://bugzilla.redhat.com/bugzilla/
 
    This section last updated 24 Dec 2002
      __________________________________________________________________
@@ -5221,7 +5221,7 @@ M
 
    MySQL
           MySQL is currently the required RDBMS for Bugzilla. MySQL can be
-          downloaded from http://www.mysql.com. While you should
+          downloaded from https://www.mysql.com. While you should
           familiarize yourself with all of the documentation, some high
           points are:
 

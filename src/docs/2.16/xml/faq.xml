@@ -551,8 +551,8 @@
 	  <para>
 	    MySQL, the database back-end for Bugzilla, allows hot-backup of data.
 	    You can find strategies for dealing with backup considerations
-	    at <ulink url="http://www.mysql.com/doc/B/a/Backup.html">
-	    http://www.mysql.com/doc/B/a/Backup.html</ulink>
+	    at <ulink url="https://www.mysql.com/doc/B/a/Backup.html">
+	    https://www.mysql.com/doc/B/a/Backup.html</ulink>
 	  </para>
 	</answer>
       </qandaentry>
@@ -1076,7 +1076,7 @@
             information.  There are also more intuitive GUI clients available.
             Personal favorites of the Bugzilla team are <ulink
             url="http://www.phpmyadmin.net/">phpMyAdmin</ulink> and <ulink
-            url="http://www.mysql.com/downloads/gui-mycc.html">MySQL Control
+            url="https://www.mysql.com/downloads/gui-mycc.html">MySQL Control
             Center</ulink>.
 	  </para>
 	</answer>

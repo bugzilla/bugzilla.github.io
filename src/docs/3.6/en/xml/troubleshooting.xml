@@ -247,7 +247,7 @@ TEST-OK Webserver is preventing fetch of https://landfill.bugzilla.org/bugzilla-
       existing module (e.g. you're running Windows) and/or don't want to
       replace it (e.g. you want to keep using a packaged version), then a
       workaround is available from the MySQL docs:
-      <ulink url="http://dev.mysql.com/doc/mysql/en/Old_client.html"/>
+      <ulink url="https://dev.mysql.com/doc/mysql/en/Old_client.html"/>
     </para>
 
   </section>

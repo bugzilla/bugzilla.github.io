@@ -43,7 +43,7 @@
       
 <listitem>
   <para>
-    <ulink url="http://www.mysql.com/">MySQL database server</ulink>
+    <ulink url="https://www.mysql.com/">MySQL database server</ulink>
     (3.22.5 or greater. Note that versions of Bugzilla prior to 2.20RC1 do
     not work with MySQL 5.0.12 or higher. If you intend to install
     Bugzilla using MySQL 5.x as your back-end, please use a more current
@@ -253,7 +253,7 @@
 
       <para>
         Visit the MySQL homepage at 
-        <ulink url="http://www.mysql.com">www.mysql.com</ulink>
+        <ulink url="https://www.mysql.com">www.mysql.com</ulink>
         to grab and install the latest stable 4.x release of MySQL.
         Note that versions of Bugzilla prior to 2.20RC1 do not work with MySQL
         5.0.12 or higher. If you intend to install Bugzilla using
@@ -889,7 +889,7 @@ perl -pi -e 's@#\!/usr/bonsaitools/bin/perl@#\!/usr/bin/perl@' *cgi *pl Bug.pm p
       <para>So, to get this working, install
       <ulink url="http://www.graphviz.org/">GraphViz</ulink>. If you
       do that, you need to
-      <ulink url="http://httpd.apache.org/docs/mod/mod_imap.html">enable
+      <ulink url="https://httpd.apache.org/docs/mod/mod_imap.html">enable
       server-side image maps</ulink> in Apache.
       Alternatively, you could set up a webdot server, or use the AT&amp;T 
       public webdot server (the
@@ -1376,7 +1376,7 @@ perl -pi -e 's@#\!/usr/bonsaitools/bin/perl@#\!/usr/bin/perl@' *cgi *pl Bug.pm p
           <para>Install MySQL for NT. 
           <note>
             <para>You can download MySQL for Windows NT from 
-            <ulink url="http://www.mysql.com/">MySQL.com</ulink>
+            <ulink url="https://www.mysql.com/">MySQL.com</ulink>
 
             . Some find it helpful to use the WinMySqlAdmin utility, included
             with the download, to set up the database.</para>
@@ -1952,7 +1952,7 @@ binmode(STDOUT);
       <para>The easiest way to get a lot of these is with a program called
       Fink, which is similar in nature to the CPAN installer, but installs
       common GNU utilities. Fink is available from
-      &lt;http://sourceforge.net/projects/fink/&gt;.</para>
+      &lt;https://sourceforge.net/projects/fink/&gt;.</para>
 
       <para>Follow the instructions for setting up Fink. Once it's installed,
       you'll want to run the following as root: 

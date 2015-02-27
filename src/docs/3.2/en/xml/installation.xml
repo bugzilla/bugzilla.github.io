@@ -103,7 +103,7 @@
       
           <para>
           If you don't have it and your OS doesn't provide official packages, 
-          visit <ulink url="http://www.mysql.com"/>. You need MySQL version
+          visit <ulink url="https://www.mysql.com"/>. You need MySQL version
           &min-mysql-ver; or higher.
           </para>
       
@@ -181,7 +181,7 @@
       
       <para>
       If you don't have Apache and your OS doesn't provide official packages, 
-      visit <ulink url="http://httpd.apache.org/"/>.
+      visit <ulink url="https://httpd.apache.org/"/>.
       </para>
 
     </section>
@@ -716,7 +716,7 @@ max_allowed_packet=4M
   ft_min_word_len=2</screen>
 
           <para>Rebuilding the indexes can be done based on documentation found at
-          <ulink url="http://www.mysql.com/doc/en/Fulltext_Fine-tuning.html"/>.
+          <ulink url="https://www.mysql.com/doc/en/Fulltext_Fine-tuning.html"/>.
           </para>
         </section>
         
@@ -1604,7 +1604,7 @@ C:\perl&gt; <command>ppm install &lt;module name&gt;</command>
           <para>
             The web server looks at <filename>/usr/bin/perl</filename> to
             call Perl. If you are using Apache on windows, you can set the
-            <ulink url="http://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink>
+            <ulink url="https://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">ScriptInterpreterSource</ulink>
             directive in your Apache config file to make it look at the
             right place: insert the line
             <programlisting>ScriptInterpreterSource Registry-Strict</programlisting>
@@ -1658,7 +1658,7 @@ C:\perl&gt; <command>ppm install &lt;module name&gt;</command>
         needs this for bug graphs.</para>
 
         <para>You can use DarwinPorts (<ulink url="http://darwinports.com/"/>)
-        or Fink (<ulink url="http://sourceforge.net/projects/fink/"/>), both
+        or Fink (<ulink url="https://sourceforge.net/projects/fink/"/>), both
         of which are similar in nature to the CPAN installer, but install
         common unix programs.</para>
 

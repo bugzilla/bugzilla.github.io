@@ -39,7 +39,7 @@
 <!ENTITY landfillbase "https://landfill.bugzilla.org/bugzilla-2.22-branch/">
 <!ENTITY bz "https://www.bugzilla.org/">
 <!ENTITY bzg-bugs "<ulink url='https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla&amp;component=Documentation'>Bugzilla Documentation</ulink>">
-<!ENTITY mysql "http://www.mysql.com/">
+<!ENTITY mysql "https://www.mysql.com/">
 
 <!-- For minimum versions -->
 <!ENTITY min-mysql-ver "4.0.14">

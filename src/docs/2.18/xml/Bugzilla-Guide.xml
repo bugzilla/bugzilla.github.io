@@ -33,7 +33,7 @@
 <!ENTITY landfillbase "https://landfill.bugzilla.org/bugzilla-2.18-branch/">
 <!ENTITY bz "https://www.bugzilla.org/">
 <!ENTITY bzg-bugs "<ulink url='https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla&amp;component=Documentation'>Bugzilla Documentation</ulink>">
-<!ENTITY mysql "http://www.mysql.com/">
+<!ENTITY mysql "https://www.mysql.com/">
 <!ENTITY newest-perl-ver "5.8.3">
 
 <!-- For minimum versions -->

@@ -276,7 +276,7 @@ perl runtests.pl 2 --verbose
           <para>
             If using Apache on Windows, you can avoid the whole problem
             by setting the <ulink
-            url="http://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">
+            url="https://httpd.apache.org/docs-2.0/mod/core.html#scriptinterpretersource">
             ScriptInterpreterSource</ulink> directive to 'Registry'.
             (If using Apache 2 or higher, set it to 'Registry-Strict'.)
             ScriptInterperterSource requires a registry entry
@@ -529,7 +529,7 @@ perl runtests.pl 2 --verbose
             MySQL, the database back-end for Bugzilla, allows hot-backup
             of data. You can find strategies for dealing with backup
             considerations at <ulink
-            url="http://www.mysql.com/doc/B/a/Backup.html"/>.
+            url="https://www.mysql.com/doc/B/a/Backup.html"/>.
           </para>
         </answer>
       </qandaentry>
@@ -775,7 +775,7 @@ perl runtests.pl 2 --verbose
             <programlisting>
 /usr/bin/mysqldump -u(username) -p(password) --database bugs > bugzilla-backup.txt
             </programlisting>
-            See the <ulink url="http://dev.mysql.com/doc/mysql/en/mysqldump.html">
+            See the <ulink url="https://dev.mysql.com/doc/mysql/en/mysqldump.html">
             mysqldump documentation</ulink> for more information on using 
             the tool, including how to restore your copy onto the destination
             machine.
@@ -1103,7 +1103,7 @@ password=mypassword
             delete and modify table information. There are also more intuitive
             GUI clients available. Personal favorites of the Bugzilla team
             are <ulink url="http://www.phpmyadmin.net/">phpMyAdmin</ulink>
-            and <ulink url="http://www.mysql.com/products/mysqlcc/">MySQL
+            and <ulink url="https://www.mysql.com/products/mysqlcc/">MySQL
             Control Center</ulink>.
           </para>
 

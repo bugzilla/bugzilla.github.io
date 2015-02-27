@@ -341,7 +341,7 @@ Chapter 2. Installing Bugzilla
    mysql -V
 
    If you don't have it and your OS doesn't provide official packages,
-   visit http://www.mysql.com. You need MySQL version 4.1.2 or higher.
+   visit https://www.mysql.com. You need MySQL version 4.1.2 or higher.
 
    Note
 
@@ -402,7 +402,7 @@ Chapter 2. Installing Bugzilla
    experiences with us by filing a bug in Bugzilla Documentation.
 
    If you don't have Apache and your OS doesn't provide official packages,
-   visit http://httpd.apache.org/.
+   visit https://httpd.apache.org/.
      __________________________________________________________________
 
 2.1.4. Bugzilla
@@ -686,7 +686,7 @@ max_allowed_packet=4M
   ft_min_word_len=2
 
    Rebuilding the indexes can be done based on documentation found at
-   http://www.mysql.com/doc/en/Fulltext_Fine-tuning.html.
+   https://www.mysql.com/doc/en/Fulltext_Fine-tuning.html.
      __________________________________________________________________
 
 2.2.2.2.3. Add a user to MySQL
@@ -1302,8 +1302,8 @@ ppm repository add theory58S http://theoryx5.uwinnipeg.ca/ppms/
    Apple does not include the GD library with Mac OS X. Bugzilla needs
    this for bug graphs.
 
-   You can use MacPorts (http://www.macports.org/) or Fink
-   (http://sourceforge.net/projects/fink/), both of which are similar in
+   You can use MacPorts (https://www.macports.org/) or Fink
+   (https://sourceforge.net/projects/fink/), both of which are similar in
    nature to the CPAN installer, but install common unix programs.
 
    Follow the instructions for setting up MacPorts or Fink. Once you have
@@ -5580,7 +5580,7 @@ requested by server..."
    existing module (e.g. you're running Windows) and/or don't want to
    replace it (e.g. you want to keep using a packaged version), then a
    workaround is available from the MySQL docs:
-   http://dev.mysql.com/doc/mysql/en/Old_client.html
+   https://dev.mysql.com/doc/mysql/en/Old_client.html
      __________________________________________________________________
 
 Appendix B. Contrib
@@ -6275,7 +6275,7 @@ M
 
    MySQL
           MySQL is one of the supported RDBMS for Bugzilla. MySQL can be
-          downloaded from http://www.mysql.com. While you should
+          downloaded from https://www.mysql.com. While you should
           familiarize yourself with all of the documentation, some high
           points are:
 

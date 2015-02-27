@@ -361,7 +361,7 @@ Chapter 2. Installing Bugzilla
    Installed Version Test: mysql -V
 
    If you don't have it and your OS doesn't provide official packages,
-   visit http://www.mysql.com. You need MySQL version 3.23.41 or higher.
+   visit https://www.mysql.com. You need MySQL version 3.23.41 or higher.
 
    Note
 
@@ -404,7 +404,7 @@ Chapter 2. Installing Bugzilla
    experiences with us by filing a bug in Bugzilla Documentation.
 
    If you don't have Apache and your OS doesn't provide official packages,
-   visit http://httpd.apache.org/.
+   visit https://httpd.apache.org/.
      __________________________________________________________________
 
 2.1.4. Bugzilla
@@ -745,7 +745,7 @@ Chapter 2. Installing Bugzilla
   ft_min_word_len=2
 
    Rebuilding the indexes can be done based on documentation found at
-   http://www.mysql.com/doc/en/Fulltext_Fine-tuning.html.
+   https://www.mysql.com/doc/en/Fulltext_Fine-tuning.html.
 
    Note
 
@@ -1343,7 +1343,7 @@ ppm repository add landfill http://www.landfill.bugzilla.org/ppm/
 
    You can install it using a program called Fink, which is similar in
    nature to the CPAN installer, but installs common GNU utilities. Fink
-   is available from http://sourceforge.net/projects/fink/.
+   is available from https://sourceforge.net/projects/fink/.
 
    Follow the instructions for setting up Fink. Once it's installed,
    you'll want to use it to install the gd2 package.
@@ -5256,7 +5256,7 @@ perl runtests.pl 2 --verbose
 
    MySQL, the database back-end for Bugzilla, allows hot-backup of data.
    You can find strategies for dealing with backup considerations at
-   http://www.mysql.com/doc/B/a/Backup.html.
+   https://www.mysql.com/doc/B/a/Backup.html.
 
    A.2.11. What type of human resources are needed to be on staff to
    install and maintain Bugzilla? Specifically, what type of skills does
@@ -6050,7 +6050,7 @@ requested by server..."
    existing module (e.g. you're running Windows) and/or don't want to
    replace it (e.g. you want to keep using a packaged version), then a
    workaround is available from the MySQL docs:
-   http://dev.mysql.com/doc/mysql/en/Old_client.html
+   https://dev.mysql.com/doc/mysql/en/Old_client.html
      __________________________________________________________________
 
 Appendix C. Contrib
@@ -6793,7 +6793,7 @@ M
 
    MySQL
           MySQL is currently the required RDBMS for Bugzilla. MySQL can be
-          downloaded from http://www.mysql.com. While you should
+          downloaded from https://www.mysql.com. While you should
           familiarize yourself with all of the documentation, some high
           points are:
 
