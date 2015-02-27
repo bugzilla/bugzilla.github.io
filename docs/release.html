@@ -1,0 +1,458 @@
+[%# How to Release Bugzilla %]
+[% title = "How to Release Bugzilla" %]
+
+<h1>How to Release Bugzilla</h1>
+
+<p>This document describes the entire process of releasing a version
+    of Bugzilla. The sections are in order of how things should be 
+    done.</p>
+    
+<h2>Table of Contents</h2>
+
+<ul>
+    <li><a href="#release_planning">Release Planning</a>
+        <ul><li><a href="#file_bugs">File Bugs</a></li>
+            <li><a href="#motivate_people">Motivate People</a></li></ul>
+    </li>
+    <li><a href="#pre_release">Pre-Release</a>
+        <ul><li><a href="#security_advisory">Security Advisory</a></li>
+            <li><a href="#release_notes">Release Notes</a></li></ul>
+    </li>
+    <li><a href="#right_before_release">Right Before Release</a>
+        <ul><li><a href="#web_site_updates">Web Site Updates</a></li>
+            <li><a href="#commit_security_bugs">Check-In Security Bugs</a></li>
+            <li><a href="#freeze_the_tree">Freeze the Tree</a></li>
+            <li><a href="#update_versions">Update the Version 
+                Numbers</a></li>
+            <li><a href="#tag_releases">Tag the Releases in CVS</a></li>
+            <li><a href="#create_the_tarballs">Create the Tarballs</a></li>
+            <li><a href="#make_diffs">Make the Diff Files</a></li>
+            <li><a href="#update_checksetup_tinderbox">Update the Checksetup
+                Tinderbox</a></li>
+        </ul>
+    </li>
+    <li><a href="#release">Release</a>
+        <ul><li><a href="#post_the_files">Post the Files</a></li>
+            <li><a href="#commit_website">Check-In the Website 
+                Updates</a></li>
+            <li><a href="#send_security_advisory">Send the Security 
+                Advisory</a></li>
+            <li><a href="#send_release_announcement">Send the Release
+                Announcement</a></li>
+        </ul>
+    </li>
+    <li><a href="#post_release">Post-Release</a></li>
+</ul>
+    
+<h2><a name="release_planning"></a>Release Planning</h2>
+
+<p>This is where we <em>plan</em> to have a release, long before
+    the actual release is done.</p>
+
+<h3><a name="file_bugs"></a>File Bugs</h3>
+
+<p>File bugs for the following things...</p>
+
+<ol>
+    <li>&quot;Release Bugzilla X.YY, Z.AA&quot; and mark it
+        as severity &quot;blocker.&quot; It should block 
+        <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=bz-release">bug
+        286269</a>, which has the alias <strong>bz-release</strong>. (Sample: 
+        <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=559988">bug 
+        559988</a>)</li>
+    
+    <li><strong>Security Advisory</strong>: It should block the first bug,
+        and and Security bugs targeted at this release should be dependencies.
+        (Sample: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=290249">bug
+        290249</a>)</li>
+    
+    <li><strong>Release Notes</strong>: Point releases and rc1 versions
+        need release notes. Each version being released needs a separate
+        Release Notes bug filed. These bugs should block the first bug. For 
+        final releases of major versions, you need a &quot;clean up release
+        notes&quot; bug. (Sample: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286274">bug
+        286274</a>)</li>
+        
+    <li><strong>New Features Page</strong> (Release Candidates and Final 
+        Releases Only): Make this bug depend on the appropriate Release 
+        Notes bug. (Sample: <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=286278">bug 
+        286278</a>)</li>
+</ol>
+
+
+<h3><a name="motivate_people"></a>Motivate People</h3>
+
+<p>Basically, just make it <em>really</em> easy to find and access
+    all the bugs that need to be fixed for the release. I usually do
+    this a few days after I file the above bugs.</p>
+    
+<p>This means:</p>
+
+
+<ol>
+    <li>Do a search for blockers for the release, and make the query link into
+        a <a href="http://tinyurl.com">tinyurl</a>.
+        When creating a tinyurl, make sure that no "order by" information is
+        part of the URL so that you don't break people's LASTORDER cookies.</li>
+    <li>Put that tinyurl at the very end of the topic line of the 
+        <a href="https://wiki.mozilla.org/Bugzilla:Communicate">#mozwebtools
+        IRC channel on irc.mozilla.org</a>, with a brief explanation like 
+        &quot;2.20 Blockers: <var>tinyurl</var>&quot;.</li>
+    <li>Send out an email to developers&#64;bugzilla.org explaining
+        that we're releasing, and include the tinyurl. Having just <em>one</em>
+        link in the email gets people to focus a bit more.</li>
+    <li>If you are desperate: Send out an email to 
+        <a href="http://lists.mozilla.org/listinfo/support-bugzilla">support-bugzilla</a>
+        with a tinyurl pointing to <em>all</em> bugs targeted at your release,
+        sorted by Importance. Explain that you'd like some help, and
+        link them also to the 
+        <a href="https://wiki.mozilla.org/Bugzilla:Developers">Contributor's
+        Guide</a></li>
+</ol>
+
+
+<h2><a name="pre_release"></a>Pre-Release</h2>
+
+<p>Basically, you just have to get all the bugs to have patches with
+    review+ on them. A few of them require some special handling:</p>
+    
+<h3><a name="security_advisory"></a>Security Advisory</h3>
+
+<h4>Format</h4>
+
+<p>The actual &quot;issues&quot; in a security advisory normally look 
+    something like this:</p>
+
+<pre>Class:       Cross-site scripting
+Versions:    2.15 through 2.18rc3 and 2.19.1 (from cvs)
+Description: It is possible to blah blah blah...
+             And here are some details on how it can be made less bad...
+Reference:   https://bugzilla.mozilla.org/show_bug.cgi?id=272620
+CVE Name:    CAN-2004-1061</pre>
+
+<p>The different values for <strong>Class</strong> can be found in
+    older <a href="../security/">Security Advisories</a>.
+    The &quot;CVE Name&quot; is, obviously, not always needed.</p>
+
+<h4>Determining Affected Versions</h4>
+
+<p>It also can be a bit tricky to determine the earliest version affected
+    by a security bug. What I do is use 
+    <a href="http://bzr.mozilla.org/bugzilla/">Loggerhead's</a> "Files"
+    interface to find the place where the patched code was first introduced.
+    (That is, the code the Security bug is modifying.) Then, by looking at
+    the Changes log in Loggerhead, you can match that up with the dates on the
+    <a href="../releases/">Release Information</a> page.</p>
+    
+<h4>Getting it Reviewed</h4>
+
+<p>Security Advisories get sent to security&#64;bugzilla.org for review.
+    Allow at least two or three days for the members of the list to
+    respond.</p>
+
+<p>If you don't get a response after three or four days, that probably
+    means the advisory is fine. But still check with people on IRC and
+    get them to look at it.</p>
+
+<h3><a name="release_notes"></a>Release Notes</h3>
+
+<p>The actual process of writing Release Notes is described in the
+    <a href="../docs/releasenote.html">Release Noting Guide</a>. The
+    important thing to remember about Release Notes is that they should
+    be sent to reviewers&#64;bugzilla.org for comment. Give the list
+    about two days to respond.</p>
+
+<p>They should also be attached normally to the bug, and you should ask
+    some Documentation reviewer to look over them.</p>
+
+
+<h2><a name="right_before_release"></a>Right Before Release</h2>
+
+<p>Releasing Bugzilla can take a <em>long time</em>. I think the fastest I ever
+    did it was six hours. Start the process a day before you actually
+    want to release.</p> 
+
+<h3><a name="web_site_updates"></a>Web Site Updates</h3>
+
+<h4>Check Out From CVS</h4>
+
+<p>In order to update the website, the first thing you have to do is
+  check out its code from CVS. The best place to do this is on
+  <a href="https://landfill.bugzilla.org/">landfill</a>, because it
+  already has the environment set up to be able to fully build the website.
+  Make sure you have checkin access on cvs.mozilla.org.</p>
+
+<p>The CVS info is:</p>
+
+<p><kbd>CVSROOT=:ext:user%domain.com@cvs.mozilla.org:/www<br />
+  cvs -z3 checkout bugzilla-org</kbd></p>
+
+<p>Or, if you don't have checkin access, but you want to work on the web
+  site updates anyhow, the CVSROOT for anonymous access is:</p>
+
+<p><kbd>CVSROOT=:pserver:anonymous@cvs-mirror.mozilla.org:/www</kbd></p>
+
+<h4>Automatic Website Updater</h4>
+
+<p>There is now a script that does most of the web site updates for a release,
+  called <kbd>bin/do-release.pl</kbd> in the website checkout. You use it like
+  this:</p>
+
+<p><kbd>bin/do-release.pl --security=3.2.6 3.7.1 3.6.1 3.4.7 3.2.7</kbd></p>
+
+<p>That updates your local checkout as though you were going to do a release
+  of 3.7.1, 3.6.1, 3.4.7, and 3.2.7, with a security advisory where the lowest
+  <em>unfixed</em> version being fixed was 3.2.6.</p>
+
+<p>This script will update the files in your checkout appropriately for the
+  release, and will also print a lot of messages like "<kbd>** Remember to update 
+  some/file.html</kbd>". Those "remember" messages are files that are <em>not</em>
+  updated by the script, and will have to be updated by you. The updates that
+  need to be done to those files are described below in the "Manual Website
+  Updating" section below.</p>
+
+<p>Now, search the src/ directory for "FIXME": <kbd>grep -R src/ FIXME</kbd></p>
+
+<p>The results show places where you probably need to update the files. Some
+  of the FIXMEs are dates, and you don't know the date of the release yet, so
+  you can leave those as FIXME. But the other FIXMEs need to be fixed now.</p>
+
+<h4>Manual Website Updating</h4>
+
+<p>Before we had the automatic updater script, we used to do all the website
+  updates by hand. This section preserves the full instructions for how to
+  update the website for a release, in case you need to understand exactly
+  what the automatic script is doing, or in case you need to understand how
+  to update one of the files that the script doesn't update.</p>
+
+<ol>
+    <li>Create a directory for the Security Advisory. The directory is always
+        numbered by <em>the lowest <strong>unfixed</strong> version that is
+        being <strong>fixed</strong></em>. For example, if you release
+        versions 2.16.9, 2.18.1, and 2.19.3, and they all have a single
+        Security Advisory, the security advisory goes into the 2.16.8/ 
+        directory.</li>
+    
+    <li>For each new release, create a &quot;Release Info&quot; page:
+        <ul>
+            <li>Create a directory in the releases/ directory for 
+                the new release.</li>
+            <li>Copy over the index.html.tmpl file from the previous 
+                release on that branch.</li>
+            <li>Edit any links to point to the right place for the new
+                version.</li>
+            <li>Change any text that refers to the previous version to instead
+                refer to this version. This includes at least the title and
+                the text at the top.</li>
+            <li>Open Firefox and go to the branch
+                installation on landfill. Open up the release notes and
+                save them as &quot;Web Page, complete&quot;--this will
+                make all relative links into absolute links so that you
+                can copy the page to the website. Just remove the
+                Bugzilla page header and page footer, and you can
+                pase the code basically directly as the Release Notes
+                page.
+
+                <p>Do make sure that the <kbd>docs_urlbase</kbd> parameter
+                  on the branch installation points to the correct docs
+                  on bugzilla.org first, though.</p></li>
+            <li>Link to the appropriate new Security Advisory.</li>
+        </ul>
+    </li>
+    
+    <li>Update lib/releases-list.txt, which controls the main Release
+      Information page.</li>
+    
+    <li>Patch the /status/changes.html.tmpl to reflect the new releases.
+        If the patch has a &quot;FIXME&quot; date in it, remember 
+        to fix it!</li>
+
+    <li>Post the News announcement in /news/.</li>
+    
+    <li>Update the main index.html.tmpl to point to the new News item,
+        and remove the last News item from being listed on the main page.</li>
+    
+    <li>Now actually put the Security Advisory into the directory. You
+        could have done this earlier, but it usually takes a while to
+        get the Security Advisory complete and reviewed, so I put it last,
+        here.</li>
+
+    <li>Update security/index.html.tmpl to include a link to the new 
+        Security Advisory.</li>
+
+    <li>Update docs/index.html.tmpl to display the latest version numbers
+        for the links to the docs.</li>
+</ol>
+
+<p>And now you should be done with the web site update! Don't check in
+your changes to CVS yet -- that comes later.</p>
+
+<h3><a name="commit_security_bugs"></a>Check-In Security Bugs</h3>
+
+<p>Locate approved patches on Security bugs, and check them in now 
+    to CVS. If the person who wrote the patches is around, 
+    have them do it.</p>
+
+<p>Once you hit this point, you are committed to releasing, because
+    you've essentially exposed Security bugs publically without
+    a release that fixes them.</p>
+
+<h3><a name="freeze_the_tree"></a>Freeze the Tree</h3>
+
+<p>This is only here so that you remember to do it. Basically, just make
+    sure that from this point until after you post the tarballs, there
+    aren't any checkins to any branch, from anybody but you.</p>
+
+<h3><a name="update_versions"></a>Update Version Numbers</h3>
+
+<p>For each branch that you are releasing:
+
+<ol>
+    <li>Update Bugzilla/Constants.pm's BUGZILLA_VERSION variable.</li>
+    <li>Update docs/en/xml/Bugzilla-Guide.xml. bz-ver, bz-date,
+      bz-nextver, and current-year need to be updated. You may
+      also have to update landfillbase if you just branched.</li>
+    <li>For 4.3 and newer, instead of docs/en/xml/Bugzilla-Guide.xml
+      you need to update docss/bugzilla.ent.tmpl.</li>
+</ol>
+
+<h3><a name="tag_releases"></a>Tag the Releases in CVS and Bzr</h3>
+
+<p>Tagging releases in bzr is easy--after you update the version
+  number, just do <kbd>bzr tag bugzilla-version.number.here</kbd>
+  in a checkout that can write to the bzr.mozilla.org repository.</p>
+
+<p>For CVS, there is a script that can automatically tag releases for
+  you, in the website checkout, called <kbd>bin/tag-releases.pl</kbd>.
+  To use it, do: <kbd>bin/tag-releases.pl 3.7.1 3.6.1 3.4.7 3.2.7</kbd>
+  or whatever the appropriate version numbers are for your release.
+  It also has a <kbd>--dry-run</kbd> switch that you can use to
+  test your changes before you actually do the tagging.</p>
+
+<h3><a name="create_the_tarballs"></a>Create the Tarballs</h3>
+
+<p>First, wait about 5 minutes after you do the CVS tags.
+    This is because tarballs are pulled from cvs-mirror.mozilla.org, 
+    and you need to wait for that server to be updated with the tags.</p>
+    
+<p>There's a script for building Bugzilla tarballs,
+   in the <a href="http://bzr.mozilla.org/bugzilla/misc/build">misc/build
+   bzr repository</a>.</p> 
+
+<p>Just build a tarball for each release, using the version-specific
+    CVS or bzr tags that you made above. (Don't use the -BRANCH or _Stable
+    tags.)</p>
+
+<h3>Make the Diff Files</h3>
+
+<p>In addition to tarballs, you also need to generate the .diff files.
+    For this, you'll need an unpacked tarball of every Bugzilla release
+    from each series you're releasing against.</p>
+
+<p>There's a script called makediffs.pl in the 
+   <a href="http://bzr.mozilla.org/bugzilla/misc/build">misc/build
+   bzr repository</a> that will generate diff files for every
+   .tar.gz file in your current directory.</p>
+
+<p>Development versions don't need .diff files, and neither do
+    Release Candidates.</p>
+
+<h3><a name="update_checksetup_tinderbox"></a>Update the Checksetup
+    Tinderbox</h3>
+
+<p>There is a tinderbox that lives on cg-bugs01.mozilla.org for testing
+    checksetup.pl's upgrade ability. It does this by having a copy
+    of a populated database from every version.</p>
+
+<p>When you make a new release, you need to copy the &quot;_branch&quot;
+    or &quot;_tip&quot; database to a database named after the release.</p>
+
+<p>For example, for the 3.6.1 and 3.7.1 release, you might do this:</p>
+
+<pre>mysqlclone "-h landfill.bugzilla.org bugs_tip" bugs_3_7_1
+mysqlclone "-h landfill.bugzilla.org bugs_bugzilla3_6_branch" bugs_3_6_1
+pgclone bugs_tip bugs_3_7_1
+pgclone bugs_bugzilla3_6_branch bugs_3_6_1</pre>
+
+<p>I didn't make a 3.4.7 database, because 3.4.7 had no updates to
+    checksetup.pl (so it wasn't any different from the base 3.4, which I
+    already had a database for).</p>
+
+<p>Then the <kbd>/home/tinderbox/config-test-checksetup</kbd> files
+    also need to be updated. Find the db_list variable and add
+    the new databases to it. (The format of the variable is obvious
+    once you see it.)</p>
+
+<h2><a name="release"></a>Release</h2>
+    
+<h3><a name="post_the_files"></a>Post the Files</h3>
+
+<p>Using sftp or scp, upload the tarballs and .diff.gz files to
+  stage.mozilla.org, to the /pub/mozilla.org/webtools directory.</p>
+
+<p>Remember to fix the <code>bugzilla-LATEST</code> and 
+  <code>bugzilla-STABLE</code> symlinks, if necessary.</p>
+
+<p>Also verify that the uploaded files are world readable so that 
+  downloads
+  will work properly.</p>
+
+<h3><a name="commit_website"></a>Check-In the Website Updates</h3>
+
+<p>Now, you commit the changes you made to the website, above. Double-check
+    everything to make sure that all the dates and times are correct
+    anywhere that you had to put a date/time.</p>
+
+<h3><a name="send_security_advisory"></a>Send Security Advisory</h3>
+
+<p>Double-check the Security Advisory before you send it. Make
+    sure that any links you have in the Advisory actually work.</p>
+
+<p>Usually, we GPG sign the Security Advisory with a key that
+   has its public half available from either public keyservers
+   or the bugzilla.org website.</p>
+
+<p>The Security Advisory is sent to:</p>
+
+<ul>
+    <li><a href="http://www.securityfocus.com/archive/post/1">BugTraq</a></li>
+    <li>announce&#64;bugzilla.org</li>
+    <li>support-bugzilla&#64;lists.mozilla.org</li>
+</ul>
+
+<p>Send each as a <em>separate email</em>. This is because you will
+    get a lot of bounce messages, and you don't want them to be
+    spread around to the other lists. (Some things sending bounce
+    messages are really stupid and will attempt to do this.)</p>
+
+<h3><a name="send_release_announcement"></a>Send Release Announcement</h3>
+    
+<p>This is the Release Announcement that you created on the
+    <a href="#file_bugs">bug that you filed</a>.</p>
+
+<p>Make sure that you put <kbd>[ANN]</kbd> at the beginning of
+ the Subject line.</p>
+    
+<p>Send it to:
+
+<ul>
+    <li>announce&#64;bugzilla.org</li>
+    <li>support-bugzilla&#64;lists.mozilla.org</li>
+</ul>
+
+<p>Once again, send each as a separate email.</p>
+
+<h2>Post-Release</h2>
+        
+<p>Stuff you do after you've posted the release and sent the 
+    announcements:</p>
+
+<ol>
+    <li>Unlock the Security Bugs. Just remove them from the bugzilla-security
+        group.</li>
+    <li>Update <a href="http://freshmeat.net/projects/bugzilla/">FreshMeat</a></li>
+    <li>Update the VERSION number in Bugzilla/Constants.pm on each branch,
+      to have a &quot;+&quot; after it.</li>
+    <li>Update bugzilla-update.xml on landfill so that the notification
+      system will detect new releases.</li>
+</ol>

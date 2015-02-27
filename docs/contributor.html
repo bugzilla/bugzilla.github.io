@@ -1,0 +1,128 @@
+[%# Who We Are %]
+[%
+	title = "Contributors' Guide"
+%]
+<h1>Contributors' Guide</h1>
+<ul>
+	<li><a href="#cvs">Developing against CVS</a></li>
+	<li><a href="#licensing">Licensing</a></li>
+	<li><a href="#submitting-patches">Submitting patches</a></li>
+	<li><a href="#keep-it-simple">Simple patches</a></li>
+	<li><a href="#review">Patches Need Review</a></li>
+</ul>
+<p>If you are intending on contributing your changes back to the Bugzilla
+   project, there are certain things you should be aware of, in order to make
+   this process smoother for all involved parties.</p>
+
+
+
+
+<a name="cvs"></a>
+<h1>Developing Against CVS</h1>
+<p>Having a copy of the latest development code from our CVS repository
+   will help you make patches that  are  more up to date with the current
+   Bugzilla code. Things get added, removed, and changed. The later the
+   version of Bugzilla you are making patches against, the easier it will be to
+   integrate your patches into Bugzilla.</p>
+               
+
+
+
+<a name="licensing"></a>
+<h1>Licensing</h1>
+<p>When introducing completely new Perl code or template files, they must be
+   licensed under the Mozilla Public License, and must have the appropriate
+   license headers. Please see the existing files for examples.</p>
+<p>When modifying an existing file, please add yourself to the contributors
+   list near the top of the file.</p>
+
+
+
+
+<a name="submitting-patches"></a>
+<h1>Submitting Your Patch</h1>
+<ul>
+  <li>All patches submitted for inclusion into Bugzilla should be in the form
+      of a "unified diff". This comes from using
+      <span class="shell-command">diff -u</span> instead of simply
+      <span class="shell-command">diff</span> when creating your patch. This
+      will result in an easier-to-read and easier-to-review patch, and thus 
+      quicker acceptance of the patch.</li>
+  <li>Recursive patches should be generated in the base Bugzilla directory,
+      if you are using CVS.  If you aren't and this isn't possible, please
+      specify the -p setting with your patch's attachment comment.</li>
+  <li>You need an account on bugzilla.mozilla.org before you can submit bugs
+      and attach patches.</li>
+  <li>First, please search bugzilla.mozilla.org, product "Bugzilla" to see if
+      there is a bug report for the bug or RFE you are fixing. If there isn't,
+      create one.</li>
+  <li>Before attaching your patch, test it yourself for correct functionality,
+      run ./runtests.sh.  If your patch changes UI, also check the html pages
+      it generates for valid html.</li>
+  <li>Attach the patch(es) to the bug report and raise a <a
+       href="#review">review request</a> for your patch by setting
+      its &quot;review&quot; flag to "?" and note in the bug to what
+      degree you have tested the patch.</li>
+  <li>Your patch will now wait for reviewers to evaluate it. If it is not
+      receiving attention fast enough, feel free to ask about its progress on
+      the bug or <a href="https://wiki.mozilla.org/Bugzilla:Communicate">IRC 
+      (irc.mozilla.org #mozwebtools)</a>. However, please remember
+      the Bugzilla team's resources are limited and we have a lot to do, so
+      review will often take a while. If your reviewer doesn't respond within
+      a week or two, pick another appropriate reviewer from the 
+      <a href="reviewer-list.html">Reviewers List</a>.</li>
+  <li>Even if you have check in access to cvs.mozilla.org, you shouldn't check
+      in your patch until the <a href="#review">review process</a> is complete.
+      "Complete" means it
+      has both successful "review" and "approval" requests, and there are no
+      other reasons that have been mentioned on the bug why it shouldn't be
+      checked in now.</li>
+  <li>For more information on what we will be looking at during the review 
+      process, please see the 
+      <a href="reviewer.html">Reviewers' Guide</a>.</li>
+</ul>
+                 
+
+
+
+<a name="keep-it-simple"></a>
+<h1>Simple Patches</h1>
+<p>It is a good idea to split your changes up into multiple simple patches. Simple patches are easier to review, because:</p>
+<ul>
+  <li>there is more locality between similar changes, meaning less scrolling and hunting for code</li>
+  <li>the whole patch can be dedicated to just one issue, making reviewing a simpler mental task by reducing the number of mental context switches and improving the likelihood of finding problems with the patches</li>
+  <li>they can be reviewed and checked in separately, meaning only one part has to be remade if it gets a negative review, and meaning less code will get stale waiting around for a subsequent review</li>
+  <li> simple patches can be easily reviewed in small blocks of time, if that's all the reviewer has at the time</li>
+</ul>
+<p>Not splitting patches into separate simple patches is very tempting for all developers. They have completed our work, and they attach it. It is the easiest thing to do.</p>
+<p>But it is not the easiest thing for the reviewer. And Bugzilla has a much bigger problem getting enough review than it does development. So moving work from the reviewer to the developer is probably a good idea. And in the end, getting the code in ASAP is what's usually important for the developer.</p>
+<p>It is very easy as a developer to neglect the fact that reviewers come in with no context, and orienting yourself to someone else's code can be difficult. What seems like a simple patch to the code's developer, can be difficult to someone trying to do a thorough review.</p>
+<p>Generally, simpler equates with smaller, but not always. A small patch that does ten different things is likely a lot more complex than a big one that does the same thing in 100 different places.</p>
+<p>Not everything can be split up into simple patches. The first guideline of simple patches to follow is that no patch should break things. So often, this means patches cannot be simple.</p>
+<p>The second guideline is that multiple independent changes should go in separate patches. Patches should usually be split up based on what you're doing rather than in what files you're doing it in.</p>
+<p>It is not always possible to find multiple independent changes to make into independent patches. Often we must have a set of patches, where certain patches must be applied before others, and we should not neglect this possibility - it is still easier to review than one complex patch.</p>
+<p>When you are creating separate patches, make each one a separate attachment on the bug report.</p>
+ 
+
+
+
+<a name="reviewers"></a> <!-- The old name, kept around for old links. -->
+<a name="review"></a>
+<h1>Patches Need Review</h1>
+
+<p>So, you have a patch, it's small, and you've posted it to the right bug.</p>
+
+<p>Now you need somebody to review it!</p>
+
+<p>Take a look at the <a href="reviewer-list.html">Reviewers List</a>, and
+find the right person to review your patch. (The list itself explains how
+to pick the right reviewer.)</p>
+
+<p>Then, request that person to review your patch. (Click Edit next to the 
+patch, change the review flag to &quot;?&quot;, then add their name 
+to the right.)</p>
+
+<p>Once you've obtained a positive review on your patch, you can request 
+&quot;approval&quot; on the bug itself to get it in the queue to 
+be checked in.</p>
+
