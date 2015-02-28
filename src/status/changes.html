@@ -13,93 +13,94 @@ please choose one of the following:
 <table><tr>
 <td>
 <table class="changelist">
+[% SET branch = 'master' %]
 <tr><td><b>Development (trunk):</b></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.6' t='' %]">4.5.6 &rarr; today</a></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.5' t='4.5.6' %]">4.5.5 &rarr; 4.5.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.4' t='4.5.5' %]">4.5.4 &rarr; 4.5.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.3' t='4.5.4' %]">4.5.3 &rarr; 4.5.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.2' t='4.5.3' %]">4.5.2 &rarr; 4.5.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.1' t='4.5.2' %]">4.5.1 &rarr; 4.5.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.3.3' t='4.5.1' %]">4.3.3/4.5 &rarr; 4.5.1</a></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
+<tr><td><a href="[% PROCESS query f='4.3.2' t='4.3.3' %]">4.3.2 &rarr; 4.3.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.3.1' t='4.3.2' %]">4.3.1 &rarr; 4.3.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.1.3' t='4.3.1' %]">4.1.3/4.3 &rarr; 4.3.1</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2014-07-24+14:00' t='2014-10-06+13:00' %]">4.5.5 &rarr; 4.5.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-04-18+15:00' t='2014-07-24+14:00' %]">4.5.4 &rarr; 4.5.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-04-17+11:00' t='2014-04-18+15:00' %]">4.5.3 &rarr; 4.5.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-01-27+15:00' t='2014-04-17+11:00' %]">4.5.2 &rarr; 4.5.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2013-10-17+04:00' t='2014-01-27+15:00' %]">4.5.1 &rarr; 4.5.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-08-30+13:00' t='2013-10-17+04:00' %]">4.3.3/4.5 &rarr; 4.5.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.1.2' t='4.1.3' %]">4.1.2 &rarr; 4.1.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.1.1' t='4.1.2' %]">4.1.1 &rarr; 4.1.2</a></td></tr>
 <tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.7.2' t='4.1.1' %]">3.7.2/4.1 &rarr; 4.1.1</a></td></tr>
+<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
+<tr><td><a href="[% PROCESS query f='3.7.1' t='3.7.2' %]">3.7.1 &rarr; 3.7.2</a></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.5.3' t='3.7.1' %]">3.5.3/3.7 &rarr; 3.7.1</a></td></tr>
+<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
+<tr><td><a href="[% PROCESS query f='3.5.2' t='3.5.3' %]">3.5.2 &rarr; 3.5.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.5.1' t='3.5.2' %]">3.5.1 &rarr; 3.5.2</a></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.3.4'  t='3.5.1' %]">3.3.4/3.5 &rarr; 3.5.1</a></td></tr>
+<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
+<tr><td><a href="[% PROCESS query f='3.3.3'  t='3.3.4' %]">3.3.3 &rarr; 3.3.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.3.2'  t='3.3.3' %]">3.3.2 &rarr; 3.3.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.3.1'  t='3.3.2' %]">3.3.1 &rarr; 3.3.2</a></td></tr>
+<tr><td></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.1.4'  t='3.3.1' %]">3.1.4 &rarr; 3.3.1</a></td></tr>
 <tr><td></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2012-07-26+15:00' t='2012-08-30+13:00' %]">4.3.2 &rarr; 4.3.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-04-18+14:00' t='2012-07-26+15:00' %]">4.3.1 &rarr; 4.3.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-08-04+18:05' t='2012-04-18+14:00' %]">4.1.3/4.3 &rarr; 4.3.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.1.3'  t='3.1.4' %]">3.1.3 &rarr; 3.1.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.1.2'  t='3.1.3' %]">3.1.2 &rarr; 3.1.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.1.1'  t='3.1.2' %]">3.1.1 &rarr; 3.1.2</a></td></tr>
 <tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0rc1'  t='3.1.1' %]">3.0rc1/3.1 &rarr; 3.1.1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2011-04-27+19:30' t='2011-08-04+18:05' %]">4.1.2 &rarr; 4.1.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-03-13+23:30' t='2011-04-27+19:30' %]">4.1.1 &rarr; 4.1.2</a></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-07-05+19:40' t='2011-03-13+23:30' %]">3.7.2/4.1 &rarr; 4.1.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.23.4'  t='3.0rc1' %]">2.23.4 &rarr; 3.0rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.23.3'  t='2.23.4' %]">2.23.3 &rarr; 2.23.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.23.2'  t='2.23.3' %]">2.23.2 &rarr; 2.23.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.23.1'  t='2.23.2' %]">2.23.1 &rarr; 2.23.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22rc1' t='2.23.1' %]">2.22rc1/2.23 &rarr; 2.23.1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2010-06-24+14:40' t='2010-07-05+19:40' %]">3.7.1 &rarr; 3.7.2</a></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-01-31+17:30' t='2010-06-24+14:40' %]">3.5.3/3.7 &rarr; 3.7.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.21.1'  t='2.22rc1' %]">2.21.1 &rarr; 2.22rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20rc1' t='2.21.1' %]">2.20rc1/2.21 &rarr; 2.21.1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2009-11-18+18:30' t='2010-01-31+17:30' %]">3.5.2 &rarr; 3.5.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-11-05+06:20' t='2009-11-18+18:30' %]">3.5.1 &rarr; 3.5.2</a></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-03-30+17:20' t='2009-11-05+06:20' %]">3.3.4/3.5 &rarr; 3.5.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.19.3'  t='2.20rc1' %]">2.19.3 &rarr; 2.20rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.19.2'  t='2.19.3' %]">2.19.2 &rarr; 2.19.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.19.1'  t='2.19.2' %]">2.19.1 &rarr; 2.19.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18rc1' t='2.19.1' %]">2.18rc1/2.19 &rarr; 2.19.1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-03+02:20' t='2009-03-30+17:20' %]">3.3.3 &rarr; 3.3.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-02+16:30' t='2009-02-03+02:20' %]">3.3.2 &rarr; 3.3.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-01-06+00:00' t='2009-02-02+16:30' %]">3.3.1 &rarr; 3.3.2</a></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-05-20 13:00' t='2009-01-06+00:00' %]">(branch) &rarr; 3.3.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-05-04+19:45' t='2008-05-20 13:00' %]">3.1.4 &rarr; (branch)</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.7'  t='2.18rc1' %]">2.17.7 &rarr; 2.18rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.6'  t='2.17.7' %]">2.17.6 &rarr; 2.17.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.5'  t='2.17.6' %]">2.17.5 &rarr; 2.17.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.4'  t='2.17.5' %]">2.17.4 &rarr; 2.17.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.3'  t='2.17.4' %]">2.17.3 &rarr; 2.17.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.17.1'  t='2.17.3' %]">2.17.1 &rarr; 2.17.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16rc1' t='2.17.1' %]">2.16rc1/2.17 &rarr; 2.17.1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2008-02-01+16:40' t='2008-05-04+19:45' %]">3.1.3 &rarr; 3.1.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-09-18+18:15' t='2008-02-01+16:40' %]">3.1.2 &rarr; 3.1.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-08-23+12:45' t='2007-09-18+18:15' %]">3.1.1 &rarr; 3.1.2</a></td></tr>
-<tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-02-26+00:30' t='2007-08-23+12:45' %]">3.0rc1/3.1 &rarr; 3.1.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14'    t='2.16rc1' %]">2.14 &rarr; 2.16rc1</a></td></tr>
 <tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2007-02-02+15:30' t='2007-02-26+00:30' %]">2.23.4 &rarr; 3.0rc1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-10-15+2:30' t='2007-02-02+15:30' %]">2.23.3 &rarr; 2.23.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-07-09+17:00' t='2006-10-15+2:30' %]">2.23.2 &rarr; 2.23.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-04-22+20:00' t='2006-07-09+17:00' %]">2.23.1 &rarr; 2.23.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-02-21+00:00' t='2006-04-22+20:00' %]">2.22rc1/2.23 &rarr; 2.23.1</a></td></tr>
-<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2005-09-30+19:00' t='2006-02-21+00:00' %]">2.21.1 &rarr; 2.22rc1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-07-07+23:30' t='2005-09-30+19:00' %]">2.20rc1/2.21 &rarr; 2.21.1</a></td></tr>
-<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2005-05-11+20:00' t='2005-07-07+23:30' %]">2.19.3 &rarr; 2.20rc1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-01-15+04:00' t='2005-05-11+20:00' %]">2.19.2 &rarr; 2.19.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-10-25+01:00' t='2005-01-15+04:00' %]">2.19.1 &rarr; 2.19.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-07-11+00:00' t='2004-10-25+01:00' %]">2.18rc1/2.19 &rarr; 2.19.1</a></td></tr>
-<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2004-03-04+00:00' t='2004-07-11+00:00' %]">2.17.7 &rarr; 2.18rc1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-11-03+00:00' t='2004-03-04+00:00' %]">2.17.6 &rarr; 2.17.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-11-03+00:00' t='2003-11-10+00:00' %]">2.17.5 &rarr; 2.17.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-04-25+00:00' t='2003-11-03+00:00' %]">2.17.4 &rarr; 2.17.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-01-03+00:00' t='2003-04-25+00:00' %]">2.17.3 &rarr; 2.17.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-11-25+00:00' t='2003-01-03+00:00' %]">2.17.1 &rarr; 2.17.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-05-09+00:00' t='2002-11-25+00:00' %]">2.16rc1/2.17 &rarr; 2.17.1</a></td></tr>
-<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2001-08-29+13:00' t='2002-05-09+00:00' %]">2.14 &rarr; 2.16rc1</a></td></tr>
-<tr><td style="text-align: right;">&uarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
-<tr><td><a href="[% PROCESS query f='2001-04-25+12:00' t='2001-08-29+13:00' %]">2.12 &rarr; 2.14</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2000-05-08+13:00' t='2001-04-25+12:00' %]">2.10 &rarr; 2.12</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1999-11-19+15:56:28' t='2000-05-08+13:00' %]">2.8 &rarr; 2.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1999-08-30+23:02:22' t='1999-11-19+15:56:28' %]">2.6 &rarr; 2.8</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1999-04-30+19:42:25' t='1999-08-30+23:02:22' %]">2.4 &rarr; 2.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1999-02-10+14:12:00' t='1999-04-30+19:42:25' %]">2.2 &rarr; 2.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1998-09-18+23:07:00' t='1999-02-10+14:11:30' %]">2.0 &rarr; 2.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='1998-08-25+23:10:00' t='1998-09-18+23:07:00' %]">birth &rarr; 2.0</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.12'    t='2.14' %]">2.12 &rarr; 2.14</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.10'    t='2.12' %]">2.10 &rarr; 2.12</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.8'     t='2.10' %]">2.8 &rarr; 2.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.6'     t='2.8' %]">2.6 &rarr; 2.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.4'     t='2.6' %]">2.4 &rarr; 2.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.2'     t='2.4' %]">2.2 &rarr; 2.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.0'     t='2.2' %]">2.0 &rarr; 2.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f=''        t='2.0' %]">birth &rarr; 2.0</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -114,9 +115,9 @@ please choose one of the following:
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td><b>5.0 branch:</b></td></tr>
-<tr><td><a href="[% PROCESS query_git %]">5.0rc2 &rarr; today</a></td></tr>
-<tr><td><a href="[% PROCESS query_git %]">5.0rc1 &rarr; 5.0rc2</a></td></tr>
-<tr><td><a href="[% PROCESS query_git %]">4.5.6 &rarr; 5.0rc1</td></tr>
+<tr><td><a href="[% PROCESS query f='5.0rc2' t='' %]">5.0rc2 &rarr; today</a></td></tr>
+<tr><td><a href="[% PROCESS query f='5.0rc1' t='5.0rc2' %]">5.0rc1 &rarr; 5.0rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.5.6'  t='5.0rc1' %]">4.5.6 &rarr; 5.0rc1</td></tr>
 <tr><td style="text-align: left;">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -199,18 +200,18 @@ please choose one of the following:
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td><b>4.4 branch:</b></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = '' %]">4.4.8 &rarr; today</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8753 %]">4.4.7 &rarr; 4.4.8</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8748 %]">4.4.6 &rarr; 4.4.7</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8728 %]">4.4.5 &rarr; 4.4.6</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8708 %]">4.4.4 &rarr; 4.4.5</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8682 %]">4.4.3 &rarr; 4.4.4</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8678 %]">4.4.2 &rarr; 4.4.3</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8653 %]">4.4.1 &rarr; 4.4.2</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8629 %]">4.4 &rarr; 4.4.1</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8560 %]">4.4rc2 &rarr; 4.4</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8526 %]">4.4rc1 &rarr; 4.4rc2</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8456 %]">4.3.3 &rarr; 4.4rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.8'  t='' %]">4.4.8 &rarr; today</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.7'  t='4.4.8' %]">4.4.7 &rarr; 4.4.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.6'  t='4.4.7' %]">4.4.6 &rarr; 4.4.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.5'  t='4.4.6' %]">4.4.5 &rarr; 4.4.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.4'  t='4.4.5' %]">4.4.4 &rarr; 4.4.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.3'  t='4.4.4' %]">4.4.3 &rarr; 4.4.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.2'  t='4.4.3' %]">4.4.2 &rarr; 4.4.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4.1'  t='4.4.2' %]">4.4.1 &rarr; 4.4.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4'    t='4.4.1' %]">4.4 &rarr; 4.4.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4rc2' t='4.4' %]">4.4rc2 &rarr; 4.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.4rc1' t='4.4rc2' %]">4.4rc1 &rarr; 4.4rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.3.3'  t='4.4rc1' %]">4.3.3 &rarr; 4.4rc1</a></td></tr>
 <tr><td style="text-align: left;">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -283,25 +284,25 @@ please choose one of the following:
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td><b>4.2 branch:</b></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = '' %]">4.2.13 &rarr; today</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8285 %]">4.2.12 &rarr; 4.0.13</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8281 %]">4.2.11 &rarr; 4.2.12</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8271 %]">4.2.10 &rarr; 4.2.11</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8264 %]">4.2.9 &rarr; 4.2.10</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8251 %]">4.2.8 &rarr; 4.2.9</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8247 %]">4.2.7 &rarr; 4.2.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.13' t='' %]">4.2.13 &rarr; today</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.12' t='4.0.13' %]">4.2.12 &rarr; 4.0.13</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.11' t='4.2.12' %]">4.2.11 &rarr; 4.2.12</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.10' t='4.2.11' %]">4.2.10 &rarr; 4.2.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.9'  t='4.2.10' %]">4.2.9 &rarr; 4.2.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.8'  t='4.2.9' %]">4.2.8 &rarr; 4.2.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.7'  t='4.2.8' %]">4.2.7 &rarr; 4.2.8</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8235 %]">4.2.6 &rarr; 4.2.7</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8216 %]">4.2.5 &rarr; 4.2.6</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8193 %]">4.2.4 &rarr; 4.2.5</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8170 %]">4.2.3 &rarr; 4.2.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.6'  t='4.2.7' %]">4.2.6 &rarr; 4.2.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.5'  t='4.2.6' %]">4.2.5 &rarr; 4.2.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.4'  t='4.2.5' %]">4.2.4 &rarr; 4.2.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.3'  t='4.2.4' %]">4.2.3 &rarr; 4.2.4</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8133 %]">4.2.2 &rarr; 4.2.3</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8109 %]">4.2.1 &rarr; 4.2.2</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8082 %]">4.2 &rarr; 4.2.1</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8032 %]">4.2rc2 &rarr; 4.2</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 8022 %]">4.2rc1 &rarr; 4.2rc2</a></td></tr>
-<tr><td><a href="[% PROCESS query_bzr rev = 7992 %]">4.1.3 &rarr; 4.2rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.2'  t='4.2.3' %]">4.2.2 &rarr; 4.2.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2.1'  t='4.2.2' %]">4.2.1 &rarr; 4.2.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2'    t='4.2.1' %]">4.2 &rarr; 4.2.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2rc2' t='4.2' %]">4.2rc2 &rarr; 4.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.2rc1' t='4.2rc2' %]">4.2rc1 &rarr; 4.2rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.1.3'  t='4.2rc1' %]">4.1.3 &rarr; 4.2rc1</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -364,36 +365,36 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-4_0-BRANCH' %]
+[% SET branch = '4.0' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td><b>4.0 branch:</b></td></tr>
-<tr><td><a href="[% PROCESS query f='2015-01-27+16:27' t='' %]">4.0.17 &rarr; today</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2015-01-21+17:28' t='2015-01-27+16:27' %]">4.0.16 &rarr; 4.0.17</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-10-06+13:00' t='2015-01-21+17:28' %]">4.0.15 &rarr; 4.0.16</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-07-24+14:00' t='2014-10-06+13:00' %]">4.0.14 &rarr; 4.0.15</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-04-18+15:00' t='2014-07-24+14:00' %]">4.0.13 &rarr; 4.0.14</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2014-04-17+11:00' t='2014-04-18+15:00' %]">4.0.12 &rarr; 4.0.13</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2013-10-16+14:00' t='2014-04-17+15:00' %]">4.0.11 &rarr; 4.0.12</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.17' t='' %]">4.0.17 &rarr; today</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.16' t='4.0.17' %]">4.0.16 &rarr; 4.0.17</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.15' t='4.0.16' %]">4.0.15 &rarr; 4.0.16</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.14' t='4.0.15' %]">4.0.14 &rarr; 4.0.15</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.13' t='4.0.14' %]">4.0.13 &rarr; 4.0.14</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.12' t='4.0.13' %]">4.0.12 &rarr; 4.0.13</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.11' t='4.0.12' %]">4.0.11 &rarr; 4.0.12</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2013-02-19+11:00' t='2013-10-16+14:00' %]">4.0.10 &rarr; 4.0.11</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-11-13+13:00' t='2013-02-19+11:00' %]">4.0.9 &rarr; 4.0.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-08-30+13:00' t='2012-11-13+13:00' %]">4.0.8 &rarr; 4.0.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.10' t='4.0.11' %]">4.0.10 &rarr; 4.0.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.9'  t='4.0.10' %]">4.0.9 &rarr; 4.0.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.8'  t='4.0.9' %]">4.0.8 &rarr; 4.0.9</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-07-26+15:00' t='2012-08-30+13:00' %]">4.0.7 &rarr; 4.0.8</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-04-18+12:00' t='2012-07-26+15:00' %]">4.0.6 &rarr; 4.0.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-02-22+10:10' t='2012-04-18+12:00' %]">4.0.5 &rarr; 4.0.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-01-31+10:00' t='2012-02-22+10:10' %]">4.0.4 &rarr; 4.0.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-12-28+15:20' t='2012-01-31+10:00' %]">4.0.3 &rarr; 4.0.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-08-04+17:30' t='2011-12-28+15:20' %]">4.0.2 &rarr; 4.0.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.7'  t='4.0.8' %]">4.0.7 &rarr; 4.0.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.6'  t='4.0.7' %]">4.0.6 &rarr; 4.0.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.5'  t='4.0.6' %]">4.0.5 &rarr; 4.0.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.4'  t='4.0.5' %]">4.0.4 &rarr; 4.0.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.3'  t='4.0.4' %]">4.0.3 &rarr; 4.0.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.2'  t='4.0.3' %]">4.0.2 &rarr; 4.0.3</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-04-27+19:30' t='2011-08-04+17:30' %]">4.0.1 &rarr; 4.0.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-02-15+09:30' t='2011-04-27+19:30' %]">4.0 &rarr; 4.0.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-01-24+16:00' t='2011-02-15+09:30' %]">4.0rc2 &rarr; 4.0</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-11-02+18:05' t='2011-01-24+16:00' %]">4.0rc1 &rarr; 4.0rc2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-08-05+19:20' t='2010-11-02+18:05' %]">3.7.3 &rarr; 4.0rc1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-07-08+10:00' t='2010-08-05+19:20' %]">3.7.2 &rarr; 3.7.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0.1'  t='4.0.2' %]">4.0.1 &rarr; 4.0.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0'    t='4.0.1' %]">4.0 &rarr; 4.0.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0rc2' t='4.0' %]">4.0rc2 &rarr; 4.0</a></td></tr>
+<tr><td><a href="[% PROCESS query f='4.0rc1' t='4.0rc2' %]">4.0rc1 &rarr; 4.0rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.7.3'  t='4.0rc1' %]">3.7.3 &rarr; 4.0rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.7.2'  t='3.7.3' %]">3.7.2 &rarr; 3.7.3</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -449,7 +450,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-3_6-BRANCH' %]
+[% SET branch = '3.6' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -462,28 +463,28 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>3.6 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2013-02-19+11:00' t='' %]">3.6.13 &rarr; 3.6.13+</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-11-13+13:00' t='2013-02-19+11:00' %]">3.6.12 &rarr; 3.6.13</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-08-30+13:00' t='2012-11-13+13:00' %]">3.6.11 &rarr; 3.6.12</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.13' t='' %]">3.6.13 &rarr; 3.6.13+</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.12' t='3.6.13' %]">3.6.12 &rarr; 3.6.13</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.11' t='3.6.12' %]">3.6.11 &rarr; 3.6.12</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-07-26+15:00' t='2012-08-30+13:00' %]">3.6.10 &rarr; 3.6.11</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-04-18+12:00' t='2012-07-26+15:00' %]">3.6.9 &rarr; 3.6.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2012-01-31+10:00' t='2012-04-18+12:00' %]">3.6.8 &rarr; 3.6.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.10' t='3.6.11' %]">3.6.10 &rarr; 3.6.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.9'  t='3.6.10' %]">3.6.9 &rarr; 3.6.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.8'  t='3.6.9' %]">3.6.8 &rarr; 3.6.9</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-12-28+15:20' t='2012-01-31+10:00' %]">3.6.7 &rarr; 3.6.8</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-08-04+17:30' t='2011-12-28+15:20' %]">3.6.6 &rarr; 3.6.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.7'  t='3.6.8' %]">3.6.7 &rarr; 3.6.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.6'  t='3.6.7' %]">3.6.6 &rarr; 3.6.7</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-04-27+19:30' t='2011-08-04+17:30' %]">3.6.5 &rarr; 3.6.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.5'  t='3.6.6' %]">3.6.5 &rarr; 3.6.6</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-01-24+16:00' t='2011-04-27+19:30' %]">3.6.4 &rarr; 3.6.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-11-02+18:05' t='2011-01-24+16:00' %]">3.6.3 &rarr; 3.6.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-08-05+19:20' t='2010-11-02+18:05' %]">3.6.2 &rarr; 3.6.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.4'  t='3.6.5' %]">3.6.4 &rarr; 3.6.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.3'  t='3.6.4' %]">3.6.3 &rarr; 3.6.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.2'  t='3.6.3' %]">3.6.2 &rarr; 3.6.3</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-06-24+14:40' t='2010-08-05+19:20' %]">3.6.1 &rarr; 3.6.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-04-13+04:00' t='2010-06-24+14:40' %]">3.6 &rarr; 3.6.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-03-08+00:15' t='2010-04-13+04:00' %]">3.6rc1 &rarr; 3.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-01-31+17:30' t='2010-03-08+00:15' %]">3.5.3 &rarr; 3.6rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6.1'  t='3.6.2' %]">3.6.1 &rarr; 3.6.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6'    t='3.6.1' %]">3.6 &rarr; 3.6.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.6rc1' t='3.6' %]">3.6rc1 &rarr; 3.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.5.3'  t='3.6rc1' %]">3.5.3 &rarr; 3.6rc1</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -534,7 +535,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-3_4-BRANCH' %]
+[% SET branch = '3.4' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -555,28 +556,28 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>3.4 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2011-12-28+15:20' t='2012-01-31+10:00' %]">3.4.13 &rarr; 3.4.14</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-08-04+17:30' t='2011-12-28+15:20' %]">3.4.12 &rarr; 3.4.13</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.13' t='3.4.14' %]">3.4.13 &rarr; 3.4.14</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.12' t='3.4.13' %]">3.4.12 &rarr; 3.4.13</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-04-27+19:30' t='2011-08-04+17:30' %]">3.4.11 &rarr; 3.4.12</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.11' t='3.4.12' %]">3.4.11 &rarr; 3.4.12</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2011-01-24+16:00' t='2011-04-27+19:30' %]">3.4.10 &rarr; 3.4.11</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-11-02+18:05' t='2011-01-24+16:00' %]">3.4.9 &rarr; 3.4.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-08-05+19:20' t='2010-11-02+18:05' %]">3.4.8 &rarr; 3.4.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.10' t='3.4.11' %]">3.4.10 &rarr; 3.4.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.9'  t='3.4.10' %]">3.4.9 &rarr; 3.4.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.8'  t='3.4.9' %]">3.4.8 &rarr; 3.4.9</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-06-24+14:40' t='2010-08-05+19:20' %]">3.4.7 &rarr; 3.4.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.7'  t='3.4.8' %]">3.4.7 &rarr; 3.4.8</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-03-08+00:15' t='2010-06-24+14:40' %]">3.4.6 &rarr; 3.4.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-01-31+17:30' t='2010-03-08+00:15' %]">3.4.5 &rarr; 3.4.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.6'  t='3.4.7' %]">3.4.6 &rarr; 3.4.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.5'  t='3.4.6' %]">3.4.5 &rarr; 3.4.6</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-11-18+18:30' t='2010-01-31+17:30' %]">3.4.4 &rarr; 3.4.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-11-05+06:20' t='2009-11-18+18:30' %]">3.4.3 &rarr; 3.4.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-09-11+10:20' t='2009-11-05+06:20' %]">3.4.2 &rarr; 3.4.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-08-01+07:55' t='2009-09-11+10:20' %]">3.4.1 &rarr; 3.4.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-07-28+02:00' t='2009-08-01+07:55' %]">3.4 &rarr; 3.4.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-07-08+07:25' t='2009-07-28+02:00' %]">3.4rc1 &rarr; 3.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-03-30+17:20' t='2009-07-08+07:25' %]">3.3.4 &rarr; 3.4rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.4'  t='3.4.5' %]">3.4.4 &rarr; 3.4.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.3'  t='3.4.4' %]">3.4.3 &rarr; 3.4.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.2'  t='3.4.3' %]">3.4.2 &rarr; 3.4.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4.1'  t='3.4.2' %]">3.4.1 &rarr; 3.4.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4'    t='3.4.1' %]">3.4 &rarr; 3.4.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.4rc1' t='3.4' %]">3.4rc1 &rarr; 3.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.3.4'  t='3.4rc1' %]">3.3.4 &rarr; 3.4rc1</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -619,7 +620,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-3_2-BRANCH' %]
+[% SET branch = '3.2' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -645,31 +646,31 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>3.2 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2011-01-24+16:00' t='' %]">3.2.10 &rarr; 3.2.10+</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-11-02+18:05' t='2011-01-24+16:00' %]">3.2.9 &rarr; 3.2.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-08-05+19:20' t='2010-11-02+18:05' %]">3.2.8 &rarr; 3.2.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.10' t='' %]">3.2.10 &rarr; 3.2.10+</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.9'  t='3.2.10' %]">3.2.9 &rarr; 3.2.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.8'  t='3.2.9' %]">3.2.8 &rarr; 3.2.9</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-06-24+14:40' t='2010-08-05+19:20' %]">3.2.7 &rarr; 3.2.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.7'  t='3.2.8' %]">3.2.7 &rarr; 3.2.8</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2010-01-31+17:30' t='2010-06-24+14:40' %]">3.2.6 &rarr; 3.2.7</a></td></tr>
-<tr><td></td></tr>
-<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.6'  t='3.2.7' %]">3.2.6 &rarr; 3.2.7</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-09-11+10:20' t='2010-01-31+17:30' %]">3.2.5 &rarr; 3.2.6</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-07-08+07:25' t='2009-09-11+10:20' %]">3.2.4 &rarr; 3.2.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-03-30+17:20' t='2009-07-08+07:25' %]">3.2.3 &rarr; 3.2.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.5'  t='3.2.6' %]">3.2.5 &rarr; 3.2.6</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-03+02:20' t='2009-03-30+17:20' %]">3.2.2 &rarr; 3.2.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-02+16:30' t='2009-02-03+02:20' %]">3.2.1 &rarr; 3.2.2</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-11-29+18:30' t='2009-02-02+16:30' %]">3.2 &rarr; 3.2.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-11-06+23:00' t='2008-11-29+18:30' %]">3.2rc2 &rarr; 3.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-08-12+03:00' t='2008-11-06+23:00' %]">3.2rc1 &rarr; 3.2rc2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='' t='2008-08-12+03:00' %]">(start) &rarr; 3.2rc1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.4'  t='3.2.5' %]">3.2.4 &rarr; 3.2.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.3'  t='3.2.4' %]">3.2.3 &rarr; 3.2.4</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.2'  t='3.2.3' %]">3.2.2 &rarr; 3.2.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2.1'  t='3.2.2' %]">3.2.1 &rarr; 3.2.2</a></td></tr>
+<tr><td></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2'    t='3.2.1' %]">3.2 &rarr; 3.2.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2rc2' t='3.2' %]">3.2rc2 &rarr; 3.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.2rc1' t='3.2rc2' %]">3.2rc1 &rarr; 3.2rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.1.4'  t='3.2rc1' %]">(start) &rarr; 3.2rc1</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -704,7 +705,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-3_0-BRANCH' %]
+[% SET branch = '3.0' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -738,29 +739,29 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>3.0 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2010-01-31+17:30' t='' %]">3.0.11 &rarr; 3.0.11+</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.11' t='' %]">3.0.11 &rarr; 3.0.11+</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-11-05+06:20' t='2010-01-31+17:30' %]">3.0.10 &rarr; 3.0.11</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-09-11+10:20' t='2009-11-05+06:20' %]">3.0.9 &rarr; 3.0.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.10' t='3.0.11' %]">3.0.10 &rarr; 3.0.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.9'  t='3.0.10' %]">3.0.9 &rarr; 3.0.10</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-03+02:20' t='2009-09-11+10:20' %]">3.0.8 &rarr; 3.0.9</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2009-02-02+16:30' t='2009-02-03+02:20' %]">3.0.7 &rarr; 3.0.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.8'  t='3.0.9' %]">3.0.8 &rarr; 3.0.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.7'  t='3.0.8' %]">3.0.7 &rarr; 3.0.8</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-11-06+23:00' t='2009-02-02+16:30' %]">3.0.6 &rarr; 3.0.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-08-12+03:00' t='2008-11-06+23:00' %]">3.0.5 &rarr; 3.0.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-05-04+19:45' t='2008-08-12+03:00' %]">3.0.4 &rarr; 3.0.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.6'  t='3.0.7' %]">3.0.6 &rarr; 3.0.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.5'  t='3.0.6' %]">3.0.5 &rarr; 3.0.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.4'  t='3.0.5' %]">3.0.4 &rarr; 3.0.5</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-01-08+23:45' t='2008-05-04+19:45' %]">3.0.3 &rarr; 3.0.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-09-18+18:15' t='2008-01-08+23:45' %]">3.0.2 &rarr; 3.0.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-08-23+12:45' t='2007-09-18+18:15' %]">3.0.1 &rarr; 3.0.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-05-09+16:00' t='2007-08-23+12:45' %]">3.0 &rarr; 3.0.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-02-26+00:30' t='2007-05-09+16:00' %]">3.0rc1 &rarr; 3.0</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.3'  t='3.0.4' %]">3.0.3 &rarr; 3.0.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.2'  t='3.0.3' %]">3.0.2 &rarr; 3.0.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0.1'  t='3.0.2' %]">3.0.1 &rarr; 3.0.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0'    t='3.0.1' %]">3.0 &rarr; 3.0.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='3.0rc1' t='3.0' %]">3.0rc1 &rarr; 3.0</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -789,7 +790,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-2_22-BRANCH' %]
+[% SET branch = '2.22' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -837,21 +838,21 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>2.22 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2008-11-06+23:00' t='2009-02-02+16:30' %]">2.22.6 &rarr; 2.22.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-08-12+03:00' t='2008-11-06+23:00' %]">2.22.5 &rarr; 2.22.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2008-05-04+19:45' t='2008-08-12+03:00' %]">2.22.4 &rarr; 2.22.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.6'  t='2.22.7' %]">2.22.6 &rarr; 2.22.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.5'  t='2.22.6' %]">2.22.5 &rarr; 2.22.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.4'  t='2.22.5' %]">2.22.4 &rarr; 2.22.5</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-08-23+12:45' t='2008-05-04+19:45' %]">2.22.3 &rarr; 2.22.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.3'  t='2.22.4' %]">2.22.3 &rarr; 2.22.4</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-02-02+15:30' t='2007-08-23+12:45' %]">2.22.2 &rarr; 2.22.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-10-15+2:30' t='2007-02-02+15:30' %]">2.22.1 &rarr; 2.22.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.2'  t='2.22.3' %]">2.22.2 &rarr; 2.22.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22.1'  t='2.22.2' %]">2.22.1 &rarr; 2.22.2</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-04-22+20:00' t='2006-10-15+2:30' %]">2.22 &rarr; 2.22.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-02-21+00:00' t='2006-04-22+20:00' %]">2.22rc1 &rarr; 2.22 </a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22'    t='2.22.1' %]">2.22 &rarr; 2.22.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.22rc1' t='2.22' %]">2.22rc1 &rarr; 2.22</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -874,7 +875,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-2_20-BRANCH' %]
+[% SET branch = '2.20' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -926,20 +927,20 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>2.20 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2008-05-04+19:45' t='2008-11-06+23:00' %]">2.20.6 &rarr; 2.20.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.6'  t='2.20.7' %]">2.20.6 &rarr; 2.20.7</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-08-23+12:45' t='2008-05-04+19:45' %]">2.20.5 &rarr; 2.20.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.5'  t='2.20.6' %]">2.20.5 &rarr; 2.20.6</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2007-02-02+15:30' t='2007-08-23+12:45' %]">2.20.4 &rarr; 2.20.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-10-15+2:30' t='2007-02-02+15:30' %]">2.20.3 &rarr; 2.20.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.4'  t='2.20.5' %]">2.20.4 &rarr; 2.20.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.3'  t='2.20.4' %]">2.20.3 &rarr; 2.20.4</a></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-04-22+20:00' t='2006-10-15+2:30' %]">2.20.2 &rarr; 2.20.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-02-21+00:00' t='2006-04-22+20:00' %]">2.20.1 &rarr; 2.20.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-09-30+19:00' t='2006-02-21+00:00' %]">2.20 &rarr; 2.20.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-08-08+00:00' t='2005-09-30+19:00' %]">2.20rc2 &rarr; 2.20</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-07-07+23:30' t='2005-08-08+00:00' %]">2.20rc1 &rarr; 2.20rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.2'  t='2.20.3' %]">2.20.2 &rarr; 2.20.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20.1'  t='2.20.2' %]">2.20.1 &rarr; 2.20.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20'    t='2.20.1' %]">2.20 &rarr; 2.20.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20rc2' t='2.20' %]">2.20rc2 &rarr; 2.20</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.20rc1' t='2.20rc2' %]">2.20rc1 &rarr; 2.20rc2</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -959,7 +960,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-2_18-BRANCH' %]
+[% SET branch = '2.18' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -1018,18 +1019,18 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>2.18 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2006-10-15+2:30' t='' %]">2.18.6 &rarr; 2.18.6+</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.6'  t='' %]">2.18.6 &rarr; 2.18.6+</a></td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
-<tr><td><a href="[% PROCESS query f='2006-02-21+00:00' t='2006-10-15+2:30' %]">2.18.5 &rarr; 2.18.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-09-30+19:00' t='2006-02-21+00:00' %]">2.18.4 &rarr; 2.18.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-07-09+15:45' t='2005-09-30+19:00' %]">2.18.3 &rarr; 2.18.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-07-07+23:30' t='2005-07-09+15:45' %]">2.18.2 &rarr; 2.18.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-05-11+20:00' t='2005-07-07+23:30' %]">2.18.1 &rarr; 2.18.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-01-15+04:00' t='2005-05-11+20:00' %]">2.18 &rarr; 2.18.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-10-25+01:00' t='2005-01-15+04:00' %]">2.18rc3 &rarr; 2.18</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-07-28+00:00' t='2004-10-25+01:00' %]">2.18rc2 &rarr; 2.18rc3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-07-11+00:00' t='2004-07-28+00:00' %]">2.18rc1 &rarr; 2.18rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.5'  t='2.18.6' %]">2.18.5 &rarr; 2.18.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.4'  t='2.18.5' %]">2.18.4 &rarr; 2.18.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.3'  t='2.18.4' %]">2.18.3 &rarr; 2.18.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.2'  t='2.18.3' %]">2.18.2 &rarr; 2.18.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18.1'  t='2.18.2' %]">2.18.1 &rarr; 2.18.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18'    t='2.18.1' %]">2.18 &rarr; 2.18.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18rc3' t='2.18' %]">2.18rc3 &rarr; 2.18</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18rc2' t='2.18rc3' %]">2.18rc2 &rarr; 2.18rc3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.18rc1' t='2.18rc2' %]">2.18rc1 &rarr; 2.18rc2</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td></td></tr>
@@ -1044,7 +1045,7 @@ please choose one of the following:
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-2_16-BRANCH' %]
+[% SET branch = '2.16' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -1110,26 +1111,26 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>2.16 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2005-05-18+23:00' t='2006-02-21+00:00' %]">2.16.10 &rarr; 2.16.11</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-05-11+20:00' t='2005-05-18+23:00' %]">2.16.9 &rarr; 2.16.10</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2005-01-15+04:00' t='2005-05-11+20:00' %]">2.16.8 &rarr; 2.16.9</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-10-25+01:00' t='2005-01-15+04:00' %]">2.16.7 &rarr; 2.16.8</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-07-11+00:00' t='2004-10-25+01:00' %]">2.16.6 &rarr; 2.16.7</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2004-03-04+00:00' t='2004-07-11+00:00' %]">2.16.5 &rarr; 2.16.6</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-11-03+00:00' t='2004-03-04+00:00' %]">2.16.4 &rarr; 2.16.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-04-24+23:45' t='2003-11-03+00:00' %]">2.16.3 &rarr; 2.16.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2003-01-02+18:00' t='2003-04-24+23:45' %]">2.16.2 &rarr; 2.16.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-10-10+00:00' t='2003-01-02+18:00' %]">2.16.1 &rarr; 2.16.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-07-29+00:00' t='2002-10-01+00:00' %]">2.16 &rarr; 2.16.1</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-06-08+00:00' t='2002-07-29+00:00' %]">2.16rc2 &rarr; 2.16</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-05-09+00:00' t='2002-06-09+00:00' %]">2.16rc1 &rarr; 2.16rc2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.10' t='2.16.11' %]">2.16.10 &rarr; 2.16.11</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.9'  t='2.16.10' %]">2.16.9 &rarr; 2.16.10</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.8'  t='2.16.9' %]">2.16.8 &rarr; 2.16.9</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.7'  t='2.16.8' %]">2.16.7 &rarr; 2.16.8</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.6'  t='2.16.7' %]">2.16.6 &rarr; 2.16.7</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.5'  t='2.16.6' %]">2.16.5 &rarr; 2.16.6</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.4'  t='2.16.5' %]">2.16.4 &rarr; 2.16.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.3'  t='2.16.4' %]">2.16.3 &rarr; 2.16.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.2'  t='2.16.3' %]">2.16.2 &rarr; 2.16.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16.1'  t='2.16.2' %]">2.16.1 &rarr; 2.16.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16'    t='2.16.1' %]">2.16 &rarr; 2.16.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16rc2' t='2.16' %]">2.16rc2 &rarr; 2.16</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.16rc1' t='2.16rc2' %]">2.16rc1 &rarr; 2.16rc2</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 <tr><td></td></tr>
 <tr><td>&rarr; &nbsp; &rarr; &nbsp; &rarr; &nbsp; &rarr; &nbsp; &rarr;</td></tr>
 </table>
 </td>
 
-[% SET branch = 'BUGZILLA-2_14_1-BRANCH' %]
+[% SET branch = '2.14' %]
 <td valign="top" style="border-left:solid black 1px">
 <table class="changelist">
 <tr><td></td></tr>
@@ -1205,11 +1206,11 @@ please choose one of the following:
 <tr><td></td></tr>
 <tr><td><b>2.14 branch:</b></td></tr>
 <tr><td>(branch closed)</td></tr>
-<tr><td><a href="[% PROCESS query f='2002-10-10+01:00' t='2003-01-02+18:00' %]">2.14.4 &rarr; 2.14.5</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-07-29+00:00' t='2002-10-01+00:00' %]">2.14.3 &rarr; 2.14.4</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-06-08+00:00' t='2002-07-29+00:00' %]">2.14.2 &rarr; 2.14.3</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2002-01-05+12:30' t='2002-06-08+00:00' %]">2.14.1 &rarr; 2.14.2</a></td></tr>
-<tr><td><a href="[% PROCESS query f='2001-08-29+13:00' t='2002-01-05+12:30' %]">2.14 &rarr; 2.14.1</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14.4' t='2.14.5' %]">2.14.4 &rarr; 2.14.5</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14.3' t='2.14.4' %]">2.14.3 &rarr; 2.14.4</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14.2' t='2.14.3' %]">2.14.2 &rarr; 2.14.3</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14.1' t='2.14.2' %]">2.14.1 &rarr; 2.14.2</a></td></tr>
+<tr><td><a href="[% PROCESS query f='2.14'   t='2.14.1' %]">2.14 &rarr; 2.14.1</a></td></tr>
 <tr><td style="text-align: left">&rarr; &nbsp; &rarr; &nbsp; &uarr;</td></tr>
 </table>
 </td>
@@ -1217,13 +1218,6 @@ please choose one of the following:
 </table>
 
 [% BLOCK query %]
-http://bonsai.mozilla.org/cvsquery.cgi?mindate=[% f %][% '&amp;maxdate=' _  t IF t %]&amp;module=Bugzilla&amp;sortby=Date&amp;date=explicit[% '&amp;branch=' _ branch IF branch %]
-[% END %]
-
-[% BLOCK query_bzr %]
-https://bzr.mozilla.org/bugzilla/[% branch %]/changes/[% rev %]
-[% END %]
-
-[% BLOCK query_git %]
-https://git.mozilla.org/?p=bugzilla/bugzilla.git;a=shortlog;h=refs/heads/[% branch %]
+[% IF t %][% to = "refs/tags/bugzilla-" _ t %][% ELSE %][% to = branch %][% END -%]
+https://git.mozilla.org/?p=bugzilla/bugzilla.git;a=shortlog;h=[% to %][% IF f %];hp=refs/tags/bugzilla-[% f %][% END %]
 [% END %]
