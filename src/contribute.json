@@ -1,0 +1,29 @@
+{
+    "name": "Bugzilla",
+    "description": "The Bugzilla bug tracker.",
+    "repository": {
+        "url": "http://git.mozilla.org/?p=bugzilla/bugzilla.git",
+        "clone": "https://git.mozilla.org/bugzilla/bugzilla.git",
+        "license": "MPL2",
+        "type": "git"
+    },
+    "participate": {
+        "home": "https://www.bugzilla.org/",
+        "docs": "http://bugzilla.readthedocs.org",
+        "mailing-list": "https://lists.bugzilla.org/listinfo/",
+        "irc": "irc://irc.mozilla.org/#bugzilla"
+    },
+    "bugs": {
+        "list": "https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla",
+        "report": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla",
+        "mentored": "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty&query_format=advanced&bug_status=NEW&product=Bugzilla"
+    },
+    "keywords": [
+        "perl",
+        "html5",
+        "jquery",
+        "javascript",
+        "yui"
+    ]
+}
+
