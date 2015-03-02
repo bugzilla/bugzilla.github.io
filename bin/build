@@ -1,6 +1,19 @@
 #!/bin/bash
-git stash; git pull --rebase; git stash pop
-ttree -f etc/ttree.cfg $@
-ttree -f etc/ttree-docs.cfg $@
-rsync -aq --exclude=.git --exclude=/*.html src/docs/ dest/docs
-perl bin/build-docs.pl
+FORCE_UPDATE=$1
+GIT_BRANCH_REVNO=$(git ls-remote origin master | awk -F ' ' '{print $1}')
+GIT_LOCAL_REVNO=$(git log --pretty=oneline -n1 | awk -F ' ' '{print $1}')
+
+if [ "$FORCE_UPDATE" != "" ] || [ "$GIT_BRANCH_REVNO" != "$GIT_LOCAL_REVNO" ]; then
+    git stash
+    git pull --rebase
+    RETVAL=$?
+    if [ $RETVAL -ne 0 ]; then
+        git stash pop
+        exit $RETVAL
+    fi
+    git stash pop
+    ttree -f etc/ttree.cfg $@
+    ttree -f etc/ttree-docs.cfg $@
+    rsync -aq --exclude=.git --exclude=/*.html src/docs/ dest/docs
+    perl bin/build-docs.pl
+fi
