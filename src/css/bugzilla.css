@@ -347,11 +347,11 @@ table.reviewers tr.r1
     color: red;
 }
 
-.req_table {
+.req_table, #language_table {
     border-collapse: collapse;
 }
 
-.req_table td, .req_table th {
+.req_table td, .req_table th, #language_table th, #language_table td {
     border: 1px solid black;
     padding: .25em;
 }
