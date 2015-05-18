@@ -8,35 +8,37 @@ name|orgurl|bzurl
 # Best link checker: http://www.kevinfreitas.net/extensions/linkchecker/
 #
 #############################################################################
-# The following were all broken, at least in part, on 2014-04-25:
+# The following were all broken, at least in part, on 2015-05-18:
 #
-# Bergen Street Software|http://www.bergenstreetsoftware.com/|http://www.bergenstreetsoftware.com/bugs/
-# LAAS|http://softs.laas.fr/|https://softs.laas.fr/bugzilla/
-# Linux@DUKE|http://linux.duke.edu/|https://devel.linux.duke.edu/bugzilla/
-# Multi Emulator Super System|http://www.mess.org/|http://bugzilla.mess.org/
-# PJRC|http://www.pjrc.com/|http://www.pjrc.com/bugzilla/
-# Tauvex|http://tauvex.iiap.res.in/|http://tauvex.iiap.res.in/bugzilla/
-# Cloud.com|http://www.cloud.com/|http://bugs.cloud.com/
-# Symbian|http://www.symbian.org/|http://developer.symbian.org/bugs/
+# Achievo|http://www.achievo.org/|http://bugzilla.achievo.org/
+# Auraria Library, University of Denver|http://library.auraria.edu/|http://bugzilla.auraria.edu/
+# Anionu|https://anionu.com/|http://bugs.anionu.com/
+# AccessGrid, Argonne National Laboratory|http://www.mcs.anl.gov/index.php|http://bugzilla.mcs.anl.gov/accessgrid/
+# Gocept|http://www.gocept.com/|http://bugs.gocept.com/
+# Halogen D.G.|http://www.halogen-dg.com/|http://bugs.halogen-dg.com/
+# j2 Solutions|http://geek.j2solutions.net/|http://geek.j2solutions.net/bugzilla/
+# OpenEAI|http://www.openeai.org/|http://bugzilla.openeai.org/
+# OpenGroupWare.org|http://www.opengroupware.org/|http://bugzilla.opengroupware.org/bugzilla/index.cgi
+# Sourcey|http://sourcey.com|http://bugs.sourcey.com
+# The Model Coupling Toolkit, Argonne National Laboratory|http://www.mcs.anl.gov/|http://bugzilla.mcs.anl.gov/mct/
+# UCLA Grid Portal|http://www.ucgrid.org/|http://www.ucgrid.org/bugs/
+# Xilay Software|http://www.xilay.nl/|http://bugs.xilay.nl/
+# XORP|http://www.xorp.org/|http://www.xorp.org/bugzilla/index.cgi
 #
 # End of potentially-broken list
 #############################################################################
 
 1cpp.ru|http://www.1cpp.ru/|http://cvs.alterplast.ru/bugs/
 AbiWord|http://www.abisource.com/|http://bugzilla.abisource.com/
-AccessGrid, Argonne National Laboratory|http://www.mcs.anl.gov/index.php|http://bugzilla.mcs.anl.gov/accessgrid/
-Achievo|http://www.achievo.org/|http://bugzilla.achievo.org/
 Activestate|http://www.activestate.com/|http://bugs.activestate.com/
 Advanced Digital Broadcast|http://www.adbglobal.com/|https://support.adbglobal.com/bugz/index.cgi 
 Alt Linux|http://www.altlinux.org/|https://bugzilla.altlinux.org/
-Anionu|https://anionu.com/|http://bugs.anionu.com/
 Anope IRC Services|http://www.anope.org/|http://bugs.anope.org/
 Apache Project|http://www.apache.org/|http://issues.apache.org/bugzilla/
 AspectC++|http://www.aspectc.org/|http://www.aspectc.org/bugzilla/
 Asteriou|http://www.asteriou.com/|http://bugzilla.asteriou.com/
 Astur Linux|http://www.asturlinux.org/|http://www.asturlinux.org/bugzilla/
 Async Open Source|http://www.async.com.br/|http://bugs.async.com.br/
-Auraria Library, University of Denver|http://library.auraria.edu/|http://bugzilla.auraria.edu/
 Avadhi Finance and Technology|http://www.avadhi.com/|http://www.avadhi.com/bugzilla-2.18rc3/index.cgi
 Cendio|http://www.cendio.com/|http://www.cendio.com/bugzilla/
 Center for Distributed Object Computing, Washington University at St. Louis|http://deuce.doc.wustl.edu/|http://deuce.doc.wustl.edu/bugzilla/
@@ -47,7 +49,6 @@ Compendium, Open University|http://compendium.open.ac.uk/|http://compendium.open
 ContentLion|http://www.contentlion.org/|http://bugzilla.contentlion.org/
 Computational Biology and Informatics Lab, University of Pennsylvania|http://www.cbil.upenn.edu/|https://www.cbil.upenn.edu/tracker/
 Courtesan Consulting|http://www.courtesan.com/|http://www.courtesan.com/bugzilla/
-cPanel|http://www.cpanel.net/|http://bugzilla.cpanel.net/
 CVS on NT|http://www.cvsnt.org/|http://customer.march-hare.com/webtools/bugzilla/
 DataDino|http://www.datadino.com/|http://www.datadino.com/bugzilla/
 distributed.net|http://www.distributed.net/|http://bugs.distributed.net/
@@ -69,8 +70,6 @@ Geant4 project|http://geant4.org/|http://bugzilla-geant4.kek.jp/
 Gentoo|http://www.gentoo.org/|http://bugs.gentoo.org/
 Glub Tech, Inc|http://www.glub.com/|http://www.glub.com/bugs/
 GNOME|http://www.gnome.org/|http://bugzilla.gnome.org/
-Gocept|http://www.gocept.com/|http://bugs.gocept.com/
-Halogen D.G.|http://www.halogen-dg.com/|http://bugs.halogen-dg.com/
 HPCalc|http://www.hpcalc.org|http://bugs.hpcalc.org
 HylaFAX|http://www.hylafax.org/|http://bugs.hylafax.org/bugzilla/
 Icculus|http://www.icculus.org/|https://bugzilla.icculus.org/
@@ -78,7 +77,6 @@ imCode|http://www.imcode.com/|http://bugzilla.imcode.com/
 IntelliCAD Technology Consortium|http://www.itcdevelopment.org/|http://www.itcdevelopment.org/bugzilla/
 Invitel Zrt.|http://www.invitel.hu/|http://project.invitel.co.hu/bcpbugs/index.cgi
 iPLATINUM Pty Ltd|http://www.iplatinum.com.au/|http://support.iplatinum.com.au/bugzilla/index.cgi
-j2 Solutions|http://geek.j2solutions.net/|http://geek.j2solutions.net/bugzilla/
 Jabber.ru|http://www.jabber.ru/|http://www.jabber.ru/bugzilla/
 JacORB|http://www.jacorb.org/|http://www.jacorb.org/bugzilla/
 KDE|http://www.kde.org/|http://bugs.kde.org/
@@ -106,9 +104,7 @@ Novell, Inc.|http://www.novell.com/|https://bugzilla.novell.com/
 ODAMEX|http://odamex.net/|http://odamex.net/bugs/enter_bug.cgi
 Open Bioinformatics Foundation|http://www.open-bio.org/|http://bugzilla.open-bio.org/
 OpenCms|http://www.opencms.org/|http://www.opencms.org/bugzilla/
-OpenEAI|http://www.openeai.org/|http://bugzilla.openeai.org/
 OpenFabrics Alliance|http://www.openfabrics.org/|https://bugs.openfabrics.org/
-OpenGroupWare.org|http://www.opengroupware.org/|http://bugzilla.opengroupware.org/bugzilla/index.cgi
 Open NMS|http://www.opennms.org/|http://bugzilla.opennms.org/
 Open Office|http://www.openoffice.org/|http://www.openoffice.org/issues/query.cgi
 OpenSolaris|http://www.opensolaris.org/|http://defect.opensolaris.org/bz/
@@ -135,7 +131,6 @@ Scilab|http://www.scilab.org/|http://www.scilab.org/cgi-bin/bugzilla_bug_II/inde
 SGI|http://www.sgi.com/|http://oss.sgi.com/bugzilla/
 Skolelinux|http://www.skolelinux.no/|http://bugs.skolelinux.no/
 softCENTRAL|http://www.softcentral.com/|http://www.softcentral.com/bugCENTRAL/
-Sourcey|http://sourcey.com|http://bugs.sourcey.com
 Spam Assassin|http://www.spamassassin.org/|http://bugzilla.spamassassin.org/
 SquidGuard|http://www.squidguard.org/|http://www.squidguard.org/cgi-bin/bugs/index.cgi
 Squid|http://www.squid-cache.org/|http://bugs.squid-cache.org/
@@ -147,26 +142,23 @@ SystemDataRecorder|http://www.systemdatarecorder.org/|http://systemdatarecorder.
 TECOM|http://www.tecomtech.com/|http://www.tecomtech.com/bugzilla/
 The D Programming Language|http://www.digitalmars.com/d/|http://d.puremagic.com/issues/
 The Globus Toolkit|http://www.globus.org/|http://bugzilla.globus.org/bugzilla/
-The Model Coupling Toolkit, Argonne National Laboratory|http://www.mcs.anl.gov/|http://bugzilla.mcs.anl.gov/mct/
 The OpenFabrics Alliance|http://www.openfabrics.org/|https://bugs.openfabrics.org/
 The World Wide Web Consortium|http://www.w3.org/|http://www.w3.org/Bugs/Public/
 TimeSys|https://linuxlink.timesys.com/|https://linuxlink.timesys.com/bugs/
 Tinyproxy|https://www.banu.com/tinyproxy/|https://www.banu.com/bugzilla/
-UCLA Grid Portal|http://www.ucgrid.org/|http://www.ucgrid.org/bugs/
 Unbound|http://unbound.net/|http://www.nlnetlabs.nl/bugs/
 W3C|http://www.w3.org|http://www.w3.org/Bugs/Public/
 WebKit|http://webkit.org/|http://bugs.webkit.org/
-Wikimedia Foundation|http://wikimedia.org/|https://bugzilla.wikimedia.org/
 willuhn.de Buzzword Factory|https://www.willuhn.de/|https://www.willuhn.de/bugzilla/
-Wincent Colaiuta|http://www.wincent.com/|http://bugs.wincent.com/
 Wine|http://www.winehq.com/|http://bugs.winehq.com/
 Wireshark|http://www.wireshark.org/|http://bugs.wireshark.org/
 XenSource|http://www.xensource.com/|http://bugzilla.xensource.com/bugzilla/
 XFCE|http://www.xfce.org/|http://bugzilla.xfce.org/
-Xilay Software|http://www.xilay.nl/|http://bugs.xilay.nl/
-XORP|http://www.xorp.org/|http://www.xorp.org/bugzilla/index.cgi
 libtorque|http://dank.qemfd.net/dankwiki/index.php/Libtorque|http://dank.qemfd.net/bugzilla/
 DV Digitaler Verlag GmbH|http://dv.de/|http://bugs.dv.de/
 Interactive Limited|http://www.interactivelimited.com/|https://sa1on.com/bugzilla/
 Greytip Software Pvt. Ltd.|http://www.greytip.com/|http://bugs.greytip.com/
 March Hare Software|http://march-hare.com/|http://customer.march-hare.com/webtools/bugzilla/tt.htm
+Mediaup Crossmedia|http://www.mediaup.de/|http://bugzilla.mediaup.de/
+ContentLion|http://contentlion.org/|http://bugzilla.contentlion.org/
+Mageia Linux|http://www.mageia.org|https://bugs.mageia.org/
