@@ -1246,6 +1246,6 @@ please choose one of the following:
 </table>
 
 [% BLOCK query %]
-[% IF t %][% to = "refs/tags/bugzilla-" _ t %][% ELSE %][% to = branch %][% END -%]
-https://git.mozilla.org/?p=bugzilla/bugzilla.git;a=shortlog;h=[% to %][% IF f %];hp=refs/tags/bugzilla-[% f %][% END %]
+[% IF t %][% to = "refs/tags/release-" _ t %][% ELSE %][% to = branch %][% END -%]
+https://git.mozilla.org/?p=bugzilla/bugzilla.git;a=shortlog;h=[% to %][% IF f %];hp=refs/tags/release-[% f %][% END %]
 [% END %]
