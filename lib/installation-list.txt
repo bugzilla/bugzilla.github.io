@@ -162,3 +162,5 @@ March Hare Software|http://march-hare.com/|http://customer.march-hare.com/webtoo
 Mediaup Crossmedia|http://www.mediaup.de/|http://bugzilla.mediaup.de/
 ContentLion|http://contentlion.org/|http://bugzilla.contentlion.org/
 Mageia Linux|http://www.mageia.org|https://bugs.mageia.org/
+LiveCode|http://www.livecode.org/|http://quality.runrev.com/
+ESSPL|http://www.esspl.com/|http://bugzilla.esspl.com/
