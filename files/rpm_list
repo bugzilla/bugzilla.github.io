@@ -11,7 +11,9 @@ lynx
 make
 openssl
 openssl-devel
+patch
 perl-App-cpanminus
+perl-CGI
 rsh
 sphinx-webtools
 subversion
