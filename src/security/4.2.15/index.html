@@ -39,7 +39,7 @@ CVE Number:  CVE-2015-8508
 Class:       Information Leak
 Versions:    Bugzilla 2.17.1 to 4.2.15, 4.3.1 to 4.4.10, 4.5.1 to 5.0.1
 Fixed In:    4.2.16, 4.4.11, 5.0.2
-Description: If an external HTML page contains a <script> element with
+Description: If an external HTML page contains a &lt;script> element with
              its src attribute pointing to a buglist in CSV format, some
              web browsers incorrectly try to parse the CSV file as valid
              JavaScript code. As the buglist is generated based on the
