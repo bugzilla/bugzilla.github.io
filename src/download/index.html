@@ -1,11 +1,11 @@
 [%# Download %]
-[% 
+[%
     title = "Download"
     release = {
-        stable => { branch => '5.0', current => '5.0.1',  },
-        old    => { branch => '4.4', current => '4.4.10', },
-        legacy => { branch => '4.2', current => '4.2.15', },
-#        dev    => { branch => '5.1', current => '5.1', 
+        stable => { branch => '5.0', current => '5.0.2',  },
+        old    => { branch => '4.4', current => '4.4.11', },
+        legacy => { branch => '4.2', current => '4.2.16', },
+#        dev    => { branch => '5.1', current => '5.1',
 #                    devbranch => '5.1', branched => 0, rc => 0 },
     }
 %]
@@ -17,7 +17,7 @@
   <li><a href="#localizations">Localized Templates</a></li>
   <li><a href="#stable">Stable Release</a></li>
   [% IF release.dev.rc %]
-  <li><a href="#candidate">Stable Release Candidate</a></li> 
+  <li><a href="#candidate">Stable Release Candidate</a></li>
   [% ELSIF release.dev %]
   <li><a href="#devel">Development Snapshot</a></li>
   [% END %]
@@ -61,10 +61,10 @@
 <h2>Bugzilla Addons</h2>
 
 <p>For a list of programs that can enhance and interact with Bugzilla in
-  various ways, see our 
+  various ways, see our
   <a href="https://wiki.mozilla.org/Bugzilla:Addons">Addons list</a>.</p>
 
-  
+
 <a name="localizations"></a>
 <h2>Localized Templates</h2>
 
@@ -172,14 +172,14 @@ place to start if you want to bring a localization up to date.</p>
 <h2>Stable Release ([% release.stable.current %])</h2>
 
 <p>Bugzilla [% release.stable.current %] is the latest stable release
-  [% IF release.stable.branch != release.stable.current %] in the 
+  [% IF release.stable.branch != release.stable.current %] in the
   [%+ release.stable.branch %] series[% END -%].</p>
 
-<p>A look at the new features in [% release.stable.branch %] can be found 
+<p>A look at the new features in [% release.stable.branch %] can be found
   in the <a href="../releases/[% release.stable.branch %]/release-notes.html#v[% release.stable.branch.replace('\.', '') %]_feat">[% release.stable.branch %]
   Release Notes</a>.</p>
 
-<p>We encourage all users, <em>especially</em> upgraders, to read the 
+<p>We encourage all users, <em>especially</em> upgraders, to read the
   <a href="../releases/[% release.stable.current %]/release-notes.html">Release
   Notes</a> before installing Bugzilla [% release.stable.current %].</p>
 
@@ -191,48 +191,48 @@ place to start if you want to bring a localization up to date.</p>
 
 [% IF release.dev.rc %]
   <h2>Stable Release Candidate ([% release.dev.current %])</h2>
-  
+
   <p>Bugzilla [% release.dev.current %] is our latest release candidate
-    for <a href="../releases/[% release.dev.branch %]/">Bugzilla 
+    for <a href="../releases/[% release.dev.branch %]/">Bugzilla
     [% release.dev.branch %]</a>.</p>
-  
+
   <p>Release candidates receive full QA testing, and should be considerably
     more stable than development releases. They have not been thoroughly
     tested in the real world, but should be safe for most production
     environments, particularly small ones.</p>
-  
-  <p>Note, however, that many Bugzilla extensions (such as 
+
+  <p>Note, however, that many Bugzilla extensions (such as
     <a href="https://www.mozilla.org/projects/testopia/">Testopia</a>)
     do not support Release Candidates.</p>
-  
+
   <p>If you do use a Release Candidate, make sure to upgrade to the final
     release when it comes out.</p>
-  
+
   <p>A look at the new features in Bugzilla [% release.dev.current %]
-    can be found in the 
+    can be found in the
     <a href="../releases/[% release.dev.branch %]/release-notes.html#feat">
       Release Notes</a>.
     Also make sure to read the
     <a href="../releases/[% release.dev.branch %]/release-notes.html">Release
     Notes</a>.</p>
-  
+
   [% INCLUDE dl mode = 'rc' release = release.dev %]
 [% ELSIF release.dev %]
   <h2>Development Snapshot ([% release.dev.current %])</h2>
-  
+
   <p>Bugzilla [% release.dev.current %] is our latest development snapshot
     leading to Bugzilla [% release.dev.branch %].</p>
-  
+
   <p>Use of a development branch is <strong>at your own risk</strong>.
     They receive very little testing, so expect this release to be
-    unstable. Users of [% release.stable.branch %] or older 
+    unstable. Users of [% release.stable.branch %] or older
     [%+ release.dev.devbranch %] releases are encouraged to try out new
-    [%+ release.dev.devbranch %] releases in a testing environment 
+    [%+ release.dev.devbranch %] releases in a testing environment
     and let us know of any problems that are found with the release.</p>
-  
+
   <p>A look at the new features that will be in Bugzilla [% release.dev.branch %]
      can be found in our latest <a href="../status/">Status Updates</a>.</p>
-  
+
   [% INCLUDE dl mode = 'dev' release = release.dev %]
 [% END %]
 
@@ -240,9 +240,9 @@ place to start if you want to bring a localization up to date.</p>
 <a name="v[% release.old.branch.replace('\.', '') %]"></a>
 <h2>Old Stable Release ([% release.old.current %])</h2>
 
-<p>[% release.old.current %] is the old stable version of Bugzilla. 
-  If you are doing a new installation of Bugzilla, we recommend that you 
-  use the <a href="#stable">latest stable version</a> instead of a 
+<p>[% release.old.current %] is the old stable version of Bugzilla.
+  If you are doing a new installation of Bugzilla, we recommend that you
+  use the <a href="#stable">latest stable version</a> instead of a
   [% release.old.branch %] version.</p>
 
 <p>An overview of the new features in [% release.old.branch %] can be found in
@@ -251,7 +251,7 @@ place to start if you want to bring a localization up to date.</p>
   Release Notes</a>.</p>
 
 <p>We encourage all users, <em>especially</em> upgraders, to
-  read the 
+  read the
   <a href="../releases/[% release.old.current %]/release-notes.html">Release
   Notes</a> before installing Bugzilla [% release.old.current %].</p>
 
@@ -263,9 +263,9 @@ place to start if you want to bring a localization up to date.</p>
 
 <p>Bugzilla [% release.legacy.current %] is the legacy release of Bugzilla.
    It is kept here for sites still running the [% release.legacy.branch %]
-   codebase to enable them to pick up security updates. All users are 
+   codebase to enable them to pick up security updates. All users are
    recommended to use <a href="#stable">Bugzilla [% release.stable.current %]</a>
-   instead, and users of Bugzilla [% release.legacy.branch %] are encouraged 
+   instead, and users of Bugzilla [% release.legacy.branch %] are encouraged
    to upgrade to [% release.stable.current %] as soon as possible.</p>
 
 [% INCLUDE dl mode = '' release = release.legacy %]
@@ -280,5 +280,5 @@ place to start if you want to bring a localization up to date.</p>
 <h2>Archives</h2>
 
 <p>If for some reason you need a very old version of Bugzilla,
-  you can download tarballs from the 
+  you can download tarballs from the
   <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/">Bugzilla FTP site</a>.</p>
