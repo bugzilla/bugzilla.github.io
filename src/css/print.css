@@ -73,7 +73,7 @@ dt.im {
 	color: #000;
 }
 #mainContent a[href^="/"]:after {
-	content: " (http://www.mozilla.org" attr(href) ") ";
+	content: " (https://www.bugzilla.org" attr(href) ") ";
 }
 
 #tools, #search, #ad, #bn, #int, .skipLink, #brd, ul#nav, .hide {

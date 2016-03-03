@@ -7,13 +7,13 @@
 
 /* Basic Structure */
 	body {
-		background: #fff url("https://www.mozilla.org/images/body_back.gif") repeat-x;
+		background: #fff url("../images/body_back.gif") repeat-x;
 	}
 
 /* Header */
 
 	#header {
-		background: #455372 url("https://www.mozilla.org/images/header_bl.png") bottom left repeat-x;
+		background: #455372 url("../images/header_bl.png") bottom left repeat-x;
 		position: relative;
 		min-height: 39px;
 		height: 5em;
@@ -30,7 +30,7 @@
 		left: 0;
 		margin: 0;
 		font-size: 2px;
-		background: url("https://www.mozilla.org/images/header_tl.gif") no-repeat;
+		background: url("../images/header_tl.gif") no-repeat;
 		height: 8px;
 		z-index: 100; /* above the UL */
 	}
@@ -52,12 +52,12 @@
 		margin: 0;
 		padding: 0 15px 0 0;
 		list-style: none;
-		background: url("https://www.mozilla.org/images/header_br.gif") no-repeat bottom right;
+		background: url("../images/header_br.gif") no-repeat bottom right;
 		z-index: 90; /* below the H1 */
 	}
 	#header li {
 		float: right;
-		background: transparent url("https://www.mozilla.org/images/header_tab.gif") 100% -600px no-repeat;
+		background: transparent url("../images/header_tab.gif") 100% -600px no-repeat;
 		padding: 0 6px 0 0;
 		margin: 0 1px 0 0;
 		border-bottom: 1px solid #515358;
@@ -66,7 +66,7 @@
 		float: left;
 		display: block;
 		padding: 4px 4px 4px 10px;
-		background: transparent url("https://www.mozilla.org/images/header_tab.gif") 0% -600px no-repeat;
+		background: transparent url("../images/header_tab.gif") 0% -600px no-repeat;
 		font-weight: bold;
 		color: #fff;
 		text-decoration: none;
@@ -118,7 +118,7 @@
 		top: 0;
 		right: 0;
 		padding: 12px 20px 0 0;
-		background: url("https://www.mozilla.org/images/header_tr.gif") no-repeat top right;
+		background: url("../images/header_tr.gif") no-repeat top right;
 		margin: 0; /* need for IE Mac */
 		text-align: right; /* need for IE Mac */
 		white-space: nowrap; /* for Opera */
@@ -153,15 +153,15 @@
 	#nav:before {
 		line-height: 0.1;
 		font-size: 1px;
-		background: transparent url("https://www.mozilla.org/images/menu_tr.gif") no-repeat top right;
+		background: transparent url("../images/menu_tr.gif") no-repeat top right;
 		margin: 0;
 		height: 9px;
 		display: block;
 		border-bottom: 1px solid #ddd;
-		content: url("https://www.mozilla.org/images/key-point_tl.gif");
+		content: url("../images/key-point_tl.gif");
 	}
 	#nav {
-		background: #E0E9E9 url("https://www.mozilla.org/images/menu_back.gif") right repeat-y;
+		background: #E0E9E9 url("../images/menu_back.gif") right repeat-y;
 	}
 	#nav:after {
 		display: block;
@@ -169,10 +169,10 @@
 		padding-top: 0;
 		line-height: 0.1;
 		font-size: 1px;
-		content:  url("https://www.mozilla.org/images/key-point_bl.gif");
+		content:  url("../images/key-point_bl.gif");
 		margin: 0 0 0 0;
 		height: 8px;
-		background: transparent url("https://www.mozilla.org/images/menu_br.gif") scroll no-repeat bottom right ;
+		background: transparent url("../images/menu_br.gif") scroll no-repeat bottom right ;
 		border-top: 1px solid #fff;
 	}
 	
