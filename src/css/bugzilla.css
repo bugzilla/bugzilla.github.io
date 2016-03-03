@@ -235,6 +235,7 @@
 		margin: 2em 0;
 		padding: 1em 0;
 		text-align: center;
+        clear: both;
 	}
 	
 	#footer ul {
