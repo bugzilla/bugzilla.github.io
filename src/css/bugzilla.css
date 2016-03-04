@@ -298,6 +298,10 @@ table.reviewers tr.r1
 .changelist a { margin-left: 5px; margin-right: 5px; }
 .changelist tr td { height: 20px; text-align: center; font-size:10px; white-space: nowrap; }
 
+#mainContent {
+    margin-top: 1em;
+}
+
 .console
 {
     color: #fff;
