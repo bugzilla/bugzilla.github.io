@@ -11,6 +11,7 @@ lynx
 make
 openssl
 openssl-devel
+passwd
 patch
 perl-App-cpanminus
 perl-CGI
