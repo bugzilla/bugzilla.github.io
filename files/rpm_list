@@ -29,4 +29,5 @@ texlive-tex4ht
 texlive-threeparttable
 texlive-ucs
 texlive-wrapfig
+vim-enhanced
 xmlto
