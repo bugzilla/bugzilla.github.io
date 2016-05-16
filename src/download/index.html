@@ -17,12 +17,14 @@
   <li><a href="#localizations">Localized Templates</a></li>
   <li><a href="#stable">Stable Release</a></li>
   [% IF release.dev.rc %]
-  <li><a href="#candidate">Stable Release Candidate</a></li>
+    <li><a href="#candidate">Stable Release Candidate</a></li>
   [% ELSIF release.dev %]
-  <li><a href="#devel">Development Snapshot</a></li>
+    <li><a href="#devel">Development Snapshot</a></li>
   [% END %]
   <li><a href="#oldstable">Old Stable Release</a></li>
-  <li><a href="#legacy">Legacy Release</a></li>
+  [% IF release.legacy %]
+    <li><a href="#legacy">Legacy Release</a></li>
+  [% END %]
   <li><a href="#archives">Archives</a></li>
 </ul>
 
@@ -248,19 +250,20 @@ place to start if you want to bring a localization up to date.</p>
 
 [% INCLUDE dl mode = '' release = release.old %]
 
-<a name="v[% release.legacy.branch.replace('\.', '') %]"></a>
 <a name="legacy"></a>
-<h2>Legacy Release ([% release.legacy.current %])</h2>
+[% IF release.legacy %]
+  <a name="v[% release.legacy.branch.replace('\.', '') %]"></a>
+  <h2>Legacy Release ([% release.legacy.current %])</h2>
 
-<p>Bugzilla [% release.legacy.current %] is the legacy release of Bugzilla.
-   It is kept here for sites still running the [% release.legacy.branch %]
-   codebase to enable them to pick up security updates. All users are
-   recommended to use <a href="#stable">Bugzilla [% release.stable.current %]</a>
-   instead, and users of Bugzilla [% release.legacy.branch %] are encouraged
-   to upgrade to [% release.stable.current %] as soon as possible.</p>
+  <p>Bugzilla [% release.legacy.current %] is the legacy release of Bugzilla.
+    It is kept here for sites still running the [% release.legacy.branch %]
+    codebase to enable them to pick up security updates. All users are
+    recommended to use <a href="#stable">Bugzilla [% release.stable.current %]</a>
+    instead, and users of Bugzilla [% release.legacy.branch %] are encouraged
+    to upgrade to [% release.stable.current %] as soon as possible.</p>
 
-[% INCLUDE dl mode = '' release = release.legacy %]
-
+  [% INCLUDE dl mode = '' release = release.legacy %]
+[% END %]
 
 <a name="archives"></a>
 <a name="v212"></a><a name="v214"></a><a name="v216"></a>
@@ -268,6 +271,7 @@ place to start if you want to bring a localization up to date.</p>
 <a name="v224"></a>
 <a name="v30"></a><a name="v32"></a><a name="v34"></a>
 <a name="v36"></a>
+<a name="v40"></a><a name="v42"></a>
 <h2>Archives</h2>
 
 <p>If for some reason you need a very old version of Bugzilla,
