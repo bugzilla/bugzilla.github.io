@@ -31,7 +31,7 @@ chdir 'bugzilla';
 # fiddly.
 if (!-d "base-clone") {
     print "Cloning new base clone...\n" if $verbose;
-    system("git clone https://git.mozilla.org/bugzilla/bugzilla base-clone");
+    system("git clone https://github.com/bugzilla/bugzilla.git base-clone");
 }
 else {
     print "Updating base clone...\n" if $verbose;
