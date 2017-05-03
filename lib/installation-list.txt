@@ -102,6 +102,7 @@ NetFilter|http://www.netfilter.org/|https://bugzilla.netfilter.org/
 North Carolina State University LUG|http://www.linux.ncsu.edu/|http://bugs.linux.ncsu.edu/
 Novell, Inc.|http://www.novell.com/|https://bugzilla.novell.com/
 ODAMEX|http://odamex.net/|http://odamex.net/bugs/enter_bug.cgi
+OKIT GmbH|http://ww.okit.de/|https://bugzilla.okit.de/
 Open Bioinformatics Foundation|http://www.open-bio.org/|http://bugzilla.open-bio.org/
 OpenCms|http://www.opencms.org/|http://www.opencms.org/bugzilla/
 OpenFabrics Alliance|http://www.openfabrics.org/|https://bugs.openfabrics.org/
