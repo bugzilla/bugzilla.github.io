@@ -36,6 +36,8 @@ theme: minima
 gems:
   - jekyll-feed
   - jekyll-last-modified-at
+plugins_dir:
+  - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
