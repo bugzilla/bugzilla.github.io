@@ -1,5 +1,3 @@
-ErrorDocument 403 /error403.html
-ErrorDocument 404 /error404.html
 Redirect permanent /docs/contributor.html https://wiki.mozilla.org/Bugzilla:Developers
 RewriteEngine On
 RewriteRule ^docs/tip/en/html/api https://www.bugzilla.org/docs/tip/en/html/integration/api [R=301]

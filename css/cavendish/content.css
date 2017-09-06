@@ -282,7 +282,7 @@ ol.faq li a:hover {
 		color: #4C5C5C;
 	}
 	
-	#product-side .download h3 {
+	.download h3 {
 		color: #1D9101;
 		font-weight: bold;
 		margin: 0;
@@ -310,6 +310,30 @@ ol.faq li a:hover {
 	}
 	.other a:link, .other a:visited { color: #666; }
 	.download .other a:hover { color: #000; }
+	.download:before {
+		line-height: 0.1;
+		font-size: 1px;
+		margin: -15px -15px 0 -15px;
+		height: 15px;
+		display: block;
+		border: none;
+		content: url("../../img/download_tl.gif");
+	}
+	.download {
+		background: #C4EFA1 url("../../img/download_back.gif") top right no-repeat;
+		padding: 15px 45px 15px 15px;
+		margin-bottom: 0.5em;
+	}
+	.download:after {
+		display: block;
+		padding-top: 15px;
+		line-height: 0.1;
+		font-size: 1px;
+		content:  url("../../img/download_bl.gif");
+		margin: -10px -45px -15px -15px;
+		height: 8px;
+		background: transparent url("../../img/download_br.gif") scroll no-repeat bottom right ;
+	}        
 	.configParent {
 		display: block;
 		font-size: 85%;

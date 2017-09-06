@@ -9,21 +9,26 @@ title: "Download"
   <li><a href="#howtoget">How To Get Bugzilla</a></li>
   <li><a href="#addons">Bugzilla Addons</a></li>
   <li><a href="#localizations">Localized Templates</a></li>
-  <li><a href="#stable">Stable Release</a></li>
-  {% if releases.dev.rc == 1 %}
-    <li><a href="#candidate">Stable Release Candidate</a></li>
-  {% elsif releases.dev %}
-    <li><a href="#devel">Development Snapshot</a></li>
-  {% endif %}
-  <li><a href="#oldstable">Old Stable Release</a></li>
-  <li><a href="#archives">Archives</a></li>
+  <li><a href="#manual">Manual Downloads</a>
+  <ul>
+    <li><a href="#stable">Stable Release</a></li>
+    {% if releases.dev.rc == 1 %}
+      <li><a href="#candidate">Stable Release Candidate</a></li>
+    {% elsif releases.dev %}
+      <li><a href="#devel">Development Snapshot</a></li>
+    {% endif %}
+    <li><a href="#oldstable">Old Stable Release</a></li>
+    <li><a href="#archives">Archives</a></li>
+  </ul>
 </ul>
 
 
 <a name="howtoget"></a>
 <h2>How To Get Bugzilla</H2>
 
-<p>Instructions on how to obtain, install and configure Bugzilla are in the
+<p><b>By far best way to get, maintain and upgrade Bugzilla is as a checkout
+   from the appropriate branch of our source code control system.</b> This
+   is true of both stable and development versions. Instructions are in the
    <a href="https://bugzilla.readthedocs.org/en/latest/installing/">Installation
    and Maintenance Guide</a>. That document also explains how to upgrade
    Bugzilla to a new version, move a Bugzilla installation between machines,
@@ -167,95 +172,41 @@ Listed there are works in progress, older releases for unsupported Bugzilla vers
 and orphaned projects. We don't advise using unsupported releases, but it may be a good
 place to start if you want to bring a localization up to date.</p>
 
+<a name="manual">
+<h2>Manual Downloads</h2>
+
+<p>Again, the best way to get Bugzilla is to follow the instructions in the
+<a href="https://bugzilla.readthedocs.org/en/latest/installing/">Installation
+and Maintenance Guide</a>, which use the 'git' version control system. However,
+if you do need to download a tarball, here they are:
+
 <a name="stable"></a>
 <a name="v{{ releases.stable.branch | replace: '.', '' }}"></a>
-<h2>Stable Release ({{ releases.stable.current }})</h2>
+<h3>Stable Release ({{ releases.stable.current }})</h3>
 
-<p>Bugzilla {{ releases.stable.current }} is the latest stable release
-  {% if releases.stable.branch != releases.stable.current %} in the
-  {{ releases.stable.branch }} series{% endif %}.</p>
-
-<p>A look at the new features in {{ releases.stable.branch }} can be found
-  in the <a href="../releases/{{ releases.stable.branch }}/release-notes.html#v{{ releases.stable.branch | replace: '.', '' }}_feat">{{ releases.stable.branch }}
-  Release Notes</a>.</p>
-
-<p>We encourage all users, <em>especially</em> upgraders, to read the
-  <a href="../releases/{{ releases.stable.current }}/release-notes.html">Release
-  Notes</a> before installing Bugzilla {{ releases.stable.current }}.</p>
-
-{X% INCLUDE dl mode = 'stable' release = releases.stable %}
+{% include dl.html mode = 'stable' release = releases.stable %}
 
 <a name="candidate"></a>
 <a name="devel"></a>
 <a name="v{{ releases.dev.branch | replace: '.', '' }}"></a>
 
 {% if releases.dev.rc == 1 %}
-  <h2>Stable Release Candidate ({{ releases.dev.current }})</h2>
+  <h3>Stable Release Candidate ({{ releases.dev.current }})</h3>
 
-  <p>Bugzilla {{ releases.dev.current }} is our latest release candidate
-    for <a href="../releases/{{ releases.dev.branch }}/">Bugzilla
-    {{ releases.dev.branch }}</a>.</p>
-
-  <p>Release candidates receive full QA testing, and should be considerably
-    more stable than development releases. They have not been thoroughly
-    tested in the real world, but should be safe for most production
-    environments, particularly small ones.</p>
-
-  <p>Note, however, that many Bugzilla extensions (such as
-    <a href="https://www.mozilla.org/projects/testopia/">Testopia</a>)
-    do not support Release Candidates.</p>
-
-  <p>If you do use a Release Candidate, make sure to upgrade to the final
-    release when it comes out.</p>
-
-  <p>A look at the new features in Bugzilla {{ releases.dev.current }}
-    can be found in the
-    <a href="../releases/{{ releases.dev.branch }}/release-notes.html#feat">
-      Release Notes</a>.
-    Also make sure to read the
-    <a href="../releases/{{ releases.dev.branch }}/release-notes.html">Release
-    Notes</a>.</p>
-
-  {X% INCLUDE dl mode = 'rc' release = releases.dev %}
+  {% include dl.html mode = 'rc' release = releases.dev %}
+  
 {% elsif releases.dev %}
-  <h2>Development Snapshot ({{ releases.dev.current }})</h2>
+  <h3>Development Snapshot ({{ releases.dev.current }})</h3>
 
-  <p>Bugzilla {{ releases.dev.current }} is our latest development snapshot
-    leading to Bugzilla {{ releases.dev.branch }}.</p>
-
-  <p>Use of a development branch is <strong>at your own risk</strong>.
-    They receive very little testing, so expect this release to be
-    unstable. Users of {{ releases.stable.branch }} or older
-    {{ releases.dev.devbranch }} releases are encouraged to try out new
-    {{ releases.dev.devbranch }} releases in a testing environment
-    and let us know of any problems that are found with the releases.</p>
-
-  <p>A look at the new features that will be in Bugzilla {{ releases.dev.branch }}
-     can be found in our latest <a href="../status/">Status Updates</a>.</p>
-
-  {X% INCLUDE dl mode = 'dev' release = releases.dev %}
+  {% include dl.html mode = 'dev' release = releases.dev %}
+  
 {% endif %}
 
 <a name="oldstable"></a>
 <a name="v{{ releases.old.branch | replace: '.', '' }}"></a>
-<h2>Old Stable Release ({{ releases.old.current }})</h2>
+<h3>Old Stable Release ({{ releases.old.current }})</h3>
 
-<p>{{ releases.old.current }} is the old stable version of Bugzilla.
-  If you are doing a new installation of Bugzilla, we recommend that you
-  use the <a href="#stable">latest stable version</a> instead of a
-  {{ releases.old.branch }} version.</p>
-
-<p>An overview of the new features in {{ releases.old.branch }} can be found in
-  the <a href="../releases/{{ releases.old.branch }}/release-notes.html#v
-    {{ releases.old.branch | replace: '.', '' }}_feat">{{ releases.old.branch }}
-  Release Notes</a>.</p>
-
-<p>We encourage all users, <em>especially</em> upgraders, to
-  read the
-  <a href="../releases/{{ releases.old.current }}/release-notes.html">Release
-  Notes</a> before installing Bugzilla {{ releases.old.current }}.</p>
-
-{X% INCLUDE dl mode = '' release = releases.old %}
+{% include dl.html mode = '' release = releases.old %}
 
 <a name="archives"></a>
 <a name="v212"></a><a name="v214"></a><a name="v216"></a>
@@ -264,7 +215,7 @@ place to start if you want to bring a localization up to date.</p>
 <a name="v30"></a><a name="v32"></a><a name="v34"></a>
 <a name="v36"></a>
 <a name="v40"></a><a name="v42"></a>
-<h2>Archives</h2>
+<h3>Archives</h3>
 
 <p>If for some reason you need a very old version of Bugzilla,
   you can download tarballs from the
