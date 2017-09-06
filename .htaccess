@@ -1,5 +1,0 @@
-Redirect permanent /docs/contributor.html https://wiki.mozilla.org/Bugzilla:Developers
-RewriteEngine On
-RewriteRule ^docs/tip/en/html/api https://www.bugzilla.org/docs/tip/en/html/integration/api [R=301]
-RewriteRule ^docs/tip/en/html/intergration/api/ - [L]
-RewriteRule ^docs/tip/en/html/ https://bugzilla.readthedocs.org/en/latest/ [R=302] 
