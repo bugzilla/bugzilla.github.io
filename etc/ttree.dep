@@ -1,3 +1,0 @@
-* : footer.tmpl header.tmpl nav.tmpl wrapper.tmpl
-installation-list/index.html : installation-list.txt
-releases/index.html : releases-list.txt

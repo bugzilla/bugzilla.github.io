@@ -1,0 +1,60 @@
+---
+title: "Installation List"
+---
+
+<h1>Installation List</h1>
+
+<p>A large number of companies, organizations, and projects use Bugzilla. 
+   This page showcases a few particularly high-profile or otherwise interesting 
+   installations, and also contains a list of public Bugzillas.</p>
+
+<h2>Free Software Projects</h2>
+<ul>
+<li>Mozilla: <a href="https://bugzilla.mozilla.org/">https://bugzilla.mozilla.org/</a></li>
+<li>Linux Kernel: <a href="http://bugzilla.kernel.org/">http://bugzilla.kernel.org/</a></li>
+<li>GNOME: <a href="http://bugzilla.gnome.org/">http://bugzilla.gnome.org/</a></li>
+<li>KDE: <a href="http://bugs.kde.org/">http://bugs.kde.org/</a></li>
+<li>Apache Project: <a href="https://bz.apache.org/bugzilla/">https://bz.apache.org/bugzilla/</a></li>
+<li>LibreOffice: <a href="https://bugs.documentfoundation.org/">https://bugs.documentfoundation.org/</a></li>
+<li>Open Office: <a href="https://bz.apache.org/ooo/">https://bz.apache.org/ooo/</a></li>
+<li>Eclipse: <a href="http://bugs.eclipse.org/bugs/">http://bugs.eclipse.org/bugs/</a></li>
+</ul>
+
+<h2>Linux Distributions</h2>
+<ul>
+<li>Red Hat: <a href="https://bugzilla.redhat.com/">https://bugzilla.redhat.com/</a></li>
+<li>Gentoo: <a href="http://bugs.gentoo.org/">http://bugs.gentoo.org/</a></li>
+<li>Novell: <a href="https://bugzilla.novell.com/">https://bugzilla.novell.com/</a></li>
+</ul>
+
+<h2>Full List</h2>
+
+<p>This page lists the {{ site.data.installation-list.size }}
+companies, organizations, and projects
+that we know of who are running "public" Bugzilla installations. A public
+installation is one whose front or login page can be viewed over the
+Internet. This is, of course, only a small fraction of the Bugzilla
+installations out there - there are probably at least 10 times as many
+private ones. We used to track those too, but we found spammers
+were trying to use this page for SEO :-(.</p>
+
+<p>If you or your company are using Bugzilla, your installation is "public" in
+the sense defined above, and you would like to be listed, please mail
+<a href="mailto:gerv&#64;mozilla.org?subject=Bugzilla%20Installation%20List">Gerv</a>.
+<!-- XXX This date should be dynamic -->
+(This list was last updated on May 3rd, 2017;
+<a href="https://github.com/bugzilla/bugzilla.org/commits/master/_data/installation-list.csv">history</a>).</p>
+
+<!-- XXX This should be grouped by initial letter -->
+
+{% for item in site.data.installation-list %}
+  {% if item.orgurl %}
+      <a href="{{ item.orgurl | url_encode }}">{{ item.name }}</a>
+  {% else %}
+      {{ item.name }}
+  {% endif %}
+  {% if item.bzurl %}
+        (<a href="{{ item.bzurl | url_encode }}">Bugzilla</a>)
+  {% endif %}
+  <br>
+{% endfor %}

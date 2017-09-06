@@ -1,3 +1,4 @@
-/dest
 /bugzilla
 .DS_Store
+/_site
+.jekyll-metadata

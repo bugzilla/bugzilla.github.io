@@ -1,0 +1,102 @@
+---
+title: "Release Information"
+---
+
+<h1>Release Information</h1>
+<p>Here you can find specific information about current and previous stable Bugzilla releases.</p>
+
+<h2>Release Policy</h2>
+
+<ul>
+  <li><b>Trunk</b>
+    <ul>
+      <li>Approved changes added constantly</li>
+      <li>Occasionally development snapshots are released</li>
+    </ul>
+  </li>
+  <li><b>Current Stable Release</b>
+    <ul>
+      <li>Includes bug fixes and performance improvements only</li>
+      <li>No new features or large scale performance improvements</li>
+      <li>No database schema changes</li>
+      <li>May contain documentation changes</li>
+      <li>Changes to the documentation in docbook or perldoc format</li>
+      <li>Excludes any changes to templates that aren't part of bug fix,
+        other than typos or grammatical fixes</li>
+    </ul>
+  </li>
+  <li><b>Old Stable Releases</b>
+    <ul>
+      <li>Current policy is that 4 months after the next major release, support
+        for the oldest stable release will be dropped. The other stable release
+        will still be supported until four months after the next major release.
+      </li>
+      <li>Contains security, crash, data loss, and selected critical fixes only</li>
+      <li>No documentation changes unrelated to the above changes allowed</li>
+    </ul>
+  </li>
+  <li><b>Previous Releases</b>
+    <ul>
+      <li>Any release prior to the old stable releases are unsupported</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Release Dates</h2>
+
+<p>The list below is a list of the release dates of previous versions
+of Bugzilla.</p>
+
+<table>
+    <tr><th>Version</th><th>Release Date</th></tr>
+[%- USE date(format = "%B %e, %Y", locale = 'en_US') -%]
+[%- USE thefile = File("lib/releases-list.txt") -%]
+[%- USE data = datafile(thefile.path, delim = "\t") -%]
+[%- FOREACH item = data -%]
+  [%- r.title: '' %][% r.class = '' -%]
+  [%- IF item.date == 'future' -%]
+    [%- r.title: ' title="Upcoming Release"' -%]
+    [%- r.date = '(not shipped yet)' %]
+    <tr>
+        <td colspan="2"><span style="font-style: italic;">Upcoming Releases</span></td>
+    </tr>
+  [%- END -%]
+  [%- IF item.mode == 'current' || item.mode == 'old' -%]
+    [%- r.class = ' class="stableRelease"' -%]
+  [%- END -%]
+  [%- IF item.mode == 'current' -%]
+    [%- r.title: ' title="Current Stable Release"' %]
+    <tr>
+        <td colspan="2"><span style="font-style: italic;">Current Stable Release</span></td>
+    </tr>
+  [%- END -%]
+  [%- IF item.mode == 'old' -%]
+    [%- IF r.prev != 'old' %]
+    <tr>
+        <td colspan="2"><span style="font-style: italic;">Old Stable Releases</span></td>
+    </tr>
+    [%- END -%]
+    [%- r.title: ' title="Old Stable Release"' -%]
+  [%- END -%]
+  [%- IF item.mode == '' && item.mode != r.prev %]
+    <tr>
+        <td colspan="2"><span style="font-style: italic;">Previous Releases</span></td>
+    </tr>
+  [%- END %]
+    <tr[% r.class %]>
+  [%- v = item.version.split('\.') -%]
+  [%- UNLESS v.0 == 2 && v.1 < 11 -%]
+        <td><a href="[% item.version %]/"[% r.title %]>[% item.version %]</a></td>
+  [%- ELSE %]
+        <td>[% item.version %]</td>
+  [%- END %]
+  [%- IF item.date.match("[\d+/]+") %]
+    [%- d = item.date.split('/') -%]
+    [%- item.date = "0:0:0 " _ d.2 _ ":" _ d.1 _ ":" _ d.0 -%]
+    [%- r.date = date.format(item.date) -%]
+  [%- END %]
+        <td>[% r.date %]</td>
+    </tr>
+  [%- r.prev = item.mode -%]
+[%- END %]
+</table>

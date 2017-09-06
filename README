@@ -1,45 +1,18 @@
-Directory Structure
--------------------
-Contained in CVS:
-bin - contains the build scripts
-etc - Template Toolkit configuration
-lib - various include files for the templates and the site map used to generate
-      the navigation menus
-src - the actual site content
+This website uses Github Pages and Jekyll.
 
-Generated:
-dest - the output of the build script (the finished website docroot)
+A file needs to have YAML Front Matter to be processed by Jekyll (and so to
+have e.g. the bugzilla.org wrapper applied). Front Matter looks like this at
+the top of the file:
 
-Build Requirements
-------------------
-* jade
-* dblatex
-* xmlto
-* expat library
-* Perl modules:
-  * Template Toolkit
-  * XML::XPath
-  * File::Which
+---
+title: "My Title"
+---
 
-Building the Site
------------------
-To build manually:
-* cd into the directory containing this README file
-* run "bin/build"
-* The "dest" directory will be created if it doesn't exist, and the tree will be
-  built there.
+Other parameters can go between the three dashes. You can also have no
+parameters if you just want to say "process this".
+ 
+Jekyll's templating engine is Liquid. Reference:
+https://github.com/Shopify/liquid/wiki/Liquid-for-Designers
 
-To build from a cron job:
-* Same as above, but run "bin/build-exclusive.pl" instead, which does locking
-  to ensure build jobs don't overlap.
-
-HTML files will be processed by Template Toolkit.  This means you can use Template
-Toolkit directives in your pages for creative content or site-wide variables that
-you define in one of the config files.  See http://www.template-toolkit.org/ for
-documentation.
-
-The main site look (banner, navigation, etc) is in lib/wrapper.tmpl
-
-Configuration Files
--------------------
-Most config files are self-documenting.  Read the comments in the files.
+Here are the available template variables:
+https://jekyllrb.com/docs/variables/

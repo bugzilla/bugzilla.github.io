@@ -1,0 +1,514 @@
+---
+title: "Notes for Upgraders"
+---
+
+<h1>Notes for Upgraders</h1>
+                                            
+<p>This is a consolidated list of release note items relevant to those
+upgrading Bugzilla. If you are upgrading from version X.X to version Y.Y,
+you need to read all the notes for every version between them, plus those
+for version Y.Y.</p>
+
+<p>Each new version of Bugzilla has many enhancements and improvements.
+Issues are listed here only if they might lead to an admin needing to pay
+special attention and possibly take manual steps to update their installation,
+its extensions, or code which interacts with their Bugzilla. So the focus
+is on backwardly-incompatible changes. This is not a complete list of changes.</p>
+
+<p>If, when upgrading, you hit an issue which is not documented here and which
+was not caused by your own changes or customizations, please file a bug to get
+it added to this document.</p>
+
+<h2>4.4</h2>
+
+<h3>Apache Configuration Change</h3>
+
+<p>
+  For improved security, Bugzilla now prevents directory browsing
+  by default. In order to do that, the root <kbd>bugzilla/.htaccess</kbd> file
+  now contains the <kbd>Options -Indexes</kbd> directive. By default, this
+  directive is not allowed in <kbd>.htaccess</kbd> and so you must configure
+  Apache to allow it. To do that, add <kbd>Options</kbd> to the
+  <kbd>AllowOverride</kbd> directive in <kbd>httpd.conf</kbd>. This means you
+  should now have something like this:
+  <p>
+    <kbd>AllowOverride Limit FileInfo Indexes Options</kbd>
+  </p>
+  Check the
+  <a href="https://www.bugzilla.org/docs/4.4/en/html/configuration.html#http-apache">documentation</a>
+  for more information about how to configure Apache.
+</p>
+
+<h3 id="v44_code_changes">Code Changes Which May Affect Customizations and Extensions</h3>
+
+<ul>
+  <li>The <em>usebugaliases</em> parameter has been removed. Aliases are now
+    always available.</li>
+  <li>It is now illegal to have a product with no components and no versions.
+    Trying to delete the last component or version of a product is now
+    rejected.</li>
+  <li>Trying to set the component, target milestone or version of a bug
+    to a disabled value is no longer accepted. The change will be rejected.</li>
+  <li>Quips can no longer exceed 512 characters. Existing quips longer than
+    that are automatically truncated when upgrading.</li>
+  <li>The static <kbd>bugzilla.dtd</kbd> file has been replaced by a dynamic
+    one to take custom fields into account. The old
+    <em>&lt;urlbase&gt;/bugzilla.dtd</em> URL is now
+    <em>&lt;urlbase&gt;/page.cgi?id=bugzilla.dtd</em>.</li>
+  <li>There is a new extension located at <kbd>extensions/MoreBugUrl/</kbd>
+    which permits to add new classes of URLs in the See Also field. It uses
+    the <kbd>bug_url_sub_classes</kbd> hook mentioned above.</li>
+  <li>In the RDF output of <kbd>config.cgi</kbd>, URIs used to identify
+    versions and target milestones have been changed to be unique across
+    products.</li>
+  <li>The RDF output of <kbd>config.cgi</kbd> now also returns data about
+    classifications.</li>
+  <li>Rows in the <kbd>dependencies</kbd>, <kbd>flaginclusions</kbd> and
+    <kbd>flagexclusions</kbd> DB tables are now enforced to be unique.</li>
+  <li>The <kbd>bugs_activity</kbd> and <kbd>profiles_activity</kbd> DB
+    tables now have an auto-incremented primary key named <kbd>id</kbd>.</li>
+  <li>A custom <kbd>Bugzilla.pm</kbd> module has been added into
+    <kbd>contrib/</kbd> to help packagers to package Bugzilla in their
+    Linux distros.</li>
+</ul>
+
+<h3 id="v44_ws_changes">Notable WebService Changes</h3>
+
+<ul>
+  <li>The <kbd>User.login</kbd> WebService method now also returns a
+    <kbd>token</kbd> argument containing a login token which you can use in
+    subsequent calls to authenticate. For security reasons, this method
+    no longer generates login cookies.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=893195">Bug 893195</a>)</li>
+  <li>The <kbd>User.get</kbd> WebService method now correctly takes the
+    <kbd>maxusermatches</kbd> parameter into account when the <kbd>match</kbd>
+    argument is passed. Previously, it was returning all matching accounts.
+    To further limit the number of accounts returned by <kbd>User.get</kbd>,
+    you can now pass the <kbd>limit</kbd> argument.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=962060">Bug 962060</a>)</li>
+  <li><kbd>Bug.add_attachment</kbd> now only returns the ID of the newly
+    created attachments instead of all the attachment data.</li>
+  <li><kbd>Bug.comments</kbd> now also returns <kbd>creation_time</kbd>
+    which is exactly the same as <kbd>time</kbd>, but is provided for
+    consistency with <kbd>Bug.get</kbd> and <kbd>Bug.attachments</kbd>.
+    The <kbd>time</kbd> field may be deprecated and removed in a future release,
+    so you should use <kbd>creation_time</kbd> instead.</li>
+  <li>Field names returned in the <kbd>field_name</kbd> field of the
+    <kbd>Bug.history</kbd> method have changed to be consistent with other
+    methods.</li>
+  <li>The <kbd>Bug.search</kbd> method was returning all visible bugs
+    when called with no arguments, ignoring the <kbd>max_search_results</kbd>
+    and <kbd>search_allow_no_criteria</kbd> parameters. This has been fixed.</li>
+</ul>
+
+<h2>4.2</h2>
+
+<h3 id="v42_code_changes">Code Changes Which May Affect Customizations and Extensions</h3>
+
+<ul>
+  <li>The <kbd>email/newchangedmail.txt.tmpl</kbd> template is now fully templatized,
+    meaning that the diff table displaying changes in bug fields is
+    now generated in the template itself. This means bugmails are now
+    fully localizable.</li>
+  <li>The bugmail_recipients hook has been modified to pass <kbd>diffs</kbd> with
+    changes made to the bug as well as <kbd>users</kbd> including
+    recipients of the email notification.</li>
+  <li>YUI has been upgraded to 2.9.0.</li>
+  <li>Due to the major code refactor of <kbd>Bugzilla/Search.pm</kbd>, any
+    customization made against this file will probably need to be rewritten.</li>
+  <li>The Bugzilla-specific <kbd>url_quote</kbd> filter used in templates
+    has been removed and replaced by the <kbd>uri</kbd> filter from Template::Toolkit
+    as they are now similar.</li>
+  <li><kbd>long_list.cgi</kbd>, <kbd>showattachment.cgi</kbd> and <kbd>xml.cgi</kbd>
+    have been removed from the codebase. As <a href="#v40_code_changes">announced</a>
+    in the release notes of Bugzilla 4.0, these scripts were deprecated
+    since Bugzilla 2.19.</li>
+  <li><kbd>sidebar.cgi</kbd> has been removed, because Gecko-based browsers no
+    longer support remote XUL, and its popularity is very low.</li>
+  <li><kbd>contrib/yp_nomail.sh</kbd> has been removed. This script is no longer
+    useful since Bugzilla 3.0.</li>
+  <li><kbd>contrib/bugzilla_ldapsync.rb</kbd> has been removed. This script didn't
+    work for a long time.</li>
+</ul>
+
+<h3 id="v42_ws_changes">Notable WebService Changes</h3>
+
+<ul>
+  <li>In <kbd>Bug.fields</kbd>, the <kbd>sortkey</kbd> attribute used in
+    <kbd>values</kbd> has been renamed to <kbd>sort_key</kbd>.</li>
+  <li>In <kbd>Bug.attachments</kbd> and <kbd>Bug.add_attachment</kbd>,
+    the <kbd>is_url</kbd> attribute no longer exists.</li>
+</ul>
+
+<h2>4.0</h2>
+
+<h3>Apache Configuration Changes</h3>
+
+<h4>mod_cgi</h4>
+
+<p>If you run Bugzilla under mod_cgi (this is the most common
+  configuration, involving a &lt;Directory&gt; block in your Apache config
+  file), you will need to update the configuration of Apache for 
+  Bugzilla. In particular, this line in the Bugzilla
+  <kbd>&lt;Directory&gt;</kbd> block:</p>
+
+<blockquote><code>AllowOverride Limit</code></blockquote>
+
+<p>needs to become:</p>
+
+<blockquote><code>AllowOverride Limit FileInfo Indexes</code></blockquote>
+ 
+<p>For full details on how to configure Apache for Bugzilla,
+  see the
+  <a href="https://www.bugzilla.org/docs/4.4/en/html/configuration.html#http-apache">Configuration</a>
+  section of the Bugzilla Guide.</p>
+
+<h4>mod_perl</h4>
+
+<p>If your Bugzilla runs under mod_perl, the required Apache
+  configuration is now simpler. The line that used to look like:</p>
+
+<blockquote><code>PerlSwitches -w -T -I/var/www/html/bugzilla 
+    -I/var/www/html/bugzilla/lib</code></blockquote>
+
+<p>Now should be only:</p>
+
+<blockquote><code>PerlSwitches -w -T</code></blockquote>
+
+<p>The <code>PerlConfigRequire</code> line should stay the same, however.</p>
+
+<h3>New .htaccess file</h3>
+
+<p>In previous versions of Bugzilla, there was a file
+  in Bugzilla's root directory called ".htaccess" that was
+  generated by <kbd>checksetup.pl</kbd>. This file is now shipped with
+  Bugzilla instead of being generated during installation.</p>
+
+<p>If you update via CVS, bzr or git, you will get a message that your existing
+  .htaccess file conflicts with the new one. You must
+  <strong>remove your existing .htaccess file</strong> and use the new one
+  instead. Continuing to use your old .htaccess file will cause certain new
+  features of Bugzilla to not work properly, and may also lead
+  to security issues for your system in the future.</p>
+
+<h3 id="v40_code_changes">Code Changes Which May Affect Customizations and Extensions</h3>
+
+<ul>
+  <li>In Extensions, if you want to serve files to the user via the web,
+    they must now be in a <kbd>web/</kbd> subdirectory of your Extension.
+    (For example, <kbd>extensions/Foo/web/</kbd>). <kbd>checksetup.pl</kbd>
+    sets permissions on extensions much more strictly now, and files in
+    other locations (such as your base <kbd>extensions/Foo/</kbd> directory)
+    will no longer be available to Bugzilla users via the web
+    under certain configurations.</li>
+  <li>Previous versions of Bugzilla used to allow putting a
+    single file into the "skins" directory and having that be an entire
+    skin. That is no longer allowed, and on upgrade, <kbd>checksetup.pl</kbd>
+    will convert any such skins into a directory with a single
+    <kbd>global.css</kbd> file in them.</li>
+  <li>When updating bugs, you should now use
+    <code>$bug-&gt;set_all</code> instead of using the individual
+    <kbd>set_</kbd> methods. In particular, <kbd>set_all</kbd> is now the
+    <em>only</em> way to set the product of a bug. See
+    <kbd>process_bug.cgi</kbd> for an example of how <kbd>set_all</kbd>
+    should be used.</li>
+  <li>You should not insert &lt;script&gt; tags and &lt;link&gt; CSS tags
+    into HTML anymore, in Extensions or in your customizations. Instead,
+    you should push new values into the <kbd>style_urls</kbd> or
+    <kbd>javascript_urls</kbd> parameters. If you have to insert manual
+    tags for some reason, be sure to call "FILTER mtime" on the URL. (Search
+    for other uses of "FILTER mtime" in the templates to see how it is
+    used.)</li>
+  <li>When calling <kbd>Bugzilla::BugMail::Send</kbd>, the "changer"
+    argument must now be a <kbd>Bugzilla::User</kbd> object, not just
+    a login name. The "owner" and "qacontact" arguments are still
+    just login names.</li>
+  <li>When creating a new subclass of Bugzilla::Object, you should no
+    longer use <kbd>UPDATE_VALIDATORS</kbd>. Also, in most cases you will
+    no longer need to override <kbd>run_create_validators</kbd>. Instead,
+    there is a new constant called
+    <a href="https://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/Object.html#VALIDATOR_DEPENDENCIES">VALIDATOR_DEPENDENCIES</a>,
+    that specifies that certain fields have to be validated before other fields.
+    Then, all validators receive each already-validated value in a hash
+    as their fourth argument, so each validator can know the other values
+    that were passed in, while an object is being created. For an example of
+    how to use <kbd>VALIDATOR_DEPENDENCIES</kbd>, see
+    <kbd>Bugzilla/Field.pm</kbd>.</li>
+  <li>In previous versions of Bugzilla, you had to call
+    <code>Bugzilla-&gt;template_inner("")</code> after any time
+    that you called <kbd>template_inner</kbd> for a specific language.
+    It is no longer necessary to do this second <kbd>template_inner</kbd>
+    call.</li>
+  <li><kbd>post_bug.cgi</kbd> and <kbd>Bugzilla::Bug-&gt;create</kbd> now take
+    the <em>names</em> of groups instead of group ids.</li>
+  <li>Bugzilla::Bugmail now uses Bugzilla::Bug objects internally instead of
+    a lot of direct SQL.</li>
+  <li>For sending changes about bugs, there is now a method
+    called <kbd>send_changes</kbd> that you can call on Bugzilla::Bug
+    objects. For an example of its use, see <kbd>process_bug.cgi</kbd>.</li>
+  <li>The <kbd>Bugzilla::Search</kbd> class has been refactored, and should
+    now be easier to customize.</li>
+  <li>The <kbd>Bugzilla::Util::lsearch</kbd> function is gone. Use
+    <kbd>firstidx</kbd> from <kbd>List::MoreUtils</kbd>, instead.</li>
+  <li>Bugzilla now includes YUI 2.8.2.</li>
+  <li><kbd>long_list.cgi</kbd>, <kbd>showattachment.cgi</kbd> and
+    <kbd>xml.cgi</kbd> are deprecated scripts which are no longer actively
+    used since Bugzilla 2.19. These scripts will be removed in
+    Bugzilla 4.2.</li>
+  <li>The system for moving bugs between installations has been
+    moved into an extension called <kbd>OldBugMove</kbd>. This system was used
+    by very few Bugzilla installations--if you aren't certain
+    whether or not you are using it, you're not using it. To enable the system,
+    you have to remove the file <kbd>extensions/OldBugMove/disabled</kbd>
+    and then run <kbd>checksetup.pl</kbd>. In a future version of Bugzilla,
+    this extension may be moved outside of the core Bugzilla code,
+    so if you are interested in maintaining it, please let us know.</li>
+</ul>
+
+<h3 id="v40_ws_changes">Notable WebService Changes</h3>
+
+<ul>
+  <li>The <kbd>Bug.create</kbd> WebService method now throws an error if you
+    pass a group name which doesn't exist. In Bugzilla 4.0 and 4.0.1,
+    this group name was silently ignored, leaving your bug unsecure
+    if no other group applied.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=653341">Bug 653341</a>)</li>
+  <li>WebServices methods will return undefined bug fields as undefined
+    instead of as an empty string. This change is consistent with how
+    Bugzilla 4.2 behaves.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=657561">Bug 657561</a>)</li>
+  <li>The <kbd>Bug.get</kbd> function now returns all of a bug's
+    information other than comments and attachments.</li>
+  <li><kbd>Bug.get</kbd> no longer returns the <kbd>internals</kbd> hash.</li>
+  <li>The following functions now support the <kbd>include_fields</kbd>
+    and <kbd>exclude_fields</kbd> arguments: <kbd>Bug.get</kbd>,
+    <kbd>Bug.search</kbd>, and <kbd>Bug.attachments</kbd>. Also,
+    server-side performance of the WebService is actually increased when
+    using these arguments, now, as Bugzilla will no longer
+    get data from the database for fields you haven't asked for.</li>
+  <li>You can no longer search using the <kbd>votes</kbd> argument in
+    <kbd>Bug.search</kbd>.</li>
+  <li><kbd>Bug.attachments</kbd> now returns the attachment's description
+    using the name "summary" instead of the name "description", to be
+    consistent with the fact that bug summaries are called
+    "summary". The value is still <em>also</em> returned as "description",
+    for backwards compatibility, but this backwards compatibility will go
+    away in Bugzilla 5.0.</li>
+  <li>In the return values of various <kbd>Bug</kbd> functions, the author
+    of comments, bugs, and attachments is now called "creator",
+    instead of sometimes being called "reporter", "author", or "attacher".
+    The old names are retained for backwards-compatibility, and will stay
+    around until Bugzilla 5.0.</li>
+</ul>
+
+<h2>3.6</h2>
+
+<h3 id="v36_upgrading">DB Consistency Check</h3>
+
+<p>When upgrading to 3.6, <kbd>checksetup.pl</kbd> will create foreign keys
+  for many columns in the database. Before doing this, it will check the
+  database for consistency. If there are an unresolvable consistency
+  problems, it will tell you what table and column in the database contain
+  the bad values, and which values are bad. If you don't know what else to do,
+  you can always delete the database records which contain the bad values by
+  logging in to your database and running the following command:</p>
+
+<p><code>DELETE FROM <var>table</var> WHERE <var>column</var> IN 
+  (<var>1, 2, 3, 4</var>)</code></p>
+
+<p>Just replace "table" and "column" with the name of the table 
+  and column that <kbd>checksetup.pl</kbd> mentions, and "1, 2, 3, 4"
+  with the invalid values that <kbd>checksetup.pl</kbd> prints out.</p>
+
+<p>Remember that you should always back up your database before doing
+  an upgrade.</p>
+
+<h3 id="v36_code_changes">Code Changes Which May Affect Customizations and Extensions</h3>
+
+<ul>
+  <li>There is no longer a SendBugMail method in the templates, and bugmail
+    is no longer sent by processing a template. Instead, it is sent
+    by using <kbd>Bugzilla::BugMail::Send</kbd>.</li>
+  <li>Comments are now represented as a
+    <a href="https://www.bugzilla.org/docs/3.6/en/html/api/Bugzilla/Comment.html">Bugzilla::Comment</a>
+    object instead of just being hashes.</li>
+  <li>In previous versions of Bugzilla, the template for displaying
+    a bug required a lot of extra variables that are now global
+    template variables instead.</li>
+  <li>You can now check if optional modules are installed by using
+    <kbd>Bugzilla-&gt;feature</kbd> in Perl code or
+    <kbd>feature_enabled</kbd> in template code.</li>
+  <li>All of the various template header information required to display
+    the bug form is now in one template,
+    <kbd>template/en/default/bug/show-header.html.tmpl</kbd>.</li>
+  <li>You should now use <kbd>display_value</kbd> instead of
+    <kbd>get_status</kbd> or <kbd>get_resolution</kbd> in templates.
+    <kbd>display_value</kbd> should be used anywhere that a
+    &lt;select&gt;-type field has its values displayed.</li>
+</ul>
+
+<h3 id="v36_ws_changes">Notable WebService Changes</h3>
+
+<ul>
+  <li>The WebService now returns all dates and times in the UTC timezone.
+    <kbd>Bugzilla.time</kbd> now acts as though the Bugzilla
+    server were in the UTC timezone, always. If you want to write clients
+    that are compatible across all Bugzilla versions,
+    check the timezone from <kbd>Bugzilla.timezone</kbd> or
+    <kbd>Bugzilla.time</kbd>, and always input times in that timezone
+    and expect times to be returned in that format.</li>
+  <li>In the <kbd>Bug.add_comment</kbd> method, the "private" parameter
+    has been renamed to "is_private" (for consistency with other methods).
+    You can still use "private", though, for backwards-compatibility.</li>
+  <li>The WebService now has Perl's "taint mode" turned on. This means that
+    it validates all data passed in before sending it to the database.
+    Also, all parameter names are validated, and if you pass in a parameter
+    whose name contains anything other than letters, numbers, or underscores,
+    that parameter will be ignored. Mostly this just affects
+    customizers--Bugzilla's WebService is not functionally
+    affected by these changes.</li>
+  <li>In previous versions of Bugzilla, error messages were
+    sent word-wrapped to the client, from the WebService. Error messages
+    are now sent as one unbroken line.</li>
+</ul>
+
+<h2>3.4</h2>
+
+<h3 id="v34_upgrading">DB Consistency Check</h3>
+
+<p>When upgrading to 3.4, <kbd>checksetup.pl</kbd> will create foreign keys
+  for many columns in the database. Before doing this, it will check the
+  database for consistency. If there are an unresolvable consistency
+  problems, it will tell you what table and column in the database contain
+  the bad values, and which values are bad. If you don't know what else to do,
+  you can always delete the database records which contain the bad values by
+  logging in to your database and running the following command:</p>
+
+<p><code>DELETE FROM <var>table</var> WHERE <var>column</var> IN 
+  (<var>1, 2, 3, 4</var>)</code></p>
+
+<p>Just replace "table" and "column" with the name of the table 
+  and column that <kbd>checksetup.pl</kbd> mentions, and "1, 2, 3, 4"
+  with the invalid values that <kbd>checksetup.pl</kbd> prints out.</p>
+
+<p>Remember that you should always back up your database before doing
+  an upgrade.</p>
+
+<h3 id="v34_code_changes">Code Changes Which May Affect Customizations and Extensions</h3>
+
+<ul>
+  <li><kbd>checksetup.pl</kbd> now re-writes the <kbd>localconfig</kbd>
+    file every time it runs, keeping the current values set (if there
+    are any), but moving any unexpected variables into a file called
+    <kbd>localconfig.old</kbd>. If you want to continue having custom
+    varibles in <kbd>localconfig</kbd>, you will have to add them to
+    the <code>LOCALCONFIG_VARS</code> constant in 
+    <kbd>Bugzilla::Install::Localconfig</kbd>.</li>
+  <li><kbd>Bugzilla::Object-&gt;update()</kbd> now returns something different
+    in list context than it does in scalar context.</li>
+  <li><kbd>Bugzilla::Object-&gt;check()</kbd> now can take object
+    ids in addition to names. Just pass in <code>{ id =&gt; $some_value
+    }</code>.</li>
+  <li>Instead of being defined in <kbd>buglist.cgi</kbd>, columns for
+    search results are now defined in a subroutine called <code>COLUMNS</code>
+    in <kbd>Bugzilla::Search</kbd>. The data now mostly comes from the
+    <kbd>fielddefs</kbd> table in the database. Search.pm now takes a list
+    of column names from fielddefs for its <kbd>fields</kbd> argument instead 
+    of literal SQL columns.</li>
+  <li><kbd>Bugzilla::Field-&gt;legal_values</kbd> now returns an array of
+    <a href="https://www.bugzilla.org/docs/3.6/en/html/api/Bugzilla/Field/Choice.html">Bugzilla::Field::Choice</a>
+    objects instead of an array of strings. Bugzilla::Field::Choice will be used
+    in more places, in the future.</li>
+  <li>We now use <kbd>Bugzilla::Bug-&gt;check()</kbd> instead of 
+    <kbd>ValidateBugId</kbd>.</li>
+  <li>The <kbd>groups</kbd> and <kbd>bless_groups</kbd> methods in 
+    <kbd>Bugzilla::User</kbd> now return an arrayref of 
+    <kbd>Bugzilla::Group</kbd> objects instead of a hashref with
+    group ids and group names.</li>
+  <li>Standard Bugzilla drop-down fields now have their type
+    set to <kbd>FIELD_TYPE_SINGLE_SELECT</kbd> in the fielddefs table.</li>
+  <li><kbd>Bugzilla-&gt;usage_mode</kbd> now defaults to 
+    <kbd>USAGE_MODE_CMDLINE</kbd> if we are not running inside a web
+    server.</li>
+  <li>We no longer delete environment variables like <kbd>$ENV{PATH}</kbd>
+    automatically unless we're actually running in taint mode.</li>
+  <li>We are now using YUI 2.6.0.</li>
+  <li>In <a href="config.cgi?ctype=rdf">the RDF format of config.cgi</a>,
+    the "resource" attribute for flags now contains "flag.cgi" instead
+    of "flags.cgi".</li>
+</ul>
+
+<h4 id="v34_ws_changes">Notable WebService Changes</h4>
+
+<ul>
+  <li><kbd>Bugzilla.timezone</kbd> is now deprecated.</li>
+  <li>Many WebService function parameters now take individual values in
+    addition to arrays.</li>
+  <li>The WebService now validates input types--it makes sure that dates
+    are in the right format, that ints are actually ints, etc. It will throw
+    an error if you send it invalid data. It also accepts empty ints, doubles,
+    and dateTimes, and translates them to <kbd>undef</kbd>.</li>
+</ul>
+
+<h2>3.2</h2>
+
+<ul>
+  <li>If you upgrade by CVS, the <kbd>extensions</kbd> and 
+    <kbd>skins/contrib</kbd> directories are now in CVS instead of
+    being created by <kbd>checksetup.pl</kbd> If you do a <kbd>cvs update</kbd>
+    from 3.0, you will be told that your directories are "in the way" and
+    you should delete (or move) them and then do <kbd>cvs update</kbd>
+    again. Also, the <kbd>docs</kbd> directory has been restructured
+    and after you <kbd>cvs update</kbd> you can delete the <kbd>docs/html</kbd>,
+    <kbd>docs/pdf</kbd>, <kbd>docs/txt</kbd>, and <kbd>docs/xml</kbd>
+    directories.</li>
+  <li>If you are using MySQL, you should know that Bugzilla
+    now uses InnoDB for all tables. <kbd>checksetup.pl</kbd> will convert
+    your tables automatically, but if you have InnoDB disabled,
+    the upgrade will not be able to complete (and <kbd>checksetup.pl</kbd>
+    will tell you so).</li>
+</ul>
+
+<h3 id="v32_code_changes">Code Changes Which May Affect Customizations</h3>
+
+<ul>
+    <li>You should now be using <code>get_status('NEW')</code> instead of
+    <code>status_descs.NEW</code> in templates.</li>
+</ul>
+
+<h2>3.0</h2>
+
+<h3 id="v30_code_changes">Code Changes Which May Affect Customizations</h3>
+
+<ul>
+    <li>The old <kbd>SendSQL</kbd> function and all of its companions are
+  <strong>gone</strong>. Instead, we now use DBI for all database
+  interaction. For more information about how to use 
+  <a href="http://search.cpan.org/perldoc?DBI">DBI</a> with 
+  Bugzilla, see the 
+  <a href="https://www.bugzilla.org/docs/developer.html#sql-sendreceive">Developer's
+  Guide Section About DBI</a>.</li>
+  <li>Instead of <kbd>UserInGroup()</kbd>, all of Bugzilla now 
+    uses <kbd>Bugzilla-&gt;user-&gt;in_group</kbd></li>
+  <li>Parameters are accessed through <kbd>Bugzilla-&gt;params</kbd>
+    instead of using the <kbd>Param()</kbd> function, now.</li>
+  <li>The variables from the <kbd>localconfig</kbd> file are accessed
+    through the <code>Bugzilla-&gt;localconfig</code> hash instead of through
+    <kbd>Bugzilla::Config</kbd>.</li>
+  <li><kbd>Bugzilla::BugMail::MessageToMTA()</kbd> has moved into its
+    own module, along with other mail-handling code, called
+    <kbd>Bugzilla::Mailer</kbd></li>
+  <li>The <kbd>CheckCanChangeField()</kbd> subroutine in 
+    <kbd>process_bug.cgi</kbd> has been moved to <kbd>Bugzilla::Bug</kbd>,
+    and is now a method of a bug object.</li>
+  <li>The code that used to be in the <kbd>global/banner.html.tmpl</kbd>
+    template is now in <kbd>global/header.html.tmpl</kbd>. The banner
+    still exists, but the file is empty.</li>
+</ul>
+
+<h2>Older Releases</h2>
+
+<p>If you are upgrading from a release even older than 2.22 (which was the
+release before 3.0), you will need to do the release note archaeology yourself.
+Start <a href="../releases/2.22.7/release-notes.html">here</a>.</p>
+
