@@ -2,17 +2,14 @@
 title: "Release Information"
 ---
 
-<h1>Release Information</h1>
-<p>Here you can find specific information about current and previous stable Bugzilla releases.</p>
-
-<h2>Release Policy</h2>
+<h2>Current Releases and Change Policy</h2>
 
 <ul>
   <li><b>Trunk
   (<a href="{{site.data.releases.dev.current }}/">{{site.data.releases.dev.current }})</a></b>
     <ul>
       <li>Approved changes added constantly</li>
-      <li>Occasionally development snapshots are released</li>
+      <li>Occasional development snapshots are released</li>
     </ul>
   </li>
   <li><b>Current Stable Release
@@ -22,9 +19,8 @@ title: "Release Information"
       <li>No new features or large scale performance improvements</li>
       <li>No database schema changes</li>
       <li>May contain documentation changes</li>
-      <li>Changes to the documentation in docbook or perldoc format</li>
-      <li>Excludes any changes to templates that aren't part of bug fix,
-        other than typos or grammatical fixes</li>
+      <li>No changes to templates that aren't part of bug fix,
+          other than typos or grammatical fixes</li>
     </ul>
   </li>
   <li><b>Old Stable Release
@@ -38,21 +34,17 @@ title: "Release Information"
       <li>No documentation changes unrelated to the above changes allowed</li>
     </ul>
   </li>
-  <li><b>Previous Releases</b>
-    <ul>
-      <li>Any release prior to the old stable releases are unsupported</li>
-    </ul>
-  </li>
 </ul>
+
+<p>Any release prior to the old stable release is unsupported.</p>
 
 <h2>Release Dates</h2>
 
-<p>The list below is a list of the release dates of previous versions
-of Bugzilla.</p>
+<p>Here is a list of the release dates of every version of Bugzilla.</p>
 
 {% assign list = site.data.releases-list %}
 
-<table>
+<table border=1>
     <tr><th>Version</th><th>Release Date</th></tr>
 {% for item in list %}
     <tr>
