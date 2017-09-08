@@ -10,8 +10,8 @@ use IO::File;
 use Template;
 use LWP::UserAgent;
 
-die "You must be in the root of a bugzilla.org checkout\n"
-    unless (-d 'src' && -d 'lib' && -d 'bin');
+die "You must be in the root of a bugzilla.github.io checkout\n"
+    unless (-d '_layouts' && -d 'img' && -d '_release-template');
 
 use lib 'lib/perl';
 use BugzillaOrg::Util;
@@ -19,7 +19,7 @@ use BugzillaOrg::Util;
 $Template::Config::SERVICE = 'BugzillaOrg::Template::Service';
 
 use constant TEMPLATE_CONFIG => {
-    INCLUDE_PATH => ['lib/release-template'],
+    INCLUDE_PATH => ['_release-template'],
 
     FILTERS => {
         branch => \&branch,
@@ -63,40 +63,40 @@ sub get_template {
 
 sub release_index {
     my ($version) = @_;
-    my $filename = "src/releases/$version/index.html";
+    my $filename = "releases/$version/index.html";
     write_template($filename, 'releases/index.html', { version => $version });
 }
 
 sub release_notes {
     my ($version) = @_;
 
-    # Get web release notes for 3.0 or higher.
+    # Get release notes from repo
     my $install = branch($version) . '-branch';
     $version =~ /^(\d+)/;
     my $major = $1;
-    my $page = 'page.cgi?id=release-notes.html';
-    # Major versions before 3.0 use text release notes.
-    if ($major < 3) {
-        $page = 'docs/rel_notes.txt';
-    }
-    my $url = "https://landfill.bugzilla.org/bugzilla-$install/$page";
+    my $page = 'template/en/default/pages/release-notes.html.tmpl';
+    my $url = "https://raw.githubusercontent.com/bugzilla/bugzilla/$version/$page";
     print "Getting release notes from $url...\n";
     my $response = $ua->get($url);
     my $relnotes = $response->content;
-    if ($major < 3) {
-        $relnotes = CGI::Util::simple_escape($relnotes);
-        $relnotes = "<pre>$relnotes</pre>";
-    }
-    else {
-        $relnotes =~ s/^.+?\Q<div id="bugzilla-body">\E//s;
-        $relnotes =~ s/<\/div>\s+<div id="footer">.+$//s;
-        $relnotes =~ s/page\.cgi\?id=release-notes\d?.html/\.\.\/index\.html/;
-        $relnotes =~ s/"(page\.cgi\?id=(fields|quicksearch)\.html)"/"https:\/\/landfill\.bugzilla\.org\/bugzilla-$install\/$1"/g;
-    }
-    # Escape % signs so that Template Toolkit doesn't get confused.
+
+    # Chop off header and footer
+    $relnotes =~ s/^.+?\Q</h1>\E//s;
+    $relnotes =~ s/\Q[% INCLUDE global/footer.html.tmpl %]\E.+$//s;
+    
+    # Poor man's noun replacement system
+    $relnotes =~ s/\Q[% terms.bug %]\E/bug/g;
+    $relnotes =~ s/\Q[% terms.Bug %]\E/Bug/g;
+    $relnotes =~ s/\Q[% terms.Bugzilla %]\E/Bugzilla/g;
+
+    # Remove templated "minimum version" stuff that isn't processed in the raw
+    # file
+    $relnotes =~ s/\Q<h2 id="req">\E.+(<h2 id="feat">)/$1/s;
+
+    # Escape any % signs so that Template Toolkit doesn't get confused.
     $relnotes =~ s/%/&#37;/g;
 
-    my $filename = "src/releases/$version/release-notes.html";
+    my $filename = "releases/$version/release-notes.html";
     write_template($filename, 'releases/release-notes.html',
         { version => $version, relnotes => $relnotes });
 }    
@@ -115,7 +115,7 @@ sub security_advisory {
         }
     }
 
-    write_template("src/security/$security/index.html", 'security/index.html',
+    write_template("security/$security/index.html", 'security/index.html',
                    { previous => \@previous });
 }
 
@@ -132,7 +132,7 @@ sub news {
           devel    => $info->{dev}, 
           rc       => $info->{rc} });
 
-    my $template_file = 'src/news/index.html';
+    my $template_file = 'news/index.html';
     print "Updating $template_file...\n";
     system("git reset --hard $template_file");
     my $news_fh = new IO::File($template_file, '<');
@@ -167,31 +167,30 @@ foreach my $version (@stable) {
     release_notes($version);
     next if $switch{'relnotes-only'};
     release_index($version);
-    print "** Remember to update lib/releases-list.txt\n";
+    print "** Remember to update _data/releases-list.csv\n";
 }
 
 exit if $switch{'relnotes-only'};
 
 if ($rc) {
     my $branch = branch($rc);
-    print "** Remember to update src/releases/$branch/index.html\n";
+    print "** Remember to update releases/$branch/index.html\n";
     release_notes($branch);
 }
 
 if ($dev) {
     my $dev_branch = branch($dev);
-    print "** Remember to update src/releases/$dev_branch/index.html\n";
+    print "** Remember to update releases/$dev_branch/index.html\n";
 }
 
 if ($switch{'security'}) {
     security_advisory($switch{'security'}, \@versions);
-    print "** Remember to update src/security/index.html\n";
+    print "** Remember to update security/index.html\n";
 }
 
 if (scalar @versions) {
     news($vers);
-    print "** Remember to update src/index.html\n";
-    print "** Remember to update src/download/index.html\n";
-    print "** Remember to update src/docs/index.html\n";
-    print "** Remember to update src/status/changes.html\n";
+    print "** Remember to update index.html\n";
+    print "** Remember to update download/index.html\n";
+    print "** Remember to update docs/index.html\n";
 }
