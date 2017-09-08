@@ -72,17 +72,17 @@ sub release_notes {
 
     # Get release notes from repo
     my $install = branch($version) . '-branch';
-    $version =~ /^(\d+)/;
+    $version =~ /^(\d+\.\d+)/;
     my $major = $1;
     my $page = 'template/en/default/pages/release-notes.html.tmpl';
-    my $url = "https://raw.githubusercontent.com/bugzilla/bugzilla/$version/$page";
+    my $url = "https://raw.githubusercontent.com/bugzilla/bugzilla/$major/$page";
     print "Getting release notes from $url...\n";
     my $response = $ua->get($url);
     my $relnotes = $response->content;
 
     # Chop off header and footer
-    $relnotes =~ s/^.+?\Q</h1>\E//s;
-    $relnotes =~ s/\Q[% INCLUDE global/footer.html.tmpl %]\E.+$//s;
+    $relnotes =~ s/^.+?\Q<\/h1>\E//s;
+    $relnotes =~ s/\Q[% INCLUDE global\/footer.html.tmpl %]\E.+$//s;
     
     # Poor man's noun replacement system
     $relnotes =~ s/\Q[% terms.bug %]\E/bug/g;
@@ -133,8 +133,6 @@ sub news {
           rc       => $info->{rc} });
 
     my $template_file = 'news/index.html';
-    print "Updating $template_file...\n";
-    system("git reset --hard $template_file");
     my $news_fh = new IO::File($template_file, '<');
     my $news_text;
     { local $/; $news_text = <$news_fh>; }
@@ -155,6 +153,11 @@ GetOptions(\%switch, 'help|h|?', 'security=s', 'relnotes-only');
 $template = Template->new(TEMPLATE_CONFIG)
   || die("Template creation failed: " . Template->error());
 $ua = new LWP::UserAgent;
+
+if (!scalar(@ARGV)) {
+    print "Usage: do-release.pl <version> <version> [--security <version>]* [--relnotes-only]\n";
+    exit(1);
+}
 
 my $vers = get_versions(@ARGV);
 my @versions = @{ $vers->{'versions'} };
@@ -191,6 +194,7 @@ if ($switch{'security'}) {
 if (scalar @versions) {
     news($vers);
     print "** Remember to update index.html\n";
+    print "** Remember to update news/index.html\n";
     print "** Remember to update download/index.html\n";
     print "** Remember to update docs/index.html\n";
 }
