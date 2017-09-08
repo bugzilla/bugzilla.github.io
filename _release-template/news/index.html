@@ -66,8 +66,7 @@
 
 [% BLOCK version_links %]
   <ul>
-    <li><a href="../download/#v
-                 [%~ version FILTER branch FILTER remove('\.') %]">Download [% version %]</a></li>
+    <li><a href="../download/">Download [% version %]</a></li>
     [% IF is_rc %]
       [% relnote_version = version FILTER branch %]
     [% ELSE %]

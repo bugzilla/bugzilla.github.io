@@ -1,20 +1,16 @@
 ---
-title: "Bugzilla [% version %]
+title: "Bugzilla [% version %]"
 ---
 
 <h1>Bugzilla [% version %]</h1>
 
 <ul>
-  <li><a href="../../download/#v
-               [%- version FILTER branch FILTER remove('\.') %]">Download 
-    Bugzilla [% version %]</a></li>
+  <li><a href="../../download/">Get Bugzilla [% version %]</a></li>
   <li><a href="release-notes.html">Release Notes for Bugzilla
     [% version %]</a></li>
   <li><a href="release-notes.html#v
         [%- version FILTER branch FILTER remove ('\.') %]_feat">New 
         Features in Bugzilla [% version FILTER branch %]</a></li>
-  <li><a href="../../status/changes.html">Complete changelogs since 
-    prior versions</a></li>
   [% IF security.defined %]
     <li><a href="../../security/[% security %]/">Security Advisory for
       versions before [% version %]</a></li>

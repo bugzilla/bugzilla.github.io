@@ -85,9 +85,10 @@ sub release_notes {
     $relnotes =~ s/\Q[% INCLUDE global\/footer.html.tmpl %]\E.+$//s;
     
     # Poor man's noun replacement system
-    $relnotes =~ s/\Q[% terms.bug %]\E/bug/g;
-    $relnotes =~ s/\Q[% terms.Bug %]\E/Bug/g;
-    $relnotes =~ s/\Q[% terms.Bugzilla %]\E/Bugzilla/g;
+    $relnotes =~ s/\[%\+? terms\.(bugs?) %\]/$1/gi;
+    $relnotes =~ s/\Q[% terms.abug %]\E/a bug/g;
+    $relnotes =~ s/\[%\+?\s*terms\.Bugzilla %\]/Bugzilla/g;
+    $relnotes =~ s/\Q[%%]\E//g;
 
     # Remove templated "minimum version" stuff that isn't processed in the raw
     # file
@@ -155,7 +156,8 @@ $template = Template->new(TEMPLATE_CONFIG)
 $ua = new LWP::UserAgent;
 
 if (!scalar(@ARGV)) {
-    print "Usage: do-release.pl <version> <version> [--security <version>]* [--relnotes-only]\n";
+    print "Usage: do-release.pl <version> <version> [--security <version>] [--relnotes-only]\n";
+    print "The --security switch takes the oldest stable version being released which is affected.\n";
     exit(1);
 }
 
