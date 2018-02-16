@@ -27,3 +27,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jekyll-last-modified-at'
 gem 'jekyll-sitemap'
+gem "json", "2.0.2"
