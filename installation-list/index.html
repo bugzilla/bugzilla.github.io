@@ -49,12 +49,12 @@ the sense defined above, and you would like to be listed, please mail
 
 {% for item in site.data.installation-list %}
   {% if item.orgurl %}
-      <a href="{{ item.orgurl | url_encode }}">{{ item.name }}</a>
+      <a href="{{ item.orgurl }}">{{ item.name }}</a>
   {% else %}
       {{ item.name }}
   {% endif %}
   {% if item.bzurl %}
-        (<a href="{{ item.bzurl | url_encode }}">Bugzilla</a>)
+        (<a href="{{ item.bzurl }}">Bugzilla</a>)
   {% endif %}
   <br>
 {% endfor %}
