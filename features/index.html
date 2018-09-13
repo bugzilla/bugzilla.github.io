@@ -8,7 +8,7 @@ title: "Features"
 
 <ul>
   <li><a href="#searchpage">Advanced Search Capabilities</a></li>
-  <li><a href="#email">Email Notifications Controlled By User 
+  <li><a href="#email">Email Notifications Controlled By User
     Preferences</a></li>
   <li><a href="#buglist-formats">Bug Lists in Multiple Formats (Atom,
     iCal, etc.)</a></li>
@@ -19,7 +19,7 @@ title: "Features"
   <li><a href="#email-in">File/Modify Bugs By Email</a></li>
   <li><a href="#time-tracking">Time Tracking</a></li>
   <li><a href="#rs">Request System</a></li>
-  <li><a href="#private">Private Attachments and Comments</a></li>  
+  <li><a href="#private">Private Attachments and Comments</a></li>
   <li><a href="#nick-complete">Automatic Username Completion or
     Drop-Down User Lists</a></li>
   <li><a href="#patchviewer">Patch Viewer</a></li>
@@ -99,12 +99,12 @@ title: "Features"
 
 <p>For example, you could pick Product
   as the X axis, and Status as the Y axis, and then you would see
-  <a href="https://landfill.bugzilla.org/bugzilla-tip/report.cgi?x_axis_field=product&y_axis_field=bug_status&z_axis_field=&query_format=report-table&format=table&action=wrap">a report
+  <a href="https://bugzilla-dev.allizom.org/report.cgi?x_axis_field=product&amp;y_axis_field=bug_status&amp;z_axis_field=&amp;query_format=report-table&amp;format=table&amp;action=wrap">a report
   of how many bugs were in each Status, in each Product</a>.</p>
 
-<p>You can also view that same table as a <a href="https://landfill.bugzilla.org/bugzilla-tip/report.cgi?x_axis_field=product&y_axis_field=bug_status&z_axis_field=&width=600&height=350&action=wrap&format=line">line graph</a>,
-  <a href="https://landfill.bugzilla.org/bugzilla-tip/report.cgi?x_axis_field=product&y_axis_field=bug_status&z_axis_field=&width=600&height=350&action=wrap&format=bar">bar graph</a>,
-  or <a href="https://landfill.bugzilla.org/bugzilla-tip/report.cgi?z_axis_field=product&format=pie&x_axis_field=bug_status&query_format=report-graph&action=wrap">pie chart</a>.</p>
+<p>You can also view that same table as a <a href="https://bugzilla-dev.allizom.org/report.cgi?x_axis_field=product&amp;y_axis_field=bug_status&amp;z_axis_field=&amp;width=600&amp;height=350&amp;action=wrap&amp;format=line">line graph</a>,
+  <a href="https://bugzilla-dev.allizom.org/report.cgi?x_axis_field=product&amp;y_axis_field=bug_status&amp;z_axis_field=&amp;width=600&amp;height=350&amp;action=wrap&amp;format=bar">bar graph</a>,
+  or <a href="https://bugzilla-dev.allizom.org/report.cgi?z_axis_field=product&amp;format=pie&amp;x_axis_field=bug_status&amp;query_format=report-graph&amp;action=wrap">pie chart</a>.</p>
 
 <p>You can also specify a "Z axis" to generate multiple tables or graphs.</p>
 
@@ -113,7 +113,7 @@ title: "Features"
 
 <p>Finally, to see how your Bugzilla installation has changed over time,
   Bugzilla also supports a charting system, which can create
-  <a href="https://landfill.bugzilla.org/bugzilla-tip/reports.cgi?product=FoodReplicator&datasets=NEW&datasets=RESOLVED">graphs that
+  <a href="https://bugzilla-dev.allizom.org/reports.cgi?product=Firefox&amp;datasets=NEW&amp;datasets=RESOLVED">graphs that
   track changes in the system over time</a>.</p>
 
 <h3 id="autodup">Automatic Duplicate Bug Detection</h3>
@@ -218,8 +218,8 @@ title: "Features"
 <h3>Excellent Security</h3>
 <p>The Bugzilla Project takes security seriously. Bugzilla runs under Perl's
   "taint" mode to prevent SQL Injection, and has a very careful system in
-  place to prevent Cross-Site Scripting. Bugzilla's history of patching 
-  security vulnerabilities is excellent, and the system is designed at 
+  place to prevent Cross-Site Scripting. Bugzilla's history of patching
+  security vulnerabilities is excellent, and the system is designed at
   every stage with security in mind.</p>
 
 <p>Bugzilla is also very careful about information leaks--if you use Bugzilla's
@@ -245,7 +245,7 @@ title: "Features"
   behavior in various ways. There is a
   <a href="https://wiki.mozilla.org/Bugzilla:Addons#Bugzilla_Extensions">list
   of available extensions</a> that you can install on your Bugzilla, and
-  also very extensive 
+  also very extensive
   <a href="https://www.bugzilla.org/docs/tip/en/html/api/Bugzilla/Extension.html">documentation
   on how to write your own Extension</a>. Extensions are a great
   way to write customizations for Bugzilla that you can maintain with
@@ -285,8 +285,8 @@ title: "Features"
         <li>Chinese</li>
         <li>Czech</li>
         <li>French</li>
-        <li>German</li> 
-        <li>Japanese</li> 
+        <li>German</li>
+        <li>Japanese</li>
         <li>Polish</li>
         <li>Portuguese (Brazil)</li>
         <li>Spanish (Spain or Mexico)</li>
@@ -304,7 +304,7 @@ title: "Features"
 
 <a name="mod_perl"></a>
 <h3>mod_perl Support for Excellent Performance</h3>
-<p>Bugzilla can be run under Apache's 
+<p>Bugzilla can be run under Apache's
   <a href="http://perl.apache.org/">mod_perl</a>, which greatly speeds up
   individual page loads. Bugzilla pages often load in under a second when
   running under mod_perl.</p>
@@ -325,7 +325,7 @@ title: "Features"
 
 <a name="groups"></a>
 <h3>Control Bug Visibility/Editing with Groups</h3>
-<p>Bugzilla allows you to define which groups of users can edit or see 
+<p>Bugzilla allows you to define which groups of users can edit or see
   which bugs. These controls are very advanced, and were designed to support
   small-group needs to full enterprise group systems.</p>
 
@@ -345,7 +345,7 @@ title: "Features"
 
 <p>You can also "stack" these authentication methods, so that, for example,
   it falls back to the Bugzilla database if the user isn't found in LDAP.</p>
-    
+
 <a name="dbs"></a>
 <h3>Support for Multiple Database Engines</h3>
 <p>Bugzilla can run on MySQL, PostgreSQL and Oracle. MS-SQL is on the road
