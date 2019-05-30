@@ -11,7 +11,7 @@
         "home": "https://www.bugzilla.org/",
         "docs": "http://bugzilla.readthedocs.org",
         "mailing-list": "https://lists.bugzilla.org/listinfo/",
-        "irc": "irc://irc.mozilla.org/#bugzilla"
+        "irc": "ircs://chat.freenode.net/bugzilla"
     },
     "bugs": {
         "list": "https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla",
