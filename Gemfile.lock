@@ -194,7 +194,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (2.0.2)
+    json (2.3.0)
     kramdown (1.17.0)
     liquid (4.0.3)
     listen (3.2.1)
@@ -247,15 +247,14 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
-  jekyll-feed (~> 0.6)
+  jekyll-feed (~> 0.13)
   jekyll-last-modified-at
   jekyll-sitemap
-  json (= 2.0.2)
-  minima (~> 2.0)
+  json (= 2.3.0)
   tzinfo-data
 
 RUBY VERSION
-   ruby 2.6.5p114
+   ruby 2.6.6p146
 
 BUNDLED WITH
    1.17.2

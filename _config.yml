@@ -32,11 +32,16 @@ defaults:
 
 # Build settings
 markdown: kramdown
-theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-sitemap
 exclude:
   - Gemfile
   - Gemfile.lock
+  - bin
+  - docker
+  - lib
+  - docker-compose.yml
+  - Dockerfile
+  - README.md
