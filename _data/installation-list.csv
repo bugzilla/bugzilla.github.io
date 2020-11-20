@@ -61,6 +61,7 @@
 "libtorque","http://dank.qemfd.net/dankwiki/index.php/Libtorque","http://dank.qemfd.net/bugzilla/"
 "Linux Kernel","http://www.linux.org/","http://bugzilla.kernel.org/"
 "LiveCode","http://www.livecode.org/","http://quality.runrev.com/"
+"LLVM","https://llvm.org/","https://bugs.llvm.org/"
 "LON-CAPA","http://www.lon-capa.org/","http://bugs.lon-capa.org/"
 "Lysator","http://www.lysator.liu.se/","http://bugzilla.lysator.liu.se/"
 "Lyx","http://www.lyx.org/","http://bugzilla.lyx.org/"
