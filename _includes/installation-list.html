@@ -1,0 +1,14 @@
+<ul>
+{% for item in include.list %}
+  <li>
+  {% if item.orgurl %}
+    <a href="{{ item.orgurl }}">{{ item.name }}</a>
+  {% else %}
+      {{ item.name }}
+  {% endif %}
+  {% if item.bzurl %}
+    (<a href="{{ item.bzurl }}">Bugzilla</a>)
+  {% endif %}
+  </li>
+{% endfor %}
+</ul>

@@ -13,15 +13,18 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: bugzilla.org
+title: Bugzilla
 email: developers@bugzilla.org
 description: > # this means to ignore newlines until "baseurl:"
-  This is the website for Bugzilla, bug-tracking server software for when
-  Github Issues just doesn't cut it any more.
+  The software solution designed to drive software development, which
+  lets you plan, organize and release software on your own teams'
+  schedule.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://bugzilla.org" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: bugzilla
-github_username:  bugzilla
+url: "https://bugzilla.lcp.world" # the base hostname & protocol for your site, e.g. http://example.com
+source_code: https://github.com/bugzilla/bugzilla
+list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
+report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
+remote_theme: hellcp/jekyll-theme-bugzilla
 
 defaults:
   -
@@ -29,19 +32,83 @@ defaults:
       path: ""
     values:
       layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      author: Bugzilla Team
+      breadcrumbs:
+      - name: Blog
+        link: /blog/
+      permalink: /blog/:year/:month/:day/:title/
+      ogtype: article
+  -
+    scope:
+      path: ""
+      type: "security"
+    values:
+      layout: security
+      breadcrumbs:
+      - name: Security Advisories
+        link: /security/
+      ogtype: article
+  -
+    scope:
+      path: ""
+      type: "releases"
+    values:
+      layout: release
+      mode: ""
+      rc: false
+      breadcrumbs:
+      - name: Releases
+        link: /releases/
+      ogtype: article
+  -
+    scope:
+      path: ""
+      type: "developers"
+    values:
+      layout: profile
+      breadcrumbs:
+      - name: Developers
+        link: /developers/
+      ogtype: profile
+  -
+    scope:
+      path: "/contributing/*"
+    values:
+      breadcrumbs:
+      - name: Contributing
+        link: /contributing/
+  -
+    scope:
+      path: "/support/*"
+    values:
+      breadcrumbs:
+      - name: Support
+        link: /support/
+  -
+    scope:
+      path: "/about/*"
+    values:
+      breadcrumbs:
+      - name: About
+        link: /about/
+      
 
-# Build settings
-markdown: kramdown
-plugins:
-  - jekyll-feed
-  - jekyll-last-modified-at
-  - jekyll-sitemap
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - bin
-  - docker
-  - lib
-  - docker-compose.yml
-  - Dockerfile
-  - README.md
+paginate: 10
+paginate_path: "/blog/page/:num/"
+
+collections:
+  developers:
+    output: true
+    permalink: /:collection/:path/
+  security:
+    output: true
+    permalink: /:collection/:path/
+  releases:
+    output: true
+    permalink: /:collection/:path/

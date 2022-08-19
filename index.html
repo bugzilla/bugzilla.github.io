@@ -1,56 +1,123 @@
 ---
-title: "Home"
+layout: base
+addons:
+- type: js
+  link: /assets/js/header.js
+header:
+  type: sticky
+  big: True
+  class: bg-bugzilla fixed-top # I would prefer sticky-top, but it glitches with dynamic resizing
 ---
-
-<h1>Bugzilla</h1>
-<p><b>Bugzilla</b> is server software designed to help you manage software development.</p>
-<p><b><a href="./about/">More about Bugzilla</a> &raquo;</b></p>
-
-<h2>News</h2>
-<ul>
-   <li><a href="news/#release504">Release of Bugzilla 5.1.2, 5.0.4, and 4.4.13</a>
-    [ 2018 Feb 16 ]</li>
-   <li><a href="news/#release503">Release of Bugzilla 5.1.1, 5.0.3, and 4.4.12</a>
-    [ 2016 May 16 ]</li>
-   <li><a href="news/#release502">Release of Bugzilla 5.0.2, 4.4.11 and 4.2.16</a>
-    [ 2015 Dec 22 ]</li>
-</ul>
-
-<p><b><a href="./news/">More news</a> &raquo;</b></p>
-
-<h2>Features</h2>
-<div class="flRight" style="text-align: center">
-  <img src="img/buggie.png" alt=""><br>
-  <span style="font-size: small; color:gray">Bugzilla logo by<br>
-  Dave Shea</span>
+<div class="bg-bugzilla pb-3 border-bottom fixed-top-padding">
+  <div class="container my-3">
+    <div class="row">
+      <div class="col-md-5 my-md-auto mb-3">
+        <h2>The software solution designed to drive software development</h2>
+        <p class="lead">Bugzilla lets you plan, organize and release software on your own teams' schedule.</p>
+        <div>
+          <a class="btn btn-light" href="./about/">Learn more &raquo;</a>
+          <a class="btn btn-light" href="https://bugzilla-dev.allizom.org/">Try it out &raquo;</a>
+        </div>
+      </div>
+      <div class="col-md-7 mb-3">
+        <img class="w-100 rounded" src="/assets/img/screenshot.svg">
+      </div>
+    </div>
+  </div>
 </div>
-<ul>
-  <li>Optimized database structure for increased performance and scalability</li>
-  <li>Excellent security to protect confidentiality</li>
-  <li>Advanced query tool that can remember your searches</li>
-  <li>Integrated email capabilities</li>
-  <li>Editable user profiles and comprehensive email preferences</li>
-  <li>Comprehensive permissions system</li>
-  <li>Proven under fire as <a href="https://bugzilla.mozilla.org/">Mozilla's bug tracking system</a></li>
-</ul>
-<p><b><a href="./features/">View complete list of features</a> &raquo;</b></p>
 
-<h2>Benefits</h2>
-<ul>
-  <li>Improve communication</li>
-  <li>Increase product quality</li>
-  <li>Improve customer satisfaction</li>
-  <li>Ensure accountability</li>
-  <li>Increase productivity</li>
-  <li>Bugzilla can adapt to multiple situations</li>
-</ul>
+<section class="py-4">
+  <div class="container">
+    <h2>Blog</h2>
+    <div class="row">
+    {% for post in site.posts limit:3 %}
+      <div class="col-md-4 mb-3">
+        <div class="card card-body h-100">
+          <p class="text-muted mb-1">{{ post.date | date: '%d. %B %Y' }}</p>
+          <a href="{{ post.url }}"><h5>{{ post.title }}</h5></a>
+          {% include authors.html authors=post.author %}
+          <p>{{ post.content | strip_html | truncate: 200 }}</p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+    <div class="d-flex justify-content-end">
+      <a class="btn btn-primary" href="/blog/">More news &raquo;</a>
+    </div>
+  </div>
+</section>
 
-<a name="see"></a><h2>Bugzilla in Action</h2>
-<ul>
-  <li><a href="https://bugzilla.mozilla.org/">https://bugzilla.mozilla.org/</a><br>The “original” Bugzilla used by
-    various Mozilla projects including Firefox and Bugzilla itself. <strong>Note</strong>: This is an example of a
-    publicly-available live Bugzilla site, and not a place to try out Bugzilla. Please use the
-    <a href="https://bugzilla-dev.allizom.org/">test installation</a> if you want to actually try it out.</li>
-</ul>
-<p><b><a href="./installation-list/">See who uses Bugzilla</a> &raquo;</b></p>
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="ml-auto col-md-4 my-auto h2">Performant, scalable and secure</div>
+      <div class="mr-auto col-md-4 my-auto">Tried and tested by the largest in open source, so you don't have to deal with frustrating breaks in workflow.</div>
+    </div>
+  </div>
+</section>
 
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 my-auto">
+        <h3>Products and Components</h3>
+        <p>Categorize and track the issues based on products and components</p>
+        <h3>Milestones</h3>
+        <p>Track the progress on the past, current and future releases of your products</p>
+      </div>
+      <div class="col-lg-8 col-md-6">
+        <img class="w-100 rounded border" src="/assets/img/screenshot-milestone.svg">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
+        {% include icons/communication.svg %}
+        <h3>Upgrade the communication</h3>
+      </div>
+      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
+        {% include icons/service.svg %}
+        <h3>Improve customer satisfaction</h3>
+      </div>
+      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
+        {% include icons/medal.svg %}
+        <h3>Increase productivity</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-2">
+        <h2>Bugzilla in Action</h2>
+        <p>The following open source companies and projects trusted Bugzilla and continue to use it for delivering their software to the customers and communities all around the world.</p>
+        <a class="btn btn-primary" href="/about/installation-list/">See who else uses Bugzilla &raquo;</a>
+      </div>
+      <div class="col-md-8 mb-2">
+        <div class="d-flex flex-wrap justify-content-around">
+        {%- for project in site.data.installation-list %}
+          {%- if project.logo != '' %}
+            <a href="{{ project.bzurl }}" title="{{ project.name }}" class="btn mb-4">
+                {% include free-software-logos/{{ project.logo }} %}
+                <span class="sr-only">{{ project.name }}</span>
+            </a>
+          {% endif -%}
+        {% endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h3>Ready to get started? Let's get you your own Bugzilla</h3>
+    <a class="btn btn-primary" href="/download/">{% include icons/download.svg %}Installation Instructions</a>
+  </div>
+</section>
