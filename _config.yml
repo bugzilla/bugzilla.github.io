@@ -24,7 +24,7 @@ url: "https://bugzilla.lcp.world" # the base hostname & protocol for your site, 
 source_code: https://github.com/bugzilla/bugzilla
 list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
 report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
-remote_theme: hellcp/jekyll-theme-bugzilla
+remote_theme: bugzilla/jekyll-theme
 
 defaults:
   -

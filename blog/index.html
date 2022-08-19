@@ -11,8 +11,8 @@ addons:
   link: /assets/js/calendar.js
 ---
 
-<div class="row flex-row-reverse">
-  <div class="col-lg-4 mb-3">
+<div class="row-inverse">
+  <div class="twenty">
     <p>Want to always keep up-to-date with Bugzilla news?  Subscribe to
     <b><a href="https://lists.bugzilla.org/listinfo/announce">announce<!--
       blah -->&#64;<!-- blah -->bugzilla.org</a></b>, a read-only mailing list
@@ -30,11 +30,11 @@ addons:
       <noscript>The upcoming events widget requires Javascript to be enabled</noscript>
     </div>
   </div>
-  <div class="col-lg-8 mb-3">
+  <div class="eighty">
     {% for post in paginator.posts %}
-      <div class="card card-body mb-3">
-        <a class="text-muted" href="{{ post.url }}">{{ post.date | date: '%d. %B %Y' }}</a>
-        <h2 class="mb-1" id="{{ post.id }}">{{ post.title }}</h2>
+      <div class="card">
+        <a class="date muted" href="{{ post.url }}">{{ post.date | date: '%d. %B %Y' }}</a>
+        <h1 class="title" id="{{ post.id }}">{{ post.title }}</h1>
         {% include authors.html authors=post.author %}
         {{ post.content }}
       </div>

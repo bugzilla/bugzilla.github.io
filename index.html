@@ -6,118 +6,132 @@ addons:
 header:
   type: sticky
   big: True
-  class: bg-bugzilla fixed-top # I would prefer sticky-top, but it glitches with dynamic resizing
+  class: bg-bugzilla sticky
 ---
-<div class="bg-bugzilla pb-3 border-bottom fixed-top-padding">
-  <div class="container my-3">
-    <div class="row">
-      <div class="col-md-5 my-md-auto mb-3">
-        <h2>The software solution designed to drive software development</h2>
-        <p class="lead">Bugzilla lets you plan, organize and release software on your own teams' schedule.</p>
-        <div>
-          <a class="btn btn-light" href="./about/">Learn more &raquo;</a>
-          <a class="btn btn-light" href="https://bugzilla-dev.allizom.org/">Try it out &raquo;</a>
-        </div>
+<div id="frontpage-intro" class="bg-bugzilla fixed-top-padding">
+  <div class="inner">
+    <div class="">
+      <h2>The software solution designed to drive software development</h2>
+      <lead>Bugzilla lets you plan, organize and release software on your own teams' schedule.</lead>
+      <div>
+        <a class="button" href="/about/">Learn more &raquo;</a>
+        <a class="button" href="https://bugzilla-dev.allizom.org/">Try it out &raquo;</a>
       </div>
-      <div class="col-md-7 mb-3">
-        <img class="w-100 rounded" src="/assets/img/screenshot.svg">
-      </div>
+    </div>
+    <div class="buggie-wave-container">
+      {% include buggie-wave.svg %}
+      {% include buggie-wave-hand.svg %}
+      <img class="buggie-wave-image" alt="A screenshot of the default look of the Bugzilla 6.0 homepage" src="/assets/img/screenshot.svg">
+      {% include buggie-wave-hand-overlay.svg %}
     </div>
   </div>
 </div>
 
-<section class="py-4">
-  <div class="container">
+<section id="frontpage-blog-list">
+  <div class="inner">
     <h2>Blog</h2>
-    <div class="row">
+    <ul>
     {% for post in site.posts limit:3 %}
-      <div class="col-md-4 mb-3">
-        <div class="card card-body h-100">
-          <p class="text-muted mb-1">{{ post.date | date: '%d. %B %Y' }}</p>
-          <a href="{{ post.url }}"><h5>{{ post.title }}</h5></a>
+      <li>
+        <div class="card">
+          <p class="date muted">{{ post.date | date: '%d. %B %Y' }}</p>
+          <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
           {% include authors.html authors=post.author %}
           <p>{{ post.content | strip_html | truncate: 200 }}</p>
         </div>
-      </div>
+      </li>
     {% endfor %}
-    </div>
-    <div class="d-flex justify-content-end">
-      <a class="btn btn-primary" href="/blog/">More news &raquo;</a>
-    </div>
-  </div>
-</section>
-
-<section class="py-4">
-  <div class="container">
-    <div class="row">
-      <div class="ml-auto col-md-4 my-auto h2">Performant, scalable and secure</div>
-      <div class="mr-auto col-md-4 my-auto">Tried and tested by the largest in open source, so you don't have to deal with frustrating breaks in workflow.</div>
+    </ul>
+    <div>
+      <a class="button primary" href="/blog/">More news &raquo;</a>
     </div>
   </div>
 </section>
 
-<section class="py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-4 col-md-6 my-auto">
-        <h3>Products and Components</h3>
-        <p>Categorize and track the issues based on products and components</p>
-        <h3>Milestones</h3>
-        <p>Track the progress on the past, current and future releases of your products</p>
-      </div>
-      <div class="col-lg-8 col-md-6">
-        <img class="w-100 rounded border" src="/assets/img/screenshot-milestone.svg">
-      </div>
-    </div>
+<section id="frontpage-performant">
+  <img class="running-fg" alt="Buggie, the Bugzilla mascot, in a running outfit, consisting of a white sleveless top with red bands around arm holes, dark gray shorts with a red band around the waist and purple shoes with white soles. Its antennas are blown back with the wind. It has a slight smile on its face." src="/assets/img/running-fg.svg"/>
+  <div class="inner">
+    <div><h2>Performant, scalable and secure</h2></div>
+    <div>Tried and tested by the largest in open source, so you don't have to deal with frustrating breaks in workflow.</div>
   </div>
 </section>
 
-<section class="py-5">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
+<section id="frontpage-benefits">
+  <div class="inner">
+    <h2>Benefits</h2>
+    <ul>
+      <li>
+        {% include icons/service.svg %}
+        <h3>Improve product quality</h3>
+      </li>
+      <li>
         {% include icons/communication.svg %}
         <h3>Upgrade the communication</h3>
-      </div>
-      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
-        {% include icons/service.svg %}
-        <h3>Improve customer satisfaction</h3>
-      </div>
-      <div class="col-sm-4 d-flex flex-column align-items-center text-center">
+      </li>
+      <li>
         {% include icons/medal.svg %}
         <h3>Increase productivity</h3>
+      </li>
+    </ul
+  </div>
+</section>
+
+<section id="frontpage-search">
+  <div class="inner">
+    <h2>Features</h2>
+    <ul>
+      <li>
+        <h3>Advanced Search</h3>
+        <p>Search and find for the exact thing you are looking for</p>
+      </li>
+      <li>
+        <h3>Products and Components</h3>
+        <p>Categorize and track the issues based on products and components</p>
+      </li>
+      <li>
+        <h3>Milestones</h3>
+        <p>Track the progress on the past, current and future releases of your products</p>
+      </li>
+      <a class="button primary" href="/about/features">More features &raquo;</a>
+    </ul>
+    <div class="search-image">
+      <div class="search">
+        {% include fox-tracks.svg %}
       </div>
+      <img alt="A screenshot of the Advanced Search feature in Bugzilla 6.0, listing items for Firefox 78 milestone." src="/assets/img/screenshot-milestone.svg">
     </div>
   </div>
 </section>
 
-<section class="py-4">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-2">
-        <h2>Bugzilla in Action</h2>
-        <p>The following open source companies and projects trusted Bugzilla and continue to use it for delivering their software to the customers and communities all around the world.</p>
-        <a class="btn btn-primary" href="/about/installation-list/">See who else uses Bugzilla &raquo;</a>
-      </div>
-      <div class="col-md-8 mb-2">
-        <div class="d-flex flex-wrap justify-content-around">
-        {%- for project in site.data.installation-list %}
-          {%- if project.logo != '' %}
-            <a href="{{ project.bzurl }}" title="{{ project.name }}" class="btn mb-4">
-                {% include free-software-logos/{{ project.logo }} %}
-                <span class="sr-only">{{ project.name }}</span>
+<section id="frontpage-action">
+  <div class="inner">
+    <div>
+      <h2>Bugzilla in Action</h2>
+      <p>The following open source companies and projects trusted Bugzilla and continue to use it for delivering their software to the customers and communities all around the world.</p>
+      <a class="button primary" href="/about/installation-list/">See who else uses Bugzilla &raquo;</a>
+    </div>
+    <div>
+      <ul>
+      {%- for project in site.data.installation-list %}
+        {%- if project.logo != '' %}
+          <li>
+            <a href="{{ project.bzurl }}" title="{{ project.name }}">
+              {% include free-software-logos/{{ project.logo }} %}
+              <span class="sr-only">{{ project.name }}</span>
             </a>
-          {% endif -%}
-        {% endfor -%}
-        </div>
-      </div>
+          </li>
+        {% endif -%}
+      {% endfor -%}
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="py-5">
-  <div class="container text-center">
+<section id="frontpage-download">
+  <div class="inner">
     <h3>Ready to get started? Let's get you your own Bugzilla</h3>
-    <a class="btn btn-primary" href="/download/">{% include icons/download.svg %}Installation Instructions</a>
+    <div>
+      <a class="button primary" href="/download/">{% include icons/download.svg %}Installation Instructions</a>
+    </div>
   </div>
 </section>

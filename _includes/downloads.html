@@ -1,7 +1,8 @@
-<ul class="list-group">
+<ul>
   {% assign list = site.releases | reverse | where_exp: "item", "item.mode != ''" %}
   {% for item in list %}
-    <li class="list-group-item">
+    <li>
+      <h3 id="v{{ item.branch | replace: ',', '' }}">
       <a name="v{{ item.branch | replace: '.', '' }}"></a>
       {% case item.mode %}
       {% when 'current' %}
@@ -12,7 +13,6 @@
       {% when 'old' %}
         <a name="oldstable"></a>
       {% endcase %}
-      <h3 id="v{{ item.branch | replace: ',', '' }}" class="d-flex align-items-center justify-content-between">
         {% case item.mode %}
         {% when 'current' %}
           Stable Release
@@ -26,12 +26,14 @@
           Old Stable Release
         {% endcase %}
         ({{ item.version }})
-        <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/{{ filename }}" 
-           class="btn btn-primary">{% include icons/download.svg %}Download</a>
       </h3>
+      <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/{{ filename }}" 
+           class="button primary">{% include icons/download.svg %}Download</a>
+      <p>
       Patches to manually upgrade an earlier install of this branch
       to {{ item.version }} can be found
       <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/">on the FTP server</a>.
+      </p>
     </li>
   {% endfor %}
 </ul>

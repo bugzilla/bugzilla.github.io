@@ -52,7 +52,7 @@ parser.oncomplete = function() {
     var date = new Date(output.startDate);
     document.getElementById("calendar").innerHTML =
     '<h5>' + output.summary + '</h5>' +
-    '<p class="text-muted">' + date + '</p>' +
+    '<p class="muted">' + date + '</p>' +
     '<p>' + output.description.substr(0,255) + '…</p>' +
     '<a href="' + output.location + '">' +
     output.location + '</a>';

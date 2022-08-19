@@ -15,7 +15,7 @@ vulnerabilities. As you will note, the frequency of security releases
 has declined markedly in recent years, a fact about which we are very
 happy.
 
-<ul class="list-unstyled">
+<ul>
   {% assign sorted = site.security | reverse %}
   {% for advisory in sorted %}
   <li><a href="{{ advisory.url }}">[{{ advisory.date | date: '%Y-%0m-%0d' }}] Security advisory for versions
