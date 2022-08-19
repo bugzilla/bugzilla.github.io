@@ -1,0 +1,78 @@
+---
+title: "Release Information"
+permalink: /releases/
+---
+
+<h2>Current Releases and Change Policy</h2>
+
+{% assign list = site.releases | where_exp: 'item', 'item.mode != ""' | reverse %}
+<ul>
+  {% for item in list %}
+    {% case item.mode %}
+    {% when 'dev' %}
+    <li><b>Trunk
+    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+      <ul>
+        <li>Approved changes added constantly</li>
+        <li>Occasional development snapshots are released</li>
+      </ul>
+    </li>
+    {% when 'current' %}
+    <li><b>Current Stable Release
+    (<a href="{{ item.url }}/">{{ item.version }}</a>)</b>
+      <ul>
+        <li>Includes bug fixes and performance improvements only</li>
+        <li>No new features or large scale performance improvements</li>
+        <li>No database schema changes</li>
+        <li>May contain documentation changes</li>
+        <li>No changes to templates that aren't part of bug fix,
+            other than typos or grammatical fixes</li>
+      </ul>
+    </li>
+    {% when 'old' %}
+    <li><b>Old Stable Release
+    (<a href="{{ item.url }}/">{{ item.version }}</a>)</b>
+      <ul>
+        <li>Current policy is that 4 months after the next major release, support
+          for the oldest stable release will be dropped. The other stable release
+          will still be supported until four months after the next major release.
+        </li>
+        <li>Contains security, crash, data loss, and selected critical fixes only</li>
+        <li>No documentation changes unrelated to the above changes allowed</li>
+      </ul>
+    </li>
+    {% endcase %}
+  {% endfor %}
+</ul>
+
+<p>Any release prior to the old stable release is unsupported.</p>
+
+<h2>Release Dates</h2>
+
+<p>Here is a list of the release dates of every version of Bugzilla sorted by its branch. You can click on the version number for a list of release notes, download links, and security advisories relevant to that release.</p>
+
+<div class="accordion" id="accordion">
+{% assign grouped = site.releases | where_exp: 'item', 'item.mode != "dev"' | group_by: 'branch' %}
+{% for group in grouped %}
+  {% assign groupid = group.name | replace: '.', '' %}
+  <div class="card">
+    <div class="card-header" id="heading{{ groupid }}">
+      <h2 class="mb-0">
+        <button class="btn btn-link w-100 text-left collapsed" type="button" data-toggle="collapse" data-target="#collapse{{ groupid }}" aria-expanded="true" aria-controls="collapse{{ groupid }}">
+          {% if group.name != '' %}{{ group.name }}{% else %}Older{% endif %}
+        </button>
+      </h2>
+    </div>
+    <div id="collapse{{ groupid }}" class="collapse" aria-labelledby="heading{{ groupid }}" data-parent="#accordion">
+      <ul class="list-group list-group-flush border-top">
+  {% for item in group.items %}
+          <li class="list-group-item d-flex align-items-center justify-content-between">
+          <a href="{{ item.version }}/">{{ item.version }}</a>
+          {{ item.date | date: "%b %d, %Y" }}
+          </li>
+  {% endfor %}
+        </ul>
+    </div>
+  </div>
+{% endfor %}
+</div>
