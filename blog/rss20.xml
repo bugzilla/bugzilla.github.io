@@ -1,0 +1,6 @@
+---
+layout: rss20
+title: Blog
+path: /blog
+feed: posts
+---

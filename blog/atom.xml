@@ -1,0 +1,6 @@
+---
+layout: atom
+title: Blog
+path: /blog
+feed: posts
+---
