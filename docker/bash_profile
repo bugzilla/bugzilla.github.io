@@ -1,9 +1,0 @@
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
-# User specific environment and startup programs
-export JADE_PUB=/usr/share/sgml
-export LDP_HOME=/usr/share/sgml/docbook/dsssl-stylesheets-1.79/dtds/decls
-export PATH=$PATH:~/bin

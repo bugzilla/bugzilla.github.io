@@ -1,6 +1,0 @@
-bugzillaorg:
-  build: .
-  ports:
-    - "4000:4000"
-  volumes:
-    - "/home/dkl/devel:/home/bugzilla/devel"
