@@ -1,22 +1,30 @@
+---
+layout: none
+---
 {
     "name": "Bugzilla",
-    "description": "The Bugzilla bug tracker.",
+    "description": "{{ site.description | normalize_whitespace }}",
     "repository": {
-        "url": "http://git.mozilla.org/?p=bugzilla/bugzilla.git",
-        "clone": "https://git.mozilla.org/bugzilla/bugzilla.git",
+        "url": "https://github.com/bugzilla/bugzilla",
+        "clone": "https://github.com/bugzilla/bugzilla.git",
         "license": "MPL2",
         "type": "git"
     },
     "participate": {
-        "home": "https://www.bugzilla.org/",
-        "docs": "http://bugzilla.readthedocs.org",
+        "home": "{{ site.url }}",
+        "docs": "https://bugzilla.readthedocs.org",
         "mailing-list": "https://lists.bugzilla.org/listinfo/",
-        "irc": "ircs://chat.freenode.net/bugzilla"
+        "irc": "ircs://irc.libera.chat/#bugzilla",
     },
     "bugs": {
-        "list": "https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla",
-        "report": "https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla",
+        "list": "{{ site.list_bugs }}",
+        "report": "{{ site.report_bug }}",
         "mentored": "https://bugzilla.mozilla.org/buglist.cgi?f1=bug_mentor&o1=isnotempty&query_format=advanced&bug_status=NEW&product=Bugzilla"
+    },
+    "urls": {
+      "prod": "https://bugzilla.mozilla.org/",
+      "stage": "https://harmony.bugzilla.ninja/",
+      "dev": "https://bugzilla-dev.allizom.org/",
     },
     "keywords": [
         "perl",
