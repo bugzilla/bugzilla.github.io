@@ -1,0 +1,61 @@
+---
+layout: base
+---
+<div class="container py-3">
+  <div class="profile card h-100">
+    <h4 class="card-header" id="{{ page.nickname }}">{{ page.firstname }} {{ page.lastname }}</h4>
+    <div class="row no-gutters h-100">
+      {% if page.image %}
+      <div class="col-auto border-right">
+        <img class="photo" src="/assets/img/developers/{{ page.image }}">
+      </div>
+      {% endif %}
+      <div class="col">
+        <ul class="list-group list-group-flush">
+        {% if page.irc %}
+          <li class="list-group-item">
+            <b class="mr-2">IRC Nick:</b>
+            {{ page.irc | markdownify }}
+          </li>
+        {% endif %}
+        {% if page.location %}
+          <li class="list-group-item">
+            <b class="mr-2">Location:</b>
+            {{ page.location | markdownify }}
+          </li>
+        {% endif %}
+        {% if page.dayjob %}
+          <li class="list-group-item">
+            <b class="mr-2">Day Job:</b>
+            {{ page.dayjob | markdownify }}
+          </li>
+        {% endif %}
+        {% if page.role %}
+          <li class="list-group-item">
+            <b class="mr-2">{% if page.former %}Previous {% endif %}Bugzilla Responsibilities:</b>
+            {{ page.role | markdownify }}
+          </li>
+        {% endif %}
+        {% if page.former-role %}
+          <li class="list-group-item">
+            <b class="mr-2">Previous Component Responsibilities:</b>
+            {{ page.former-role | markdownify }}
+          </li>
+        {% endif %}
+        {% if page.blog %}
+          <li class="list-group-item">
+            <b class="mr-2">Blog:</b>
+            <a href="{{ page.blog }}">{{ page.blog }}</a>
+          </li>
+        {% endif %}
+        {% if page.website %}
+          <li class="list-group-item">
+            <b class="mr-2">URL:</b>
+            <a href="{{ page.website }}">{{ page.website }}</a>
+          </li>
+        {% endif %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
