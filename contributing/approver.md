@@ -1,5 +1,7 @@
 ---
 title: "Approvers' Guide"
+redirect_from:
+- /docs/approver
 ---
 
 The purpose of approval is for the project leader to be able to keep

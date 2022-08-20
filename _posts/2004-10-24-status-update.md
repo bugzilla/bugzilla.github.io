@@ -4,6 +4,8 @@ date: 2004-10-24
 author: ["zach"]
 categories:
 - Status
+redirect_from:
+- /status/2004-10-24
 ---
 
 ## Introduction and Updates
@@ -16,9 +18,9 @@ Also of note is the recent release of version 0.6 of the [bugzilla-submit](/down
 
 Since the previous status update, we have also released Bugzilla 2.18rc2, an update to 2.18rc1 which fixed several major issues. These issues are detailed below. We also updated our website style to be more consistent with the new redesign of the [mozilla.org](https://www.mozilla.org) website.
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org), covering just new releases and security advisories. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce) so they can keep up to date with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org), covering just new releases and security advisories. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/listinfo/announce) so they can keep up to date with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development or more closely follow the development process may want to consider joining the developers list (developers@bugzilla.org). This list offers discussion on new features and issues. Developers are invited to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?user=&passw=&func=lists-long-full&extra=developers) to the list.
+Those looking to get involved with Bugzilla development or more closely follow the development process may want to consider joining the developers list (developers@bugzilla.org). This list offers discussion on new features and issues. Developers are invited to [subscribe](https://lists.bugzilla.org/listinfo/developers) to the list.
 
 ## New Releases
 

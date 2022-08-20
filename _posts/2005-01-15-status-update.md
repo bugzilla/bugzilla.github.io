@@ -4,15 +4,17 @@ date: 2005-01-15
 author: ["jake"]
 categories:
 - Status
+redirect_from:
+- /status/2005-01-15
 ---
 
 ## Introduction
 
 It's been about 3 months since our [last update](2004-10-24.html) and the corresponding 3rd release candidate for Bugzilla 2.18, but at long last we are pleased to announce the full release of Bugzilla 2.18\. Though it's been more than 2 1/2 years in the making, we think you'll find the [new features](/releases/2.18/) were worth the wait.
 
-If you didn't get an email notification of this new release, but would like to for future releases, be sure to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce) to our "announce" list. This is a low volume mailing list that covers releases and security advisories. We recommend that all Bugzilla administrators subscribe to this list.
+If you didn't get an email notification of this new release, but would like to for future releases, be sure to [subscribe](https://lists.bugzilla.org/listinfo/announce) to our "announce" list. This is a low volume mailing list that covers releases and security advisories. We recommend that all Bugzilla administrators subscribe to this list.
 
-If you're looking to get more involved in the actual development of Bugzilla, you may wish to consider joining the [developer's list](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?user=&passw=&func=lists-long-full&extra=developers). This higher volume list is used by the development team to discuss many aspects of the development process and Bugzilla's future.
+If you're looking to get more involved in the actual development of Bugzilla, you may wish to consider joining the [developer's list](https://lists.bugzilla.org/listinfo/developers). This higher volume list is used by the development team to discuss many aspects of the development process and Bugzilla's future.
 
 ## New Releases
 

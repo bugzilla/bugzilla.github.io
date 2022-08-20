@@ -4,6 +4,8 @@ date: 2002-07-28
 author: ["gerv", "preed"]
 categories:
 - Status
+redirect_from:
+- /status/2002-07-28
 ---
 
 ## Introduction
@@ -14,7 +16,7 @@ We have also released 2.14.3, a tiny update for 2.14.2 for people who aren't yet
 
 ## Administrators' Mailing List
 
-We've started a mailing list for people who administer Bugzillas. It'll be very low traffic - basically, release announcements and security advisories only. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce
+We've started a mailing list for people who administer Bugzillas. It'll be very low traffic - basically, release announcements and security advisories only. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/listinfo/announce
 ), so we can easily contact them with important news.
 
 ## Localisation

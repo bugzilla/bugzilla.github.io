@@ -4,6 +4,8 @@ date: 2007-02-26
 author: ["mkanat"]
 categories:
 - Status
+redirect_from:
+- /status/2007-02-26
 ---
 
 ## Introduction and Updates
@@ -20,7 +22,7 @@ Provided all goes well with RC1, we expect to release the final version of Bugzi
 
 ## Plugins!
 
-One thing we'd really like to see for Bugzilla 3.0 is some plugins! Bugzilla 3.0 has a lot of ways to write plugins, and if it doesn't support what you want to do with your plugin, we'd be happy to add hooks for you. Right now we don't have a standard place to store plugins, but if you make one, link it from the [Bugzilla Addons](https://wiki.mozilla.org/Bugzilla:Addons) page, and then tell us on the [developers mailing list](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers).
+One thing we'd really like to see for Bugzilla 3.0 is some plugins! Bugzilla 3.0 has a lot of ways to write plugins, and if it doesn't support what you want to do with your plugin, we'd be happy to add hooks for you. Right now we don't have a standard place to store plugins, but if you make one, link it from the [Bugzilla Addons](https://wiki.mozilla.org/Bugzilla:Addons) page, and then tell us on the [developers mailing list](https://lists.bugzilla.org/listinfo/developers).
 
 Also, if you know of any Bugzilla addons (or any other product that interacts with Bugzilla) that aren't listed on that page, please add them!
 
@@ -42,9 +44,9 @@ We recommend that all Bugzilla 2.18 users upgrade to 2.22.2 (or 3.0, when it com
 
 ## Stay Updated About Bugzilla
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/listinfo/announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](/contributing/).
+Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](/contributing/).
 
 ## Bugzilla Meetings
 

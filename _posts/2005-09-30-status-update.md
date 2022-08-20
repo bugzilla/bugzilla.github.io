@@ -4,15 +4,17 @@ date: 2005-09-30
 author: ["mkanat"]
 categories:
 - Status
+redirect_from:
+- /status/2005-09-30
 ---
 
 ## Introduction and Updates
 
 OK! It's been a busy few months since our last Status Update, including a lot of work toward the final release of Bugzilla 2.20, and our first release of the 2.21 series, 2.21.1\. We are also releasing a bug-fix release for the 2.18 series, 2.18.4\. Though the 2.16 branch is still supported (for a short time), there was no 2.16 release required this time around.
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/listinfo/announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
+Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
 
 ## New Releases
 
@@ -90,7 +92,7 @@ If you'd like to see faster Bugzilla releases, the best way is to come help out,
 
 [Oracle](http://www.oracle.com/) themselves are working with the Bugzilla team on porting Bugzilla to Oracle. We hope to have workable Oracle support by the release of Bugzilla 2.24\. If you'd like to keep track of how it's going, CC yourself on the [Oracle support tracking bug](https://bugzilla.mozilla.org/show_bug.cgi?id=bz-oracle).
 
-If you would like to help port Bugzilla to Oracle or any other database, feel free to contact the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). Porting Bugzilla to a new database system is usually easy, since we have a whole infrastructure in place for it.
+If you would like to help port Bugzilla to Oracle or any other database, feel free to contact the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). Porting Bugzilla to a new database system is usually easy, since we have a whole infrastructure in place for it.
 
 ## The Status of Bugzilla 2.16
 

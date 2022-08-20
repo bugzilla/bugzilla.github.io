@@ -4,6 +4,8 @@ date: 2002-03-03
 author: ["justdave"]
 categories:
 - Status
+redirect_from:
+- /status/2002-03-03
 ---
 
 ## Introduction

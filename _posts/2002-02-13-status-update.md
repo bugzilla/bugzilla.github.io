@@ -4,6 +4,8 @@ date: 2002-02-13
 author: ["zach"]
 categories:
 - Status
+redirect_from:
+- /status/2002-02-13
 ---
 
 ## Introduction

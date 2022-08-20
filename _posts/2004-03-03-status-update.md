@@ -4,6 +4,8 @@ date: 2004-03-03
 author: ["justdave"]
 categories:
 - Status
+redirect_from:
+- /status/2004-03-03
 ---
 
 ## Introduction
@@ -14,7 +16,7 @@ As of this status update, we are also releasing 2.17.7 and 2.16.5\. For the firs
 
 Note that (in tradition with previous updates, which have included a bit on this subject) Windows support (which implies being able to run a Bugzilla instance on a Windows web server) is _still_ to be completed and integrated! We would really appreciate community assistance in fixing the [remaining issues for Windows support](https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla&resolution=---&status_whiteboard_type=allwordssubstr&status_whiteboard=Win32). So far, very few people have been contributing towards the Win32 effort.
 
-We'd also like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org). We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce) so they can keep up with important Bugzilla news.
+We'd also like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org). We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/listinfo/announce) so they can keep up with important Bugzilla news.
 
 ## New Releases
 

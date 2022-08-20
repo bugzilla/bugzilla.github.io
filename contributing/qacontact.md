@@ -1,5 +1,7 @@
 ---
 title: "QA Contact Guide"
+redirect_from:
+- /docs/qacontact
 ---
 
 This guide is an introduction on using Bugzilla for carrying out QA

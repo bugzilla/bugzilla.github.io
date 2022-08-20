@@ -4,6 +4,8 @@ date: 2007-05-09
 author: ["mkanat"]
 categories:
 - Status
+redirect_from:
+- /status/2007-05-09
 ---
 
 ## Introduction and Updates
@@ -50,9 +52,9 @@ We sent a free Bugzilla t-shirt to the 3000th subscriber to our announcement lis
 
 ## Stay Updated About Bugzilla
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/listinfo/announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
+Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
 
 ## Bugzilla Meetings
 

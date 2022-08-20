@@ -16,8 +16,8 @@ available by that Bugzilla's owner.
     to ask for help or share information. You will need to subscribe to the list
     first before you can post to it, but you can unsubscribe easily once your
     question is answered if continuing to read the list isn't your thing.
-  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat
-    - Most of the Bugzilla developers are on this IRC channel. If you come here
+  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat -
+    Most of the Bugzilla developers are on this IRC channel. If you come here
     for help, please stick around and wait for an answer. We aren't ignoring you,
     but there are a lot of time zones on this planet, and not everyone is awake
     or at their computer all the time. It's not uncommon for a question to get

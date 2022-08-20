@@ -1,6 +1,8 @@
 ---
 title: "Reporting Bugs"
 intro: "Learn how to report bugs against Bugzilla"
+redirect_from:
+- /developers/reporting_bugs
 ---
 
 <span>{% include icons/warning.svg %} If the bug you wish to report affects

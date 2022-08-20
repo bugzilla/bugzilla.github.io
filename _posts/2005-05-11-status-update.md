@@ -4,13 +4,15 @@ date: 2005-05-11
 author: ["jake"]
 categories:
 - Status
+redirect_from:
+- /status/2005-05-11
 ---
 
 ## Introduction
 
 The previous three months have seen some of the most active Bugzilla development in history. The 2.20 release is promising to be very impressive. The team has been hard at work to bring long awaited features such as bugmail threading support and an optional third level of classification (in addition to the current Products and Components).
 
-If you're looking to get more involved in the actual development of Bugzilla, you may wish to consider joining the [developer's list](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This higher volume list is used by the development team to discuss many aspects of the development process and Bugzilla's future.
+If you're looking to get more involved in the actual development of Bugzilla, you may wish to consider joining the [developer's list](https://lists.bugzilla.org/listinfo/developers). This higher volume list is used by the development team to discuss many aspects of the development process and Bugzilla's future.
 
 ## New Releases
 
@@ -46,7 +48,7 @@ The 2.19.3 development release is the first official release that is able to cre
 
 If you have some other database you'd like to see supported, please let us know! It is not hard to write a new component for Bugzilla for a new database. We already have bugs filed for support for: [Oracle](https://bugzilla.mozilla.org/show_bug.cgi?id=189947), [Ingres](https://bugzilla.mozilla.org/show_bug.cgi?id=249400), [Sybase](https://bugzilla.mozilla.org/show_bug.cgi?id=173130), [Firebird](https://bugzilla.mozilla.org/show_bug.cgi?id=249254), and [MS-SQL](https://bugzilla.mozilla.org/show_bug.cgi?id=285122).
 
-However, they all need somebody to work on them! If you're interested, come talk to us in #mozwebtools on irc.mozilla.org, or tell us on the [developer's list](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers).
+However, they all need somebody to work on them! If you're interested, come talk to us in #mozwebtools on irc.mozilla.org, or tell us on the [developer's list](https://lists.bugzilla.org/listinfo/developers).
 
 ### Ability to Upgrade from 2.8 Restored
 
@@ -60,7 +62,7 @@ The decision has been made in [bug 204217](https://bugzilla.mozilla.org/show_bug
 
 ### Upcoming UI Hackathons
 
-Myk Melez has proposed that early in the development for 2.22 that the Bugzilla team should focus on making large improvements to the User Interface. His proposal for this is to have a number of weekly hackathons where teams of people agree to dedicate time to discussing UI improvements, coding them, reviewing them, and getting them checked in. Under this proposal, the [normal procedures](/developers) would still apply, but by having reviewers and approvers on hand, they could be greatly accelerated. For more information, see the archive of [Myk's post](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?list=developers&brief=on&func=archive-get-part&extra=200503/18) to the Developer's list.
+Myk Melez has proposed that early in the development for 2.22 that the Bugzilla team should focus on making large improvements to the User Interface. His proposal for this is to have a number of weekly hackathons where teams of people agree to dedicate time to discussing UI improvements, coding them, reviewing them, and getting them checked in. Under this proposal, the [normal procedures](/developers) would still apply, but by having reviewers and approvers on hand, they could be greatly accelerated. For more information, see the archive of [Myk's post](https://lists.bugzilla.org/pipermail/developers/2005-March/004306.html) to the Developer's list.
 
 ## Continuing to Support the 2.16 Branch
 

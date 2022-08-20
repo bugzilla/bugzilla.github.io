@@ -1,6 +1,8 @@
 ---
 title: "Features"
 intro: "Check out what Bugzilla can do for you"
+redirect_from:
+- /features/
 ---
 
 * Table of Contents

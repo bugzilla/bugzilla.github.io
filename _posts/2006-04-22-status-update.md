@@ -4,15 +4,17 @@ date: 2006-04-22
 author: ["justdave"]
 categories:
 - Status
+redirect_from:
+- /status/2006-04-22
 ---
 
 ## Introduction and Updates
 
 This Status Update brings with it three new versions of Bugzilla. We have the final release of 2.22, a major feature update to Bugzilla (details below). We are also releasing version 2.20.2, which contains bugfixes and security updates to the 2.20 version series. And last, but not least, Bugzilla 2.23.1, a developer preview release of the codebase that will eventually become either 2.24 or 3.0\. There's a lot of other news about the Bugzilla Project included here, so keep reading!
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/listinfo/announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
+Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
 
 ## The End Has Come! (of 2.16.x)
 

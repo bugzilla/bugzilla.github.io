@@ -1,6 +1,8 @@
 ---
 title: "Developer Profiles"
 permalink: /about/developers/
+redirect_from:
+- /developers/profiles
 ---
 
 Bugzilla's development team consists or has consisted of the following

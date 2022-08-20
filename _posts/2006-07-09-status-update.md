@@ -4,15 +4,17 @@ date: 2006-07-09
 author: ["mkanat"]
 categories:
 - Status
+redirect_from:
+- /status/2006-07-09
 ---
 
 ## Introduction and Updates
 
 Today we released a development snapshot only. We've done a lot of coding on the trunk, and we wanted to get out a new version to be tested. Most of the branches (2.18, 2.20, and 2.22) are pretty stable, so they don't urgently need a release at this time. We may be coming out with some bug fix releases for those in the coming months, though.
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list ([announce@bugzilla.org](https://lists.bugzilla.org/listinfo/announce)). We advise all Bugzilla administrators to subscribe so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-long-full&extra=developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
+Those looking to get involved with Bugzilla development may want to consider joining the [developers list (developers@bugzilla.org)](https://lists.bugzilla.org/listinfo/developers). This list offers discussion on new features and issues. Developers are invited to subscribe to the list. You may also want to read our [Contributor's Guide](https://www.bugzilla.org/docs/contributor.html).
 
 ## New Releases
 

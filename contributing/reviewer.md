@@ -1,5 +1,7 @@
 ---
 title: "Reviewers' Guide"
+redirect_from:
+- /docs/reviewer
 ---
 
 The following is a guide for reviewers of code submitted for Bugzilla.

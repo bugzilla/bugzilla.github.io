@@ -1,6 +1,8 @@
 ---
 title: "Developer's Guide" 
 intro: "Document describing coding standards of Bugzilla"
+redirect_from:
+- /docs/developer
 ---
 
 * Table of Contents

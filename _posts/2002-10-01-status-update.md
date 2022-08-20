@@ -4,6 +4,8 @@ date: 2002-10-01
 author: ["preed"]
 categories:
 - Status
+redirect_from:
+- /status/2002-10-01
 ---
 
 ## Introduction
@@ -14,7 +16,7 @@ Both releases provide enhanced security and fix critical bugs on their respectiv
 
 ## Administrators' Mailing List Reminder
 
-We'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we've started a mailing list for people who administer Bugzillas. It is very low traffic - release announcements and security advisories only. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce
+We'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we've started a mailing list for people who administer Bugzillas. It is very low traffic - release announcements and security advisories only. We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/listinfo/announce
 ), so they can keep up with important Bugzilla news.
 
 <a name="win32"></a>

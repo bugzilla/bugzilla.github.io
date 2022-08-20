@@ -4,6 +4,8 @@ date: 2003-01-02
 author: ["preed"]
 categories:
 - Status
+redirect_from:
+- /status/2003-01-02
 ---
 
 ## Introduction

@@ -35,7 +35,7 @@ The short version of how to install/use these is at the end of the [Localization
 |cs   |Čeština/Czech                 |4.4.x |5.0.x|     |Norbert Volf|
 |de   |Deutsch / German              |4.4.11|5.0.2|     |Marc Schumann|
 |es   |Español / Spanish             |      |     |     |Oscar Manuel Gómez Senovilla|
-|fr   |Français / French             |4.4.12|5.0.3|5.1.1|Cédric Corazza|
+|fr   |Français / French             |4.4.13|5.0.6|5.1.2|Cédric Corazza|
 |ja   |日本語 / Japanese              |4.4.11|5.0.2|     |Atsushi Shimono|
 |pl   |Polski / Polish               |      |     |     |Aviary.pl team|
 |ru   |Русский / Russian             |4.4.4 |     |     |Виталий Федрушков (Vitaly Fedrushkov), Alexander L. Slovesnik, Alexey Gladkov|

@@ -4,6 +4,8 @@ date: 2004-07-10
 author: ["zach"]
 categories:
 - Status
+redirect_from:
+- /status/2004-07-10
 ---
 
 ## Introduction and Updates
@@ -12,9 +14,9 @@ Welcome to the new Bugzilla status update, covering the four months since our [l
 
 We are also pleased to announce the new [Bugzilla Website](https://www.bugzilla.org/), thanks to the efforts of Mike Morgan and the Bugzilla Team. The new site is designed to more closely match the look and feel of the mozilla.org website and is standards-compliant.
 
-As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org). We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?func=lists-full-long&extra=announce) so they can keep up with important Bugzilla announcements.
+As usual, we'd like to remind all Bugzilla administrators that to assist them in keeping up-to-date with release announcements and security advisories, we provide an ultra-low-volume administrator mailing list (announce@bugzilla.org). We advise all Bugzilla administrators to [subscribe](https://lists.bugzilla.org/listinfo/announce) so they can keep up with important Bugzilla announcements.
 
-Those looking to get involved with Bugzilla development may want to consider joining the developers list (developers@bugzilla.org). This list offers discussion on new features and issues. Developers are invited to [subscribe](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?user=&passw=&func=lists-long-full&extra=developers) to the list.
+Those looking to get involved with Bugzilla development may want to consider joining the developers list (developers@bugzilla.org). This list offers discussion on new features and issues. Developers are invited to [subscribe](https://lists.bugzilla.org/listinfo/developers) to the list.
 
 ## New Releases
 

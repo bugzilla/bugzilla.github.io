@@ -25,6 +25,9 @@ source_code: https://github.com/bugzilla/bugzilla
 list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
 report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
 remote_theme: bugzilla/jekyll-theme
+plugins:
+  - jekyll-redirect-from
+  - jekyll-sitemap
 
 defaults:
   -
@@ -74,7 +77,7 @@ defaults:
       layout: profile
       breadcrumbs:
       - name: Developers
-        link: /developers/
+        link: /about/developers/
       ogtype: profile
   -
     scope:
@@ -105,7 +108,7 @@ paginate_path: "/blog/page/:num/"
 collections:
   developers:
     output: true
-    permalink: /:collection/:path/
+    permalink: /about/:collection/:path/
   security:
     output: true
     permalink: /:collection/:path/

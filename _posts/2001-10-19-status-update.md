@@ -4,6 +4,8 @@ date: 2001-10-19
 author: ["codemachine"]
 categories:
 - Status
+redirect_from:
+- /status/2001-10-19
 ---
 
 ## Introduction

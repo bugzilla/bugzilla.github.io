@@ -4,6 +4,8 @@ date: 2002-01-18
 author: ["jake"]
 categories:
 - Status
+redirect_from:
+- /status/2002-01-18
 ---
 
 ## Introduction

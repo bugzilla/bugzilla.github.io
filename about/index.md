@@ -1,5 +1,8 @@
 ---
 title: "About"
+redirect_from:
+- /status/changes
+- /status/roadmap
 ---
 
 ## What is Bugzilla?

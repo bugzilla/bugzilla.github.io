@@ -27,7 +27,7 @@ attention, I'm the one to pester.
 This is sort of the end of an era for the Bugzilla project... Both
 Frédéric and Max (who left to work at Google a couple years ago and
 [stepped down from his position earlier this
-year](https://lists.bugzilla.org/cgi-bin/mj_wwwusr?user=user%40host.com&list=developers&func=archive-get-part&extra=201211/3)
+year](https://lists.bugzilla.org/pipermail/developers/2012-November/009370.html)
 for lack of time) have been with the project for much longer than most
 people ever stick with a single employer in IT-related jobs (of which an
 open source project of this magnitude has a lot of similarities). For an

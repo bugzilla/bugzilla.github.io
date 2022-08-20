@@ -1,5 +1,7 @@
 ---
 title: "Bugzilla Reviewers"
+redirect_from:
+- /docs/reviewer-list
 ---
 
 This is a list of who to ask for review. You may ask any reviewer to

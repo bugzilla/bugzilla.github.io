@@ -1,5 +1,7 @@
 ---
 title: "Release Noting Guide"
+redirect_from:
+- /docs/releasenote
 ---
 
 The following is a guide for anyone who needs to work on the release

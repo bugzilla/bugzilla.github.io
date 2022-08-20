@@ -6,22 +6,18 @@
     title: Find out more about Bugzilla.
     name: Project
 
-  - link: /about/features/
+  - link: /about/features
     name: Features
 
-  - link: /releases/
-    title: Information on current and previous releases.
-    name: Release Information
-
-  - link: /about/installation-list/
+  - link: /about/installation-list
     title: Hundreds of companies and organizations trust Bugzilla.
     name: Who Uses Bugzilla?
 
-  - link: /about/developers/
+  - link: /about/developers
     title: Meet the Bugzilla team.
     name: Meet the Team
 
-- link: /news/
+- link: /blog/
   title: Get the low down on what's happening with the project.
   name: News
   links:
@@ -29,13 +25,17 @@
     title: Bugzilla Blog
     name: Blog
 
-  - link: http://planet.bugzilla.org
-    title: View the status of the Bugzilla project.
-    name: Planet Bugzilla
+  - link: /releases/
+    title: Information on current and previous releases.
+    name: Release Information
 
   - link: /security/
     title: Important updates regarding Bugzilla security.
     name: Security Advisories
+
+  - link: http://planet.bugzilla.org
+    title: View the status of the Bugzilla project.
+    name: Planet Bugzilla
 
 - link: /download/
   title: Download Bugzilla
@@ -53,7 +53,7 @@
     title: Ways you can help Bugzilla
     name: How to?
 
-  - link: /contributing/reporting_bugs.html
+  - link: /contributing/reporting_bugs
     title: Let us know if there is an error in Bugzilla.
     name: Report a Bug
 
