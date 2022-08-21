@@ -1,5 +1,6 @@
 ---
 title: "Query Cookbook"
+permalink: /docs/queries
 ---
 
 As a bugzilla administrator, sometimes the queries I need to do are too

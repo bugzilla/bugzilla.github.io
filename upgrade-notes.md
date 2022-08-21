@@ -1,5 +1,6 @@
 ---
 title: "Notes for Upgraders"
+permalink: /docs/upgrade-notes
 ---
 
 This is a consolidated list of release note items relevant to those
