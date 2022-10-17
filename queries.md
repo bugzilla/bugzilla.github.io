@@ -3,13 +3,13 @@ title: "Query Cookbook"
 permalink: /docs/queries
 ---
 
-As a bugzilla administrator, sometimes the queries I need to do are too
-specialized for the standard bugzilla query page and I have to do them
+As a Bugzilla administrator, sometimes the queries I need to do are too
+specialized for the standard Bugzilla query page and I have to do them
 in SQL. I want to record some of these queries here for later reference
 to save me from re-inventing the wheel. Hopefully others will find this
 useful as well.
 
-  - Search for bug owners who seem to have not used bugzilla in a while.
+  - Search for bug owners who seem to have not used Bugzilla in a while.
     Send these people mail and disable the accounts of those that
     bounce. Use the date that they last commented on a bug to decide
     whether they're active. This isn't perfect, but its good enough

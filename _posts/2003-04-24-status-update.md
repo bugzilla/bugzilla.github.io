@@ -90,7 +90,7 @@ More information can be found in ~~[bug 196433](https://bugzilla.mozilla.org/sho
 
 Matthew Barnson, the original author of much of the [Bugzilla Guide](https://www.bugzilla.org/docs/html/), has recently been swamped by life. Jacob Steenhagen was gracious (and foolish) enough to volunteer to take over. In an attempt to "sync up" the documentation, Jake has been focusing on backporting relevant changes to the documentation to the 2.16 branch. Many items in the guide have received love, but the most notable ones include:
 
-*   **Section 4.3 - OS Specific Installation (New in Devel)** - Moved a lot of stuff that is specific to the OS (or distro) out into a special section. The next step is to make the installation instructions more generic as there are still some OS specific hints, etc.
+*   **Section 4.3 - OS Specific Installation (New in Devel)** - Moved a lot of stuff that is specific to the OS (or distribution) out into a special section. The next step is to make the installation instructions more generic as there are still some OS specific hints, etc.
 *   **Section 4.4 - HTTP Server Configuration (New in Devel)** - Moved some information that is specific to the web server being used into its own section. I currently have varying amount of information for Apache, IIS, and AOL Server.
 *   **Section 5.5 - Group Security (Devel)** - Because the tip has a new security model the docs needed updating for the tip.
 *   **Section 5.6 - Bugzilla Security (2.16 and Devel)** - This section has been cleaned up considerably. It also now contains information that used to be scattered about in different sections.
@@ -158,7 +158,7 @@ Checkin manifest:
 *   Bug [195621](https://bugzilla.mozilla.org/show_bug.cgi?id=195621 "Back out taint-related changes from bug 160710") - Back out taint-related changes from bug [160710](https://bugzilla.mozilla.org/show_bug.cgi?id=160710).
 *   Bug [190892](https://bugzilla.mozilla.org/show_bug.cgi?id=190892 "Radio button for "run this query" appears needlessly if you don't have saved queries") - Radio button for "run this query" looks silly if it's the only choice. Make it a hidden input if it's the only one.
 *   Bug [180642](https://bugzilla.mozilla.org/show_bug.cgi?id=180642 "Move authentication code into a module") - Move authentication code into a module
-*   Bug [195695](https://bugzilla.mozilla.org/show_bug.cgi?id=195695 "Requesting a non-existant format results in an Internal Error") - Requesting a non-existant format results in an Internal Error
+*   Bug [195695](https://bugzilla.mozilla.org/show_bug.cgi?id=195695 "Requesting a non-existent format results in an Internal Error") - Requesting a non-existent format results in an Internal Error
 *   Bug [197180](https://bugzilla.mozilla.org/show_bug.cgi?id=197180 "Long component name accepted on component creation but not working when creating a bug") - Long comment names not flagged as an error
 *   Bug [193989](https://bugzilla.mozilla.org/show_bug.cgi?id=193989 "Email notification for cancellation of "password change token" does not use emailsuffix") - EmailSuffix wasn't getting used for password change tokens. Also removes real name from To: header which wasn't being escaped properly for RFC[2822](https://bugzilla.mozilla.org/show_bug.cgi?id=2822) specs.
 *   Bug [194917](https://bugzilla.mozilla.org/show_bug.cgi?id=194917 "bug flags template includes javascript outside of comment block") - Javascript missing HTML comments in flag list.
@@ -182,7 +182,7 @@ Checkin manifest:
 *   Bug [193511](https://bugzilla.mozilla.org/show_bug.cgi?id=193511 "post_bug page has two headers") - post_bug page has two headers.
 *   Bug [186994](https://bugzilla.mozilla.org/show_bug.cgi?id=186994 "Unable to accept a new bug that has been assigned.") - Unable to accept a new bug that has been assigned.
 *   Bug [191537](https://bugzilla.mozilla.org/show_bug.cgi?id=191537 "Make Security Section better") - Improvements to the security section.
-*   Bug [192877](https://bugzilla.mozilla.org/show_bug.cgi?id=192877 "State changes on bugs w/ dependancies cause "Use of uninitialized values"") - State changes on bugs w/ dependancies cause "Use of uninitialized values" in BugMail.pm;
+*   Bug [192877](https://bugzilla.mozilla.org/show_bug.cgi?id=192877 "State changes on bugs w/ dependencies cause "Use of uninitialized values"") - State changes on bugs w/ dependencies cause "Use of uninitialized values" in BugMail.pm;
 *   Bug [193286](https://bugzilla.mozilla.org/show_bug.cgi?id=193286 "Field validation errors have wrong page title") - Field validation errors had the wrong page title
 *   Bug [192531](https://bugzilla.mozilla.org/show_bug.cgi?id=192531 "Bugzilla not properly closing DB statement handles") - Bugzilla not properly closing DB statement handles. Change code to work arround a perl < 5.8 leak when localising the tiedstatement attributes. Also, clear the sql statestack compat stuff so thatthe handles are really dead by the time we disconnect
 *   Bug [177997](https://bugzilla.mozilla.org/show_bug.cgi?id=177997 "Bugzilla Docs: Installing with AOLserver") - Update the AOL Server section with the new configuration information.
@@ -265,10 +265,10 @@ Checkin manifest:
 *   Bug [194125](https://bugzilla.mozilla.org/show_bug.cgi?id=194125 "CGI.pl warning: Character in "c" format wrapped...") - CGI.pl perl warning: Character in "c" format wrapped
 *   Bug [195424](https://bugzilla.mozilla.org/show_bug.cgi?id=195424 "MySQL 4 Table Locking appears to be different") - Add a note about new MySQL permissions needed for Bugzilla in MySQL 4.
 *   Bug [171674](https://bugzilla.mozilla.org/show_bug.cgi?id=171674 "File::Temp (required by TT 2.08) is broken in Perl 5.6.0") - Adding a section to the Troubleshooting section describing how to fix the File::Temp problems in perl 5.6.0.
-*   Bug [197180](https://bugzilla.mozilla.org/show_bug.cgi?id=197180 "Long component name accepted on component creation but not working when creating a bug") - long component name not flagged as error. Because of a mismatch between the size of bugs.component andcomponents.program, this caused silent failures when creating/moving bugsin that component.
+*   Bug [197180](https://bugzilla.mozilla.org/show_bug.cgi?id=197180 "Long component name accepted on component creation but not working when creating a bug") - long component name not flagged as error. Because of a mismatch between the size of bugs.component and components.program, this caused silent failures when creating/moving bugsin that component.
 *   Port security section rewrite from bug [191537](https://bugzilla.mozilla.org/show_bug.cgi?id=191537 "Make Security Section better") to the 2.16.3 docs
 *   Bug [157704](https://bugzilla.mozilla.org/show_bug.cgi?id=157704 "if you delete a product when usebuggroups is ON, administrator's right may change") - Deleting a product could potentially remove privileges from administrators.
-*   Bug [191971](https://bugzilla.mozilla.org/show_bug.cgi?id=191971 "Bugzilla Guide says you can resolve bugs by email") - The guide incorrectly stated that you could close a bug by sending an email with the code in contib/
+*   Bug [191971](https://bugzilla.mozilla.org/show_bug.cgi?id=191971 "Bugzilla Guide says you can resolve bugs by email") - The guide incorrectly stated that you could close a bug by sending an email with the code in contrib/
 *   Bug [188757](https://bugzilla.mozilla.org/show_bug.cgi?id=188757 "Missing line break in Apache config example in online documentation, section "step-by-step install"") - 2.16 shipped with the problem mentioned in bug [174255](https://bugzilla.mozilla.org/show_bug.cgi?id=174255) and that fix was never ported to 2.16's documentation, so the error was still on bugzilla.org.
 *   Bug [187566](https://bugzilla.mozilla.org/show_bug.cgi?id=187566 "Upgrade section is unclear (missing -dP in suggested cvs command)") - Update upgrade section in the 2.16 branch as was done on the tip
 

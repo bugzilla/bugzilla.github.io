@@ -48,7 +48,7 @@ Bugs relevant to the templating process that are still outstanding are:
 
 ## 2.16 Goals
 
-The goals for our 2.16 release have changed since the last status update. When that update was written, the goal was to have no patches setting around bit-rotting. It was determined that while this is an admirable goal, there were other things that Bugzilla needed more, such as the aforementioned templates. Reducing the patch queue and accepting submissions from non-core developers is an ongoing goal for the Bugzilla develepment team, but we are constantly faced with the difficult decision of how to manage what little time we have to work on this project.
+The goals for our 2.16 release have changed since the last status update. When that update was written, the goal was to have no patches setting around bit-rotting. It was determined that while this is an admirable goal, there were other things that Bugzilla needed more, such as the aforementioned templates. Reducing the patch queue and accepting submissions from non-core developers is an ongoing goal for the Bugzilla development team, but we are constantly faced with the difficult decision of how to manage what little time we have to work on this project.
 
 The current goals for our 2.16 release are:
 
@@ -57,7 +57,7 @@ The current goals for our 2.16 release are:
 *   Allow users to change their own email addresses, instead of having to bug the site admin (using verification emails sent to both the old and new addresses to validate the change)
 *   Complete redesign of the schema related to security groups to eliminate the "funky groupset math" and allow more than 55 bug groups to be created.
 *   Remove old attachment code in favor of the new attachment tracker system.
-*   Enable Perl's taint mode for all user accesable files, and taint-check anything being sent to the database.
+*   Enable Perl's taint mode for all user accessible files, and taint-check anything being sent to the database.
 
 For a more up to date list, see [the roadmap](/about/#milestones). Also, the current list of open bugs that are considered release blockers can be found [in this buglist](https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla&resolution=---&bug_severity=blocker&target_milestone=Bugzilla+2.16).
 
@@ -90,7 +90,7 @@ Major new features are being working on. Some of these will appear in 2.16. If y
 [Get this list from Bonsai](http://bonsai.mozilla.org/cvsquery.cgi?module=Bugzilla&sortby=Date&date=explicit&mindate=2001%2F10%2F19+12%3A00%3A00&maxdate=2002%2F01%2F18+07%3A00%3A00)
 
 *   [Bug 73180](https://bugzilla.mozilla.org/show_bug.cgi?id=73180 "versioncache should say it's not editable.") - Put a notice in the `versioncache` file stating that it's automatically generated
-*   [Bug 104340](https://bugzilla.mozilla.org/show_bug.cgi?id=104340 "showdependencytree.cgi: toolbar UI design") - Change the UI for the toolbar that allows bugs to be hidden in the dependancy tree
+*   [Bug 104340](https://bugzilla.mozilla.org/show_bug.cgi?id=104340 "showdependencytree.cgi: toolbar UI design") - Change the UI for the toolbar that allows bugs to be hidden in the dependency tree
 *   [Bug 105480](https://bugzilla.mozilla.org/show_bug.cgi?id=105480 "Make better use of fielddefs TABLE when displaying errors") - Use the friendly name from the fielddefs table when reporting strictvalue errors if it's available
 *   [Bug 71840](https://bugzilla.mozilla.org/show_bug.cgi?id=71840 "[RFE] Make comments referenceable") - Make comments referenceable using a #c4 to get the fourth comment
 *   [Bug 63249](https://bugzilla.mozilla.org/show_bug.cgi?id=63249 "Bug count is very slow for Products with many bugs") - The Bug Counts report was running very slowly due to unneeded fields/joins in the SQL query
@@ -141,7 +141,7 @@ Major new features are being working on. Some of these will appear in 2.16. If y
 *   [Bug 109530](https://bugzilla.mozilla.org/show_bug.cgi?id=109530 "xml.cgi double (and in some cases triple) quoting special characters.") - Fixed Bug.pm so it doesn't quote xml characters until it's asked to output xml (instead of doing it both ways)
 *   [Bug 101875](https://bugzilla.mozilla.org/show_bug.cgi?id=101875 "component column should be after product column in query results") - Put the product column before the component column rather than after
 *   [Bug 109802](https://bugzilla.mozilla.org/show_bug.cgi?id=109802 "checksetup.pl fails to connect to mysql database - password not escaped in localconfig") - Make it clear how to enter mysql passwords with special characters into `localconfig`
-*   [Bug 108312](https://bugzilla.mozilla.org/show_bug.cgi?id=108312 "Mid air collision page may not show all updates") - The mid-air collision page was only showing the most recent changes if two people comitted changes to a bug while you were viewing it.
+*   [Bug 108312](https://bugzilla.mozilla.org/show_bug.cgi?id=108312 "Mid air collision page may not show all updates") - The mid-air collision page was only showing the most recent changes if two people committed changes to a bug while you were viewing it.
 *   [Bug 54901](https://bugzilla.mozilla.org/show_bug.cgi?id=54901 "[security] LDAP Authentication should fail for empty passwords") - If you were using LDAP authentication it would let you log in as anyone if you left the password blank
 *   [Bug 37339](https://bugzilla.mozilla.org/show_bug.cgi?id=37339 "Bugzilla sidebar, containing info in footer") - Added a sidebar for Mozilla based browsers that contains the saved queries from the page footer
 *   [Bug 80183](https://bugzilla.mozilla.org/show_bug.cgi?id=80183 "configurable index page (using Template Toolkit)") - Make the index page use a template and contain the normal page footer

@@ -42,7 +42,7 @@ The other two patches added a summary to "dependent bug has had its status chang
 
 With the introduction of the attachment manager came the start of a process that many Bugzilla administrators will surely cheer - templatisation (bug [86168](https://bugzilla.mozilla.org/show_bug.cgi?id=86168 "Bug 86168 - Bugzilla should use template pages instead of hard-coded HTML")). With templates, HTML is moved out of the Perl code and into separate files. Dynamically generated data is passed by Bugzilla to the templates and the result is then displayed.
 
-This makes an administrators job easier, firstly, because they don't need to know any Perl to change the user interface, and secondly, because they don't need to make changes to their customisted templates every time they upgrade.
+This makes an administrators job easier, firstly, because they don't need to know any Perl to change the user interface, and secondly, because they don't need to make changes to their customised templates every time they upgrade.
 
 Previously RedHat's fork of Bugzilla supported this feature using the "Text::Template" software. However, the attachment manager uses the "Template Toolkit" software for its templates. This is because the Template Toolkit was judged to be technically superior.
 

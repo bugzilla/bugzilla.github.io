@@ -257,11 +257,11 @@ Checkins that don't refer to a specific bug number have been omitted, and were a
 *   Bug [190432](https://bugzilla.mozilla.org/show_bug.cgi?id=190432) - Avoids using non-ANSI SQL when saving a named query
 *   Bug [250265](https://bugzilla.mozilla.org/show_bug.cgi?id=250265) - Fix taint errors with vote fields when editing products
 *   **Bug [227191](https://bugzilla.mozilla.org/show_bug.cgi?id=227191) - Prevents the database password from being disclosed when the SQL server is halted and the webserver is left running in 2.17.x releases.**
-*   **Bug [233486](https://bugzilla.mozilla.org/show_bug.cgi?id=233486) - Fixes a privilege escalation in 2.17.x releases where auser with privileges to grant membership to one or more individual groups (i.e. usually an administrator) can trick the administrative controls into granting membership in groups other than the ones he has privileges for.**
+*   **Bug [233486](https://bugzilla.mozilla.org/show_bug.cgi?id=233486) - Fixes a privilege escalation in 2.17.x releases where a user with privileges to grant membership to one or more individual groups (i.e. usually an administrator) can trick the administrative controls into granting membership in groups other than the ones he has privileges for.**
 *   **Bug [234825](https://bugzilla.mozilla.org/show_bug.cgi?id=234825) - Prevents an information leak in all versions of Bugzilla where duplicates.cgi can disclose the names of products to which the user does not have access.**
 *   **Bug [234855](https://bugzilla.mozilla.org/show_bug.cgi?id=234855) - Prevents an information leak in all versions of Bugzilla where the form for mass-editing bugs can list products to which the user does not have access.**
 *   **Bug [235265](https://bugzilla.mozilla.org/show_bug.cgi?id=235265) - Prevents a Cross-Site Scripting vulnerability in several administrative scripts.**
-*   **Bug [235510](https://bugzilla.mozilla.org/show_bug.cgi?id=235510) - Avoids a potential user password comprimise in versions 2.17.5 through 2.17.7 where the user password could be visible in web server logs when accessing a chart.**
+*   **Bug [235510](https://bugzilla.mozilla.org/show_bug.cgi?id=235510) - Avoids a potential user password compromise in versions 2.17.5 through 2.17.7 where the user password could be visible in web server logs when accessing a chart.**
 *   **Bug [244272](https://bugzilla.mozilla.org/show_bug.cgi?id=244272) - Fixes an issue where a user with permission to grant membership to any group (i.e. usually an administrator) could cause editusers.cgi to execute arbitrary SQL.**
 
 ## Stable (2.16) Branch Checkins Since the Last Status Update

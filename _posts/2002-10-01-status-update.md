@@ -116,7 +116,7 @@ Checkin manifest:
 *   Correct checkin date for bug [153578](https://bugzilla.mozilla.org/show_bug.cgi?id=153578 "Attachment modified date is meant to be attachment creation date") schema modification
 *   Bug [165080](https://bugzilla.mozilla.org/show_bug.cgi?id=165080 "Delete product fails with missing column error") - Delete product fails with missing column error
 *   Bug [161203](https://bugzilla.mozilla.org/show_bug.cgi?id=161203 "Bug changes with intermediate pages munges fields with multiple values (e.g., CC)") - Bug changes with intermediate pages munges fields withmultiple values (e.g., CC)patch by "Randall M! Gee",
-*   Bug [86651](https://bugzilla.mozilla.org/show_bug.cgi?id=86651 "contrib/cvs-update.sh sets sticky dates") - cvs-update was setting sticky dates which made commiting changes and getting updates more difficult
+*   Bug [86651](https://bugzilla.mozilla.org/show_bug.cgi?id=86651 "contrib/cvs-update.sh sets sticky dates") - cvs-update was setting sticky dates which made committing changes and getting updates more difficult
 *   Bug [164623](https://bugzilla.mozilla.org/show_bug.cgi?id=164623 "xml.cgi - attachments is broken and insiders not enforced") - xml.cgi - attachments is broken and insiders not enforced
 *   Bug [164623](https://bugzilla.mozilla.org/show_bug.cgi?id=164623 "xml.cgi - attachments is broken and insiders not enforced") - add .htaccess to .cvsignore
 *   Bug [76923](https://bugzilla.mozilla.org/show_bug.cgi?id=76923 "Don't \|use diagnostics;\|") - Don't \|use diagnostics\| (its really expensive at startup time)

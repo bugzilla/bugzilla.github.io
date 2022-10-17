@@ -11,7 +11,7 @@ new content on the old platform, and the new platform doesn't have
 anonymous access available yet (but it's coming at the end of June). 
 This means the old URL for watching our meetings live isn't going to
 work this month.  Fortunately, public meetings on the new platform are
-mirrored to Youtube, so you'll be able to watch it at
+mirrored to YouTube, so you'll be able to watch it at
 <https://www.youtube.com/watch?v=A7OC8CXMGyo>
 
 Of course, if you want to participate instead of just watch, feel free

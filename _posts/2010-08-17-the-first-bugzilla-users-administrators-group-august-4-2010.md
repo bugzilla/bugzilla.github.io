@@ -58,7 +58,7 @@ and offering integration points into Bugzilla will let people do that.
 
 Our next meeting will be on [Wednesday, December 8, 2010 at Yahoo\!
 Inc.](http://upcoming.yahoo.com/event/6629493/CA/Sunnyvale/Second-Quarterly-Bugzilla-Users-amp-Administrators-Group/Yahoo/?ps=5)
-\[alternate link: [Faceook
+\[alternate link: [Facebook
 Event](http://www.facebook.com/event.php?eid=153184864695898)\]. The
 focus of the meeting is going to be User Interface. We look forward to
 seeing you there\!

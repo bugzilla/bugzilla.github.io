@@ -78,7 +78,7 @@ When you fix a bug, ask yourself:
 Nothing will get checked into Bugzilla that doesn't pass the test suite.
 The test suite is automatically executed on each commit by the [Travis
 CI](https://travis-ci.org/bugzilla/bugzilla) system to warn us of bad
-code. It is using Bugzilla's [github
+code. It is using Bugzilla's [GitHub
 mirror](https://github.com/bugzilla/bugzilla). Anything that fails to
 pass the testing suite will be backed out immediately.
 

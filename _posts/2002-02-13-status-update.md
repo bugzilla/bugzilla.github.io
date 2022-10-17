@@ -10,7 +10,7 @@ redirect_from:
 
 ## Introduction
 
-It is clear at this point that we will not make our goal of Febuary 15th for the 2.16 release. However, the Bugzilla tree is now frozen and is only accepting bugs that have been targeted as 2.16 blockers, and things are moving quickly now, so it looks reasonable that we won't have to delay again beyond March 1st, and will probably release sooner if the right things fall into place before then.
+It is clear at this point that we will not make our goal of February 15th for the 2.16 release. However, the Bugzilla tree is now frozen and is only accepting bugs that have been targeted as 2.16 blockers, and things are moving quickly now, so it looks reasonable that we won't have to delay again beyond March 1st, and will probably release sooner if the right things fall into place before then.
 
 ## Highly Misleading & Meaningless Statistics
 
@@ -21,7 +21,7 @@ It is clear at this point that we will not make our goal of Febuary 15th for the
 |2002-02-11|34 bugs|35 bugs|27 bugs|477 bugs|396 bugs|
 |2002-02-13|24 bugs|21 bugs|23 bugs|481 bugs|405 bugs|
 
-## New Commiter
+## New Committer
 
 Bugzilla welcomes Christian Reis (kiko has he is known on #mozwebtools, irc.mozilla.org) as Bugzilla's latest cvs committer. Kiko is looking forward to squashing even more new bugs and making the 2.16 release great.
 
@@ -55,7 +55,7 @@ The current goals for our 2.16 release are still:
 *   Templatization of all customer-visible CGI pages, to allow easy customization by the administrator **(8 bugs remain)**
 *   Allow users to change their own email addresses, instead of having to bug the site admin (using verification emails sent to both the old and new addresses to validate the change) **(awaiting review)**
 *   Remove old attachment code in favor of the new attachment tracker system. **(complete)**
-*   Enable Perl's taint mode for all user accesable files, and taint-check anything being sent to the database.**(complete)**
+*   Enable Perl's taint mode for all user accessible files, and taint-check anything being sent to the database.**(complete)**
 
 **Note that the "complete redesign of the schema related to security groups to eliminate the "funky groupset math" and allow more than 55 bug groups to be created" has been pushed to early 2.18.**
 

@@ -132,7 +132,7 @@ Checkin manifest:
 *   Bug [36379](https://bugzilla.mozilla.org/show_bug.cgi?id=36379) - adds command-line switches for default product, component, and version to bug_email.pl
 *   Bug [227026](https://bugzilla.mozilla.org/show_bug.cgi?id=227026) - remove obsolete MacsBug information from guided template (we no longer support OS 9.)
 *   Backing out bug [230293](https://bugzilla.mozilla.org/show_bug.cgi?id=230293), we decided this was the wrong approach.
-*   Backing out code change that was accidently left in the patch on bug [228894](https://bugzilla.mozilla.org/show_bug.cgi?id=228894) (see comment 9)
+*   Backing out code change that was accidentally left in the patch on bug [228894](https://bugzilla.mozilla.org/show_bug.cgi?id=228894) (see comment 9)
 *   Bug [228894](https://bugzilla.mozilla.org/show_bug.cgi?id=228894) - Change HTML comments to template-toolkit ones for template version numbers.
 *   Bug [224420](https://bugzilla.mozilla.org/show_bug.cgi?id=224420) - fix test bustage caused by accidental use of the word "bugs". Oops.
 *   Bug [224420](https://bugzilla.mozilla.org/show_bug.cgi?id=224420) - add a warning that only public bugs are counted by the new charting system at the moment.

@@ -76,7 +76,7 @@ Some examples of advanced uses for the re-architected product groups follow:
 
 ### Replication/shadowdb removal
 
-The shadowdb was a readonly copy of Bugzilla's database, which Bugzilla used for potentially expensive readonly queries, such as from buglist.cgi. Due to MySQL's table-level locking mechanism, long running queries block modifications and updates to the database; the shadowdb attempted to alleviate this bottleneck by creating a second database for these long running queries to use.
+The shadowdb was a read only copy of Bugzilla's database, which Bugzilla used for potentially expensive read only queries, such as from buglist.cgi. Due to MySQL's table-level locking mechanism, long running queries block modifications and updates to the database; the shadowdb attempted to alleviate this bottleneck by creating a second database for these long running queries to use.
 
 Previously, Bugzilla handled updates from the main database to the copy on its own by keeping track of every SQL update. These updates were then sent to the shadow database via a separate process (`syncshadowdb`). This process had several bugs and was inefficient.
 
@@ -171,7 +171,7 @@ Checkin manifest:
 *   Bug [175579](https://bugzilla.mozilla.org/show_bug.cgi?id=175579 "Make templates html compliant") - make templates html compliant
 *   Bug [179206](https://bugzilla.mozilla.org/show_bug.cgi?id=179206 "enter_bug isn't picking up version from URL") - enter_bug isn't picking up version from URL
 *   Bug [180545](https://bugzilla.mozilla.org/show_bug.cgi?id=180545 "You can change the product/component on a bug without editbugs privs") - It was possible to change the product/component of a bug without having the editbugs permission.
-*   Bug [179960](https://bugzilla.mozilla.org/show_bug.cgi?id=179960 "QuickSearch queries are slow and time out") - Qucksearch queries are slow and timeoutfixed by adding subselect emulation for product/component lookups
+*   Bug [179960](https://bugzilla.mozilla.org/show_bug.cgi?id=179960 "QuickSearch queries are slow and time out") - QuickSearch queries are slow and timeoutfixed by adding subselect emulation for product/component lookups
 *   Bug [180205](https://bugzilla.mozilla.org/show_bug.cgi?id=180205 "General reporting fixes") - General reporting fixes.
 *   Bug [180151](https://bugzilla.mozilla.org/show_bug.cgi?id=180151) - Grand total links are messed up when axis is restricted,
 *   Bug [180105](https://bugzilla.mozilla.org/show_bug.cgi?id=180105) - CSV reports occasionally break,

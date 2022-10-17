@@ -74,7 +74,7 @@ for more information about how to configure Apache.
     auto-incremented primary key named `id`.
   - A custom `Bugzilla.pm` module has been added
     into `contrib/` to help packagers to package
-    Bugzilla in their Linux distros.
+    Bugzilla in their Linux distributions.
 
 ### Notable WebService Changes
 

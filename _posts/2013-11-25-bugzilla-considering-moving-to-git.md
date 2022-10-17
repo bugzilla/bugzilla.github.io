@@ -10,7 +10,7 @@ that Mozilla is trying to get out of the business of hosting every
 version control system known to man (which they currently do, or close
 to it anyway) and bzr is one of the low-hanging fruit (Bugzilla is the
 only Mozilla project using it).  There's also a lot of feeling out there
-that mirroring to github may make contributions easier for new
+that mirroring to GitHub may make contributions easier for new
 contributors. The general consensus on the thread so far is that we
 should do it; the main point of contention is how long to keep it
 mirrored in bzr after it moves.

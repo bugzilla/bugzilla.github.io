@@ -38,7 +38,7 @@ In order to better facilitate future changes to the code many of Bugzilla's inte
 
 However, these internal APIs are expected to remain fairly stable between now and the final release of 2.20.
 
-### Cross-Database Compatability
+### Cross-Database Compatibility
 
 The team is very excited to see one of the most requested changes to Bugzilla finally starting to take shape. While it's not likely to be fully supported for the 2.20 release, there has been major progress made toward allowing Bugzilla to run on more than just the MySQL database server. We have decided to start the database portability with PostgreSQL, but we won't stop there. Once the infrastructure is fully in place, it will make adding support for other ANSI compatible database servers trivial.
 

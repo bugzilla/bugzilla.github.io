@@ -100,10 +100,10 @@ The following checkins were made without reference to any specific bugs:
 *   Fix for bug [156564](https://bugzilla.mozilla.org/show_bug.cgi?id=156564 "treat bug IDs as integers in RDF output"): flag bug IDs as integers in the RDF output of buglist.cgi.
 *   Bug [156568](https://bugzilla.mozilla.org/show_bug.cgi?id=156568 "data dir is not correctly created") - data dir is not correctly created
 *   Bug [150829](https://bugzilla.mozilla.org/show_bug.cgi?id=150829 "'My Votes' link missing from footer") - 'My Votes' link missing from footer
-*   bug [155861](https://bugzilla.mozilla.org/show_bug.cgi?id=155861 "showdependancygraph.cgi fails taint check with local dot installation") - showdependancygraph.cgi fails taint check with local dotinstallation
+*   bug [155861](https://bugzilla.mozilla.org/show_bug.cgi?id=155861 "showdependencygraph.cgi fails taint check with local dot installation") - showdependencygraph.cgi fails taint check with local dotinstallation
 *   Bug [149246](https://bugzilla.mozilla.org/show_bug.cgi?id=149246 "need to be able to specify relative dates in days"): Allow use of relative time units in query screen.
 *   Fix for bug [150925](https://bugzilla.mozilla.org/show_bug.cgi?id=150925 "Cannot change e-mail address for bugzilla account."): make email address changes work.
-*   Recheckin fix for bug [150798](https://bugzilla.mozilla.org/show_bug.cgi?id=150798 "Extra whitespace included in saved query links") which I accidentaly broke in the fix for bug[150770](https://bugzilla.mozilla.org/show_bug.cgi?id=150770)
+*   Recheckin fix for bug [150798](https://bugzilla.mozilla.org/show_bug.cgi?id=150798 "Extra whitespace included in saved query links") which I accidentally broke in the fix for bug[150770](https://bugzilla.mozilla.org/show_bug.cgi?id=150770)
 *   Bug [151714](https://bugzilla.mozilla.org/show_bug.cgi?id=151714 "user with no canconfirm permission should not get option to mark bugs they reported as NEW") - user with no canconfirm permission should not get option tomark bugs they reported as NEW
 *   Fix for bug [150804](https://bugzilla.mozilla.org/show_bug.cgi?id=150804 "keywords should default to all"): makes "allwords" the default when searching for keywords.
 *   Bug [105472](https://bugzilla.mozilla.org/show_bug.cgi?id=105472 "no mention that expectbigqueries unnecessary with mysql >=3.23.2") - expectbigqueries unnecessary with mysql >=3.23.
@@ -114,7 +114,7 @@ The following checkins were made without reference to any specific bugs:
 *   Bug [155744](https://bugzilla.mozilla.org/show_bug.cgi?id=155744 "used only once warning in checksetup.pl"): fix a used only once warning in tinderbox caused by myk's checkin of bug [99203](https://bugzilla.mozilla.org/show_bug.cgi?id=99203).
 *   Bug [62000](https://bugzilla.mozilla.org/show_bug.cgi?id=62000 "Bug file attachments broken under Windows"): File attachments don't work on Windows. Note: only the code from the patch was checked in, thedocumentation issue was split to bug [155743](https://bugzilla.mozilla.org/show_bug.cgi?id=155743).
 *   Fix for bug [99203](https://bugzilla.mozilla.org/show_bug.cgi?id=99203 "alias for a bug"): Implements bug aliases feature.
-*   Bug [151871](https://bugzilla.mozilla.org/show_bug.cgi?id=151871 "performance problems in quoteUrls") - rewrite quoteUrls to fix major performance problems, and afew other misc bugs too.
+*   Bug [151871](https://bugzilla.mozilla.org/show_bug.cgi?id=151871 "performance problems in quoteUrls") - rewrite quoteUrls to fix major performance problems, and a few other misc bugs too.
 *   Fix for bug [122900](https://bugzilla.mozilla.org/show_bug.cgi?id=122900 "allow user to turn off email notification for Unconfirmed bugs"): implements email preference for unconfirmed bugs.
 *   Fix for bug [149347](https://bugzilla.mozilla.org/show_bug.cgi?id=149347 "incorrect interface comment in header.html.tmpl"): Corrects interface comment to refer to "javascript" parameter instead of "jscript" parameter.
 *   Bug [150770](https://bugzilla.mozilla.org/show_bug.cgi?id=150770 "Lost <nobr> arround query results") - Lost <nobr> arround query results
@@ -218,9 +218,9 @@ The following checkins were made without reference to any specific bugs:
 *   Bug [155793](https://bugzilla.mozilla.org/show_bug.cgi?id=155793 "$::FORM is not tainted under perl 5.6.1") - $::FORM is not tainted under perl 5.6.1
 *   Bug [156568](https://bugzilla.mozilla.org/show_bug.cgi?id=156568 "data dir is not correctly created") - data dir is not correctly created
 *   Bug [150829](https://bugzilla.mozilla.org/show_bug.cgi?id=150829 "'My Votes' link missing from footer") - 'My Votes' link missing from footer
-*   bug [155861](https://bugzilla.mozilla.org/show_bug.cgi?id=155861 "showdependancygraph.cgi fails taint check with local dot installation") - showdependancygraph.cgi fails taint check with local dotinstallation
+*   bug [155861](https://bugzilla.mozilla.org/show_bug.cgi?id=155861 "showdependencygraph.cgi fails taint check with local dot installation") - showdependencygraph.cgi fails taint check with local dotinstallation
 *   Fix for bug [150925](https://bugzilla.mozilla.org/show_bug.cgi?id=150925 "Cannot change e-mail address for bugzilla account."): Make email changes work.
-*   Recheckin fix for bug [150798](https://bugzilla.mozilla.org/show_bug.cgi?id=150798 "Extra whitespace included in saved query links") which I accidentaly broke in the fix for bug[150770](https://bugzilla.mozilla.org/show_bug.cgi?id=150770)
+*   Recheckin fix for bug [150798](https://bugzilla.mozilla.org/show_bug.cgi?id=150798 "Extra whitespace included in saved query links") which I accidentally broke in the fix for bug[150770](https://bugzilla.mozilla.org/show_bug.cgi?id=150770)
 *   Bug [151714](https://bugzilla.mozilla.org/show_bug.cgi?id=151714 "user with no canconfirm permission should not get option to mark bugs they reported as NEW") - user with no canconfirm permission should not get option tomark bugs they reported as NEW
 *   Fix for bug [150804](https://bugzilla.mozilla.org/show_bug.cgi?id=150804 "keywords should default to all"): Makes "allwords" the default when searching by keyword.
 *   Bug [155388](https://bugzilla.mozilla.org/show_bug.cgi?id=155388 "Site navigation bar link broken in 2.16"): next/prev/first/last <link> (Mozilla's Site navigation bar) didn't work after 2.16 templatization.

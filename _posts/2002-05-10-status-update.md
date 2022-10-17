@@ -49,7 +49,7 @@ The current goals for our 2.16 release are still:
 *   Templatization of all customer-visible CGI pages, to allow easy customization by the administrator **(complete)**
 *   Allow users to change their own email addresses, instead of having to bug the site admin (using verification emails sent to both the old and new addresses to validate the change) **(complete)**
 *   Remove old attachment code in favor of the new attachment tracker system. **(complete)**
-*   Enable Perl's taint mode for all user accesable files, and taint-check anything being sent to the database.**(complete)**
+*   Enable Perl's taint mode for all user accessible files, and taint-check anything being sent to the database.**(complete)**
 
 As always, for an up to date list, see [the roadmap](/about/#milestones).
 
@@ -132,7 +132,7 @@ And now... for da big list:
 *   Bug [97832](https://bugzilla.mozilla.org/show_bug.cgi?id=97832 "turn on template pre-compilation") - turn on template compilation. This means that the minimum TT version is now 2.07\.
 *   Bug [138994](https://bugzilla.mozilla.org/show_bug.cgi?id=138994 "Split duplicates.html.tmpl up") - split up duplicates.html.tmpl.
 *   Bug [140419](https://bugzilla.mozilla.org/show_bug.cgi?id=140419 "query.cgi fails after search.html.tmpl has been splited") - fix merge error from bug [138995](https://bugzilla.mozilla.org/show_bug.cgi?id=138995). Oops.
-*   Bug [140407](https://bugzilla.mozilla.org/show_bug.cgi?id=140407 "Expunge template/default and template/custom references") - remove all references to directories template/default and template/custom. They are no more. Oceania is at war with Eastasia. Oceania has always been at war with Eastasia.
+*   Bug [140407](https://bugzilla.mozilla.org/show_bug.cgi?id=140407 "Expunge template/default and template/custom references") - remove all references to directories template/default and template/custom. They are no more. Oceania is at war with East Asia. Oceania has always been at war with East Asia.
 *   Move a \</center> tag (inserted in bug [129442](https://bugzilla.mozilla.org/show_bug.cgi?id=129442 "Make HTML of a default installation HTML W3C compliant") in a vain attempt to make this CGI's HTML validate) to the bottom of the initial page. This has the effect of fixing the alignment of the "choose chart" widgets; returning them back to the centre, where it should be. No bug number.
 *   Bug [138995](https://bugzilla.mozilla.org/show_bug.cgi?id=138995 "Split up search.html.tmpl") - split up search.html.tmpl.
 *   Bug [139930](https://bugzilla.mozilla.org/show_bug.cgi?id=139930 "checksetup.pl fails if data/params doesn't exist") - checksetup.pl no longer fails if data/params does not exist
@@ -200,7 +200,7 @@ And now... for da big list:
 *   Bug [124920](https://bugzilla.mozilla.org/show_bug.cgi?id=124920 "Templatise post_bug.cgi") - Templatise post_bug.cgi.
 *   Bug [126793](https://bugzilla.mozilla.org/show_bug.cgi?id=126793 "Templatise showdependencygraph.cgi") - templatise showdependencygraph.cgi.
 *   Bug [135291](https://bugzilla.mozilla.org/show_bug.cgi?id=135291 "template version strings break templates"): add version string to new templates and fix the string for non xml templates.
-*   Bug [130373](https://bugzilla.mozilla.org/show_bug.cgi?id=130373 "Sorting by Target Milestone in templatized buglist.cgi generates bogus error") - sorting by target milestone genreated bogus error
+*   Bug [130373](https://bugzilla.mozilla.org/show_bug.cgi?id=130373 "Sorting by Target Milestone in templatized buglist.cgi generates bogus error") - sorting by target milestone generated bogus error
 *   Bug [127200](https://bugzilla.mozilla.org/show_bug.cgi?id=127200 "Query for CC takes long time") - query for cc takes long time
 *   Bug [126883](https://bugzilla.mozilla.org/show_bug.cgi?id=126883 "bugzilla.dtd isn't quite correct") - bugzilla.dtd isn't quite correct
 *   Partial fix for bug [104600](https://bugzilla.mozilla.org/show_bug.cgi?id=104600 "template/custom gets pruned on cvs update -dP"): Adds "template/custom" to .cvsignore.
@@ -221,12 +221,12 @@ And now... for da big list:
 *   Better fix for bug [132929](https://bugzilla.mozilla.org/show_bug.cgi?id=132929 "buglist.cgi "), buglist.cgi "long format" button doesn't work.
 *   Bug [133425](https://bugzilla.mozilla.org/show_bug.cgi?id=133425 "Audit show_bug.html.tmpl for FILTER usage"): adding missing FILTERs in the template
 *   Bug [92263](https://bugzilla.mozilla.org/show_bug.cgi?id=92263 "Don't output SQL commands before the footer."): Don't output SQL commands before the footer when syncshadowdb fails (only affects Bugzillas that are running shadow databases)
-*   Bug [120537](https://bugzilla.mozilla.org/show_bug.cgi?id=120537 "Dependency graphs take forever to load, and are larger than necessary") - Allow the use of a local 'dot' binary to generate dependancy graphs
+*   Bug [120537](https://bugzilla.mozilla.org/show_bug.cgi?id=120537 "Dependency graphs take forever to load, and are larger than necessary") - Allow the use of a local 'dot' binary to generate dependency graphs
 *   Bug [133210](https://bugzilla.mozilla.org/show_bug.cgi?id=133210 "checksetup uses $::params") - typo in checksetup; uses $::params instead of $::param
 *   Bug [133862](https://bugzilla.mozilla.org/show_bug.cgi?id=133862 "bugzilla index page doesn't focus text field") - bugzilla index page doesn't focus text field
 *   Bug [104589](https://bugzilla.mozilla.org/show_bug.cgi?id=104589 "User closing window should not terminate Bugzilla scripts (quick fix for 2.16)") - prevent user closing window from terminating Bugzilla scripts.
 *   Bug [133425](https://bugzilla.mozilla.org/show_bug.cgi?id=133425 "Audit show_bug.html.tmpl for FILTER usage") - FILTERs and other fixes in show_bug.html.tmpl.
-*   Bug [133200](https://bugzilla.mozilla.org/show_bug.cgi?id=133200 "mass change removes dependencies") - mass change removes dependancies.
+*   Bug [133200](https://bugzilla.mozilla.org/show_bug.cgi?id=133200 "mass change removes dependencies") - mass change removes dependencies.
 *   Bug [133206](https://bugzilla.mozilla.org/show_bug.cgi?id=133206) - mass change uses 'severity' rather than 'bug_severity'.
 *   Bug [133389](https://bugzilla.mozilla.org/show_bug.cgi?id=133389 "show_bug does not select component"): changing anything on a bug from the show_bug.cgi page would reset its component to the first in the product.
 *   Bug [133372](https://bugzilla.mozilla.org/show_bug.cgi?id=133372 "Target Milestone URL should be escaped in templates using 'FILTER uri'") - FILTER uri on milestone URL.

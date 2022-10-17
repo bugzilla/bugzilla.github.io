@@ -56,7 +56,7 @@ The current goals for our 2.16 release are still:
 *   Templatization of all customer-visible CGI pages, to allow easy customization by the administrator **(10 bugs remain)**
 *   Allow users to change their own email addresses, instead of having to bug the site admin (using verification emails sent to both the old and new addresses to validate the change) **(reviewed needs-work, waiting an updated patch)**
 *   Remove old attachment code in favor of the new attachment tracker system. **(complete)**
-*   Enable Perl's taint mode for all user accesable files, and taint-check anything being sent to the database.**(complete)**
+*   Enable Perl's taint mode for all user accessible files, and taint-check anything being sent to the database.**(complete)**
 
 For a more up to date list, see [the roadmap](/about/#milestones). Also, the current list of open bugs that are considered release blockers can be found [in this buglist](https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla&resolution=---&bug_severity=blocker&target_milestone=Bugzilla+2.16).
 

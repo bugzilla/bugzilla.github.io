@@ -32,7 +32,7 @@ history](https://www.bugzilla.org/about/):
 > night](https://github.com/bugzilla/bugzilla/commit/4727e6c09f88e63f02e6c8f359862d0c0942ed36).
 
 20 years later, Bugzilla is still alive and kicking, and [about to get a
-major facelift](https://github.com/bugzilla/harmony) that's about 10
+major face lift](https://github.com/bugzilla/harmony) that's about 10
 years overdue.  I had really hoped to be announcing the release of
 Bugzilla 6 with this post, but we're not quite there yet.  Dylan has
 been making great progress with the recent merges from

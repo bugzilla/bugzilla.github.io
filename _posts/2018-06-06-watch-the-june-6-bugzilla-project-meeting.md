@@ -13,12 +13,12 @@ categories:
       - As noted at previous meetings Mozilla is downsizing and trying
         to find external hosting for the Bugzilla Project which they'll
         still pay for, they just want to get out of the hosting
-        bussiness.
+        business.
       - Bugzilla needs to exist as a separate legal entity from the
         Mozilla Foundation for purposes of contracting with a hosting
         company, so our current status is waiting on the legal work to
         get done to create a Bugzilla subsidiary of Mozilla Foundation.
-      - The top condender for hosting right now is Linode. Other
+      - The top contender for hosting right now is Linode. Other
         possibilities are OSUOSL and Eclipse (Emmanual reminded us of
         their offer)
       - <https://landfill.bugzilla.org/> has been closed up - static

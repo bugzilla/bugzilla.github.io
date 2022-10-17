@@ -91,7 +91,7 @@ For more information see the [brief online documentation](https://bugzilla.mozil
 
 ### User Wildcard Matching
 
-Sites can now enable the use of wildcards and substrings in bug entry and editing forms. If the `usermatchmode` param is set to wildcard, then any "*" included in email addreses will be treated as a wildcard and cause the entry provided to be matched against all active userids and real names in the system. If `usermatchmode` is set to search, addresses that do not exactly match an existing email address will be matched as a substring as well.
+Sites can now enable the use of wildcards and substrings in bug entry and editing forms. If the `usermatchmode` param is set to wildcard, then any "*" included in email addresses will be treated as a wildcard and cause the entry provided to be matched against all active userids and real names in the system. If `usermatchmode` is set to search, addresses that do not exactly match an existing email address will be matched as a substring as well.
 
 Two other paramaters influence the behavior of wildcards, `maxusermatches` and `confirmuniqueusermatch` permit a site to determine how broadly to apply ambiguous wildcards and to determine if all wildcard expansions should be confirmed.
 
@@ -147,7 +147,7 @@ Checkin manifest:
 *   Bug [178043](https://bugzilla.mozilla.org/show_bug.cgi?id=178043 "In graphical reports, provide mechanism for user to tweak presentation of report") - Make it possible to have vertical x-axis labels.
 *   Bug [179706](https://bugzilla.mozilla.org/show_bug.cgi?id=179706 "activity log needs to include full account names for requestees") activity log needs to include full account names for requestees
 *   Bug [179302](https://bugzilla.mozilla.org/show_bug.cgi?id=179302 "'anyexact' isn't an option for boolean charts") - 'anyexact' isn't an option for boolean charts
-*   _**Bug [179491](https://bugzilla.mozilla.org/show_bug.cgi?id=179491 "Searchs of attachments containing a string do not enforce attchment privacy") Searchs of attachments containing a string do not enforce attchment privacy**_
+*   _**Bug [179491](https://bugzilla.mozilla.org/show_bug.cgi?id=179491 "Searchs of attachments containing a string do not enforce attachment privacy") Searchs of attachments containing a string do not enforce attachment privacy**_
 *   Second installment of Bug [179260](https://bugzilla.mozilla.org/show_bug.cgi?id=179260 "Unknown table 'map_assigned_to' in order clause at globals.pl line 242") Unknown table 'map_assigned_to' in order clause at globals.pl line 242
 *   Bug [179360](https://bugzilla.mozilla.org/show_bug.cgi?id=179360 "request.cgi: "Filter the Queue" should come before "Request Queue""): puts the filters at the top of the request queue and eliminates that empty table that sometimes is at the top of the queue.
 *   Bug [179334](https://bugzilla.mozilla.org/show_bug.cgi?id=179334 "removing + from a flag doesn't clear setter"): updates the setter consistently. also fixes numerous other bugs in the RT code.
@@ -267,7 +267,7 @@ Checkin manifest:
 *   Bug [170073](https://bugzilla.mozilla.org/show_bug.cgi?id=170073 "Running checksetup without File::Temp installed results in error."): checksetup.pl (indirectly via Bugzilla::Config.pm) had a dependency on File::Temp, which caused it to crash before the version checks were even done to warn the admin that it wasn't present. This patch reorders the loading sequence in checksetup.pl so that the version checks are done before the Config module is loaded.
 *   Bug [171506](https://bugzilla.mozilla.org/show_bug.cgi?id=171506 "Sanitycheck broken"): Fixes bustage in sanitycheck.cgi by making it check for correct product IDs in the flaginclusions and flagexclusionstables instead of the flagtypes table, which no longer has a product_id field.
 *   Bug [171420](https://bugzilla.mozilla.org/show_bug.cgi?id=171420 "faulty use of local variables in Flag.pm"): fixes usage of $template, $vars, and &Param in Flag.pm.
-*   Bug [171322](https://bugzilla.mozilla.org/show_bug.cgi?id=171322 "process_bug.cgi makes reference to non-existant product variable") process_bug.cgi makes reference to non-existant product variable
+*   Bug [171322](https://bugzilla.mozilla.org/show_bug.cgi?id=171322 "process_bug.cgi makes reference to non-existent product variable") process_bug.cgi makes reference to non-existent product variable
 *   Bug [171440](https://bugzilla.mozilla.org/show_bug.cgi?id=171440 "editgroups shows system groups as usable for bugs even though they are not") editgroups shows system groups as usable for bugs even though they are not
 *   Bug [163114](https://bugzilla.mozilla.org/show_bug.cgi?id=163114 "Templatise all calls to DisplayError") - Templatise all calls to DisplayError.
 *   Bug [98801](https://bugzilla.mozilla.org/show_bug.cgi?id=98801 "request tracker"): Implementation of the request tracker, a set of enhancements to attachment statuses.
