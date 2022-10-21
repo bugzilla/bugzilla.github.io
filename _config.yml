@@ -20,7 +20,7 @@ description: > # this means to ignore newlines until "baseurl:"
   lets you plan, organize and release software on your own teams'
   schedule.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://bugzilla.lcp.world" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.bugzilla.org/" # the base hostname & protocol for your site, e.g. http://example.com
 source_code: https://github.com/bugzilla/bugzilla
 list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
 report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
