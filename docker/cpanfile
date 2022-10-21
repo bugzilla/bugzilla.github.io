@@ -1,5 +1,0 @@
-requires 'Env';
-requires 'File::Copy::Recursive';
-requires 'File::Which';
-requires 'Memoize';
-requires 'Test';

@@ -1,0 +1,39 @@
+<ul>
+  {% assign list = site.releases | reverse | where_exp: "item", "item.mode != ''" %}
+  {% for item in list %}
+    <li>
+      <h3 id="v{{ item.branch | replace: ',', '' }}">
+      <a name="v{{ item.branch | replace: '.', '' }}"></a>
+      {% case item.mode %}
+      {% when 'current' %}
+        <a name="stable"></a>
+      {% when 'dev' %}
+        <a name="candidate"></a>
+        <a name="devel"></a>
+      {% when 'old' %}
+        <a name="oldstable"></a>
+      {% endcase %}
+        {% case item.mode %}
+        {% when 'current' %}
+          Stable Release
+        {% when 'dev' %}
+          {% if item.rc != false %}
+            Stable Release Candidate
+          {% else %}
+            Development Snapshot
+          {% endif %}
+        {% when 'old' %}
+          Old Stable Release
+        {% endcase %}
+        ({{ item.version }})
+      </h3>
+      <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/{{ filename }}" 
+           class="button primary">{% include icons/download.svg %}Download</a>
+      <p>
+      Patches to manually upgrade an earlier install of this branch
+      to {{ item.version }} can be found
+      <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/">on the FTP server</a>.
+      </p>
+    </li>
+  {% endfor %}
+</ul>

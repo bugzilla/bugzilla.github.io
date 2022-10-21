@@ -1,0 +1,55 @@
+---
+layout: base
+---
+<div class="inner">
+  <div class="card">
+    <h4 id="{{ page.nickname }}">{{ page.firstname }} {{ page.lastname }}</h4>
+    {% if page.image %}
+    <img src="/assets/img/developers/{{ page.image }}">
+    {% endif %}
+    <ul>
+    {% if page.irc %}
+      <li>
+        <b>IRC Nick:</b>
+        {{ page.irc | markdownify }}
+      </li>
+    {% endif %}
+    {% if page.location %}
+      <li>
+        <b>Location:</b>
+        {{ page.location | markdownify }}
+      </li>
+    {% endif %}
+    {% if page.dayjob %}
+      <li>
+        <b>Day Job:</b>
+        {{ page.dayjob | markdownify }}
+      </li>
+    {% endif %}
+    {% if page.role %}
+      <li>
+        <b>{% if page.former %}Previous {% endif %}Bugzilla Responsibilities:</b>
+        {{ page.role | markdownify }}
+      </li>
+    {% endif %}
+    {% if page.former-role %}
+      <li>
+        <b>Previous Component Responsibilities:</b>
+        {{ page.former-role | markdownify }}
+      </li>
+    {% endif %}
+    {% if page.blog %}
+      <li>
+        <b>Blog:</b>
+        <a href="{{ page.blog }}">{{ page.blog }}</a>
+      </li>
+    {% endif %}
+    {% if page.website %}
+      <li>
+        <b>URL:</b>
+        <a href="{{ page.website }}">{{ page.website }}</a>
+      </li>
+    {% endif %}
+    </ul>
+  </div>
+</div>

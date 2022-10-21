@@ -1,56 +1,137 @@
 ---
-title: "Home"
+layout: base
+addons:
+- type: js
+  link: /assets/js/header.js
+header:
+  type: sticky
+  big: True
+  class: bg-bugzilla sticky
 ---
-
-<h1>Bugzilla</h1>
-<p><b>Bugzilla</b> is server software designed to help you manage software development.</p>
-<p><b><a href="./about/">More about Bugzilla</a> &raquo;</b></p>
-
-<h2>News</h2>
-<ul>
-   <li><a href="news/#release504">Release of Bugzilla 5.1.2, 5.0.4, and 4.4.13</a>
-    [ 2018 Feb 16 ]</li>
-   <li><a href="news/#release503">Release of Bugzilla 5.1.1, 5.0.3, and 4.4.12</a>
-    [ 2016 May 16 ]</li>
-   <li><a href="news/#release502">Release of Bugzilla 5.0.2, 4.4.11 and 4.2.16</a>
-    [ 2015 Dec 22 ]</li>
-</ul>
-
-<p><b><a href="./news/">More news</a> &raquo;</b></p>
-
-<h2>Features</h2>
-<div class="flRight" style="text-align: center">
-  <img src="img/buggie.png" alt=""><br>
-  <span style="font-size: small; color:gray">Bugzilla logo by<br>
-  Dave Shea</span>
+<div id="frontpage-intro" class="bg-bugzilla fixed-top-padding">
+  <div class="inner">
+    <div class="">
+      <h2>The software solution designed to drive software development</h2>
+      <lead>Bugzilla lets you plan, organize and release software on your own teams' schedule.</lead>
+      <div>
+        <a class="button" href="/about/">Learn more &raquo;</a>
+        <a class="button" href="https://bugzilla-dev.allizom.org/">Try it out &raquo;</a>
+      </div>
+    </div>
+    <div class="buggie-wave-container">
+      {% include buggie-wave.svg %}
+      {% include buggie-wave-hand.svg %}
+      <img class="buggie-wave-image" alt="A screenshot of the default look of the Bugzilla 6.0 homepage" src="/assets/img/screenshot.svg">
+      {% include buggie-wave-hand-overlay.svg %}
+    </div>
+  </div>
 </div>
-<ul>
-  <li>Optimized database structure for increased performance and scalability</li>
-  <li>Excellent security to protect confidentiality</li>
-  <li>Advanced query tool that can remember your searches</li>
-  <li>Integrated email capabilities</li>
-  <li>Editable user profiles and comprehensive email preferences</li>
-  <li>Comprehensive permissions system</li>
-  <li>Proven under fire as <a href="https://bugzilla.mozilla.org/">Mozilla's bug tracking system</a></li>
-</ul>
-<p><b><a href="./features/">View complete list of features</a> &raquo;</b></p>
 
-<h2>Benefits</h2>
-<ul>
-  <li>Improve communication</li>
-  <li>Increase product quality</li>
-  <li>Improve customer satisfaction</li>
-  <li>Ensure accountability</li>
-  <li>Increase productivity</li>
-  <li>Bugzilla can adapt to multiple situations</li>
-</ul>
+<section id="frontpage-blog-list">
+  <div class="inner">
+    <h2>Blog</h2>
+    <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <div class="card">
+          <p class="date muted">{{ post.date | date: '%d. %B %Y' }}</p>
+          <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
+          {% include authors.html authors=post.author %}
+          <p>{{ post.content | strip_html | truncate: 200 }}</p>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+    <div>
+      <a class="button primary" href="/blog/">More news &raquo;</a>
+    </div>
+  </div>
+</section>
 
-<a name="see"></a><h2>Bugzilla in Action</h2>
-<ul>
-  <li><a href="https://bugzilla.mozilla.org/">https://bugzilla.mozilla.org/</a><br>The “original” Bugzilla used by
-    various Mozilla projects including Firefox and Bugzilla itself. <strong>Note</strong>: This is an example of a
-    publicly-available live Bugzilla site, and not a place to try out Bugzilla. Please use the
-    <a href="https://bugzilla-dev.allizom.org/">test installation</a> if you want to actually try it out.</li>
-</ul>
-<p><b><a href="./installation-list/">See who uses Bugzilla</a> &raquo;</b></p>
+<section id="frontpage-performant">
+  <img class="running-fg" alt="Buggie, the Bugzilla mascot, in a running outfit, consisting of a white sleveless top with red bands around arm holes, dark gray shorts with a red band around the waist and purple shoes with white soles. Its antennas are blown back with the wind. It has a slight smile on its face." src="/assets/img/running-fg.svg"/>
+  <div class="inner">
+    <div><h2>Performant, scalable and secure</h2></div>
+    <div>Tried and tested by the largest in open source, so you don't have to deal with frustrating breaks in workflow.</div>
+  </div>
+</section>
 
+<section id="frontpage-benefits">
+  <div class="inner">
+    <h2>Benefits</h2>
+    <ul>
+      <li>
+        {% include icons/service.svg %}
+        <h3>Improve product quality</h3>
+      </li>
+      <li>
+        {% include icons/communication.svg %}
+        <h3>Upgrade the communication</h3>
+      </li>
+      <li>
+        {% include icons/medal.svg %}
+        <h3>Increase productivity</h3>
+      </li>
+    </ul
+  </div>
+</section>
+
+<section id="frontpage-search">
+  <div class="inner">
+    <h2>Features</h2>
+    <ul>
+      <li>
+        <h3>Advanced Search</h3>
+        <p>Search and find for the exact thing you are looking for</p>
+      </li>
+      <li>
+        <h3>Products and Components</h3>
+        <p>Categorize and track the issues based on products and components</p>
+      </li>
+      <li>
+        <h3>Milestones</h3>
+        <p>Track the progress on the past, current and future releases of your products</p>
+      </li>
+      <a class="button primary" href="/about/features">More features &raquo;</a>
+    </ul>
+    <div class="search-image">
+      <div class="search">
+        {% include fox-tracks.svg %}
+      </div>
+      <img alt="A screenshot of the Advanced Search feature in Bugzilla 6.0, listing items for Firefox 78 milestone." src="/assets/img/screenshot-milestone.svg">
+    </div>
+  </div>
+</section>
+
+<section id="frontpage-action">
+  <div class="inner">
+    <div>
+      <h2>Bugzilla in Action</h2>
+      <p>The following open source companies and projects trusted Bugzilla and continue to use it for delivering their software to the customers and communities all around the world.</p>
+      <a class="button primary" href="/about/installation-list/">See who else uses Bugzilla &raquo;</a>
+    </div>
+    <div>
+      <ul>
+      {%- for project in site.data.installation-list %}
+        {%- if project.logo != '' %}
+          <li>
+            <a href="{{ project.bzurl }}" title="{{ project.name }}">
+              {% include free-software-logos/{{ project.logo }} %}
+              <span class="sr-only">{{ project.name }}</span>
+            </a>
+          </li>
+        {% endif -%}
+      {% endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="frontpage-download">
+  <div class="inner">
+    <h3>Ready to get started? Let's get you your own Bugzilla</h3>
+    <div>
+      <a class="button primary" href="/download/">{% include icons/download.svg %}Installation Instructions</a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+---
+layout: atom
+title: Security Advisories
+path: /security
+feed: security
+feed_reverse: true
+---

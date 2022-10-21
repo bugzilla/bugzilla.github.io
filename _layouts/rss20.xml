@@ -1,0 +1,32 @@
+---
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }} {{ page.title }}</title>
+    <link>{{ site.url }}{{ page.path }}</link>
+    <language>en</language>
+    <description>{{ site.description | normalize_whitespace }}</description>
+    <atom:link href="{{ site.url }}/rss20.xml" rel="self" type="application/rss+xml"/>
+{%- assign feed = site[page.feed] %}
+{%- if page.feed_reverse %}
+{%- assign feed = site[page.feed] | reverse %}
+{%- endif %}
+{%- for post in feed limit: 10 %}
+    <item>
+      <guid isPermaLink="false">{{ site.url }}{{ post.url }}</guid>
+      {%- for author in post.author %}
+      {%- assign profile = site.developers | where: "nickname", author | first %}
+      <dc:creator>{{ profile.firstname }} {{ profile.lastname }}</dc:creator>
+      {%- endfor %}
+      <title>{{ post.title | xml_escape }}</title>
+      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+      <link>{{ site.url }}{{ post.url }}</link>
+      {%- assign content = post.content | normalize_whitespace %}
+      {%- if content != "" %}
+      <description>{{ content | xml_escape }}</description>
+      {%- endif %}
+    </item>
+{%- endfor %}
+  </channel>
+</rss>

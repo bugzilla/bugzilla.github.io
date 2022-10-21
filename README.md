@@ -1,6 +1,6 @@
 # www.bugzilla.org #
 
-This is the code for the www.bugzilla.org website. It uses Github Pages,
+This is the code for the www.bugzilla.org website. It uses GitHub Pages,
 and so both Jekyll and the Liquid template engine.
 
 ## Editing Files ##

@@ -1,6 +1,0 @@
-{
-        "stable": { "branch": "5.0", "current": "5.0.6",  },
-        "old":    { "branch": "4.4", "current": "4.4.13", },
-        "dev":    { "branch": "6.0", "current": "5.1.2",
-                    "devbranch": "5.1", "branched": 0, "rc": 0 }
-}

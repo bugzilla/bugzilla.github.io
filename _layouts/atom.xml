@@ -1,0 +1,46 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title }} {{ page.title }}</title>
+  <subtitle>{{ site.description | normalize_whitespace }}</subtitle>
+  <icon>{{ site.baseurl }}/assets/favicon/favicon.png</icon>
+  <logo>{{ site.baseurl }}/assets/favicon/favicon.png</logo>
+  <link href="{{ site.url }}{{ page.path }}"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ page.path }}/atom.xml</id>
+  <generator>Jekyll</generator>
+  <author>
+    <name>Bugzilla Webmasters</name>
+    <email>webmaster@bugzilla.org</email>
+  </author>
+  <link href="{{ site.url }}{{ page.path }}/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="{{ site.url }}{{ page.path }}" rel="alternate"/>
+{%- assign feed = site[page.feed] %}
+{%- if page.feed_reverse %}
+{%- assign feed = site[page.feed] | reverse %}
+{%- endif %}
+{%- for post in feed limit: 10 %}
+  <entry xml:lang="en">
+    <id>{{ site.url }}{{ post.url }}</id>
+    {%- for author in post.author %}
+    {%- assign profile = site.developers | where: "nickname", author | first %}
+    <author>
+      <name>{{ profile.firstname }} {{ profile.lastname }}</name>
+      <uri>{{ site.url }}{{ profile.url }}</uri>
+    </author>
+    {%- endfor %}
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ site.time | date_to_xmlschema }}</updated>
+    <title>{{ post.title | xml_escape }}</title>
+    {%- if post.summary %}
+    <summary>{{ post.summary | xml_escape }}</summary>
+    {%- endif %}
+    <link href="{{ site.url }}{{ post.url }}"/>
+    {%- assign content = post.content | normalize_whitespace %}
+    {%- if content != " " %}
+    <content type="html" xml:lang="en">{{ content | xml_escape }}</content>
+    {%- endif %}
+  </entry>
+{%- endfor %}
+</feed>

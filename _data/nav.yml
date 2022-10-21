@@ -1,0 +1,62 @@
+- link: /about/
+  title: Find out more about Bugzilla.
+  name: About
+  links:
+  - link: /about/
+    title: Find out more about Bugzilla.
+    name: Project
+
+  - link: /about/features
+    name: Features
+
+  - link: /about/installation-list
+    title: Hundreds of companies and organizations trust Bugzilla.
+    name: Who Uses Bugzilla?
+
+  - link: /about/developers
+    title: Meet the Bugzilla team.
+    name: Meet the Team
+
+- link: /blog/
+  title: Get the low down on what's happening with the project.
+  name: News
+  links:
+  - link: /blog/
+    title: Bugzilla Blog
+    name: Blog
+
+  - link: /releases/
+    title: Information on current and previous releases.
+    name: Release Information
+
+  - link: /security/
+    title: Important updates regarding Bugzilla security.
+    name: Security Advisories
+
+  - link: http://planet.bugzilla.org
+    title: View the status of the Bugzilla project.
+    name: Planet Bugzilla
+
+- link: /download/
+  title: Download Bugzilla
+  name: Download
+
+- link: /support/
+  title: Find out where to get more information and help.
+  name: Support
+
+- link: /contributing/
+  title: Ways you can help Bugzilla
+  name: Contribute
+  links:
+  - link: /contributing/
+    title: Ways you can help Bugzilla
+    name: How to?
+
+  - link: /contributing/reporting_bugs
+    title: Let us know if there is an error in Bugzilla.
+    name: Report a Bug
+
+  - link: https://wiki.mozilla.org/Bugzilla:Home
+    title: Collaboratively updated information about Bugzilla.
+    name: Wiki

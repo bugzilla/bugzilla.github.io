@@ -1,0 +1,48 @@
+---
+title: "Blog"
+intro: "Check what's happening in the development of Bugzilla"
+redirect_from:
+- /news/
+- /news/old
+- /status/
+meta:
+- type: link
+  tags: rel="alternate" href="https://www.bugzilla.org/blog/atom.xml" type="application/atom+xml"
+addons:
+- type: js
+  link: /assets/js/ical.min.js
+- type: js
+  link: /assets/js/calendar.js
+---
+
+<div class="row-inverse">
+  <div class="twenty">
+    <p>Want to always keep up-to-date with Bugzilla news?  Subscribe to
+    <b><a href="https://lists.bugzilla.org/listinfo/announce">announce<!--
+      blah -->&#64;<!-- blah -->bugzilla.org</a></b>, a read-only mailing list
+      where we'll post announcements about new versions of Bugzilla and
+      security advisories.</p>
+
+    <p><b><a href="https://lists.bugzilla.org/pipermail/announce">Browse Archives</a> &raquo;</b></p>
+
+    <p>You can also see what's going on in the project by looking at the notes
+    of, or watching the video of, our
+    <a href="https://wiki.mozilla.org/Bugzilla:Meetings">monthly developer
+    meetings</a>.</p>
+    <div id="calendar">
+      <p>Loading the upcoming event</p>
+      <noscript>The upcoming events widget requires Javascript to be enabled</noscript>
+    </div>
+  </div>
+  <div class="eighty">
+    {% for post in paginator.posts %}
+      <div class="card">
+        <a class="date muted" href="{{ post.url }}">{{ post.date | date: '%d. %B %Y' }}</a>
+        <h1 class="title" id="{{ post.id }}">{{ post.title }}</h1>
+        {% include authors.html authors=post.author %}
+        {{ post.content }}
+      </div>
+    {% endfor %}
+    {% include pagination.html %}
+  </div>
+</div>
