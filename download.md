@@ -29,17 +29,17 @@ Bugzilla uses a template system and those templates can be translated into other
 
 The short version of how to install/use these is at the end of the [Localization Guide](https://bugzilla.readthedocs.org/en/latest/localizing/index.html).
 
-|Tag  |Language                      |4.4   |5.0  |6.0  |Maintainer|
-|---  |---                           |---   |---  |---  |---       |
-|bg   |Български език / Bulgarian    |4.4.13|5.0.6|     |Георги Д. Сотиров (Georgi D. Sotirov)|
-|cs   |Čeština/Czech                 |4.4.x |5.0.x|     |Norbert Volf|
-|de   |Deutsch / German              |4.4.11|5.0.2|     |Marc Schumann|
-|es   |Español / Spanish             |      |     |     |Oscar Manuel Gómez Senovilla|
-|fr   |Français / French             |4.4.13|5.0.6|5.1.2|Cédric Corazza|
-|ja   |日本語 / Japanese              |4.4.11|5.0.2|     |Atsushi Shimono|
-|pl   |Polski / Polish               |      |     |     |Aviary.pl team|
-|ru   |Русский / Russian             |4.4.4 |     |     |Виталий Федрушков (Vitaly Fedrushkov), Alexander L. Slovesnik, Alexey Gladkov|
-|zh_TW|繁體中文/ Chinese (Traditional)|4.4.11|5.0.2|     |Repeat Yang|
+|Tag  |Language                                                                             |4.4   |5.0  |6.0  |Maintainer|
+|---  |---                                                                                  |---   |---  |---  |---       |
+|bg   |[Български език / Bulgarian](ftp://sotirov-bg.net/pub/contrib/mozilla/bugzilla/l10n/)|4.4.13|5.0.6|     |Георги Д. Сотиров (Georgi D. Sotirov)|
+|cs   |[Čeština/Czech](http://www.bugzilla.cz/)                                             |4.4.x |5.0.x|     |Norbert Volf|
+|de   |[Deutsch / German](http://bugzilla-de.sourceforge.net/)                              |4.4.11|5.0.2|     |Marc Schumann|
+|es   |[Español / Spanish](https://sourceforge.net/projects/bugzilla-es/)                   |      |     |     |Oscar Manuel Gómez Senovilla|
+|fr   |[Français / French](http://www.bugzilla.fr/)                                         |4.4.13|5.0.6|5.1.2|Cédric Corazza|
+|ja   |[日本語 / Japanese](http://bug-ja.org/)                                               |4.4.11|5.0.2|     |Atsushi Shimono|
+|pl   |[Polski / Polish](http://www.aviary.pl/projekty/bugzilla/")                          |      |     |     |Aviary.pl team|
+|ru   |[Русский / Russian](https://sourceforge.net/projects/bugzilla-ru/)                   |4.4.4 |     |     |Виталий Федрушков (Vitaly Fedrushkov), Alexander L. Slovesnik, Alexey Gladkov|
+|zh_TW|[繁體中文/ Chinese (Traditional)](https://code.google.com/p/bugzilla-tw/)             |4.4.11|5.0.2|     |Repeat Yang|
 
 If you have additions or corrections for this list, please contact the [Bugzilla l10n team](https://wiki.mozilla.org/Bugzilla:L10n).
 
