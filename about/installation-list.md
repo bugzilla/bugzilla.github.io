@@ -2,6 +2,7 @@
 title: "Installation List"
 redirect_from:
 - /installation-list/
+- /about/installation-list/
 ---
 
 A large number of companies, organizations, and projects use Bugzilla. 
