@@ -2,10 +2,10 @@
 nickname: justdave
 firstname: Dave
 lastname: Miller
-image: justdave.jpg
+image: justdave.png
 irc: justdave
 location: Jamestown, MI, USA
-dayjob: Webtools Developer / Systems Administrator for [Mozilla Corporation](http://www.mozilla.com)
+dayjob: IT Consultant
 role: Project Lead
 blog: http://www.justdave.net/dave/
 ---
