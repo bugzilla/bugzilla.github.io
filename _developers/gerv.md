@@ -8,5 +8,6 @@ location: Loughborough, UK
 dayjob: Policy Engineer at [Mozilla](https://www.mozilla.com)
 role: Assistant Project Lead, Developer/Reviewer, Website
 blog: https://blog.gerv.net/
+former: True
 ---
 
