@@ -5,6 +5,8 @@ addons:
   link: https://lists.bugzilla.org/cgi-bin/bz_vendors.cgi?refresh=1
 - type: js
   link: /assets/js/consulting.js
+- type: css
+  link: /assets/css/consulting.css
 ---
 
 Bugzilla is made available free of charge, without warranty. Support
