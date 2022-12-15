@@ -25,7 +25,8 @@ will need to assess this for yourself. Listings are in random order and
 will display in a different order every time the page is loaded in order
 to be fair to everyone. Companies or individuals who are current
 contributors to the Bugzilla Project are sorted to the top of the list
-and have (contributor) next to their name.
+and have <span class="bugzilla_contributor">(contributor)</span> next to
+their name.
 
 All information (including comments) appears as given by the person
 requesting the listing (excepting editorial changes to make it fit the
