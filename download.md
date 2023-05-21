@@ -43,7 +43,7 @@ The short version of how to install/use these is at the end of the [Localization
 
 If you have additions or corrections for this list, please contact the [Bugzilla l10n team](https://wiki.mozilla.org/Bugzilla:L10n).
 
-If your language is not listed here, do not give up. Look at the [list of all known localization efforts](https://wiki.mozilla.org/Bugzilla:L10n:Localization_Teams). Listed there are works in progress, older releases for unsupported Bugzilla versions, and orphaned projects. We don't advise using unsupported releases, but it may be a good place to start if you want to bring a localization up to date. 
+If your language is not listed here, do not give up. Look at the [list of all known localization efforts](https://wiki.mozilla.org/Bugzilla:L10n:Localization_Teams). Listed there are works in progress, older releases for unsupported Bugzilla versions, and orphaned projects. We don't advise using unsupported releases, but it may be a good place to start if you want to bring a localization up to date.
 
 ## Manual Downloads
 
