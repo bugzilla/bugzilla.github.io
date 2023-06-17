@@ -11,11 +11,16 @@ available by that Bugzilla's owner.
 
 ## Where to Ask Questions
 
-  - **[support-list at bugzilla.org](https://lists.bugzilla.org/listinfo/support-list)** -
-    This mailing list is for Bugzilla users and administrators of Bugzilla sites 
+### By Email
+  - **[Bugzilla Support Mailing List](https://lists.bugzilla.org/listinfo/support-list)** -
+    This mailing list is for Bugzilla users and administrators of Bugzilla sites
     to ask for help or share information. You will need to subscribe to the list
-    first before you can post to it, but you can unsubscribe easily once your
-    question is answered if continuing to read the list isn't your thing.
+    first before you can post to it, and you will need to remain subscribed until
+    your question is answered if you want ot see the reply, since replies will
+    also go to the list. You can unsubscribe easily once your question is
+    answered if continuing to read the list isn't your thing.
+
+### Chat Rooms
   - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat -
     Most of the Bugzilla developers are on this IRC channel. If you come here
     for help, please stick around and wait for an answer. We aren't ignoring you,
