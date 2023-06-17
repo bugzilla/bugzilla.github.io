@@ -35,6 +35,10 @@ available by that Bugzilla's owner.
     on Matrix - this is a mirror of the #bugzilla IRC channel, and any traffic
     in either place will be seen in both. So if you like Matrix better than IRC
     you can use this to talk to the same people.
+  - **[Bugzilla Discord](https://discord.gg/ZhN6uBA)**
+    The Bugzilla Project also has a Discord server, with channels that are mirrored
+    to the above IRC and Matrix channels, so you can likewise talk to the same
+    people from here as well.
 
 ## Private Emails Do Not Help Others
 
