@@ -21,24 +21,25 @@ available by that Bugzilla's owner.
     answered if continuing to read the list isn't your thing.
 
 ### Chat Rooms
-  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat -
-    Most of the Bugzilla developers are on this IRC channel. If you come here
-    for help, please stick around and wait for an answer. We aren't ignoring you,
-    but there are a lot of time zones on this planet, and not everyone is awake
-    or at their computer all the time. It's not uncommon for a question to get
-    answered 5 or 6 hours later when the person answering gets out of bed in
-    their home time zone.  This IRC channel is also mirrored to Matrix, so if
-    you prefer Matrix, see below. We are no longer actively monitoring the #bugzilla
-    channel on Freenode, as the new network management decided to ban the access
-    method most of the Bugzilla developers use to connect to it.
+  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat
   - **[#bugzilla:mozilla.org](https://matrix.to/#/#bugzilla:mozilla.org)**
-    on Matrix - this is a mirror of the #bugzilla IRC channel, and any traffic
-    in either place will be seen in both. So if you like Matrix better than IRC
-    you can use this to talk to the same people.
+    on Matrix
   - **[Bugzilla Discord](https://discord.gg/ZhN6uBA)**
-    The Bugzilla Project also has a Discord server, with channels that are mirrored
-    to the above IRC and Matrix channels, so you can likewise talk to the same
-    people from here as well.
+
+Normally, all three of these are mirrored to each other, so you can chat on any
+of them and people will see it on all three.  At the moment, the bridge is
+broken so they can't see each other. You can still pick your favorite way to
+access, and there are a few people who are watching all three of them.
+
+If you come to the chat rooms to help, please stick around and wait for an
+answer. We aren't ignoring you, but there are a lot of time zones on this
+planet, and not everyone is awake or at their computer all the time. It's not
+uncommon for a question to get answered 5 or 6 hours later when the person
+answering gets out of bed in their home time zone.
+
+We are no longer actively monitoring the #bugzilla channel on Freenode, as the
+network management decided to ban the access method most of the Bugzilla
+developers use to connect to it.
 
 ## Private Emails Do Not Help Others
 
