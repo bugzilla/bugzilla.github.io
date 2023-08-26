@@ -48,3 +48,7 @@ Bugzilla's development should concentrate on being a bug system. While the poten
 ## Milestone plans
 
 The Milestone plans portion of our roadmap is now maintained on the [Bugzilla Wiki](https://wiki.mozilla.org/Bugzilla:Roadmap).
+
+## Who Runs This?
+
+The Bugzilla Project is managed by Zarro Boogs Corporation, a taxable non-charitable non-profit organization based in the United States (501(c)(4) status pending IRS approval), which was founded in 2023 by a group of the core developers. The Bugzilla logo and related trademarks are used under license from the Mozilla Foundation. Zarro Boogs is not owned by or affiliated with the Mozilla Foundation.

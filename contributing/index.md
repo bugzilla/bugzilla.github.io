@@ -7,12 +7,14 @@ redirect_from:
 
 There are lots of ways to contribute to the Bugzilla project:
 
+*   **Money**: You can [donate money](https://github.com/sponsors/bugzilla) to help cover our server hosting costs and pay for developer and code reviewer time.
+*   **Sponsored Development**: If you are a business that uses Bugzilla and has a staff person responsible for maintaining your Bugzilla installation, and that person is willing, please consider allowing them to spend a few hours per week on company time contributing in one of the other categories on this page to Bugzilla. In the past, this was Bugzilla's primary means of code contribution.
 *   **Code**: You can [contribute to the Bugzilla codebase](https://wiki.mozilla.org/Bugzilla:Developers) if you are familiar with Perl or features Bugzilla has/wants, such as DB, WebServices, etc. See also: [Developer's Guide](/contributing/developer)
 *   **Web Development and User Interface Design**: [contribute to the Bugzilla UI](/contributing/developer) if you are a designer and/or are good at HTML and/or CSS.
 *   **Documentation**: You can [contribute to the Bugzilla Documentation](http://bugzilla.readthedocs.org/en/latest/style.html) if you are familiar with Bugzilla as an administrator or as a user, or good at English.
 *   **Release Process**: You can [help with the release process](https://wiki.mozilla.org/Bugzilla:Release_Process) if you have some time to give us.
 *   **QA**: You can [help with the QA process](https://wiki.mozilla.org/Bugzilla:QA) if you are familiar with Bugzilla as an administrator or as a user, and have some time.
-*   **Support**: Bugzilla is community-supported. If you're an old hand at using or administering Bugzilla, hang out in our [support venues](/support/) such as our support mailing list or IRC channel and help other users.
+*   **Support**: Bugzilla is community-supported. If you're an old hand at using or administering Bugzilla, hang out in our [support venues](/support/) such as our support mailing list or chat rooms and help other users.
 *   **Translation**: You can [help to translate templates and/or documentation](http://bugzilla.readthedocs.org/en/latest/localizing/) if you are good at English and other languages.
 
 ## Guides
