@@ -19,7 +19,7 @@ companies and organizations use Bugzilla to handle their bug reporting,
 but in almost all cases, it's not **\*this\*** Bugzilla. If someone told
 you to report a bug in Bugzilla, but the bug you came to report isn't
 about Bugzilla itself, you might try looking for the correct Bugzilla on
-our [installation list](/about/installation-list/) or look on the affected
+our [installation list](/about/installation-list.html) or look on the affected
 product's web site to see if they link to their Bugzilla (or other bug
 tracking system) directly.
 
