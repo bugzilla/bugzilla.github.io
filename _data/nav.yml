@@ -6,10 +6,10 @@
     title: Find out more about Bugzilla.
     name: Project
 
-  - link: /about/features
+  - link: /about/features.html
     name: Features
 
-  - link: /about/installation-list
+  - link: /about/installation-list.html
     title: Hundreds of companies and organizations trust Bugzilla.
     name: Who Uses Bugzilla?
 
