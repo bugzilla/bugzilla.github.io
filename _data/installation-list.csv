@@ -50,6 +50,7 @@
 "Proxmox","https://proxmox.com/en/","https://bugzilla.proxmox.com/","Linux Distributions",""
 "Red Hat","https://www.redhat.com/en","https://bugzilla.redhat.com/","Linux Distributions","redhat.svg"
 "R","https://www.r-project.org/","https://bugs.r-project.org/","Free Software Projects",""
+"Rocky Linux","https://rockylinux.org/","https://bugs.rockylinux.org/","Linux Distributions","rockylinux.svg"
 "RPM Fusion","https://rpmfusion.org/","https://bugzilla.rpmfusion.org/","Free Software Projects",""
 "Samba","https://www.samba.org/","https://bugzilla.samba.org/","Free Software Projects",""
 "Scilab","https://www.scilab.org/","https://bugzilla.scilab.org/","",""
