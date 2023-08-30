@@ -2,6 +2,8 @@
 title: "Download"
 permalink: /download/
 intro: "Learn how to download, maintain, install and upgrade Bugzilla"
+redirect_from:
+- /download.html
 ---
 
 * Table of Contents
