@@ -41,6 +41,10 @@
   title: Download Bugzilla
   name: Download
 
+- link: /docs/
+  title: Bugzilla Documentation
+  name: Documentation
+
 - link: /support/
   title: Find out where to get more information and help.
   name: Support
