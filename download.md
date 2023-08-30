@@ -29,7 +29,7 @@ For a list of programs that can enhance and interact with Bugzilla in various wa
 
 Bugzilla uses a template system and those templates can be translated into other languages. This is a list of currently-known localizations of the Bugzilla UI. These are third-party contributions, so if you need help with any of them, please contact the maintainer of the particular localization.
 
-The short version of how to install/use these is at the end of the [Localization Guide](https://bugzilla.readthedocs.org/en/latest/localizing/index.html).
+The short version of how to install/use these is at the end of the [Localization Guide](https://wiki.mozilla.org/Bugzilla:L10n:Guide).
 
 |Tag  |Language                                                                             |4.4   |5.0  |6.0  |Maintainer|
 |---  |---                                                                                  |---   |---  |---  |---       |

@@ -15,7 +15,7 @@ There are lots of ways to contribute to the Bugzilla project:
 *   **Release Process**: You can [help with the release process](https://wiki.mozilla.org/Bugzilla:Release_Process) if you have some time to give us.
 *   **QA**: You can [help with the QA process](https://wiki.mozilla.org/Bugzilla:QA) if you are familiar with Bugzilla as an administrator or as a user, and have some time.
 *   **Support**: Bugzilla is community-supported. If you're an old hand at using or administering Bugzilla, hang out in our [support venues](/support/) such as our support mailing list or chat rooms and help other users.
-*   **Translation**: You can [help to translate templates and/or documentation](http://bugzilla.readthedocs.org/en/latest/localizing/) if you are good at English and other languages.
+*   **Translation**: You can [help to translate templates and/or documentation](https://wiki.mozilla.org/Bugzilla:L10n:Guide) if you are good at English and other languages.
 
 ## Guides
 
@@ -26,7 +26,7 @@ There are lots of ways to contribute to the Bugzilla project:
   - [Reviewers' Guide](/contributing/reviewer)
   - [Approvers' Guide](/contributing/approver)
   - [Localizers'
-    Guide](http://bugzilla.readthedocs.org/en/latest/localizing/)
+    Guide](https://wiki.mozilla.org/Bugzilla:L10n:Guide)
   - [Documentor's
     Guide](http://bugzilla.readthedocs.org/en/latest/style.html)
   - [Release Noting Guide](/contributing/releasenote)
