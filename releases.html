@@ -19,7 +19,7 @@ permalink: /releases/
     </li>
     {% when 'current' %}
     <li><b>Current Stable Release
-    (<a href="{{ item.url }}/">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Includes bug fixes and performance improvements only</li>
         <li>No new features or large scale performance improvements</li>
@@ -31,7 +31,7 @@ permalink: /releases/
     </li>
     {% when 'old' %}
     <li><b>Old Stable Release
-    (<a href="{{ item.url }}/">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Current policy is that 4 months after the next major release, support
           for the oldest stable release will be dropped. The other stable release
