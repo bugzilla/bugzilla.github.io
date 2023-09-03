@@ -51,19 +51,19 @@ You may use whatever coding style you want, but all files commited to the repo m
   <a href="https://www.bugzilla.org/security/4.4.12/">Security Advisory</a>
   for details.</p>
 
-<p>This release also contains the following [% terms.bug %] fixes:</p>
+<p>This release also contains the following bug fixes:</p>
 
 <ul>
   <li><kbd>checksetup.pl</kbd> would fail to update Chart storage during pre-3.6 to 5.0 upgrade.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1273846">[% terms.Bug %] 1273846</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1273846">Bug 1273846</a>)</li>
   <li><kbd>editflagtypes.cgi</kbd> would crash when classifications are enabled and
     the user did not have global <kbd>editcomponents</kbd> privileges.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1310728">[% terms.Bug %] 1310728</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1310728">Bug 1310728</a>)</li>
   <li>The <kbd>File::Slurp</kbd> would trigger warnings on perl 5.24.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1301887">[% terms.Bug %] 1301887</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1301887">Bug 1301887</a>)</li>
   <li>All the time entries in the 'when' column had the correct date but the time
     was fixed to 00:00 when using Sqlite.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1303702">[% terms.Bug %] 1303702</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1303702">Bug 1303702</a>)</li>
 </ul>
 
 <h3>5.0.3</h3>
@@ -72,32 +72,32 @@ You may use whatever coding style you want, but all files commited to the repo m
   <a href="https://www.bugzilla.org/security/4.4.11/">Security Advisory</a>
   for details.</p>
 
-<p>This release also contains the following [% terms.bug %] fixes:</p>
+<p>This release also contains the following bug fixes:</p>
 
 <ul>
   <li>A regression in Bugzilla 5.0.2 caused <kbd>whine.pl</kbd> to be unable
     to send emails due to a missing subroutine.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1235395">[% terms.Bug %] 1235395</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1235395">Bug 1235395</a>)</li>
   <li>The <kbd>Encode</kbd> module changed the way it encodes strings, causing
-    email addresses in emails sent by [%terms.Bugzilla %] to be encoded,
+    email addresses in emails sent by Bugzilla to be encoded,
     preventing emails from being correctly delivered to recipients.
     We now encode email headers correctly.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246228">[% terms.Bug %] 1246228</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1246228">Bug 1246228</a>)</li>
   <li>Fix additional taint issues with Strawberry Perl.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=987742">[% terms.Bug %] 987742</a> and
-    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1089448">[% terms.bug %] 1089448</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=987742">Bug 987742</a> and
+    <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1089448">bug 1089448</a>)</li>
   <li>When exporting a buglist as a CSV file, fields starting with either
     "=", "+", "-" or "@" are preceded by a space to not trigger formula
     execution in Excel.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1259881">[% terms.Bug %] 1259881</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1259881">Bug 1259881</a>)</li>
   <li>An extension which allows user-controlled data to be used as a link in
     tabs could trigger XSS if the data is not correctly sanitized.
-    [%+ terms.Bugzilla %] no longer relies on the extension to do the sanity
+    Bugzilla no longer relies on the extension to do the sanity
     check. A vanilla installation is not affected as no tab is user-controlled.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1250114">[% terms.Bug %] 1250114</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1250114">Bug 1250114</a>)</li>
   <li>Extensions can now easily override the favicon used for the
-    [%+ terms.Bugzilla %] website.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1250264">[% terms.Bug %] 1250264</a>)</li>
+    Bugzilla website.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1250264">Bug 1250264</a>)</li>
 </ul>
 
 <h3>5.0.2</h3>
@@ -106,7 +106,7 @@ You may use whatever coding style you want, but all files commited to the repo m
   <a href="https://www.bugzilla.org/security/4.2.15/">Security Advisory</a>
   for details.</p>
 
-<p>This release also contains the following [% terms.bug %] fixes:</p>
+<p>This release also contains the following bug fixes:</p>
 
 <ul>
   <li>mod_perl now works correctly with mod_access_compat turned off on
@@ -115,16 +115,16 @@ You may use whatever coding style you want, but all files commited to the repo m
     <pre>find . -mindepth 2 -name .htaccess -exec rm -f {} \;</pre>
     You must then run <kbd>checksetup.pl</kbd> again to recreate them with
     the correct syntax.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1223790">[% terms.Bug %] 1223790</a>)</li>
-  <li>Emails sent by [% terms.Bugzilla %] are now correctly encoded as UTF-8.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=714724">[% terms.Bug %] 714724</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1223790">Bug 1223790</a>)</li>
+  <li>Emails sent by Bugzilla are now correctly encoded as UTF-8.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=714724">Bug 714724</a>)</li>
   <li>Strawberry Perl is now fully supported on Windows.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1089448">[% terms.Bug %] 1089448</a>
-    and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=987742">[% terms.bug %] 987742</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1089448">Bug 1089448</a>
+    and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=987742">bug 987742</a>)</li>
   <li>The XML-RPC API now works with IIS on Windows.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=708252">[% terms.Bug %] 708252</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=708252">Bug 708252</a>)</li>
   <li>Some queries should now be faster on PostgreSQL.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184431">[% terms.Bug %] 1184431</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1184431">Bug 1184431</a>)</li>
 </ul>
 
 <h3>5.0.1</h3>
@@ -133,37 +133,37 @@ You may use whatever coding style you want, but all files commited to the repo m
   <a href="https://www.bugzilla.org/security/4.2.14/">Security Advisory</a>
   for details.</p>
 
-<p>This release also contains the following [% terms.bug %] fixes:</p>
+<p>This release also contains the following bug fixes:</p>
 
 <ul>
   <li>Users whose login name is not an email address could not log in on
     installations which use LDAP to authenticate users.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179160">[% terms.Bug %] 1179160</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1179160">Bug 1179160</a>)</li>
   <li>If a mandatory custom field was hidden, it was not possible to create
-    a new [% terms.bug %] or to edit existing ones.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1183398">[% terms.Bug %] 1183398</a>
-    and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1196969">[% terms.bug %] 1196969</a>)</li>
+    a new bug or to edit existing ones.
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1183398">Bug 1183398</a>
+    and <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1196969">bug 1196969</a>)</li>
   <li>A user editing his login name to point to a non-existent email address
     could cause Bugzilla to stop working, causing a denial of service.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1194987">[% terms.Bug %] 1194987</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1194987">Bug 1194987</a>)</li>
   <li>Emails generated during a transaction made PostgreSQL stop working.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1186700">[% terms.Bug %] 1186700</a>)</li>
-  <li>[% terms.Bugs %] containing a comment with a reference to a [% terms.bug %]
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1186700">Bug 1186700</a>)</li>
+  <li>Bugs containing a comment with a reference to a bug
     ID larger than 2^31 could not be displayed anymore using PostgreSQL.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191937">[% terms.Bug %] 1191937</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191937">Bug 1191937</a>)</li>
   <li>The date picker in the "Time Summary" page was broken.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1181649">[% terms.Bug %] 1181649</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1181649">Bug 1181649</a>)</li>
   <li>If <kbd>Test::Taint</kbd> or any other Perl module required to use the
     JSON-RPC API was not installed or was too old, the UI to tag comments was
     displayed anyway, you could tag comments, but tags were not persistent
     (they were lost on page reload). Now the UI to tag comments is not displayed
     at all until the missing Perl modules are installed and up-to-date.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1183227">[% terms.Bug %] 1183227</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1183227">Bug 1183227</a>)</li>
   <li>Custom fields of type <kbd>INTEGER</kbd> now accept negative integers.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1198659">[% terms.Bug %] 1198659</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1198659">Bug 1198659</a>)</li>
   <li>On Windows, the <kbd>checksetup.pl</kbd> installation script no longer
     asks for a SMTP server. It can be set after the installation is complete.
-    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191255">[% terms.Bug %] 1191255</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1191255">Bug 1191255</a>)</li>
 </ul>
 
 <h2 id="req">Minimum Requirements</h2>
@@ -185,31 +185,340 @@ You may use whatever coding style you want, but all files commited to the repo m
 <h3 id="req_perl">Perl</h3>
 
 <p>Perl <span class="req_new">v5.10.1</span></p>
+<h3 id="req_mysql">For MySQL Users</h3>
 
-[% INCLUDE db_req db='mysql' %]
+  <ul>
+    <li>MySQL
+       v5.0.15
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::mysql
+      v4.001</li>
+  </ul>
+<h3 id="req_pg">For PostgreSQL Users</h3>
 
-[% INCLUDE db_req db='pg' %]
+  <ul>
+    <li>PostgreSQL
+       v8.03.0000
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::Pg
+      v2.7.0</li>
+  </ul>
+<h3 id="req_oracle">For Oracle Users</h3>
 
-[% INCLUDE db_req db='oracle' %]
+  <ul>
+    <li>Oracle
+       v10.02.0
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::Oracle
+      v1.19</li>
+  </ul>
+<h3 id="req_sqlite">For SQLite Users</h3>
 
-[% INCLUDE db_req db='sqlite' %]
+  <ul>
+    <li>SQLite
+       v3.6.22
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::SQLite
+      v1.29</li>
+  </ul>
 
 <h3 id="req_modules">Required Perl Modules</h3>
-
-[% INCLUDE req_table reqs = REQUIRED_MODULES
-                     new = ['JSON-XS', 'Email-Sender']
-                     updated = ['DateTime', 'DateTime-TimeZone',
-                                'Template-Toolkit', 'URI'] %]
+<table class="req_table">
+    <tr>
+      <th>Module</th> <th>Version</th>
+    </tr>
+      <tr>
+        <td >CGI</td>
+        <td >3.51
+        </td>
+      </tr>
+      <tr>
+        <td >Digest::SHA</td>
+        <td >
+            (Any)
+        </td>
+      </tr>
+      <tr>
+        <td >Date::Format</td>
+        <td >2.23
+        </td>
+      </tr>
+      <tr>
+        <td >DateTime</td>
+        <td  class="req_new">0.75
+        </td>
+      </tr>
+      <tr>
+        <td >DateTime::TimeZone</td>
+        <td  class="req_new">1.64
+        </td>
+      </tr>
+      <tr>
+        <td >DBI</td>
+        <td >1.614
+        </td>
+      </tr>
+      <tr>
+        <td >Template</td>
+        <td  class="req_new">2.24
+        </td>
+      </tr>
+      <tr>
+        <td  class="req_new">Email::Sender</td>
+        <td  class="req_new">1.300011
+        </td>
+      </tr>
+      <tr>
+        <td >Email::MIME</td>
+        <td >1.904
+        </td>
+      </tr>
+      <tr>
+        <td >URI</td>
+        <td  class="req_new">1.55
+        </td>
+      </tr>
+      <tr>
+        <td >List::MoreUtils</td>
+        <td >0.32
+        </td>
+      </tr>
+      <tr>
+        <td >Math::Random::ISAAC</td>
+        <td >1.0.1
+        </td>
+      </tr>
+      <tr>
+        <td  class="req_new">JSON::XS</td>
+        <td  class="req_new">2.01
+        </td>
+      </tr>
+</table>
 
 <h3 id="req_optional_mod">Optional Perl Modules</h3>
 
 <p>The following perl modules, if installed, enable various
   features of Bugzilla:</p>
-
-[% INCLUDE req_table reqs = OPTIONAL_MODULES
-                     new  = ['Cache-Memcached','File-Copy-Recursive']
-                     updated = ['Chart', 'Test-Taint']
-                     include_feature = 1 %]
+<table class="req_table">
+    <tr>
+      <th>Module</th> <th>Version</th>
+        <th>Enables Feature</th>
+    </tr>
+      <tr>
+        <td >GD</td>
+        <td >1.20
+        </td>
+          <td>Graphical Reports, New Charts, Old Charts</td>
+      </tr>
+      <tr>
+        <td >Chart::Lines</td>
+        <td  class="req_new">2.4.1
+        </td>
+          <td>New Charts, Old Charts</td>
+      </tr>
+      <tr>
+        <td >Template::Plugin::GD::Image</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >GD::Text</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >GD::Graph</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >MIME::Parser</td>
+        <td >5.406
+        </td>
+          <td>Move Bugs Between Installations</td>
+      </tr>
+      <tr>
+        <td >LWP::UserAgent</td>
+        <td >
+            (Any)
+        </td>
+          <td>Automatic Update Notifications</td>
+      </tr>
+      <tr>
+        <td >XML::Twig</td>
+        <td >
+            (Any)
+        </td>
+          <td>Move Bugs Between Installations, Automatic Update Notifications</td>
+      </tr>
+      <tr>
+        <td >PatchReader</td>
+        <td >0.9.6
+        </td>
+          <td>Patch Viewer</td>
+      </tr>
+      <tr>
+        <td >Net::LDAP</td>
+        <td >
+            (Any)
+        </td>
+          <td>LDAP Authentication</td>
+      </tr>
+      <tr>
+        <td >Authen::SASL</td>
+        <td >
+            (Any)
+        </td>
+          <td>SMTP Authentication</td>
+      </tr>
+      <tr>
+        <td >Net::SMTP::SSL</td>
+        <td >1.01
+        </td>
+          <td>SSL Support for SMTP</td>
+      </tr>
+      <tr>
+        <td >Authen::Radius</td>
+        <td >
+            (Any)
+        </td>
+          <td>RADIUS Authentication</td>
+      </tr>
+      <tr>
+        <td >SOAP::Lite</td>
+        <td >0.712
+        </td>
+          <td>XML-RPC Interface</td>
+      </tr>
+      <tr>
+        <td >XMLRPC::Lite</td>
+        <td >0.712
+        </td>
+          <td>XML-RPC Interface</td>
+      </tr>
+      <tr>
+        <td >JSON::RPC</td>
+        <td >
+            (Any)
+        </td>
+          <td>JSON-RPC Interface, REST Interface</td>
+      </tr>
+      <tr>
+        <td >Test::Taint</td>
+        <td  class="req_new">1.06
+        </td>
+          <td>JSON-RPC Interface, XML-RPC Interface, REST Interface</td>
+      </tr>
+      <tr>
+        <td >HTML::Parser</td>
+        <td >3.67
+        </td>
+          <td>More HTML in Product/Group Descriptions</td>
+      </tr>
+      <tr>
+        <td >HTML::Scrubber</td>
+        <td >
+            (Any)
+        </td>
+          <td>More HTML in Product/Group Descriptions</td>
+      </tr>
+      <tr>
+        <td >Encode</td>
+        <td >2.21
+        </td>
+          <td>Automatic charset detection for text attachments</td>
+      </tr>
+      <tr>
+        <td >Encode::Detect</td>
+        <td >
+            (Any)
+        </td>
+          <td>Automatic charset detection for text attachments</td>
+      </tr>
+      <tr>
+        <td >Email::Reply</td>
+        <td >
+            (Any)
+        </td>
+          <td>Inbound Email</td>
+      </tr>
+      <tr>
+        <td >HTML::FormatText::WithLinks</td>
+        <td >0.13
+        </td>
+          <td>Inbound Email</td>
+      </tr>
+      <tr>
+        <td >TheSchwartz</td>
+        <td >1.07
+        </td>
+          <td>Mail Queueing</td>
+      </tr>
+      <tr>
+        <td >Daemon::Generic</td>
+        <td >
+            (Any)
+        </td>
+          <td>Mail Queueing</td>
+      </tr>
+      <tr>
+        <td >mod_perl2</td>
+        <td >1.999022
+        </td>
+          <td>mod_perl</td>
+      </tr>
+      <tr>
+        <td >Apache2::SizeLimit</td>
+        <td >0.96
+        </td>
+          <td>mod_perl</td>
+      </tr>
+      <tr>
+        <td >File::MimeInfo::Magic</td>
+        <td >
+            (Any)
+        </td>
+          <td>Sniff MIME type of attachments</td>
+      </tr>
+      <tr>
+        <td >IO::Scalar</td>
+        <td >
+            (Any)
+        </td>
+          <td>Sniff MIME type of attachments</td>
+      </tr>
+      <tr>
+        <td  class="req_new">Cache::Memcached</td>
+        <td  class="req_new">
+            (Any)
+        </td>
+          <td>Memcached Support</td>
+      </tr>
+      <tr>
+        <td  class="req_new">File::Copy::Recursive</td>
+        <td  class="req_new">
+            (Any)
+        </td>
+          <td>Documentation</td>
+      </tr>
+      <tr>
+        <td >File::Which</td>
+        <td >
+            (Any)
+        </td>
+          <td>Documentation</td>
+      </tr>
+</table>
 
 <h3 id="req_apache">Optional Apache Modules</h3>
 
@@ -234,8 +543,8 @@ You may use whatever coding style you want, but all files commited to the repo m
 <ul>
   <li><a href="#feat_webservices">Improved WebServices</a></li>
   <li><a href="#feat_caching_performance">Improved Caching using Memcached</a></li>
-  <li><a href="#feat_comment_tags">Ability to Tag [% terms.Bug %] Comments</a></li>
-  <li><a href="#feat_bug_groups">Improved [% terms.Bug %] Group Membership Checking</a></li>
+  <li><a href="#feat_comment_tags">Abililty to Tag Bug Comments</a></li>
+  <li><a href="#feat_bug_groups">Improved Bug Group Membership Checking</a></li>
   <li><a href="#feat_documentation">Improved Documentation for Users and Administrators</a></li>
   <li><a href="#feat_other">Other Enhancements and Changes</a></li>
 </ul>
@@ -257,7 +566,7 @@ You may use whatever coding style you want, but all files commited to the repo m
 </p>
 <p>
   Several methods have been added and existing ones improved to allow returning
-  data that was not available before such as <kbd>Group.get</kbd>. <kbd>B[%%]ug.search</kbd>
+  data that was not available before such as <kbd>Group.get</kbd>. <kbd>Bug.search</kbd>
   is now as full featured as the Advanced Query UI allowing for the same searches
   to be executed. Attachment data such as flags and other metadata can now be
   updated through the API. Other WebService changes are detailed
@@ -274,10 +583,10 @@ You may use whatever coding style you want, but all files commited to the repo m
   objects that are retrieved multiple times during a request such as user data, etc.
 </p>
 
-<h3 id="feat_comment_tags">Ability to Tag [% terms.Bug %] Comments</h3>
+<h3 id="feat_comment_tags">Ability to Tag Bug Comments</h3>
 
 <p>
-  Users can add tags, visible to other users, to [% terms.bug %] comments. This
+  Users can add tags, visible to other users, to bug comments. This
   gives the users the ability to thread conversations, mark comments as spam,
   identify important comments, etc. Users can hide comments that contain specific
   tags if desired. The tag input field also supports autocompletion so commonly
@@ -285,23 +594,23 @@ You may use whatever coding style you want, but all files commited to the repo m
   be automatically hidden from view.
 </p>
 
-<h3 id="feat_bug_groups">Improved [% terms.Bug %] Group Membership Checking</h3>
+<h3 id="feat_bug_groups">Improved Bug Group Membership Checking</h3>
 
 <p>
-  In the past, Bugzilla restricted who can view [% terms.abug %] to everyone
-  who was a member of ALL the groups the [% terms.bug %] was in. That is, the
+  In the past, Bugzilla restricted who can view a bug to everyone
+  who was a member of ALL the groups the bug was in. That is, the
   groups were ANDed together. This made some access control scenarios rather
   difficult to achieve. So now, Bugzilla defaults to (and can be switched to,
-  in existing installations) a mode where the [% terms.bug %] can be viewed by
-  everyone who is a member of ANY group the [% terms.bug %] is in. That is, the
-  groups are ORed together. This give more flexibility in the way [% terms.bugs %]
+  in existing installations) a mode where the bug can be viewed by
+  everyone who is a member of ANY group the bug is in. That is, the
+  groups are ORed together. This give more flexibility in the way bugs
   are made private to specific groups of users.
 </p>
 <p>
-  <strong>Note:</strong> Group memberships for [% terms.bugs %] and users are
+  <strong>Note:</strong> Group memberships for bugs and users are
   not changed at all when this setting is switched. When switching from AND to
-  OR, this means that [% terms.bugs %] may be more widely viewable than previously.
-  It is the responsibility of the administrator to make sure that no [% terms.bugs %]
+  OR, this means that bugs may be more widely viewable than previously.
+  It is the responsibility of the administrator to make sure that no bugs
   are accidentally revealed to the wrong people when changing this setting.
 </p>
 
@@ -321,32 +630,32 @@ You may use whatever coding style you want, but all files commited to the repo m
 <h4>Enhancements for Users</h4>
 
 <ul>
-  <li><strong>[% terms.Bugs %]:</strong> The deadline field is now visible to users
+  <li><strong>Bugs:</strong> The deadline field is now visible to users
     not in the the <kbd>timetracking</kbd> group.</li>
-  <li><strong>[% terms.Bugs %]:</strong> There is now a "Preview" mode when
+  <li><strong>Bugs:</strong> There is now a "Preview" mode when
     creating a new comment that allows you to see how the comment will look
     before committing to the database.</li>
-  <li><strong>[% terms.Bugs %]:</strong> The reporter is now allowed to enter
-    keywords at time of [% terms.bug %] creation.</li>
-  <li><strong>[% terms.Bugs %]:</strong> "See Also" now allows spaces as well as
+  <li><strong>Bugs:</strong> The reporter is now allowed to enter
+    keywords at time of bug creation.</li>
+  <li><strong>Bugs:</strong> "See Also" now allows spaces as well as
     commas to delimit multiple values.</li>
-  <li><strong>[% terms.Bugs %]:</strong> Auto linkification in comments of [% terms.bug %]
+  <li><strong>Bugs:</strong> Auto linkification in comments of bug
     IDs and comment IDs has been improved.</li>
-  <li><strong>[% terms.Bugs %]:</strong> [% terms.Bugs %] can now have multiple
-    aliases assigned to them. Before each [% terms.bug %] could only have a single
+  <li><strong>Bugs:</strong> Bugs can now have multiple
+    aliases assigned to them. Before each bug could only have a single
     value. Also, aliases are now visible in the browser's title bar.</li>
-  <li><strong>[% terms.Bugs %]:</strong> Users can now change the flags of multiple
-    [%+ terms.bugs %] at once using the mass-edit form.</li>
+  <li><strong>Bugs:</strong> Users can now change the flags of multiple
+    bugs at once using the mass-edit form.</li>
   <li><strong>Charts and Reports:</strong> UTF-8 characters are now correctly
     displayed in "New Charts" and graphical reports.</li>
   <li><strong>Charts and Reports:</strong> Custom multi-select fields are now
     available as report axis options. This makes them usable for categorizing
-    [%+ terms.bugs %] in reports.</li>
+    bugs in reports.</li>
   <li><strong>Email:</strong> You can now choose to not receive any mail at all
-    about a particular [% terms.bug %], even if you continue to have a role on
-    that [% terms.bug %] (e.g. reporter).</li>
-  <li><strong>Email:</strong> When adding or removing [% terms.abug %] as a
-    dependency, the summary of the [% terms.bug %] is included in the email
+    about a particular bug, even if you continue to have a role on
+    that bug (e.g. reporter).</li>
+  <li><strong>Email:</strong> When adding or removing a bug as a
+    dependency, the summary of the bug is included in the email
     notification.</li>
   <li><strong>Requests:</strong> <kbd>request.cgi</kbd> can now output results in
     CSV format.</li>
@@ -357,7 +666,7 @@ You may use whatever coding style you want, but all files commited to the repo m
   <li><strong>Searches:</strong> Quicksearch now allows for use of comparison
     operators such as !=, >=, >, &lt;, etc., in addition to substring searches.</li>
   <li><strong>Searches:</strong> The "Blocks" and "Depends On" values can now be
-    displayed as columns in [% terms.abug %] list.</li>
+    displayed as columns in a bug list.</li>
   <li><strong>Searches:</strong> The "is empty" and "is not empty" search operators
     have been added to the Advanced Search UI. This allows searching for null
     and not null values for certain fields.</li>
@@ -374,9 +683,9 @@ You may use whatever coding style you want, but all files commited to the repo m
   <li><strong>Administration:</strong> JavaScript and CSS files are now minified
     and concatenated to improve page load performance. When changes are made,
     <kbd>checksetup.pl</kbd> should be run to regenerate the combined files.</li>
-  <li><strong>[% terms.Bugs %]:</strong> Bugzilla now keeps track of the last
+  <li><strong>Bugs:</strong> Bugzilla now keeps track of the last
     time each user visited (that is, loaded the show_bug page in a web browser)
-    each [% terms.bug %]. This could be useful for dashboards or API clients.</li>
+    each bug. This could be useful for dashboards or API clients.</li>
   <li><strong>Database:</strong> Text that contained unicode
     supplementary characters (outside BMP) was cut off when using MySQL as backend.
     This has been fixed to prevent data loss.</li>
@@ -390,11 +699,11 @@ You may use whatever coding style you want, but all files commited to the repo m
   <li><strong>Email:</strong> Email generation originally was done before the
     jobqueue job was inserted. This is now delayed and done by
     <kbd>jobqueue.pl</kbd> right before sending the email which can improve
-    responsiveness when processing [% terms.bug %] changes.</li>
+    responsiveness when processing bug changes.</li>
   <li><strong>Email:</strong> When a site administrator creates a new user, an
     email is sent to the user.</li>
   <li><strong>Email:</strong> For dependency email notifications, the header
-    <kbd>X-B[%%]ugzilla-Type: dep_changed</kbd> is set.</li>
+    <kbd>X-Bugzilla-Type: dep_changed</kbd> is set.</li>
   <li><strong>Email:</strong> <kbd>whine.pl</kbd> emails now use
     <kbd>DEFAULT_COLUMN_LIST</kbd> (the same default columns seen in the buglist
     page) instead of hard coded column list.</li>
@@ -406,7 +715,7 @@ You may use whatever coding style you want, but all files commited to the repo m
 <h4 id="feat_webservices_other">WebService Changes</h4>
 
 <ul>
-  <li><kbd>B[%%]ug.search</kbd> now allows for full search functionality
+  <li><kbd>Bug.search</kbd> now allows for full search functionality
     similar to what is possible using the Advanced Query UI.</li>
   <li>Basic support for eTag headers has been added to all WebServices
     to allow for better network performance.</li>
@@ -418,11 +727,11 @@ You may use whatever coding style you want, but all files commited to the repo m
   <li>Invalid or expired authentication cookies and tokens now throw
     errors instead of being silently ignored. <kbd>User.valid_login</kbd>
     can be used to determine if they are still valid or not.</li>
-  <li>WebService calls that are used to create and update [% terms.bugs %]
+  <li>WebService calls that are used to create and update bugs
     and attachments now support setting and updating of flags.</li>
-  <li><kbd>B[%%]ug.update_attachment</kbd> can update an attachment's
+  <li><kbd>Bug.update_attachment</kbd> can update an attachment's
     metadata as well as its flags.</li>
-  <li>The <kbd>product</kbd> parameter for <kbd>B[%%]ug.possible_duplicates</kbd>
+  <li>The <kbd>product</kbd> parameter for <kbd>Bug.possible_duplicates</kbd>
     has been renamed to <kbd>products</kbd>.</li>
   <li>Some compatibility fields included in returned data that were marked
     to be removed in this release are now gone.</li>
@@ -430,9 +739,9 @@ You may use whatever coding style you want, but all files commited to the repo m
     its members.</li>
   <li><kbd>FlagType.get</kbd> has been added to get information about valid
     flag types for a given product and component.</li>
-  <li>The deprecated <kbd>B[%%]ug.get_bugs</kbd>, <kbd>B[%%]ug.get_history</kbd>
+  <li>The deprecated <kbd>Bug.get_bugs</kbd>, <kbd>Bug.get_history</kbd>
     and <kbd>Product.get_products</kbd> methods are no longer supported.
-    They have been renamed to <kbd>B[%%]ug.get</kbd>, <kbd>B[%%]ug.history</kbd>
+    They have been renamed to <kbd>Bug.get</kbd>, <kbd>Bug.history</kbd>
     and <kbd>Product.get</kbd> respectively.</li>
 </ul>
 
@@ -464,50 +773,3 @@ You may use whatever coding style you want, but all files commited to the repo m
   <li>A new hook called <kbd>user_check_account_creation</kbd> has been added
     to add extra checks before accepting the creation of a new user account.</li>
 </ul>
-
-[% INCLUDE global/footer.html.tmpl %]
-
-[% BLOCK db_req %]
-  [% SET m = DB_MODULE.$db %]
-  <h3 id="req_[% db FILTER html %]">For [% m.name FILTER html %] Users</h3>
-
-  <ul>
-    <li>[% m.name FILTER html %]
-       [%+ '<span class="req_new">' IF db_new %]v[% m.db_version FILTER html %]
-       [% '</span>' IF db_new %]
-       </li>
-    <li><strong>perl module:</strong>
-      [%+ m.dbd.module FILTER html %]
-      [%+ '<span class="req_new">' IF dbd_new %]v[% m.dbd.version FILTER html %]
-      [% '</span>' IF dbd_new %]</li>
-  </ul>
-[% END %]
-
-
-[% BLOCK req_table %]
-  <table class="req_table">
-    <tr>
-      <th>Module</th> <th>Version</th>
-      [% IF include_feature %]
-        <th>Enables Feature</th>
-      [% END %]
-    </tr>
-    [% FOREACH req = reqs %]
-      <tr>
-        <td [% ' class="req_new"' IF new.contains(req.package) %]>
-          [%- req.module FILTER html %]</td>
-        <td [% ' class="req_new"' IF updated.contains(req.package)
-                                     OR new.contains(req.package) %]>
-          [%- IF req.version == 0 %]
-            (Any)
-          [% ELSE %]
-            [%- req.version FILTER html %]
-          [% END %]
-        </td>
-        [% IF include_feature %]
-          <td>[% req.feature.join(', ') FILTER html %]</td>
-        [% END %]
-      </tr>
-    [% END %]
-</table>
-[% END %]
