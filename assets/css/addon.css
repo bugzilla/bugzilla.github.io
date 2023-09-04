@@ -468,9 +468,9 @@ lead {
 }
 
 #donations div {
-  border: 1px solid rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.3);
   border-radius: 4px;
-  background: rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.2);
   padding: 10px;
   display: flex;
   align-items: center;
@@ -478,5 +478,12 @@ lead {
 }
 
 #donations div lead {
-  margin: 0 10px;
+  margin: 0 12px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#donations div .button {
+  font-size: 15px;
+  font-weight: 600;
 }
