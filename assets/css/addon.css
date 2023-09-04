@@ -462,3 +462,21 @@ lead {
   flex-direction: column;
   align-items: center;
 }
+
+#donations {
+  padding-bottom: 20px
+}
+
+#donations div {
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 4px;
+  background: rgba(0,0,0,0.1);
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#donations div lead {
+  margin: 0 10px;
+}
