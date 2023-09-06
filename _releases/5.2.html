@@ -1,0 +1,593 @@
+---
+version: 5.2
+branch: 5.2
+date: 2023-09-05
+mode: current
+advisory:
+- version: 5.2
+  url: 4.4.13
+redirect_from:
+- /releases/5.2/release-notes
+---
+
+<ul class="bz_toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#point">Updates since 5.0.4</a></li>
+  <li><a href="#req">Minimum Requirements</a></li>
+  <li><a href="#feat">New Features and Improvements</a></li>
+  <li><a href="#issues">Outstanding Issues</a></li>
+  <li><a href="#code_changes">Code Changes Which May Affect
+    Customizations and Extensions</a></li>
+  <li><a href="https://bugzilla.readthedocs.org/en/latest/installing/upgrading.html">
+    Notes On Upgrading From a Previous Version</a></li>
+  <li><a href="http://www.bugzilla.org/releases/">Release Notes for Previous Versions</a></li>
+</ul>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>Welcome to Bugzilla 5.2! This is kind of a weird release to explain. Back in
+early 2019, versions 5.0.5 and 5.0.6 were released for the 5.0.x branch,
+however, these releases contained invasive database schema and code
+reformatting changes that technically should not have been allowed to land on a
+stable branch. Some people noticed this, and never upgraded from 5.0.4 since
+5.0.5 and 5.0.6 did not contain any security fixes. To fix this situation, 5.2
+is picking up where 5.0.6 left off, since 5.0.5 technically should have been
+5.2. Those still on 5.0.4 can upgrade to 5.0.4.1 if they're not ready to go a
+full version release yet.</p>
+
+<p><strong>NOTE:</strong> Because of the above situation, version 5.1.x
+(development release) is actually NEWER code than 5.2, and you cannot "upgrade"
+to 5.2 from 5.1.x. The 5.1.x series has been retroactively renamed to
+5.3.x.</p>
+
+<p>Bugzilla is making an attempt to be 100% accessible. We're not
+there yet. We have made accessibilty improvements but we're quite sure that
+we've missed a lot. If you find any accessibility issues such as fields missing
+labels, poor contrast, or things that don't play well with screen readers,
+please file a new bug which blocks our
+<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=bugzilla-section508">Section 508 Compliance bug</a>.</p>
+
+<p>If you're upgrading, make sure to read
+  <a href="https://bugzilla.readthedocs.org/en/latest/installing/upgrading.html">
+  Notes On Upgrading From a Previous Version</a>. If you are upgrading from a
+  release before 4.4, make sure to read the release notes for all the
+  <a href="http://www.bugzilla.org/releases/">previous versions</a> in between
+  your version and this one, <strong>particularly the Upgrading section of each
+  version's release notes</strong>.</p>
+
+<h2 id="point">Updates in this 5.2.x Release</h2>
+
+<p>Future releases on this branch will contain a list of the updates since the
+last point release in this section.</p>
+
+<p>Because of the weird way versions 5.0.5 and 5.0.6 were released, changes
+from those releases are included <a href="#point504">below</a> in case you're upgrading from the
+5.0.4.x branch.</p>
+
+<h2 id="req">Minimum Requirements</h2>
+
+<p>Any requirements that are new since 5.0 will look like
+  <span class="req_new">this</span>.</p>
+
+<ul>
+  <li><a href="#req_perl">Perl</a></li>
+  <li><a href="#req_mysql">For MySQL Users</a></li>
+  <li><a href="#req_mariadb">For MariaDB Users</a></li>
+  <li><a href="#req_pg">For PostgreSQL Users</a></li>
+  <li><a href="#req_oracle">For Oracle Users</a></li>
+  <li><a href="#req_sqlite">For SQLite Users</a></li>
+  <li><a href="#req_modules">Required Perl Modules</a></li>
+  <li><a href="#req_optional_mod">Optional Perl Modules</a></li>
+  <li><a href="#req_apache">Optional Apache Modules</a></li>
+</ul>
+
+<h3 id="req_perl">Perl</h3>
+
+<p>Perl <span class="req_new">v5.14</span></p>
+<h3 id="req_mariadb">For MariaDB Users</h3>
+
+  <ul>
+    <li>MariaDB
+       v10.0.5
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::MariaDB
+      any version</li>
+  </ul>
+<h3 id="req_mysql">For MySQL Users</h3>
+
+  <ul>
+    <li>MySQL
+       v5.6.12
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::mysql
+      v4.032</li>
+  </ul>
+<h3 id="req_pg">For PostgreSQL Users</h3>
+
+  <ul>
+    <li>PostgreSQL
+       v8.03.0000
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::Pg
+      v2.7.0</li>
+  </ul>
+<h3 id="req_oracle">For Oracle Users</h3>
+
+  <ul>
+    <li>Oracle
+       v10.02.0
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::Oracle
+      v1.19</li>
+  </ul>
+<h3 id="req_sqlite">For SQLite Users</h3>
+
+  <ul>
+    <li>SQLite
+       v3.6.22
+       </li>
+    <li><strong>perl module:</strong>
+      DBD::SQLite
+      v1.29</li>
+  </ul>
+
+<h3 id="req_modules">Required Perl Modules</h3>
+<table class="req_table">
+    <tr>
+      <th>Module</th> <th>Version</th>
+    </tr>
+      <tr>
+        <td >CGI</td>
+        <td >3.51
+        </td>
+      </tr>
+      <tr>
+        <td >Digest::SHA</td>
+        <td >
+            (Any)
+        </td>
+      </tr>
+      <tr>
+        <td >Date::Format</td>
+        <td >2.23
+        </td>
+      </tr>
+      <tr>
+        <td >DateTime</td>
+        <td  class="req_new">0.75
+        </td>
+      </tr>
+      <tr>
+        <td >DateTime::TimeZone</td>
+        <td  class="req_new">1.64
+        </td>
+      </tr>
+      <tr>
+        <td >DBI</td>
+        <td >1.614
+        </td>
+      </tr>
+      <tr>
+        <td >DBIx::Connector</td>
+        <td >0.56
+        </td>
+      </tr>
+      <tr>
+        <td >Moo</td>
+        <td >2.003004
+        </td>
+      </tr>
+      <tr>
+        <td >Template</td>
+        <td  class="req_new">3.008
+        </td>
+      </tr>
+      <tr>
+        <td  class="req_new">Email::Sender</td>
+        <td  class="req_new">2.600
+        </td>
+      </tr>
+      <tr>
+        <td >Email::Address::XS</td>
+        <td >1.05
+        </td>
+      </tr>
+      <tr>
+        <td >Email::MIME</td>
+        <td >1.904
+        </td>
+      </tr>
+      <tr>
+        <td >URI</td>
+        <td  class="req_new">1.55
+        </td>
+      </tr>
+      <tr>
+        <td >List::MoreUtils</td>
+        <td >0.32
+        </td>
+      </tr>
+      <tr>
+        <td >Math::Random::ISAAC</td>
+        <td >1.0.1
+        </td>
+      </tr>
+      <tr>
+        <td  class="req_new">JSON::XS</td>
+        <td  class="req_new">2.01
+        </td>
+      </tr>
+</table>
+
+<h3 id="req_optional_mod">Optional Perl Modules</h3>
+
+<p>The following perl modules, if installed, enable various
+  features of Bugzilla:</p>
+<table class="req_table">
+    <tr>
+      <th>Module</th> <th>Version</th>
+        <th>Enables Feature</th>
+    </tr>
+      <tr>
+        <td >GD</td>
+        <td >1.20
+        </td>
+          <td>Graphical Reports, New Charts, Old Charts</td>
+      </tr>
+      <tr>
+        <td >Chart::Lines</td>
+        <td  class="req_new">2.4.1
+        </td>
+          <td>New Charts, Old Charts</td>
+      </tr>
+      <tr>
+        <td >Template::Plugin::GD::Image</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >GD::Text</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >GD::Graph</td>
+        <td >
+            (Any)
+        </td>
+          <td>Graphical Reports</td>
+      </tr>
+      <tr>
+        <td >MIME::Parser</td>
+        <td >5.406
+        </td>
+          <td>Move Bugs Between Installations</td>
+      </tr>
+      <tr>
+        <td >LWP::UserAgent</td>
+        <td >
+            (Any)
+        </td>
+          <td>Automatic Update Notifications</td>
+      </tr>
+      <tr>
+        <td >XML::Twig</td>
+        <td >
+            (Any)
+        </td>
+          <td>Move Bugs Between Installations, Automatic Update Notifications</td>
+      </tr>
+      <tr>
+        <td >PatchReader</td>
+        <td >0.9.6
+        </td>
+          <td>Patch Viewer</td>
+      </tr>
+      <tr>
+        <td >Net::LDAP</td>
+        <td >
+            (Any)
+        </td>
+          <td>LDAP Authentication</td>
+      </tr>
+      <tr>
+        <td >Authen::SASL</td>
+        <td >
+            (Any)
+        </td>
+          <td>SMTP Authentication</td>
+      </tr>
+      <tr>
+        <td >Net::SMTP::SSL</td>
+        <td >1.01
+        </td>
+          <td>SSL Support for SMTP</td>
+      </tr>
+      <tr>
+        <td >Authen::Radius</td>
+        <td >
+            (Any)
+        </td>
+          <td>RADIUS Authentication</td>
+      </tr>
+      <tr>
+        <td >SOAP::Lite</td>
+        <td >0.712
+        </td>
+          <td>XML-RPC Interface</td>
+      </tr>
+      <tr>
+        <td >XMLRPC::Lite</td>
+        <td >0.712
+        </td>
+          <td>XML-RPC Interface</td>
+      </tr>
+      <tr>
+        <td >JSON::RPC</td>
+        <td >
+            (Any)
+        </td>
+          <td>JSON-RPC Interface, REST Interface</td>
+      </tr>
+      <tr>
+        <td >Test::Taint</td>
+        <td  class="req_new">1.06
+        </td>
+          <td>JSON-RPC Interface, XML-RPC Interface, REST Interface</td>
+      </tr>
+      <tr>
+        <td >HTML::Parser</td>
+        <td >3.67
+        </td>
+          <td>More HTML in Product/Group Descriptions</td>
+      </tr>
+      <tr>
+        <td >HTML::Scrubber</td>
+        <td >
+            (Any)
+        </td>
+          <td>More HTML in Product/Group Descriptions</td>
+      </tr>
+      <tr>
+        <td >Encode</td>
+        <td >2.21
+        </td>
+          <td>Automatic charset detection for text attachments</td>
+      </tr>
+      <tr>
+        <td >Encode::Detect</td>
+        <td >
+            (Any)
+        </td>
+          <td>Automatic charset detection for text attachments</td>
+      </tr>
+      <tr>
+        <td >Email::Reply</td>
+        <td >
+            (Any)
+        </td>
+          <td>Inbound Email</td>
+      </tr>
+      <tr>
+        <td >HTML::FormatText::WithLinks</td>
+        <td >0.13
+        </td>
+          <td>Inbound Email</td>
+      </tr>
+      <tr>
+        <td >TheSchwartz</td>
+        <td >1.07
+        </td>
+          <td>Mail Queueing</td>
+      </tr>
+      <tr>
+        <td >Daemon::Generic</td>
+        <td >
+            (Any)
+        </td>
+          <td>Mail Queueing</td>
+      </tr>
+      <tr>
+        <td >mod_perl2</td>
+        <td >1.999022
+        </td>
+          <td>mod_perl</td>
+      </tr>
+      <tr>
+        <td >Apache2::SizeLimit</td>
+        <td >0.96
+        </td>
+          <td>mod_perl</td>
+      </tr>
+      <tr>
+        <td >File::MimeInfo::Magic</td>
+        <td >
+            (Any)
+        </td>
+          <td>Sniff MIME type of attachments</td>
+      </tr>
+      <tr>
+        <td >IO::Scalar</td>
+        <td >
+            (Any)
+        </td>
+          <td>Sniff MIME type of attachments</td>
+      </tr>
+      <tr>
+        <td  class="req_new">Cache::Memcached</td>
+        <td  class="req_new">
+            (Any)
+        </td>
+          <td>Memcached Support</td>
+      </tr>
+      <tr>
+        <td  class="req_new">File::Copy::Recursive</td>
+        <td  class="req_new">
+            (Any)
+        </td>
+          <td>Documentation</td>
+      </tr>
+      <tr>
+        <td >File::Which</td>
+        <td >
+            (Any)
+        </td>
+          <td>Documentation</td>
+      </tr>
+</table>
+
+<h3 id="req_apache">Optional Apache Modules</h3>
+
+<p>If you are using Apache as your webserver, Bugzilla can
+  take advantage of some Apache features if you have the below Apache
+  modules installed and enabled.</p>
+
+<ul>
+  <li>mod_headers</li>
+  <li>mod_expires</li>
+  <li>mod_env</li>
+</ul>
+
+<p>On most systems (but not on Windows), <kbd>checksetup.pl</kbd> is able to
+  tell whether or not you have these modules installed, and it will tell
+  you.</p>
+
+
+<a name="v52_feat"></a>
+<h2 id="feat">New Features and Improvements</h2>
+
+<ul>
+  <li><a href="#feat_mobilerender">Improved Mobile Rendering</a></li>
+  <li><a href="#feat_mariadb">Explicit MariaDB Support</a></li>
+  <li><a href="#feat_mysql8">MySQL 8+ Support</a></li>
+  <li><a href="#feat_docker">Demo Docker Configuration</a></li>
+  <li><a href="#feat_other">Other Enhancements and Changes</a></li>
+</ul>
+
+<h3 id="feat_mobilerender">Improved Mobile Rendering</h3>
+
+<p>
+Metadata to assist browsers in properly rendering Bugzilla on mobile browsers was added. Without this metadata Google Search tools would report Bugzilla pages as not suitable for mobile devices. Bugzilla still needs work to actually look nice on mobile devices but this is a good start. (<a href="https://github.com/bugzilla/bugzilla/pull/78">PR #78</a>)
+</p>
+
+<h3 id="feat_mariadb">Explicit MariaDB Support</h3>
+
+<p>Newer versions of MariaDB (10.6 and newer) have diverged from MySQL
+sufficiently that you can't really call it a drop-in replacement for MySQL
+anymore. We new have a 'mariadb' database driver for all versions of MariaDB.
+<code>checksetup.pl</code> will prompt you to switch to it if it detects that you are connected to a MariaDB database server.
+(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1467006">Bug 1467006</a>)</p>
+
+<h3 id="feat_mysql8">MySQL 8+ Support</h3>
+
+<p>Bugzilla previously did not work on MySQL 8 or newer. Now it does.
+(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1592129">Bug 1592129</a>)</p>
+
+<h3 id="feat_docker">Demo Docker Configuration</h3>
+
+<p>Bugzilla now ships with a Docker Compose configuration which
+provides an out-of-the-box Bugzilla with a default configuration to
+test with. Type <code>docker compose up</code> in the root
+directory to start it up. You will be prompted on the console with how to
+connect to it once it comes up. Requires that you have Docker already
+installed. This configuration is not suitable for production use, and is just
+for playing around with it and testing it without needing to do a full
+installation.
+(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1888068">Bug 1888068</a>)</p>
+
+<h3 id="feat_other">Other Enhancements and Changes</h3>
+
+<h4>Enhancements for Users</h4>
+
+<ul>
+  <li><strong>UI:</strong> WineHQ Forum links are now accepted in the See Also field on bugs. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1523814">Bug 1523814</a>)</li>
+  <li><strong>Accessibility:</strong> Color contrast in the default theme was adjusted to comply with WCAG AA 2.0 recommendations. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1798166">Bug 1798166</a>)</li>
+  <li><strong>Email:</strong> Emails about bugs now include an <code>X-Bugzilla-ID</code> header which lists the Bug ID, for potential use in filtering. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1403169">Bug 1403169</a>)</li>
+</ul>
+
+<h4>Enhancements for Administrators and Developers</h4>
+
+<ul>
+  <li><strong>Database:</strong> <strong>UTF8 data encoding is now
+    enforced.</strong> Older version of Bugzilla made the
+    conversion of older data to UTF8 optional. Converting your existing data to
+    UTF8 is now mandatory. Your data will be converted when you run
+    <kbd>checksetup.pl</kbd>. If you are not already encoding your data in UTF8
+    you may want to verify that it will correctly convert on a backup copy of
+    your database before upgrading.</li>
+  <li><strong>Database:</strong>If you are using MySQL, the majority of the
+    database tables will also be converted to the InnoDB storage engine. This
+    makes searching more efficent and allows for real referential
+    integrity.</li>
+  <li><strong>Installation:</strong> Bugzilla now supports
+    Email::MIME version 1.949 and newer, which previously would crash
+    Bugzilla when it tried to send email.
+    (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1657496">Bug 1657496</a>)</li>
+  <li><strong>Installation:</strong> The <code>testserver.pl</code> script will
+    now work with self-signed SSL certificates if you pass the
+    <code>--self-signed</code> option on the command line. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1851398">Bug 1851398</a>)</li>
+</ul>
+
+<h4 id="feat_webservices_other">WebService Changes</h4>
+
+<ul>
+  <li><strong>Group.get</strong> method is now properly marked as Read Only. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1584477">Bug 1584477</a>)</li>
+</ul>
+
+<h4 id="code_changes">Code Changes Which May Affect Customizations and Extensions</h4>
+
+<ul>
+  <li>The Bugzilla::DB object now has a qi attribute which returns a special
+    hashref that can be used inside double-quoted strings to quote database
+    identifiers.<br>
+    <code>
+  my $q = Bugzilla-&gt;dbh-&gt;qi;
+  Bugzilla-&gt;dbh-&gt;do("SELECT COUNT(*) FROM $q-&gt;{groups}");
+    </code><br>(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1592129">Bug 1592129</a>)
+  </li>
+  <li>Bugzilla now uses Email::Address::XS instead of Email::Address for managing email address parsing. If you made use of Email::Address directly you should update to use Email::Address::XS instead. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1853138">Bug 1853138</a>)</li>
+</ul>
+
+<h3 id="point504">Changes since Version 5.0.4</h3>
+
+<p>Because of the weird way we branched to fix the 5.0.5 numbering problem, the
+changes from 5.0.5 and 5.0.6 are included here in case you're upgrading from
+the 5.0.4.x branch.</p>
+
+<h3>5.0.6</h3>
+
+<ul>
+<li><strong>Adminstration:</strong> It is now possible to create more than 255
+flags (up to 65535) (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1526703">Bug 1526703</a>)</li>
+</ul>
+
+<h3>5.0.5</h3>
+
+<ul>
+<li><strong>User Interface:</strong> Email addresses with apostrophes (yes,
+that's legal) no longer break the "Send Mail to Bug Assignees"
+button on bug lists. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1226123">Bug 1226123</a>)</li>
+<li><strong>Installation/Upgrading:</strong> If using MySQL, the
+<code>bugs_fulltext</code> table is now InnoDB instead of MyISAM. This may
+cause your upgrade to take a while. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=981487">Bug 981487</a>)</li>
+<li><strong>Developers:</strong> This release reformats the code according to
+the same conventions as the popular Mojolicious product and includes a
+<code>.perltidyrc</code> to do the same.  You may use whatever coding style you
+want, but all files commited to the repo must be reformatted according to those
+rules.</li>
+<li><strong>Developers:</strong> A new hook <code>template_after_create</code>
+was added, which can be used to manipulate the template object before it gets
+rendered. You can use this to define new Template Toolkit virtual methods or
+filters in extensions.
+(<a href="https://github.com/bugzilla/bugzilla/pull/60">PR #60</a>)</li>
+</ul>
+
+<ul>

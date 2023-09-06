@@ -12,6 +12,8 @@
         <a name="devel"></a>
       {% when 'old' %}
         <a name="oldstable"></a>
+      {% when 'deprecated' %}
+        <a name="deprecated"></a>
       {% endcase %}
         {% case item.mode %}
         {% when 'current' %}
@@ -24,6 +26,8 @@
           {% endif %}
         {% when 'old' %}
           Old Stable Release
+        {% when 'deprecated' %}
+          Deprecated Old Stable Release
         {% endcase %}
         ({{ item.version }})
       </h3>

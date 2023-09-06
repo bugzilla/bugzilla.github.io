@@ -1,16 +1,14 @@
 ---
-version: 4.4.13
+version: 4.4.14
 branch: 4.4
-date: 2018-02-16
+date: 2023-09-05
 advisory:
-- version: 4.4.13
-  url: 4.4.12
+- version: 4.4.14
+  url: 4.4.13
+mode: deprecated
 redirect_from:
-- /releases/4.4.13/release-notes
+- /releases/4.4.14/release-notes
 ---
-
-
-<h1>Bugzilla 4.4.13 Release Notes</h1>
 
 <ul class="bz_toc">
   <li><a href="#v44_introduction">Introduction</a></li>
@@ -42,6 +40,42 @@ redirect_from:
   release notes</strong>.</p>
 
 <h2 id="v44_point">Updates in this 4.4.x Release</h2>
+
+<h3>4.4.14</h3>
+
+<p>This release fixes one security issue. See the
+  <a href="https://www.bugzilla.org/security/4.4.13/">Security Advisory</a>
+  for details.</p>
+
+<div style="border: 3px solid red; padding: 0.5em;">
+This will be the last release of the Bugzilla 4.4 branch unless
+further security issues are found before the EOL date passes.
+Bugzilla 4.4 will reach end of life 4 months after the release of
+Version 4.4.14. Please take the opportunity to upgrade to version 5.2 or newer.
+</div>
+
+<p>This release also contains the following bug fixes:</p>
+
+<ul>
+  <li>The Email::MIME module changed the way it set content types on emails in
+  version 1.949, causing Bugzilla to throw an error and preventing
+  emails from being correctly delivered to recipients. We now set the content
+  type correctly on emails.
+  (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1657496">Bug 1657496</a>)</li>
+
+  <li>Template Toolkit versions 2.28 through 3.007 are blacklisted due to a
+  compatibility issue.  Versions 2.22 through 2.27 and 3.008 and later are
+  still supported.
+  (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1560873">Bug 1560873</a>)</li>
+
+  <li>Bugzilla has a dependency on the Email::Address Perl module
+  which was unstated in the dependency list because it was also a dependency of
+  Email::Sender which Bugzilla also uses. Newer versions of
+  Email::Sender stopped depending on Email::Address, so Bugzilla
+  now needs to depend on it explicitly.
+  (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1851352">Bug 1851352</a>)</li>
+
+</ul>
 
 <h3>4.4.13</h3>
 
@@ -397,7 +431,7 @@ redirect_from:
       </tr>
       <tr>
         <td >DBI</td>
-        <td  class="req_new">1.54
+        <td  class="req_new">1.614
         </td>
       </tr>
       <tr>
@@ -408,6 +442,12 @@ redirect_from:
       <tr>
         <td >Email::Send</td>
         <td  class="req_new">2.04
+        </td>
+      </tr>
+      <tr>
+        <td >Email::Address</td>
+        <td >
+            (Any)
         </td>
       </tr>
       <tr>
@@ -561,7 +601,7 @@ redirect_from:
       </tr>
       <tr>
         <td >HTML::Parser</td>
-        <td >3.40
+        <td >3.67
         </td>
           <td>More HTML in Product/Group Descriptions</td>
       </tr>
@@ -1090,7 +1130,7 @@ redirect_from:
     tables now have an auto-incremented primary key named <kbd>id</kbd>.</li>
   <li>A custom <kbd>Bugzilla.pm</kbd> module has been added into
     <kbd>contrib/</kbd> to help packagers to package Bugzilla in their
-    Linux distributions.</li>
+    Linux distros.</li>
 </ul>
 
 
@@ -2287,7 +2327,7 @@ redirect_from:
   you may not call functions that <em>change</em> data.</p>
 
 <p>For more details, see the
-  <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Server/JSONRPC.html#JSONP">JSONP
+  <a href="docs/en/html/api/Bugzilla/WebService/Server/JSONRPC.html#JSONP">JSONP
   section</a> of the JSON-RPC WebService documentation.</p>
 
 <h3 id="v40_feat_ws">Major WebService Enhancements</h3>
@@ -2425,7 +2465,7 @@ redirect_from:
     <kbd>text/plain</kbd> attachments as HTML.</li>
   <li>If you receive a Whine mail that is empty, there will now be a brief
     message explaining that your search found no results.</li>
-  <li>The <a href="https://landfill.bugzilla.org/bugzilla-4.4-branch/page.cgi?id=fields.html">Field Help Page</a> now
+  <li>The <a href="page.cgi?id=fields.html">Field Help Page</a> now
     contains a description of every single field that can be on
     a bug in Bugzilla.</li>
 </ul>
@@ -2482,7 +2522,7 @@ redirect_from:
     for some reason, those emails will now have a Date header reflecting the
     time they were <em>supposed</em> to be sent, instead of when they actually
     <em>were</em> sent.</li>
-  <li><kbd>./jobqueue.pl install</kbd> now works on SUSE Linux.</li>
+  <li><kbd>./jobqueue.pl install</kbd> now works on SuSE Linux.</li>
   <li>Bugzilla now runs much better in Apache's suexec mode
     than it used to. As part of this, <kbd>checksetup.pl</kbd> sets
     much stricter permissions on all the files in Bugzilla
@@ -2501,7 +2541,7 @@ redirect_from:
     <a href="https://developer.mozilla.org/en/Security/HTTP_Strict_Transport_Security">Strict-Transport-Security</a>
     header with every HTTPS connection, for additional security.</li>
   <li>New code hooks (see their documentation in
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/Hook.html">Bugzilla::Hook</a>):
+    <a href="docs/en/html/api/Bugzilla/Hook.html">Bugzilla::Hook</a>):
     bug_check_can_change_field, search_operator_field_override,
     bugmail_relationships, object_columns, object_update_columns,
     and object_validators. The colchange_columns hook has been removed,
@@ -2528,13 +2568,13 @@ redirect_from:
 <ul>
   <li>You can now call some JSON-RPC methods using HTTP GET, in addition to
     using HTTP POST. See the
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Server/JSONRPC.html#Connecting_via_GET">JSON-RPC
+    <a href="docs/en/html/api/Bugzilla/WebService/Server/JSONRPC.html#Connecting_via_GET">JSON-RPC
     documentation</a> for details.</li>
   <li>You can now update existing bugs using the
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Bug.html#update">Bug.update</a>
+    <a href="docs/en/html/api/Bugzilla/WebService/Bug.html#update">Bug.update</a>
     function.</li>
   <li>You can now add attachments to bugs using the
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Bug.html#add_attachment">Bug.add_attachment</a>
+    <a href="docs/en/html/api/Bugzilla/WebService/Bug.html#add_attachment">Bug.add_attachment</a>
     function.</li>
   <li>The <kbd>Bug.get</kbd> function now returns all of a bug's
     information other than comments and attachments.</li>
@@ -2551,7 +2591,7 @@ redirect_from:
     private when filing a bug via the <kbd>Bug.create</kbd>
     function.</li>
   <li>You can now specify groups to put a bug in, in the
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/WebService/Bug.html#create">Bug.create</a>
+    <a href="docs/en/html/api/Bugzilla/WebService/Bug.html#create">Bug.create</a>
     function. (This also means that you can specify groups when filing
     a bug via email_in.pl.)</li>
   <li>The <kbd>User.get</kbd> function now accepts <kbd>groups</kbd>
@@ -2613,7 +2653,7 @@ redirect_from:
 
 <p>For full details on how to configure Apache for Bugzilla,
   see the
-  <a href="http://www.bugzilla.org/docs/4.4/en/html/configuration.html#http-apache">Configuration</a>
+  <a href="docs/en/html/configuration.html#http-apache">Configuration</a>
   section of the Bugzilla Guide.</p>
 
 <h4>mod_perl</h4>
@@ -2681,7 +2721,7 @@ redirect_from:
     longer use <kbd>UPDATE_VALIDATORS</kbd>. Also, in most cases you will
     no longer need to override <kbd>run_create_validators</kbd>. Instead,
     there is a new constant called
-    <a href="http://www.bugzilla.org/docs/4.4/en/html/api/Bugzilla/Object.html#VALIDATOR_DEPENDENCIES">VALIDATOR_DEPENDENCIES</a>,
+    <a href="docs/en/html/api/Bugzilla/Object.html#VALIDATOR_DEPENDENCIES">VALIDATOR_DEPENDENCIES</a>,
     that specifies that certain fields have to be validated before other fields.
     Then, all validators receive each already-validated value in a hash
     as their fourth argument, so each validator can know the other values
@@ -2711,7 +2751,3 @@ redirect_from:
     Bugzilla 4.2.</li>
 </ul>
 
-<h2 id="v40_previous">Release Notes For Previous Versions</h2>
-
-<p><a href="/releases/">Release Notes for
-  Bugzilla 3.x and Earlier</a></p>
