@@ -49,7 +49,7 @@ $265)) paid before we had a way to collect donations.</li>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
 </p>
 <p>
-<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will take 2.9% + 30¢ as a transaction fee.
+<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will deduct 2.9% + 30¢ from your contribution as a transaction fee.
 </p>
 
 <h3>Ongoing Necessary Expenses</h3>
@@ -72,7 +72,7 @@ $265)) paid before we had a way to collect donations.</li>
 <p>
 
 <p>
-<a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will take 2.9% + 30¢ each month as a transaction fee.
+<a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will deduct 2.9% + 30¢ from your contribution each month as a transaction fee.
 <p>
 
 <h3>Ongoing "Nice to have" expenses</h3>
