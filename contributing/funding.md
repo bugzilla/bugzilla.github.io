@@ -67,7 +67,9 @@ progress:before {
 <span class="fundprogressbar_total">$3250</span>
 </div>
 
-<p>You can contribute towards this goal at <a href="https://github.com/sponsors/bugzilla">GitHub Sponsors</a> (GitHub account required).</p>
+<p>
+<a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
+</p>
 
 <h3>Ongoing Necessary Expenses</h3>
 
@@ -85,10 +87,13 @@ progress:before {
 <span class="fundprogressbar_total">$55.08</span>
 </div>
 
-<p>You can sign up to make a monthly contribution towards this goal in either of these places:</p>
-<ul><li><a href="https://github.com/sponsors/bugzilla">GitHub Sponsors</a> (GitHub account required).</li>
-    <li><a href="https://liberapay.com/bugzilla/">Liberapay</a> any payment type Stripe will accept (credit, debit, etc)</li>
-</ul>
+<p>
+<a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
+<p>
+
+<p>
+<a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc).
+<p>
 
 <h3>Ongoing "Nice to have" expenses</h3>
 
