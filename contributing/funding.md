@@ -53,7 +53,7 @@ Bugzilla trademark</li>
 
 <ul>
 <li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
-<li><strong>$25.00 per year</strong> - State of Michigan Non-profit filing fee.</li>
+<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee.</li>
 </ul>
 
 <p>Funded by recurring donations.</p>
@@ -62,7 +62,7 @@ Bugzilla trademark</li>
 <div class="fundprogress">
 <span class="fundprogressbar_current">$5.00</span>
 <progress class="fundprogressbar" max="5508" value="500"></progress>
-<span class="fundprogressbar_total">$55.08</span>
+<span class="fundprogressbar_total">$54.67</span>
 </div>
 
 <p>
