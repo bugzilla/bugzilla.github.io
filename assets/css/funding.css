@@ -1,0 +1,29 @@
+.fundprogress {
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+}
+.fundprogressbar {
+  flex-grow: 1;
+  margin: 0 12px;
+  height: 2em;
+  appearance: none;
+  text-align: center;
+  vertical-align: middle;
+  color: white;
+  background-image: green;
+}
+.fundprogressbar_current {
+  vertical-align: middle;
+  font-size: x-large;
+}
+.fundprogressbar_total {
+  vertical-align: middle;
+  font-size: x-large;
+}
+.fundprogress {
+}
+
+.fundprogressbar {
+}
+

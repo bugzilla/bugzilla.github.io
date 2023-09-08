@@ -5,6 +5,9 @@ redirect_from:
 - /donate/
 - /donations/
 - /give/
+addons:
+- type: css
+  link: /assets/css/funding.css
 ---
 
 <h2>What Bugzilla Spends Money On</h2>
@@ -33,37 +36,9 @@ Bugzilla trademark</li>
 
 <p>Funded by one-time donations.</p>
 <p>As of 2023/09/07:</p>
-<style type="text/css"><!--
-progress:before {
-  content: '$' attr(value);
-}
-.fundprogress {
-  width: 100%;
-  text-align: center;
-  vertical-align: middle;
-}
-.fundprogressbar {
-  width: 80%;
-  height: 2em;
-  appearance: none;
-  text-align: center;
-  vertical-align: middle;
-  color: white;
-  background-image: green;
-}
-.fundprogressbar_current {
-  vertical-align: middle;
-  font-size: x-large;
-}
-.fundprogressbar_total {
-  vertical-align: middle;
-  font-size: x-large;
-}
--->
-</style>
 <div class="fundprogress">
 <span class="fundprogressbar_current">$130</span>
-<progress class="fundprogressbar" max="3250" value="130">$130.00</progress>
+<progress class="fundprogressbar" max="3250" value="130"></progress>
 <span class="fundprogressbar_total">$3250</span>
 </div>
 
@@ -86,7 +61,7 @@ progress:before {
 
 <div class="fundprogress">
 <span class="fundprogressbar_current">$5.00</span>
-<progress class="fundprogressbar" max="5508" value="500">$5.00</progress>
+<progress class="fundprogressbar" max="5508" value="500"></progress>
 <span class="fundprogressbar_total">$55.08</span>
 </div>
 
@@ -114,7 +89,7 @@ month.</p>
 
 <div class="fundprogress">
 <span class="fundprogressbar_current">$0</span>
-<progress class="fundprogressbar" max="4000" value="0">$0</progress>
+<progress class="fundprogressbar" max="4000" value="0"></progress>
 <span class="fundprogressbar_total">$4000</span>
 </div>
 
