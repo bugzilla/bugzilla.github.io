@@ -46,7 +46,7 @@ Bugzilla trademark</li>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
 </p>
 <p>
-<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will take 2.9% + 30¢ each month as a transaction fee.
+<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will take 2.9% + 30¢ as a transaction fee.
 </p>
 
 <h3>Ongoing Necessary Expenses</h3>
@@ -80,12 +80,15 @@ a pool to be used towards hiring a developer to work on code or review submitted
 patches. Once enough money collects to be worth funding a project, we'll have
 someone work on it.</p>
 
+<p>Current accumulated unspent balance of one-time and recurring donations exceeding the above goals:</p>
+<div class="fundprogress"><span class="fundprogressbar_current">$0</span></div>
+
 <p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
 month.</p>
 
-<p>This progress meter will not start filling until one of the above fills up.</p>
+<p>Single-month recurring donations exceeding the above necessary expenses</p>
 
 <div class="fundprogress">
 <span class="fundprogressbar_current">$0</span>
