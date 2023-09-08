@@ -486,4 +486,5 @@ lead {
 #donations div .button {
   font-size: 15px;
   font-weight: 600;
+  color: var(--primary-button-foreground-color) !important;
 }
