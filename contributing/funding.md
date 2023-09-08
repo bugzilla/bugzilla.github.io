@@ -131,7 +131,7 @@ it.</p>
 companies get the quickest results by customizing their local copy only for
 their own use, and not taking the time to contribute those changes to the
 public version.  Being able to upgrade it down the line without losing their
-customizations is "someone else's problem in the future." (Indidentally, we'd
+customizations is "someone else's problem in the future." (Incidentally, we'd
 love your help if you're a company that uses Bugzilla and can let one of your
 internal developers spend a couple hours per week on Bugzilla!)</p>
 
