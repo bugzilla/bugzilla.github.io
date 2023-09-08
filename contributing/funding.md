@@ -72,7 +72,7 @@ progress:before {
 <h3>Ongoing Necessary Expenses</h3>
 
 <ul>
-<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode. Monthly.</li>
+<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
 <li><strong>$25.00 per year</strong> - State of Michigan Non-profit filing fee.</li>
 </ul>
 
