@@ -70,6 +70,9 @@ progress:before {
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
 </p>
+<p>
+<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Google Pay, Apple Pay, CashApp).
+</p>
 
 <h3>Ongoing Necessary Expenses</h3>
 
