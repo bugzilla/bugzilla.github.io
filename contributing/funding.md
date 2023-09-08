@@ -2,6 +2,9 @@
 title: "Funding"
 redirect_from:
 - /funding/
+- /donate/
+- /donations/
+- /give/
 ---
 
 <h2>What Bugzilla Spends Money On</h2>
