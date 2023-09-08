@@ -12,7 +12,8 @@ addons:
 
 <h2>What Bugzilla Spends Money On</h2>
 
-All monetary amounts listed on this page are in US Dollars (USD).
+<p>All monetary amounts listed on this page are in US Dollars (USD).</p>
+<p>Amounts last updated 2023/09/08.</p>
 
 <h3>One Time Expenses</h3>
 
@@ -30,16 +31,18 @@ the US Internal Revenue Service</li>
 <li><strong>$1700.00</strong> - Legal fees to cover lawyer time during
 negotiations with the Mozilla Foundation to obtain the license to use the
 Bugzilla trademark</li>
+<li><strong>$400.00</strong> - year-to-date hosting costs for two servers in
+Linode (January to March at $45 (x3 = $135), April to August at $53 (x5 =
+$265)) paid before we had a way to collect donations.</li>
 </ul>
 
 <h4>Payoff Progress</h4>
 
 <p>Funded by one-time donations.</p>
-<p>As of 2023/09/07:</p>
 <div class="fundprogress">
 <span class="fundprogressbar_current">$130</span>
-<progress class="fundprogressbar" max="3250" value="130"></progress>
-<span class="fundprogressbar_total">$3250</span>
+<progress class="fundprogressbar" max="3650" value="130"></progress>
+<span class="fundprogressbar_total">$3650</span>
 </div>
 
 <p>
@@ -53,16 +56,15 @@ Bugzilla trademark</li>
 
 <ul>
 <li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
-<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee.</li>
+<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
 </ul>
 
 <p>Funded by recurring donations.</p>
-<p>As of 2023/09/07:</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$5.00</span>
+<span class="fundprogressbar_current">$5</span>
 <progress class="fundprogressbar" max="5508" value="500"></progress>
-<span class="fundprogressbar_total">$54.67</span>
+<span class="fundprogressbar_total">$55</span>
 </div>
 
 <p>
@@ -75,20 +77,25 @@ Bugzilla trademark</li>
 
 <h3>Ongoing "Nice to have" expenses</h3>
 
-<p>Any money received beyond the goals in the above two categories will go into
-a pool to be used towards hiring a developer to work on code or review submitted
-patches. Once enough money collects to be worth funding a project, we'll have
-someone work on it.</p>
+<h4>General project fund</h4>
 
-<p>Current accumulated unspent balance of one-time and recurring donations exceeding the above goals:</p>
+<p>Any money received beyond the goals listed above will go into a pool to be
+used towards hiring a developer to work on code or review submitted patches for
+one-off projects. Once enough money collects to be worth funding a project,
+we'll have someone work on it.</p>
+
+<p>Current accumulated unspent balance of one-time and recurring donations
+exceeding the above goals:</p>
 <div class="fundprogress"><span class="fundprogressbar_current">$0</span></div>
+
+<h4>Permanent developer</h4>
 
 <p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
-month.</p>
+month in recurring donations.</p>
 
-<p>Single-month recurring donations exceeding the above necessary expenses</p>
+<p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
 <div class="fundprogress">
 <span class="fundprogressbar_current">$0</span>
@@ -96,6 +103,7 @@ month.</p>
 <span class="fundprogressbar_total">$4000</span>
 </div>
 
+<p>Once this goal is met, this amount will no longer be included in the general project fund.</p>
 
 <h2>Why Bugzilla Needs Money Now</h2>
 
@@ -108,7 +116,7 @@ it.</p>
 <p>Sadly, this is no longer the case. In the name of immediate productivity,
 companies get the quickest results by customizing their local copy only for
 their own use, and not taking the time to contribute those changes to the
-public version.  Being able to upgrade it down the line without losing their
+public version. Being able to upgrade it down the line without losing their
 customizations is "someone else's problem in the future." (Incidentally, we'd
 love your help if you're a company that uses Bugzilla and can let one of your
 internal developers spend a couple hours per week on Bugzilla!)</p>
@@ -127,5 +135,7 @@ non-charitable non-profit organization (US Tax Code §501(c)(4) status pending
 IRS approval), and registered as a Non-Profit Corporation in the State of
 Michigan, which means we are required to spend all money raised on the needs of
 the project, and not make a profit on it. However, since we are not a charity,
-your donations will not be tax deductible.</p>
+your donations will not be tax deductible. The Bugzilla trademarks are used
+under license from the Mozilla Foundation. ZBC is not affiliated with the
+Mozilla Foundation.</p>
 
