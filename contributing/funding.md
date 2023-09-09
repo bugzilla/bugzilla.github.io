@@ -82,7 +82,9 @@ $265)) paid before we had a way to collect donations.</li>
 <p>Any money received beyond the goals listed above will go into a pool to be
 used towards hiring a developer to work on code or review submitted patches for
 one-off projects. Once enough money collects to be worth funding a project,
-we'll have someone work on it.</p>
+we'll have someone work on it. Recurring donations that exceed the monthly
+necessities goal will be contributed to the one-time expenses pay-off fund
+first before being placed here, until those expenses are paid off.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the above goals:</p>
