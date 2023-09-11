@@ -67,6 +67,8 @@ $265)) paid before we had a way to collect donations.</li>
 <span class="fundprogressbar_total">$55</span>
 </div>
 
+<p>Recurring donations which exceed the above goal will be credited towards the one-time expenses payoff fund each month until it is paid off, then will be contributed to the general project fund below.</p>
+
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
 <p>
