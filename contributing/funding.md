@@ -67,7 +67,9 @@ $265)) paid before we had a way to collect donations.</li>
 <span class="fundprogressbar_total">$55</span>
 </div>
 
-<p>Recurring donations which exceed the above goal will be credited towards the one-time expenses payoff fund each month until it is paid off, then will be contributed to the general project fund below.</p>
+<p>Recurring donations which exceed the above goal will be credited towards the
+one-time expenses payoff fund each month until it is paid off, then will be
+contributed to the permanent developer fund below.</p>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
@@ -97,7 +99,9 @@ exceeding the above goals:</p>
 <p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
-month in recurring donations.</p>
+month in recurring donations. Until this goal is met, the amount raised will
+be contributed to the general project fund each month. Once this goal is hit,
+then a developer will be hired, instead.</p>
 
 <p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
@@ -106,8 +110,6 @@ month in recurring donations.</p>
 <progress class="fundprogressbar" max="4000" value="0"></progress>
 <span class="fundprogressbar_total">$4000</span>
 </div>
-
-<p>Once this goal is met, this amount will no longer be included in the general project fund.</p>
 
 <h2>Why Bugzilla Needs Money Now</h2>
 
