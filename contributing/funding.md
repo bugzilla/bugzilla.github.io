@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2023/09/08.</p>
+<p>Amounts last updated 2023/09/13.</p>
 
 <h3>One Time Expenses</h3>
 
@@ -40,8 +40,8 @@ $265)) paid before we had a way to collect donations.</li>
 
 <p>Funded by one-time donations.</p>
 <div class="fundprogress">
-<span class="fundprogressbar_current">$130</span>
-<progress class="fundprogressbar" max="3650" value="130"></progress>
+<span class="fundprogressbar_current">$1130</span>
+<progress class="fundprogressbar" max="3650" value="1130"></progress>
 <span class="fundprogressbar_total">$3650</span>
 </div>
 
