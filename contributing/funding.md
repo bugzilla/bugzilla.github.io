@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2023/09/20.</p>
+<p>Amounts last updated 2023/09/21.</p>
 
 <h3>One Time Expenses</h3>
 
@@ -40,8 +40,8 @@ $265)) paid before we had a way to collect donations.</li>
 
 <p>Funded by one-time donations.</p>
 <div class="fundprogress">
-<span class="fundprogressbar_current">$1160</span>
-<progress class="fundprogressbar" max="3650" value="1160"></progress>
+<span class="fundprogressbar_current">$1298</span>
+<progress class="fundprogressbar" max="3650" value="1298"></progress>
 <span class="fundprogressbar_total">$3650</span>
 </div>
 
@@ -51,6 +51,7 @@ $265)) paid before we had a way to collect donations.</li>
 <p>
 <a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will deduct 2.9% + 30¢ from your contribution as a transaction fee.
 </p>
+<p>If you give via Stripe and want to cover the fee (completely optional), here's the formula: Take the amount you want us to get, add 30¢, then divide by 0.971.  For example, if you want us to get $100, add 30¢ to make 100.30, then divide by 0.971 and round it to two places after the decimal, which gives you $103.30. To verify it, subtract 2.9% to get 100.3043, round to two digits after the decimal to get 100.30, then subtract 30¢ to get $100.</p>
 
 <h3>Ongoing Necessary Expenses</h3>
 
@@ -62,8 +63,8 @@ $265)) paid before we had a way to collect donations.</li>
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$5</span>
-<progress class="fundprogressbar" max="5508" value="500"></progress>
+<span class="fundprogressbar_current">$17</span>
+<progress class="fundprogressbar" max="55" value="17"></progress>
 <span class="fundprogressbar_total">$55</span>
 </div>
 
