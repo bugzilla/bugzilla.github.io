@@ -70,7 +70,9 @@ $265)) paid before we had a way to collect donations.</li>
 
 <p>Recurring donations which exceed the above goal will be credited towards the
 one-time expenses payoff fund each month until it is paid off, then will be
-contributed to the permanent developer fund below.</p>
+contributed to the permanent developer fund below. If monthly expenses come
+due and not enough is in the Ongoing Necessary Expenses fund, the balance
+will be deducted from the One Time Expenses fund.</p>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
