@@ -488,3 +488,30 @@ lead {
   font-weight: 600;
   color: var(--primary-button-foreground-color) !important;
 }
+
+.profile {
+  float: left;
+  border: 1px solid black;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  padding-right: 1em;
+}
+
+.profile_photo {
+  float: left;
+}
+
+.profile_photo img {
+  height: 150px;
+  width: 150px;
+}
+
+.profile_info {
+  margin-left: 1em;
+  width: 250px;
+  float: left;
+}
+
+.profile_end {
+  clear: both;
+}

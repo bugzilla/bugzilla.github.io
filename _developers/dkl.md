@@ -7,5 +7,6 @@ irc: dkl
 location: Raleigh, NC, USA
 dayjob: Bugzilla Developer for [Mozilla](https://www.mozilla.com)
 role: Release Manager, Developer/Reviewer, PostgreSQL port
+board_position: Secretary
 ---
 
