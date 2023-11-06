@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2023/10/28.</p>
+<p>Amounts last updated 2023/11/05.</p>
 
 <h3>One Time Expenses</h3>
 
@@ -40,8 +40,8 @@ $265)) paid before we had a way to collect donations.</li>
 
 <p>Funded by one-time donations.</p>
 <div class="fundprogress">
-<span class="fundprogressbar_current">$2362</span>
-<progress class="fundprogressbar" max="3650" value="2362"></progress>
+<span class="fundprogressbar_current">$2325</span>
+<progress class="fundprogressbar" max="3650" value="2325"></progress>
 <span class="fundprogressbar_total">$3650</span>
 </div>
 
@@ -63,16 +63,16 @@ $265)) paid before we had a way to collect donations.</li>
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$17</span>
-<progress class="fundprogressbar" max="55" value="17"></progress>
+<span class="fundprogressbar_current">$57</span>
+<progress class="fundprogressbar" max="55" value="57"></progress>
 <span class="fundprogressbar_total">$55</span>
 </div>
 
-<p>Recurring donations which exceed the above goal will be credited towards the
-one-time expenses payoff fund each month until it is paid off, then will be
-contributed to the permanent developer fund below. If monthly expenses come
+<p><b>Recurring donations which exceed the above goal will be credited towards the
+one-time expenses payoff fund each month until it is paid off</b>, then will be
+contributed to the permanent developer fund below. <strike>If monthly expenses come
 due and not enough is in the Ongoing Necessary Expenses fund, the balance
-will be deducted from the One Time Expenses fund.</p>
+will be deducted from the One Time Expenses fund.</strike></p>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
