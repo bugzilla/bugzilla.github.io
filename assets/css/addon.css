@@ -491,7 +491,8 @@ lead {
 
 .profile {
   float: left;
-  border: 1px solid black;
+  border: 1px solid var(--primary-region-border-color);
+  border-radius: var(--primary-region-border-radius);
   margin-right: 1em;
   margin-bottom: 1em;
   padding-right: 1em;

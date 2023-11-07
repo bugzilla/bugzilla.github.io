@@ -3,6 +3,11 @@ title: "Zarro Boogs Corporation"
 redirect_from:
 - /zbc
 - /about/zbc
+board_positions:
+- President
+- Treasurer
+- Secretary
+- Board Member
 ---
 
 <p>Zarro Boogs Corporation (ZBC) is a non-charitable non-profit organization
@@ -30,15 +35,7 @@ anniversary of Bugzilla's first public release.</p>
 
 The board of directors currently consists of the following people:
 
-{% assign profile = site.developers | where_exp: "item", "item.board_position == 'President'" %}
-{% include board-card.html list=profile %}
-
-{% assign profile = site.developers | where_exp: "item", "item.board_position == 'Treasurer'" %}
-{% include board-card.html list=profile %}
-
-{% assign profile = site.developers | where_exp: "item", "item.board_position == 'Secretary'" %}
-{% include board-card.html list=profile %}
-
-{% assign list = site.developers | where_exp: "item", "item.board_position == 'Board Member'" %}
-{% include board-card.html list=list %}
-
+{% for board_position in page.board_positions %}
+  {% assign profiles = site.developers | where_exp: "item", "item.board_position == board_position" %}
+  {% include board-card.html list=profiles %}
+{% endfor %}
