@@ -63,14 +63,14 @@ $265)) paid before we had a way to collect donations.</li>
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$77</span>
+<span class="fundprogressbar_current">$55</span>
 <progress class="fundprogressbar" max="55" value="55"></progress>
 <span class="fundprogressbar_total">$55</span>
 </div>
 
 <p><b>Recurring donations which exceed the above goal will be credited towards the
-one-time expenses payoff fund each month until it is paid off</b>, then will be
-contributed to the permanent developer fund below. <strike>If monthly expenses come
+permanent developer fund below, the balance at the end of each month being paid to 
+the one-time payoff fund until it is paid off.</b> <strike>If monthly expenses come
 due and not enough is in the Ongoing Necessary Expenses fund, the balance
 will be deducted from the One Time Expenses fund.</strike></p>
 
@@ -102,17 +102,27 @@ exceeding the above goals:</p>
 <p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
-month in recurring donations. Until this goal is met, the amount raised will
-be contributed to the general project fund each month. Once this goal is hit,
-then a developer will be hired, instead.</p>
+month in recurring donations. Until this one-time expenses goal is met, the 
+balance at the end of each month will be contributed to that fund. After that,
+it will be contributed to the general project fund each month. Once this goal 
+is hit, then a developer will be hired, instead.</p>
 
 <p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$0</span>
-<progress class="fundprogressbar" max="4000" value="0"></progress>
+<span class="fundprogressbar_current">$22</span>
+<progress class="fundprogressbar" max="4000" value="22"></progress>
 <span class="fundprogressbar_total">$4000</span>
 </div>
+
+<p>
+<a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
+<p>
+
+<p>
+<a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will deduct 2.9% + 30¢ from your contribution each month as a transaction fee.
+<p>
+
 
 <h2>Why Bugzilla Needs Money Now</h2>
 
