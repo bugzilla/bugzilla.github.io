@@ -63,7 +63,7 @@ $265)) paid before we had a way to collect donations.</li>
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$67</span>
+<span class="fundprogressbar_current">$77</span>
 <progress class="fundprogressbar" max="55" value="55"></progress>
 <span class="fundprogressbar_total">$55</span>
 </div>
