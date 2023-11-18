@@ -526,6 +526,11 @@ lead {
   justify-content: space-between;
 }
 
+#sponsors li {
+  border: 1px solid var(--primary-region-border-color);
+  border-radius: var(--primary-region-border-radius);
+}
+  
 #sponsors ul li a {
   display: block;
   color: var(--application-foreground-color);
