@@ -1,20 +1,43 @@
+{%- assign sponsor500 = site.data.sponsor-list | where: 'category', '500' %}
+{%- if sponsor500.size > 0 %}
+<h4>The following people or companies are sponsoring us for $500 or more per month:</h4>
+
+<div id="sponsors" class="sponsors500">
+  <ul>
+    {%- for sponsor in sponsor500 %}
+      <li>
+        {%- if sponsor.url != '' %}
+          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+        {% endif -%}
+          {% include sponsor-logos/{{ sponsor.logo }} %}
+          <span class="sr-only">{{ sponsor.name }}</span>
+        {%- if sponsor.url != '' %}
+          </a>
+        {% endif -%}
+      </li>
+    {% endfor -%}
+  </ul>
+</div>
+{% endif -%}
+
+{%- assign sponsor150 = site.data.sponsor-list | where: 'category', '150' %}
+{%- if sponsor150.size > 0 %}
 <h4>The following people or companies are sponsoring us for $150 or more per month:</h4>
 
 <div id="sponsors" class="sponsors150">
   <ul>
-    {%- for sponsor in site.data.sponsor-list %}
-      {%- if sponsor.category == '150' %}
-        <li>
-          {%- if sponsor.url != '' %}
-            <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
-          {% endif -%}
-            {% include sponsor-logos/{{ sponsor.logo }} %}
-            <span class="sr-only">{{ sponsor.name }}</span>
-          {%- if sponsor.url != '' %}
-            </a>
-          {% endif -%}
-        </li>
-      {% endif -%}
+    {%- for sponsor in sponsor150 %}
+      <li>
+        {%- if sponsor.url != '' %}
+          <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+        {% endif -%}
+          {% include sponsor-logos/{{ sponsor.logo }} %}
+          <span class="sr-only">{{ sponsor.name }}</span>
+        {%- if sponsor.url != '' %}
+          </a>
+        {% endif -%}
+      </li>
     {% endfor -%}
   </ul>
 </div>
+{% endif -%}

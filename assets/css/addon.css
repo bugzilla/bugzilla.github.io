@@ -523,7 +523,7 @@ lead {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 #sponsors li {
@@ -540,4 +540,9 @@ lead {
 #sponsors.sponsors150 svg {
   width: 100px;
   height: 100px;
+}
+
+#sponsors.sponsors500 svg {
+  width: 300px;
+  height: 300px;
 }
