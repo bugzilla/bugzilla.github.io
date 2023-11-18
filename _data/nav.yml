@@ -17,6 +17,10 @@
     title: Meet the Bugzilla team.
     name: Meet the Team
 
+  - link: /about/zarroboogs.html
+    title: Find out about the company managing the Bugzilla Project.
+    name: Zarro Boogs Corporation
+
 - link: /blog/
   title: Get the low down on what's happening with the project.
   name: News

@@ -1,0 +1,13 @@
+{% for profile in include.list %}
+<div class="profile">
+<div class="profile_photo">
+<img alt="[image of {{ profile.firstname }} {{ profile.lastname }}]" src="/assets/img/developers/{{ profile.image }}">
+</div>
+<div class="profile_info">
+<h3 class="boardmember_name">{{ profile.firstname }} {{ profile.lastname }}</h3>
+<h4 class="boardmember_title">{{ profile.board_position }}</h4>
+<p><b>Location:</b> {{ profile.location }}</p>
+</div>
+<div class="profile_end"></div>
+</div>
+{% endfor %}
