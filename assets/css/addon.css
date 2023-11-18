@@ -516,3 +516,23 @@ lead {
 .profile_end {
   clear: both;
 }
+
+#sponsors ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#sponsors ul li a {
+  display: block;
+  color: var(--application-foreground-color);
+  padding: 8px 16px
+}
+
+#sponsors.sponsors150 svg {
+  width: 100px;
+  height: 100px;
+}

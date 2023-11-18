@@ -15,6 +15,29 @@ addons:
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
 <p>Amounts last updated 2023/11/17.</p>
 
+<h3>Thanks to our Sponsors!</h3>
+
+<h4>The following people or companies are sponsoring us for $150 or more per month:</h4>
+
+<div id="sponsors" class="sponsors150">
+  <ul>
+    {%- for sponsor in site.data.sponsor-list %}
+      {%- if sponsor.category == '150' %}
+        <li>
+          {%- if sponsor.url != '' %}
+            <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+          {% endif -%}
+            {% include sponsor-logos/{{ sponsor.logo }} %}
+            <span class="sr-only">{{ sponsor.name }}</span>
+          {%- if sponsor.url != '' %}
+            </a>
+          {% endif -%}
+        </li>
+      {% endif -%}
+    {% endfor -%}
+  </ul>
+</div>
+
 <h3>One Time Expenses</h3>
 
 <p>Zarro Boogs Corporation was just recently formed by a group of the core
