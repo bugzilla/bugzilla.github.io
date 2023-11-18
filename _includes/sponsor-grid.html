@@ -1,0 +1,20 @@
+<h4>The following people or companies are sponsoring us for $150 or more per month:</h4>
+
+<div id="sponsors" class="sponsors150">
+  <ul>
+    {%- for sponsor in site.data.sponsor-list %}
+      {%- if sponsor.category == '150' %}
+        <li>
+          {%- if sponsor.url != '' %}
+            <a href="{{ sponsor.url }}" title="{{ sponsor.name }}">
+          {% endif -%}
+            {% include sponsor-logos/{{ sponsor.logo }} %}
+            <span class="sr-only">{{ sponsor.name }}</span>
+          {%- if sponsor.url != '' %}
+            </a>
+          {% endif -%}
+        </li>
+      {% endif -%}
+    {% endfor -%}
+  </ul>
+</div>
