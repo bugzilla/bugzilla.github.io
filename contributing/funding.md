@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2023/11/21.</p>
+<p>Amounts last updated 2023/11/22.</p>
 
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
