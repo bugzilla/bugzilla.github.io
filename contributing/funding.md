@@ -15,6 +15,9 @@ addons:
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
 <p>Amounts last updated 2023/21/20.</p>
 
+<h3>Thanks to our Sponsors!</h3>
+{% include sponsor-grid.html %}
+
 <h3>One Time Expenses</h3>
 
 <p>Zarro Boogs Corporation was just recently formed by a group of the core
