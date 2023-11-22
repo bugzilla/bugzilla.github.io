@@ -43,8 +43,8 @@ $265)) paid before we had a way to collect donations.</li>
 
 <p>Funded by one-time donations.</p>
 <div class="fundprogress">
-<span class="fundprogressbar_current">$2450</span>
-<progress class="fundprogressbar" max="3650" value="2450"></progress>
+<span class="fundprogressbar_current">$2692</span>
+<progress class="fundprogressbar" max="3650" value="2692"></progress>
 <span class="fundprogressbar_total">$3650</span>
 </div>
 
