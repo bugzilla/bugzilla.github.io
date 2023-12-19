@@ -150,7 +150,7 @@ pie-in-the-sky goal.</p>
 href="/about/zarroboogs.html">Zarro Boogs Corporation</a> (ZBC) in order to be
 a legal entity which could hold the license to the Bugzilla Trademark and raise
 money on behalf of the project. ZBC is a non-charitable non-profit organization
-(US Tax Code §501(c)(4) status pending IRS approval), and registered as a
+(US Internal Revenue Code §501(c)(4) status), and registered as a
 Non-Profit Corporation in the State of Michigan, which means we are required to
 spend all money raised on the needs of the project, and not make a profit on
 it. However, since we are not a charity, your donations will not be tax
