@@ -11,7 +11,7 @@ board_positions:
 ---
 
 <p>Zarro Boogs Corporation (ZBC) is a non-charitable non-profit organization
-(US Tax Code §501(c)(4) status pending IRS approval), and registered as a
+(US Internal Revenue Code §501(c)(4) status), and registered as a
 Non-Profit Corporation in the State of Michigan, which means we are required to
 spend all money raised on the needs of the project, and not make a profit on
 it. However, since we are not a charity, any donations will not be tax
