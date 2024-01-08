@@ -80,8 +80,7 @@ fund (scroll down).</p>
 used towards hiring a developer to work on code or review submitted patches for
 one-off projects. Once enough money collects to be worth funding a project,
 we'll have someone work on it. Recurring donations that exceed the monthly
-necessities goal will be contributed to the one-time expenses pay-off fund
-first before being placed here, until those expenses are paid off.</p>
+necessities goal will be contributed to the Permanent Developer fund.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the above goals:</p>
@@ -100,11 +99,9 @@ exceeding the above goals:</p>
 <p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
-month in recurring donations. <b>Until the one-time expenses goal is met, 
-the balance of this fund at the end of each month will be contributed to that 
-fund.</b> After that, it will be contributed to the general project fund each 
-month. Once the permenant developer goal is hit, then a developer will be 
-hired, instead.</p>
+month in recurring donations. <b>Until this goal is met, the balance will be
+contributed to the general project fund each month.</b> Once the permanant
+developer goal is hit, then a developer will be hired, instead.</p>
 
 <p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
