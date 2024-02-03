@@ -13,78 +13,23 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2024/01/01.</p>
+<p>Amounts last updated 2024/02/03.</p>
 
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
-
-<h3>One Time Expenses</h3>
-
-<p>Zarro Boogs Corporation was just recently formed by a group of the core
-Bugzilla Developers in order to have a legal entity which could hold the
-license to the Bugzilla trademark and potentially pay one or more developers.
-We incured the following costs in setting up this entity:</p>
-
-<ul>
-<li><strong>$1500.00</strong> - Legal fees related to researching the proper
-structure for the new company, creating the founding documents to make the
-company legit, and registering it with the State of Michigan</li>
-<li><strong>$50.00</strong> - Filing fee to apply for §501(c)(4) status from
-the US Internal Revenue Service</li>
-<li><strong>$1700.00</strong> - Legal fees to cover lawyer time during
-negotiations with the Mozilla Foundation to obtain the license to use the
-Bugzilla trademark</li>
-<li><strong>$400.00</strong> - year-to-date hosting costs for two servers in
-Linode (January to March at $45 (x3 = $135), April to August at $53 (x5 =
-$265)) paid before we had a way to collect donations.</li>
-</ul>
-
-<h4>Payoff Progress</h4>
-
-<p>Funded by one-time donations.</p>
-<div class="fundprogress">
-<span class="fundprogressbar_current">$3650</span>
-<progress class="fundprogressbar" max="3650" value="3650"></progress>
-<span class="fundprogressbar_total">$3650</span>
-</div>
-
-<p><b>This goal has been met as of December 19! Thank you, thank you, thank
-you to everyone who contributed!</b></p>
-<p>Additional one-time donations from now on will go into the general project
-fund to actually fund Bugzilla development (scroll down).</p>
-
-<h3>Ongoing Necessary Expenses</h3>
-
-<ul>
-<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
-<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
-</ul>
-
-<p>Funded by recurring donations.</p>
-
-<div class="fundprogress">
-<span class="fundprogressbar_current">$55</span>
-<progress class="fundprogressbar" max="55" value="55"></progress>
-<span class="fundprogressbar_total">$55</span>
-</div>
-
-<p><b>This goal has been met! Thank you!</b></p>
-<p>Additional recurring donations are still needed for the Permanent developer
-fund (scroll down).</p>
 
 <h3>Ongoing "Nice to have" expenses</h3>
 
 <h4>General project fund</h4>
 
-<p>Any money received beyond the goals listed above will go into a pool to be
+<p>Any money received beyond the other goals listed will go into a pool to be
 used towards hiring a developer to work on code or review submitted patches for
 one-off projects. Once enough money collects to be worth funding a project,
-we'll have someone work on it. Recurring donations that exceed the monthly
-necessities goal will be contributed to the Permanent Developer fund.</p>
+we'll have someone work on it.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the above goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$432</span></div>
+<div class="fundprogress"><span class="fundprogressbar_current">$613</span></div>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
@@ -119,8 +64,24 @@ developer goal is hit, then a developer will be hired, instead.</p>
 <a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will deduct 2.9% + 30¢ from your contribution each month as a transaction fee.
 <p>
 
+<h3>Ongoing Necessary Expenses</h3>
 
-<h2>Why Bugzilla Needs Money Now</h2>
+<ul>
+<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
+<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
+</ul>
+
+<p>Funded by recurring donations.</p>
+
+<div class="fundprogress">
+<span class="fundprogressbar_current">$55</span>
+<progress class="fundprogressbar" max="55" value="55"></progress>
+<span class="fundprogressbar_total">$55</span>
+</div>
+
+<p><b>This goal has been met! Thank you!</b></p>
+
+<h2>Why Bugzilla Now Needs Money</h2>
 
 <p>Historically, most of Bugzilla's development was done by coders who worked
 at companies who used Bugzilla, where those companies allowed them to spend
