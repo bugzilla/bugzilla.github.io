@@ -48,7 +48,7 @@ month in recurring donations. <b>Until this goal is met, the balance will be
 contributed to the general project fund each month.</b> Once the permanant
 developer goal is hit, then a developer will be hired, instead.</p>
 
-<p>Single-month recurring donations exceeding the above necessary expenses:</p>
+<p>Single-month recurring donations exceeding the below necessary expenses:</p>
 
 <div class="fundprogress">
 <span class="fundprogressbar_current">$182</span>
