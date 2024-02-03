@@ -18,26 +18,25 @@ addons:
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
 
+<h3>Ongoing Necessary Expenses</h3>
+
+<ul>
+<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
+<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
+</ul>
+
+<p>Funded by recurring donations.</p>
+
+<div class="fundprogress">
+<span class="fundprogressbar_current">$55</span>
+<progress class="fundprogressbar" max="55" value="55"></progress>
+<span class="fundprogressbar_total">$55</span>
+</div>
+
+<p><b>This goal has been met! Thank you!</b></p>
+<p><b>Additional funding needed for other goals, please scroll down!</b></p>
+
 <h3>Ongoing "Nice to have" expenses</h3>
-
-<h4>General project fund</h4>
-
-<p>Any money received beyond the other goals listed will go into a pool to be
-used towards hiring a developer to work on code or review submitted patches for
-one-off projects. Once enough money collects to be worth funding a project,
-we'll have someone work on it.</p>
-
-<p>Current accumulated unspent balance of one-time and recurring donations
-exceeding the above goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$613</span></div>
-
-<p>
-<a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
-</p>
-<p>
-<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will deduct 2.9% + 30¢ from your contribution as a transaction fee.
-</p>
-<p>If you give via Stripe and want to cover the fee (completely optional), here's the formula: Take the amount you want us to get, add 30¢, then divide by 0.971.  For example, if you want us to get $100, add 30¢ to make 100.30, then divide by 0.971 and round it to two places after the decimal, which gives you $103.30. To verify it, subtract 2.9% to get 100.3043, round to two digits after the decimal to get 100.30, then subtract 30¢ to get $100.</p>
 
 <h4>Permanent developer</h4>
 
@@ -45,8 +44,8 @@ exceeding the above goals:</p>
 to work around 20 hours per per week on Bugzilla on whatever needs doing, and
 not just one-off projects. To do this, we anticipate needing about $4000 per
 month in recurring donations. <b>Until this goal is met, the balance will be
-contributed to the general project fund each month.</b> Once the permanant
-developer goal is hit, then a developer will be hired, instead.</p>
+contributed to the general project fund each month (see below).</b> Once the permanant
+developer goal is hit, then a permanent developer will be hired, instead.</p>
 
 <p>Single-month recurring donations exceeding the below necessary expenses:</p>
 
@@ -64,22 +63,23 @@ developer goal is hit, then a developer will be hired, instead.</p>
 <a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will deduct 2.9% + 30¢ from your contribution each month as a transaction fee.
 <p>
 
-<h3>Ongoing Necessary Expenses</h3>
+<h4>General project fund</h4>
 
-<ul>
-<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
-<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
-</ul>
+<p>Any money contributed to this fund will be used towards hiring a developer
+to work on code or review submitted patches for one-off projects. Once enough
+money collects to be worth funding a project, we'll have someone work on it.</p>
 
-<p>Funded by recurring donations.</p>
+<p>Current accumulated unspent balance of one-time and recurring donations
+exceeding the other goals:</p>
+<div class="fundprogress"><span class="fundprogressbar_current">$613</span></div>
 
-<div class="fundprogress">
-<span class="fundprogressbar_current">$55</span>
-<progress class="fundprogressbar" max="55" value="55"></progress>
-<span class="fundprogressbar_total">$55</span>
-</div>
-
-<p><b>This goal has been met! Thank you!</b></p>
+<p>
+<a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
+</p>
+<p>
+<a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will deduct 2.9% + 30¢ from your contribution as a transaction fee.
+</p>
+<p>If you give via Stripe and want to cover the fee (completely optional), here's the formula: Take the amount you want us to get, add 30¢, then divide by 0.971.  For example, if you want us to get $100, add 30¢ to make 100.30, then divide by 0.971 and round it to two places after the decimal, which gives you $103.30. To verify it, subtract 2.9% to get 100.3043, round to two digits after the decimal to get 100.30, then subtract 30¢ to get $100.</p>
 
 <h2>Why Bugzilla Now Needs Money</h2>
 
