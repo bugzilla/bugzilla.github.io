@@ -71,7 +71,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the other goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$613</span></div>
+<div class="fundprogress"><span class="fundprogressbar_current">$794</span></div>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
