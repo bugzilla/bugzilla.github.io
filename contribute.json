@@ -14,7 +14,7 @@ layout: none
         "home": "{{ site.url }}",
         "docs": "https://bugzilla.readthedocs.org",
         "mailing-list": "https://lists.bugzilla.org/listinfo/",
-        "irc": "ircs://irc.libera.chat/#bugzilla",
+        "irc": "ircs://irc.libera.chat/#bugzilla"
     },
     "bugs": {
         "list": "{{ site.list_bugs }}",
@@ -24,7 +24,7 @@ layout: none
     "urls": {
       "prod": "https://bugzilla.mozilla.org/",
       "stage": "https://harmony.bugzilla.ninja/",
-      "dev": "https://bugzilla-dev.allizom.org/",
+      "dev": "https://bugzilla-dev.allizom.org/"
     },
     "keywords": [
         "perl",
