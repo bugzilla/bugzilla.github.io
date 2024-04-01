@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2024/02/03.</p>
+<p>Amounts last updated 2024/04/01.</p>
 
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
@@ -71,7 +71,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the other goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$794</span></div>
+<div class="fundprogress"><span class="fundprogressbar_current">$976</span></div>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
@@ -90,12 +90,13 @@ included in future Bugzilla versions without them having to locally customize
 it.</p>
 
 <p>Sadly, this is no longer the case. In the name of immediate productivity,
-companies get the quickest results by customizing their local copy only for
-their own use, and not taking the time to contribute those changes to the
-public version. Being able to upgrade it down the line without losing their
-customizations is "someone else's problem in the future." (Incidentally, we'd
-love your help if you're a company that uses Bugzilla and can let one of your
-internal developers spend a couple hours per week on Bugzilla!)</p>
+some companies decide that they can get the quickest results by customizing
+their local copy only for their own use, and not taking the time to contribute
+those changes to the public version. Being able to upgrade it down the line
+without losing their customizations is "someone else's problem in the future."
+(Incidentally, we'd love your help if you're a company that uses Bugzilla and
+can let one of your internal developers spend a couple hours per week on
+Bugzilla!)</p>
 
 <p>Because Bugzilla is now in this position, we are trying to raise enough
 money to directly pay at least one developer, so that it will actually be
@@ -113,5 +114,5 @@ Non-Profit Corporation in the State of Michigan, which means we are required to
 spend all money raised on the needs of the project, and not make a profit on
 it. However, since we are not a charity, your donations will not be tax
 deductible. The Bugzilla trademarks are used under license from the Mozilla
-Foundation. ZBC is not affiliated with the Mozilla Foundation.</p>
+Foundation. ZBC is not affiliated with or owned by the Mozilla Foundation.</p>
 
