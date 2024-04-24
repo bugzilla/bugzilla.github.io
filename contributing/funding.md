@@ -13,7 +13,7 @@ addons:
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2024/04/01.</p>
+<p>Amounts last updated 2024/04/24.</p>
 
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
@@ -71,7 +71,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the other goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$976</span></div>
+<div class="fundprogress"><span class="fundprogressbar_current">$1226</span></div>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
