@@ -1,5 +1,6 @@
 ---
 title: "Zarro Boogs Corporation"
+intro: "Zarro Boogs Corporation (ZBC) is a non-charitable non-profit organization (US Internal Revenue Code §501(c)(4) status), and registered as a Non-Profit Corporation in the State of Michigan"
 redirect_from:
 - /zbc
 - /about/zbc
