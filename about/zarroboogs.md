@@ -10,6 +10,8 @@ board_positions:
 - Board Member
 ---
 
+<div style="float: left;">{% include sponsor-logos/zbc.svg %}</div>
+
 <p>Zarro Boogs Corporation (ZBC) is a non-charitable non-profit organization
 (US Internal Revenue Code §501(c)(4) status), and registered as a
 Non-Profit Corporation in the State of Michigan, which means we are required to
