@@ -23,14 +23,15 @@ addons:
 <ul>
 <li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
 <li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
+<li><strong>$85.00 per year</strong> - IRS Form 990EZ e-filing fee. (÷12 = 7.08 per month)</li>
 </ul>
 
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$55</span>
-<progress class="fundprogressbar" max="55" value="55"></progress>
-<span class="fundprogressbar_total">$55</span>
+<span class="fundprogressbar_current">$62</span>
+<progress class="fundprogressbar" max="62" value="62"></progress>
+<span class="fundprogressbar_total">$62</span>
 </div>
 
 <p><b>This goal has been met! Thank you!</b></p>
@@ -50,8 +51,8 @@ developer goal is hit, then a permanent developer will be hired, instead.</p>
 <p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$182</span>
-<progress class="fundprogressbar" max="4000" value="182"></progress>
+<span class="fundprogressbar_current">$175</span>
+<progress class="fundprogressbar" max="4000" value="175"></progress>
 <span class="fundprogressbar_total">$4000</span>
 </div>
 
