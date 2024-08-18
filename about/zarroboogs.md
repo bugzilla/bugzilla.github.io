@@ -42,3 +42,12 @@ The board of directors currently consists of the following people:
   {% assign profiles = site.developers | where_exp: "item", "item.board_position == board_position" %}
   {% include board-card.html list=profiles %}
 {% endfor %}
+
+## Tax Information
+
+The US Internal Revenue Service requires that Non-Profit Corporations must make
+available for public inspection its annual information return for at least
+three years after the due date. The following are our annual information
+returns for the last three years (2023 is the first year we existed).
+
+* <a href="/assets/pdf/2023%20990-EZ%20-%20ZBC%20for%20distribution.pdf">2023 Form 990-EZ and Schedules</a>
