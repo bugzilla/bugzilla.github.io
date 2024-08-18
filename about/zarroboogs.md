@@ -42,6 +42,7 @@ The board of directors currently consists of the following people:
   {% assign profiles = site.developers | where_exp: "item", "item.board_position == board_position" %}
   {% include board-card.html list=profiles %}
 {% endfor %}
+<div style="clear:both;"></div>
 
 ## Tax Information
 
