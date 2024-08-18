@@ -46,8 +46,8 @@ The board of directors currently consists of the following people:
 
 ## Tax Information
 
-The US Internal Revenue Service requires that Non-Profit Corporations must make
-available for public inspection its annual information return for at least
+The US Internal Revenue Service requires that a Non-Profit Corporation must
+make available for public inspection its annual information return for at least
 three years after the due date. The following are our annual information
 returns for the last three years (2023 is the first year we existed).
 
