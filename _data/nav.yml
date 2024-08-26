@@ -65,6 +65,10 @@
     title: Let us know if there is an error in Bugzilla.
     name: Report a Bug
 
+  - link: /contributing/funding
+    title: Donate to Bugzilla, and see how your money is used.
+    name: Donate
+
   - link: https://wiki.mozilla.org/Bugzilla:Home
     title: Collaboratively updated information about Bugzilla.
     name: Wiki
