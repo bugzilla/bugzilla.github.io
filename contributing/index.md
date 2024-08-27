@@ -8,7 +8,7 @@ redirect_from:
 There are lots of ways to contribute to the Bugzilla project:
 
 *   **Money**: You can donate money to help cover our server hosting costs and pay for developer and code reviewer time.
-    [See how you can contribute money to Bugzilla, and what the money gets spent on](/contributing/funding).
+    [See how you can contribute money to Bugzilla, and what the money gets spent on](/donate).
 *   **Sponsored Development**: If you are a business that uses Bugzilla and has a staff person responsible for maintaining your Bugzilla installation, and that person is willing, please consider allowing them to spend a few hours per week on company time contributing in one of the other categories on this page to Bugzilla. In the past, this was Bugzilla's primary means of code contribution.
 *   **Code**: You can [contribute to the Bugzilla codebase](https://wiki.mozilla.org/Bugzilla:Developers) if you are familiar with Perl or features Bugzilla has/wants, such as DB, WebServices, etc. See also: [Developer's Guide](/contributing/developer)
 *   **Web Development and User Interface Design**: [contribute to the Bugzilla UI](/contributing/developer) if you are a designer and/or are good at HTML and/or CSS.

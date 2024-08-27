@@ -65,7 +65,7 @@
     title: Let us know if there is an error in Bugzilla.
     name: Report a Bug
 
-  - link: /contributing/funding
+  - link: /donate
     title: Donate to Bugzilla, and see how your money is used.
     name: Donate
 

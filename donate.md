@@ -2,12 +2,18 @@
 title: "Funding"
 redirect_from:
 - /funding/
-- /donate/
+- /contributing/funding/
+- /contributing/funding.html
 - /donations/
 - /give/
 addons:
 - type: css
   link: /assets/css/funding.css
+monthly_goal: 62
+monthly_balance: 62
+devfund_goal: 4000
+devfund_balance: 169
+general_balance: 2095
 ---
 
 <h2>What Bugzilla Spends Money On</h2>
@@ -29,9 +35,9 @@ addons:
 <p>Funded by recurring donations.</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$62</span>
-<progress class="fundprogressbar" max="62" value="62"></progress>
-<span class="fundprogressbar_total">$62</span>
+<span class="fundprogressbar_current">${{ page.monthly_balance }}</span>
+<progress class="fundprogressbar" max="{{ page.monthly_goal }}" value="{{ page.monthly_balance }}"></progress>
+<span class="fundprogressbar_total">${{ page.monthly_goal }}</span>
 </div>
 
 <p><b>This goal has been met! Thank you!</b></p>
@@ -51,9 +57,9 @@ developer goal is hit, then a permanent developer will be hired, instead.</p>
 <p>Single-month recurring donations exceeding the above necessary expenses:</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">$169</span>
-<progress class="fundprogressbar" max="4000" value="169"></progress>
-<span class="fundprogressbar_total">$4000</span>
+<span class="fundprogressbar_current">${{ page.devfund_balance }}</span>
+<progress class="fundprogressbar" max="{{ page.devfund_goal }}" value="{{ page.devfund_balance }}"></progress>
+<span class="fundprogressbar_total">${{ page.devfund_goal }}</span>
 </div>
 
 <p>
@@ -72,7 +78,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 
 <p>Current accumulated unspent balance of one-time and recurring donations
 exceeding the other goals:</p>
-<div class="fundprogress"><span class="fundprogressbar_current">$2095</span></div>
+<div class="fundprogress"><span class="fundprogressbar_current">${{ page.general_balance }}</span></div>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
