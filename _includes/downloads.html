@@ -33,11 +33,13 @@
       {% endif %}
       <a href="http://ftp.mozilla.org/pub/webtools/bugzilla/{{branchdir}}/bugzilla-{{item.version}}.tar.gz"
            class="button primary">{% include icons/download.svg %}Download</a>
+      {% if item.mode != 'dev' -%}
       <p>
       Patches to manually upgrade an earlier install of this branch
       to {{ item.version }} can be found
       <a href="https://ftp.mozilla.org/pub/webtools/bugzilla/{{branchdir}}/patches/">on the FTP server</a>.
       </p>
+      {% endif -%}
     </li>
   {% endfor %}
 </ul>
