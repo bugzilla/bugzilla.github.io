@@ -27,7 +27,11 @@
         {% endcase %}
         ({{ item.version }})
       </h3>
-      <a href="https://ftp.mozilla.org/pub/mozilla.org/webtools/bugzilla-{{item.version}}.tar.gz" 
+      {% assign branchdir = item.branch | append: "-branch" -%}
+      {% if item.mode == 'dev' -%}
+      {% assign branchdir = "developer-preview" -%}
+      {% endif %}
+      <a href="http://ftp.mozilla.org/pub/webtools/bugzilla/{{branchdir}}/bugzilla-{{item.version}}.tar.gz"
            class="button primary">{% include icons/download.svg %}Download</a>
       <p>
       Patches to manually upgrade an earlier install of this branch
