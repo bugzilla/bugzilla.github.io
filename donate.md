@@ -1,5 +1,5 @@
 ---
-title: "Funding"
+title: "Donate to Bugzilla"
 redirect_from:
 - /funding/
 - /contributing/funding/
@@ -13,13 +13,14 @@ monthly_goal: 62
 monthly_balance: 62
 devfund_goal: 4000
 devfund_balance: 169
-general_balance: 2095
+general_balance: 2134
+last_update: "2024/08/30"
 ---
 
 <h2>What Bugzilla Spends Money On</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
-<p>Amounts last updated 2024/08/27.</p>
+<p>Amounts last updated {{ page.last_update }}.</p>
 
 <h3>Thanks to our Sponsors!</h3>
 {% include sponsor-grid.html %}
