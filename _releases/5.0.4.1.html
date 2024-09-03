@@ -1,6 +1,6 @@
 ---
 version: 5.0.4.1
-branch: 5.0.4
+branch: 5.0
 mode: old
 date: 2023-09-05
 advisory:
@@ -48,9 +48,11 @@ redirect_from:
   <a href="https://www.bugzilla.org/security/4.4.13/">Security Advisory</a>
   for details.</p>
 
-<p>This release is intended to follow the stable 5.0 branch ofBugzilla. Version 5.0.5 contained invasive fixes which should not
-have been on a stable branch, so we branched again from 5.0.4 to continue to
-provide security updates without the invasive changes.</p>
+<p>This release is intended to follow the stable 5.0 branch of Bugzilla.
+Version 5.0.5 contained invasive fixes which should not have been on a stable
+branch, so we branched again from 5.0.4 to continue to provide security
+updates without the invasive changes. <b>This release track of Bugzilla now
+lives on the 5.0.4 branch in Git.</b></p>
 
 <p>This release also contains the following bug fixes:</p>
 
@@ -70,8 +72,8 @@ provide security updates without the invasive changes.</p>
 
   <li>Metadata to assist browsers in properly rendering Bugzilla on
   mobile browsers was added. Without this metadata Google Search tools would
-  report Bugzilla pages as not suitable for mobile devices.Bugzilla still needs work to actually look nice on mobile devices
-  but this is a good start.
+  report Bugzilla pages as not suitable for mobile devices. Bugzilla still
+  needs work to actually look nice on mobile devices but this is a good start.
   (<a href="https://github.com/bugzilla/bugzilla/pull/78">PR #78</a>)</li>
 
   <li>The Email::MIME module changed the way it set content types on emails in
