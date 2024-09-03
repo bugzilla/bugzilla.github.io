@@ -72,13 +72,18 @@ interested in helping make Bugzilla 6 happen, that list of showstoppers is
 hoping to have Bugzilla 6 in release candidate stage (or at least in beta)
 within the next few months.
 
+## Live streaming content
+
+Bugzilla now has a [Twitch channel](https://twitch.tv/bugzillaproject)! We will
+be streaming things like work sessions, triage parties, and tutorial content.
+Can't make the scheduled live streams? You can watch the Video On Demand
+recordings on our [YouTube channel](https://www.youtube.com/@bugzillaproject).
+Regular streams are at 1pm US Eastern time on Saturdays. We may also stream at
+other random times.
+
 ## Immediate **Help Wanted**
 
-1. **Documentation**. Harmony (5.9.1) in particular needs a LOT of
-   documentation help, as what’s there now is pretty specific to trying to
-produce a testing environment for bugzilla.mozilla.org, rather than a
-standalone Bugzilla.
-2. **Section 508 Compliance Audit**. There are a number of US government
+1. **Section 508 Compliance Audit**. There are a number of US government
    agencies who use Bugzilla internally (NASA is a publicly visible example).
 New US government projects have to comply with the new accessibility guidelines
 in Section 508 of the Communications Act, so if we want them to be able to
