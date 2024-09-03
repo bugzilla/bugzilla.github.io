@@ -17,6 +17,16 @@ permalink: /releases/
         <li>Occasional development snapshots are released</li>
       </ul>
     </li>
+    {% when 'olddev' %}
+    <li><b>Deprecated Trunk
+    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+      <ul>
+        <li>Formerly the development branch (Trunk) but no longer considered where current development happens.</li>
+        <li>Will be around until we have a good way to upgrade from it to 5.9.x</li>
+        <li>Contains security, crash, data loss, and selected critical fixes only</li>
+        <li>Occasional development snapshots are released</li>
+      </ul>
+    </li>
     {% when 'current' %}
     <li><b>Current Stable Release
     (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
@@ -35,7 +45,7 @@ permalink: /releases/
       <ul>
         <li>Current policy is that 4 months after the next major release, support
           for the oldest stable release will be dropped. The other stable release
-          will still be supported until four months after the next major release.
+          will still be supported until four months after the following major release.
         </li>
         <li>Contains security, crash, data loss, and selected critical fixes only</li>
         <li>No documentation changes unrelated to the above changes allowed</li>
@@ -47,7 +57,7 @@ permalink: /releases/
       <ul>
         <li>Current policy is that 4 months after the next major release, support
           for the oldest stable release will be dropped. The other stable release
-          will still be supported until four months after the next major release.
+          will still be supported until four months after the following major release.
           <strong>This branch is currently in that state, and has less than four
           months of support remaining.</strong>
         </li>
@@ -66,7 +76,7 @@ permalink: /releases/
 <p>Here is a list of the release dates of every version of Bugzilla sorted by its branch. You can click on the version number for a list of release notes, download links, and security advisories relevant to that release.</p>
 
 <ul>
-{% assign grouped = site.releases | reverse | where_exp: 'item', 'item.mode != "dev"' | group_by: 'branch' %}
+{% assign grouped = site.releases | reverse | where_exp: 'item', 'item.mode != "dev"' | where_exp: 'item', 'item.mode != "olddev"' | group_by: 'branch' %}
 {% for group in grouped %}
   {% assign groupid = group.name | replace: '.', '' %}
   <li id="heading{{ groupid }}">
