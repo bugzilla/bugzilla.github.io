@@ -24,6 +24,8 @@
           {% else %}
             Development Snapshot
           {% endif %}
+        {% when 'olddev' %}
+          Deprecated Development Snapshot
         {% when 'old' %}
           Old Stable Release
         {% when 'deprecated' %}
@@ -32,12 +34,12 @@
         ({{ item.version }})
       </h3>
       {% assign branchdir = item.branch | append: "-branch" -%}
-      {% if item.mode == 'dev' -%}
+      {% if item.mode contains 'dev' -%}
       {% assign branchdir = "developer-preview" -%}
       {% endif %}
-      <a href="http://ftp.mozilla.org/pub/webtools/bugzilla/{{branchdir}}/bugzilla-{{item.version}}.tar.gz"
+      <a href="https://ftp.mozilla.org/pub/webtools/bugzilla/{{branchdir}}/bugzilla-{{item.version}}.tar.gz"
            class="button primary">{% include icons/download.svg %}Download</a>
-      {% if item.mode != 'dev' -%}
+      {% if item.mode contains 'dev' %}{% else -%}
       <p>
       Patches to manually upgrade an earlier install of this branch
       to {{ item.version }} can be found
