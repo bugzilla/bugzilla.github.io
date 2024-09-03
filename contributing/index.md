@@ -39,6 +39,7 @@ There are lots of ways to contribute to the Bugzilla project:
 ## SQL References
 
   - [MySQL](https://dev.mysql.com/doc/)
+  - [MariaDB](https://mariadb.org/documentation/)
   - [PostgreSQL](https://www.postgresql.org/docs/)
   - [Oracle](https://www.oracle.com/database/technologies/appdev/sql.html)
   - [ANSI SQL](https://ronsavage.github.io/SQL/) (Bugzilla attempts to conform
