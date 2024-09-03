@@ -3,11 +3,15 @@ title: "Support"
 ---
 
 ## Bugzilla Support Options
+{:.no_toc}
 
 The options described here are for installation, administration, and
 customization support for Bugzilla server software. If you are an
 end-user of a Bugzilla, please consult the support options made
 available by that Bugzilla's owner.
+
+* This list item should be replaced by the :toc
+{:toc}
 
 ## Where to Ask Questions
 
