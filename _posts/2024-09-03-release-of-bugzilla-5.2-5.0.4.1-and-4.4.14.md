@@ -19,7 +19,7 @@ below. First let's get to the big news!
 
 Here's what we're releasing today:
 
-[**4.4.14**](/download/v44) – The 4.4 branch has been on life support for a
+[**4.4.14**](/download#v44) – The 4.4 branch has been on life support for a
 **LONG** time (it was initially released in **2013!!!**). It supports outdated
 OSes that are hard to find or install, let alone test for these days, and we’ve
 been itching to drop it for a long time.  But our support policy says that we
@@ -29,7 +29,7 @@ after that until today.  **That four month countdown to End-of-Life starts
 NOW.** This will be the final release of the 4.4 branch (barring any additional
 security issues being found in the next 4 months).
 
-[**5.0.4.1**](/download/v5041) – Why 5.0.4.1 when there’s a 5.0.6 release?  Well, if you paid
+[**5.0.4.1**](/download#v5041) – Why 5.0.4.1 when there’s a 5.0.6 release?  Well, if you paid
 attention to the change logs, 5.0.5 and 5.0.6 contained a massive schema
 change, as well as reformatting almost all of the Perl code in the source, both
 of which are a violation of our support policy for a stable branch (a
@@ -40,7 +40,7 @@ fixes.  5.0.4.1 will give those people additional fixes for 5.0.4 without
 forcing them to pick up those schema and code reformatting changes. Additional
 updates to the 5.0 branch from now on will continue from 5.0.4.2 and onward.
 
-[**5.2**](/download/v52) – This is our new stable release, and starts the 4 month
+[**5.2**](/download#v52) – This is our new stable release, and starts the 4 month
 countdown for discontinuing the 4.4 branch. 5.2 is forked from the 5.0 branch
 after 5.0.6, and will contain those schema and code formatting changes from
 5.0.5 and 5.0.6 in it. So if you _**did**_ upgrade to 5.0.6, 5.2 will be
@@ -50,7 +50,7 @@ with that release (i.e. 5.0.5 should have been called 5.2 to begin with). Note
 that **if you are using the 5.1.x development releases, those did NOT feed into
 this**, and 5.2 would actually be a downgrade for you.
 
-[**5.3.3**](/download/v533) – In order to avoid confusion with 5.2 above, the 5.1 branch has been
+[**5.3.3**](/download#v533) – In order to avoid confusion with 5.2 above, the 5.1 branch has been
 retroactively renumbered to 5.3. It is also basically dead, as we’ve put all of our resources
 into finishing off the Harmony release (see 5.9.1 below). We’re going to
 encourage people on 5.1.x/5.3.x to move to Harmony, but you’ll want to be mindful of
@@ -61,7 +61,7 @@ the release blockers and you use it, you’ll want to wait for now). Even though
 this branch is dead, we’re put out this release with the current batch of
 security fixes so you aren’t left high and dry before Harmony is ready for you.
 
-[**5.9.1**](/download/v591) – This is the first official release
+[**5.9.1**](/download#v591) – This is the first official release
 off the Harmony branch, and is classified as a **developer preview
 release**, not for production use. This is what will eventually be Bugzilla
 6. The code is mostly good enough to use right now, but there are still
