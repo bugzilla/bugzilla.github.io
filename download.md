@@ -55,4 +55,4 @@ Again, the best way to get Bugzilla is to follow the instructions in the [Instal
 
 ### Archives
 
-If for some reason you need a very old version of Bugzilla, you can download tarballs from the [Bugzilla FTP site](https://ftp.mozilla.org/pub/mozilla.org/webtools/).
+If for some reason you need a very old version of Bugzilla, you can download tarballs from the [Bugzilla FTP site](https://ftp.mozilla.org/pub/mozilla.org/webtools/bugzilla/).
