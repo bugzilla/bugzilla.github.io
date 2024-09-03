@@ -98,7 +98,7 @@ Bugzilla and the current version of Bugzilla on the above pages.
 ## Staying up-to-date with Bugzilla
 
 You can see the latest updates from the Bugzilla Project and
-the status of Bugzilla development on the [News page](https//www.bugzilla.org/news) of the Bugzilla website.
+the status of Bugzilla development on the [News page](https://www.bugzilla.org/news) of the Bugzilla website.
 
 You can also follow us on our social media:
 
