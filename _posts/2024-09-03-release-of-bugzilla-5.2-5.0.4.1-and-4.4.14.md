@@ -125,8 +125,8 @@ If you find a bug in Bugzilla, please [report it](https://www.bugzilla.org/contr
 You can ask questions for free on the mailing lists (or in online chat rooms)
 about Bugzilla, or you can hire a paid consultant to help you out:
 
-  Free Support: https://www.bugzilla.org/support/
-  Paid Support: https://www.bugzilla.org/support/consulting.html
+* [Free Support](https://www.bugzilla.org/support/)
+* [Paid Support](https://www.bugzilla.org/support/consulting.html)
 
 
 ## Immediate **Help Wanted**
@@ -204,4 +204,4 @@ its expensive counterparts lack. Consequently, Bugzilla has quickly
 become a favorite of thousands of organizations across the globe, and
 is widely regarded as one of the top defect-tracking systems available.
 
-  See https://www.bugzilla.org/about/ for more details.
+  See [https://www.bugzilla.org/about/](https://www.bugzilla.org/about/) for more details.
