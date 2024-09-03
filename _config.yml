@@ -115,6 +115,3 @@ collections:
   releases:
     output: true
     permalink: /:collection/:path/
-
-kramdown:
-  parse_block_html: true

@@ -65,11 +65,11 @@ developer goal is hit, then a permanent developer will be hired, instead.</p>
 
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at GitHub Sponsors (GitHub account required).
-<p>
+</p>
 
 <p>
 <a href="https://liberapay.com/bugzilla/" class="button primary">Sponsor Us</a> with a monthly contribution towards this goal at Liberapay using any payment type Stripe will accept (credit, debit, etc). Stripe will deduct 2.9% + 30¢ from your contribution each month as a transaction fee.
-<p>
+</p>
 
 <h4>General project fund</h4>
 
