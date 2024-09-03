@@ -25,25 +25,28 @@ available by that Bugzilla's owner.
     answered if continuing to read the list isn't your thing.
 
 ### Chat Rooms
-  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat
-  - **[#bugzilla:mozilla.org](https://matrix.to/#/#bugzilla:mozilla.org)**
+  - **#support on [Bugzilla Discord](https://discord.gg/ZhN6uBA)**
+  - **[#bugzilla-support:mozilla.org](https://matrix.to/#/#bugzilla-support:mozilla.org)**
     on Matrix
-  - **[Bugzilla Discord](https://discord.gg/ZhN6uBA)**
+  - **[#bugzilla-support](https://web.libera.chat/#bugzilla-support)** on Libera.chat
 
 Normally, all three of these are mirrored to each other, so you can chat on any
 of them and people will see it on all three.  At the moment, the bridge is
 broken so they can't see each other. You can still pick your favorite way to
-access, and there are a few people who are watching all three of them.
+access, and there are a few people who are watching all three of them. Without
+the bridge in place, the bulk of the discussion tends to happen on Discord these
+days.
 
-If you come to the chat rooms to help, please stick around and wait for an
-answer. We aren't ignoring you, but there are a lot of time zones on this
+If you come to the chat rooms for help, please stick around and wait for an
+answer (or at least leave the window open and check it later instead of logging
+out of chat). We aren't ignoring you, but there are a lot of time zones on this
 planet, and not everyone is awake or at their computer all the time. It's not
 uncommon for a question to get answered 5 or 6 hours later when the person
 answering gets out of bed in their home time zone.
 
 We are no longer actively monitoring the #bugzilla channel on Freenode, as the
 network management decided to ban the access method most of the Bugzilla
-developers use to connect to it.
+developers used to connect to it.
 
 ## Private Emails Do Not Help Others
 
@@ -59,8 +62,8 @@ developers help out there, too, when they have time. Thus we provide our general
 support on the mailing list mentioned above, where lots of people have a chance to
 answer your question (because you never know who knows the answer), and the
 questions and answers get archived and can be used by future Bugzilla admins at
-their leisure from a search engine. We'll also try to help you out on the IRC
-or Matrix channels (see above) when possible.
+their leisure from a search engine. We'll also try to help you out on the Discord,
+Matrix, or IRC channels (see above) when possible.
 
 ## Commercial Support
 
