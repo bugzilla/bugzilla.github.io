@@ -2,6 +2,33 @@
 layout: default
 ---
 
+{% comment %}
+The following captures are so we can make paragraphs indent
+{% endcomment -%}
+{% capture newline %}
+{% endcapture -%}
+{% capture linespace %}
+             {% endcapture -%}
+{% capture shortlinespace %}
+  {% endcapture -%}
+{% comment %}
+The following is a hack to make plurals or lack of them work correctly in
+sentences.
+{% endcomment -%}
+{%- assign bugcount = page.bugs | size -%}
+{%- assign issue = "issue" -%}
+{%- assign this = "this" -%}
+{%- assign has = "has" -%}
+{%- if bugcount > 1 -%}
+  {%- assign issue = "issues" -%}
+  {%- assign this = "these" -%}
+  {%- assign has = "have" -%}
+{%- endif -%}
+{% comment %}
+
+Page content starts here!
+
+{% endcomment -%}
 {{ page.date | date: '%A, ' }}{{ page.date | date_to_string: "ordinal", "US" }}<br/>
 {% if page.bugs %}
 <pre>
@@ -9,10 +36,10 @@ Summary
 =======
 
 Bugzilla is a Web-based bug-tracking system used by a large number of
-software projects. The following security issue has been discovered
+software projects. The following security {{ issue }} {{ has }} been discovered
 in Bugzilla:
 {% for bug in page.bugs %}
-* {{ bug.summary }}
+* {{ bug.summary | replace: newline, shortlinespace }}
 {% endfor %}
 All affected installations are encouraged to upgrade as soon as
 possible.
@@ -21,30 +48,38 @@ possible.
 Vulnerability Details
 =====================
 {% for bug in page.bugs %}
-{% if bug.class %}Class:       {{ bug.class }}{% endif %}
-{% if bug.affected %}Versions:    {{ bug.affected }}{% endif %}
-{% if bug.fixed-in %}Fixed In:    {{ bug.fixed-in }}{% endif %}
-{% if bug.description %}Description: {{ bug.description }}{% endif %}
-{% if bug.references %}References:  {{ bug.references }}{% endif %}
-{% if bug.cve %}CVE Number:  {{ bug.cve }}{% endif %}
+{% if bug.class %}Class:       {{ bug.class }}
+{% endif -%}
+{% if bug.affected %}Affected:    {{ bug.affected | replace: newline, linespace }}
+{% endif -%}
+{% if bug.fixed-in %}Fixed In:    {{ bug.fixed-in | replace: newline, linespace }}
+{% endif -%}
+{% if bug.description %}Description: {{ bug.description | replace: newline, linespace }}
+{% endif -%}
+{% if bug.references %}References:  {{ bug.references | replace: newline, linespace }}
+{% endif -%}
+{% if bug.cve %}CVE Number:  {{ bug.cve }}
+{% endif %}
 {% endfor %}
-
 Vulnerability Solutions
 =======================
 
-The fix for this issue is included in the {{ page.fixed-in }}
+The fix for {{ this }} {{ issue }} is included in the {{ page.fixed-in }}
 releases. Upgrading to a release with the relevant fix will
-protect your installation from possible exploits of this issue.
+protect your installation from possible exploits of {{ this }} {{ issue }}.
 
 If you are unable to upgrade but would like to patch just the security
-vulnerability, there are patches available for the issue at the
+vulnerability, there are patches available for the {{ issue }} at the
 "References" URL.
 
 Full release downloads, patches to upgrade Bugzilla from previous
 versions, and git upgrade instructions are available at:
 
   https://www.bugzilla.org/download/
+{% if page.additional %}
 
+{{ page.additional }}
+{% endif %}
 
 Credits
 =======
@@ -62,10 +97,8 @@ at:
 
   https://www.bugzilla.org/
 
-Comments and follow-ups can be directed to the mozilla.support.bugzilla
-newsgroup or the support-bugzilla mailing list.
-https://www.bugzilla.org/support/ has directions for accessing these
-forums.
+Comments and follow-ups can be directed to the support-bugzilla mailing list.
+https://www.bugzilla.org/support/ has directions for accessing this forum.
 </pre>
 {% endif %}
 {{ content }}
