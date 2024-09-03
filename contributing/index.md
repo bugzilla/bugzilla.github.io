@@ -58,13 +58,23 @@ with the development of Bugzilla. Discussion on this list tends to get
 quite technical. If you're interested in contributing code to Bugzilla,
 you should subscribe to this list. [Browse Archives](https://lists.bugzilla.org/pipermail/developers)
 
-## IRC
+## Chat rooms
 
-Much Bugzilla development discussion happens in real time on IRC. We
-hang out on the [\#bugzilla](ircs://irc.libera.chat/#bugzilla) channel
-on libera.chat. Feel free to drop in there anytime to discuss Bugzilla
-(both development and support discussion happens there).
+**NOTE: The chat rooms listed here are for development work. If you
+need help installing, administering, or using Bugzilla, please see
+the chat rooms listed on the [Support page](/support).**
 
-The easiest way to get on IRC is to use the [Kiwi web IRC
-client](https://web.libera.chat/#/#bugzilla), which
-lets you chat with us through your browser, without installing anything.
+Much Bugzilla development discussion happens in real time in the online chat
+rooms.  Normally, all three of these are mirrored to each other, so you can
+chat on any of them and people will see it on all three.  At the moment, the
+bridge is broken so they can't see each other. You can still pick your favorite
+way to access, and there are a few people who are watching all three of them.
+However, without the bridge in place, the bulk of development discussion
+happens on Discord these days.
+
+  - **#development on [Bugzilla Discord](https://discord.gg/ZhN6uBA)**
+  - **[#bugzilla:mozilla.org](https://matrix.to/#/#bugzilla:mozilla.org)**
+    on Matrix
+  - **[#bugzilla](https://web.libera.chat/#bugzilla)** on Libera.chat
+
+
