@@ -9,10 +9,10 @@ redirect_from:
 addons:
 - type: css
   link: /assets/css/funding.css
-monthly_goal: 62
-monthly_balance: 62
+monthly_goal: 68
+monthly_balance: 68
 devfund_goal: 4000
-devfund_balance: 169
+devfund_balance: 162
 general_balance: 2304
 last_update: "2024/09/02"
 ---
@@ -28,9 +28,10 @@ last_update: "2024/09/02"
 <h3>Ongoing Necessary Expenses</h3>
 
 <ul>
-<li><strong>$53.00 per month</strong> - Server Hosting: 2 servers in Linode.</li>
+<li><strong>$58.00 per month</strong> - Server Hosting: 3 servers in Linode.</li>
 <li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
 <li><strong>$85.00 per year</strong> - IRS Form 990EZ e-filing fee. (÷12 = 7.08 per month)</li>
+<li><strong>$18.00 per year</strong> - domain registration. (÷12 = 1.50 per month)</li>
 </ul>
 
 <p>Funded by recurring donations.</p>
