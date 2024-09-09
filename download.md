@@ -37,7 +37,7 @@ The short version of how to install/use these is at the end of the [Localization
 |cs   |[Čeština/Czech](http://www.bugzilla.cz/)                                             |4.4.x |5.0.x|     |Norbert Volf|
 |de   |[Deutsch / German](http://bugzilla-de.sourceforge.net/)                              |4.4.11|5.0.2|     |Marc Schumann|
 |es   |[Español / Spanish](https://sourceforge.net/projects/bugzilla-es/)                   |      |     |     |Oscar Manuel Gómez Senovilla|
-|fr   |[Français / French](http://www.bugzilla.fr/)                                         |4.4.13|5.0.6|5.1.2|Cédric Corazza|
+|fr   |[Français / French](http://www.bugzilla.fr/)                                         |4.4.14|5.2  |5.1.2|Cédric Corazza|
 |ja   |[日本語 / Japanese](http://bug-ja.org/)                                               |4.4.11|5.0.2|     |Atsushi Shimono|
 |pl   |[Polski / Polish](http://www.aviary.pl/projekty/bugzilla/")                          |      |     |     |Aviary.pl team|
 |ru   |[Русский / Russian](https://sourceforge.net/projects/bugzilla-ru/)                   |4.4.4 |     |     |Виталий Федрушков (Vitaly Fedrushkov), Alexander L. Slovesnik, Alexey Gladkov|
