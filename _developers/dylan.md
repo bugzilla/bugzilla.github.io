@@ -2,7 +2,7 @@
 nickname: dylan
 firstname: Dylan
 lastname: Hardison
-image: dylan.jpg
+image: dylan.png
 irc: dylan
 location: Seattle, WA, USA
 dayjob: Principal Engineer, Fastly
