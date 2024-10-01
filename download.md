@@ -9,6 +9,13 @@ redirect_from:
 * Table of Contents
 {:toc}
 
+<div id="donations" class="bg-bugzilla">
+  <div class="inner">
+    <lead>Want to see Bugzilla updated more frequently? Help us hire a developer!</lead>
+    <a href="/donate" class="button primary">Sponsor Us!</a>
+  </div>
+</div>
+
 ## How To Get Bugzilla
 
 **By far best way to get, maintain and upgrade Bugzilla is as a checkout from the appropriate branch of our source code control system.** This is true of both stable and development versions. Instructions on how to do this are in the [Installation and Maintenance Guide](https://bugzilla.readthedocs.org/en/latest/installing/). That document also explains how to upgrade Bugzilla to a new version, move a Bugzilla installation between machines, and migrate from other bug-tracking systems.
