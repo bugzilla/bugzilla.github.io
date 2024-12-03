@@ -13,8 +13,8 @@ monthly_goal: 68
 monthly_balance: 68
 devfund_goal: 4000
 devfund_balance: 162
-general_balance: 2455
-last_update: "2024/10/01"
+general_balance: 2780
+last_update: "2024/12/02"
 ---
 
 <h2>What Bugzilla Spends Money On</h2>
