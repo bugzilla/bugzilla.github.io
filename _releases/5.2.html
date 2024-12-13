@@ -484,12 +484,12 @@ Metadata to assist browsers in properly rendering Bugzilla on mobile browsers wa
 sufficiently that you can't really call it a drop-in replacement for MySQL
 anymore. We new have a 'mariadb' database driver for all versions of MariaDB.
 <code>checksetup.pl</code> will prompt you to switch to it if it detects that you are connected to a MariaDB database server.
-(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1467006">Bug 1467006</a>)</p>
+(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1467006">Bug 1467006</a>)</p>
 
 <h3 id="feat_mysql8">MySQL 8+ Support</h3>
 
 <p>Bugzilla previously did not work on MySQL 8 or newer. Now it does.
-(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1592129">Bug 1592129</a>)</p>
+(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1592129">Bug 1592129</a>)</p>
 
 <h3 id="feat_docker">Demo Docker Configuration</h3>
 
@@ -501,16 +501,16 @@ connect to it once it comes up. Requires that you have Docker already
 installed. This configuration is not suitable for production use, and is just
 for playing around with it and testing it without needing to do a full
 installation.
-(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1888068">Bug 1888068</a>)</p>
+(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1888068">Bug 1888068</a>)</p>
 
 <h3 id="feat_other">Other Enhancements and Changes</h3>
 
 <h4>Enhancements for Users</h4>
 
 <ul>
-  <li><strong>UI:</strong> WineHQ Forum links are now accepted in the See Also field on bugs. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1523814">Bug 1523814</a>)</li>
-  <li><strong>Accessibility:</strong> Color contrast in the default theme was adjusted to comply with WCAG AA 2.0 recommendations. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1798166">Bug 1798166</a>)</li>
-  <li><strong>Email:</strong> Emails about bugs now include an <code>X-Bugzilla-ID</code> header which lists the Bug ID, for potential use in filtering. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1403169">Bug 1403169</a>)</li>
+  <li><strong>UI:</strong> WineHQ Forum links are now accepted in the See Also field on bugs. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1523814">Bug 1523814</a>)</li>
+  <li><strong>Accessibility:</strong> Color contrast in the default theme was adjusted to comply with WCAG AA 2.0 recommendations. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1798166">Bug 1798166</a>)</li>
+  <li><strong>Email:</strong> Emails about bugs now include an <code>X-Bugzilla-ID</code> header which lists the Bug ID, for potential use in filtering. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1403169">Bug 1403169</a>)</li>
 </ul>
 
 <h4>Enhancements for Administrators and Developers</h4>
@@ -530,18 +530,18 @@ installation.
   <li><strong>Installation:</strong> Bugzilla now supports
     Email::MIME version 1.949 and newer, which previously would crash
     Bugzilla when it tried to send email.
-    (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1657496">Bug 1657496</a>)</li>
+    (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1657496">Bug 1657496</a>)</li>
   <li><strong>Installation:</strong> The <code>testserver.pl</code> script will
     now work with self-signed SSL certificates if you pass the
-    <code>--self-signed</code> option on the command line. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1851398">Bug 1851398</a>)</li>
+    <code>--self-signed</code> option on the command line. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1851398">Bug 1851398</a>)</li>
   <li><strong>Installation:</strong> An foreign key error when upgrading from
-      versions prior to 3.0 to 5.0.6 or newer was fixed. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1902375">Bug 1902375</a></li>
+      versions prior to 3.0 to 5.0.6 or newer was fixed. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1902375">Bug 1902375</a></li>
 </ul>
 
 <h4 id="feat_webservices_other">WebService Changes</h4>
 
 <ul>
-  <li><strong>Group.get</strong> method is now properly marked as Read Only. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1584477">Bug 1584477</a>)</li>
+  <li><strong>Group.get</strong> method is now properly marked as Read Only. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1584477">Bug 1584477</a>)</li>
 </ul>
 
 <h4 id="code_changes">Code Changes Which May Affect Customizations and Extensions</h4>
@@ -553,9 +553,9 @@ installation.
     <code>
   my $q = Bugzilla-&gt;dbh-&gt;qi;
   Bugzilla-&gt;dbh-&gt;do("SELECT COUNT(*) FROM $q-&gt;{groups}");
-    </code><br>(<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1592129">Bug 1592129</a>)
+    </code><br>(<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1592129">Bug 1592129</a>)
   </li>
-  <li>Bugzilla now uses Email::Address::XS instead of Email::Address for managing email address parsing. If you made use of Email::Address directly you should update to use Email::Address::XS instead. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1853138">Bug 1853138</a>)</li>
+  <li>Bugzilla now uses Email::Address::XS instead of Email::Address for managing email address parsing. If you made use of Email::Address directly you should update to use Email::Address::XS instead. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1853138">Bug 1853138</a>)</li>
 </ul>
 
 <h3 id="point504">Changes since Version 5.0.4</h3>
@@ -568,7 +568,7 @@ the 5.0.4.x branch.</p>
 
 <ul>
 <li><strong>Adminstration:</strong> It is now possible to create more than 255
-flags (up to 65535) (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1526703">Bug 1526703</a>)</li>
+flags (up to 65535) (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1526703">Bug 1526703</a>)</li>
 </ul>
 
 <h3>5.0.5</h3>
@@ -576,10 +576,10 @@ flags (up to 65535) (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=15267
 <ul>
 <li><strong>User Interface:</strong> Email addresses with apostrophes (yes,
 that's legal) no longer break the "Send Mail to Bug Assignees"
-button on bug lists. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=1226123">Bug 1226123</a>)</li>
+button on bug lists. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1226123">Bug 1226123</a>)</li>
 <li><strong>Installation/Upgrading:</strong> If using MySQL, the
 <code>bugs_fulltext</code> table is now InnoDB instead of MyISAM. This may
-cause your upgrade to take a while. (<a href="https://bugzilla.mozilla.org?show_bug.cgi?id=981487">Bug 981487</a>)</li>
+cause your upgrade to take a while. (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=981487">Bug 981487</a>)</li>
 <li><strong>Developers:</strong> This release reformats the code according to
 the same conventions as the popular Mojolicious product and includes a
 <code>.perltidyrc</code> to do the same.  You may use whatever coding style you
