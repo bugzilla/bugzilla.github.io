@@ -39,12 +39,6 @@ list who is no longer in business or no longer offering Bugzilla
 support, please email <justdave@bugzilla.org> with the relevant
 information.
 
-<b>We are currently auditing this list to ensure it is up to date. If you
-are listed here, you may receive an email from Vetle Henrik Hvoslef
-inquiring if you're still offering Bugzilla services or if you would like
-changes made to your listing. This audit is being tracked on
-<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1908268">Bug 1908268</a>.</b>
-
 <div id="regions"><a id="Region" class="button primary" href="#">All Regions</a></div>
 
 <ul id="vendor_list"></ul>
