@@ -26,6 +26,7 @@ list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
 report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
 remote_theme: bugzilla/jekyll-theme
 plugins:
+  - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll-sitemap
 
@@ -100,7 +101,6 @@ defaults:
       breadcrumbs:
       - name: About
         link: /about/
-      
 
 paginate: 10
 paginate_path: "/blog/page/:num/"
