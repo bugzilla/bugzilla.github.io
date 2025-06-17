@@ -1,7 +1,9 @@
 {% for profile in include.list %}
 <div class="profile">
 <div class="profile_photo">
-<img alt="[image of {{ profile.firstname }} {{ profile.lastname }}]" src="/assets/img/developers/{{ profile.image }}">
+<img
+  alt="[image of {{ profile.firstname }} {{ profile.lastname }}]"
+  src="{{ "/assets/img/developers/" | append: profile.image | absolute_url }}">
 </div>
 <div class="profile_info">
 <h3 class="boardmember_name">{{ profile.firstname }} {{ profile.lastname }}</h3>

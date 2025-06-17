@@ -11,7 +11,7 @@ permalink: /releases/
     {% case item.mode %}
     {% when 'dev' %}
     <li><b>Trunk
-    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url | absolute_url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Approved changes added constantly</li>
         <li>Occasional development snapshots are released</li>
@@ -19,7 +19,7 @@ permalink: /releases/
     </li>
     {% when 'olddev' %}
     <li><b>Deprecated Trunk
-    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url | absolute_url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Formerly the development branch (Trunk) but no longer considered where current development happens.</li>
         <li>Will be around until we have a good way to upgrade from it to 5.9.x</li>
@@ -28,7 +28,7 @@ permalink: /releases/
     </li>
     {% when 'current' %}
     <li><b>Current Stable Release
-    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url | absolute_url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Includes bug fixes and performance improvements only</li>
         <li>No new features or large scale performance improvements</li>
@@ -40,7 +40,7 @@ permalink: /releases/
     </li>
     {% when 'old' %}
     <li><b>Old Stable Release
-    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url | absolute_url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Current policy is that 4 months after the next major release, support
           for the oldest stable release will be dropped. The other stable release
@@ -52,7 +52,7 @@ permalink: /releases/
     </li>
     {% when 'deprecated' %}
     <li><b>Deprecated Old Stable Release
-    (<a href="{{ item.url }}">{{ item.version }}</a>)</b>
+    (<a href="{{ item.url | absolute_url }}">{{ item.version }}</a>)</b>
       <ul>
         <li>Current policy is that 4 months after the next major release, support
           for the oldest stable release will be dropped. The other stable release
@@ -83,7 +83,9 @@ permalink: /releases/
     <ul>
   {% for item in group.items %}
       <li>
-        <a href="{{ item.version }}/">{{ item.version }}</a>
+        <a href="{{ "/releases/" | append: item.version | absolute_url }}">
+          {{ item.version }}
+        </a>
         {{ item.date | date: "%b %d, %Y" }}
       </li>
   {% endfor %}

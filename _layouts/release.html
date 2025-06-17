@@ -5,11 +5,27 @@ layout: default
 <ul>
 {% if content != '' %}
   <li><a href="#release-notes">Release Notes for Bugzilla {{ page.version }}</a></li>{% endif %}
-{% if page.advisory %}{% for advisory in page.advisory %}
-  <li><a href="/security/{{ advisory.url }}/">Security Advisory for versions before {{ advisory.version }}</a></li>{% endfor %}{% endif %}
+{% if page.advisory %}
+{% for advisory in page.advisory %}
+  <li>
+    <a href="{{ "/security/" | append: advisory.url | absolute_url }}">
+      Security Advisory for versions before {{ advisory.version }}
+    </a>
+  </li>
+{% endfor %}
+{% endif %}
 {% if page.branch %}
-  <li><a href="/download/#v{{ page.branch | replace: '.', '' }}">Download Bugzilla {{ page.version }}</a></li>
-  <li><a href="https://github.com/bugzilla/bugzilla/commits/release-{{ page.version }}">Complete changelogs since prior versions</a></li>{% endif %}
+  <li>
+    <a href="{{ "/download/#v" | append: page.branch | replace: '.', '' | absolute_url }}">
+      Download Bugzilla {{ page.version }}
+    </a>
+  </li>
+  <li>
+    <a href="https://github.com/bugzilla/bugzilla/commits/release-{{ page.version }}">
+      Complete changelogs since prior versions
+    </a>
+  </li>
+{% endif %}
 </ul>
 
 {% if content != '' %}
