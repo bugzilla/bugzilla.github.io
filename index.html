@@ -15,14 +15,17 @@ header:
       <h2>The software solution designed to drive software development</h2>
       <lead>Bugzilla lets you plan, organize and release software on your own teams' schedule.</lead>
       <div>
-        <a class="button" href="/about/">Learn more &raquo;</a>
+        <a class="button" href="{{ "/about/" | absolute_url }}">Learn more &raquo;</a>
         <a class="button" href="https://bugzilla-dev.allizom.org/">Try it out &raquo;</a>
       </div>
     </div>
     <div class="buggie-wave-container">
       {% include buggie-wave.svg %}
       {% include buggie-wave-hand.svg %}
-      <img class="buggie-wave-image" alt="A screenshot of the default look of the Bugzilla 6.0 homepage" src="/assets/img/screenshot.svg">
+      <img
+        class="buggie-wave-image"
+        alt="A screenshot of the default look of the Bugzilla 6.0 homepage"
+        src="{{ "/assets/img/screenshot.svg" | absolute_url }}">
       {% include buggie-wave-hand-overlay.svg %}
     </div>
   </div>
@@ -31,7 +34,7 @@ header:
 <div id="donations" class="bg-bugzilla">
   <div class="inner">
     <lead>Bugzilla is now independently funded by people like you and companies that believe in our mission</lead>
-    <a href="/donate" class="button primary">Sponsor Us!</a>
+    <a href="{{ "/donate" | absolute_url }}" class="button primary">Sponsor Us!</a>
   </div>
 </div>
 
@@ -43,7 +46,7 @@ header:
       <li>
         <div class="card">
           <p class="date muted">{{ post.date | date: '%d. %B %Y' }}</p>
-          <a href="{{ post.url }}"><h3 class="title">{{ post.title }}</h3></a>
+          <a href="{{ post.url | absolute_url }}"><h3 class="title">{{ post.title }}</h3></a>
           {% include authors.html authors=post.author %}
           <p>{{ post.content | strip_html | truncate: 200 }}</p>
         </div>
@@ -51,13 +54,16 @@ header:
     {% endfor %}
     </ul>
     <div>
-      <a class="button primary" href="/blog/">More news &raquo;</a>
+      <a class="button primary" href="{{ "/blog/" | absolute_url }}">More news &raquo;</a>
     </div>
   </div>
 </section>
 
 <section id="frontpage-performant">
-  <img class="running-fg" alt="Buggie, the Bugzilla mascot, in a running outfit, consisting of a white sleveless top with red bands around arm holes, dark gray shorts with a red band around the waist and purple shoes with white soles. Its antennas are blown back with the wind. It has a slight smile on its face." src="/assets/img/running-fg.svg"/>
+  <img
+    class="running-fg"
+    alt="Buggie, the Bugzilla mascot, in a running outfit, consisting of a white sleveless top with red bands around arm holes, dark gray shorts with a red band around the waist and purple shoes with white soles. Its antennas are blown back with the wind. It has a slight smile on its face."
+    src="{{ "/assets/img/running-fg.svg" | absolute_url }}"/>
   <div class="inner">
     <div><h2>Performant, scalable and secure</h2></div>
     <div>Tried and tested by the largest in open source, so you don't have to deal with frustrating breaks in workflow.</div>
@@ -100,13 +106,15 @@ header:
         <h3>Milestones</h3>
         <p>Track the progress on the past, current and future releases of your products</p>
       </li>
-      <a class="button primary" href="/about/features.html">More features &raquo;</a>
+      <a class="button primary" href="{{ "/about/features.html" | absolute_url }}">More features &raquo;</a>
     </ul>
     <div class="search-image">
       <div class="search">
         {% include fox-tracks.svg %}
       </div>
-      <img alt="A screenshot of the Advanced Search feature in Bugzilla 6.0, listing items for Firefox 78 milestone." src="/assets/img/screenshot-milestone.svg">
+      <img
+        alt="A screenshot of the Advanced Search feature in Bugzilla 6.0, listing items for Firefox 78 milestone."
+        src="{{ "/assets/img/screenshot-milestone.svg" | absolute_url }}">
     </div>
   </div>
 </section>
@@ -116,7 +124,11 @@ header:
     <div>
       <h2>Bugzilla in Action</h2>
       <p>The following open source companies and projects trusted Bugzilla and continue to use it for delivering their software to the customers and communities all around the world.</p>
-      <a class="button primary" href="/about/installation-list.html">See who else uses Bugzilla &raquo;</a>
+      <a
+        class="button primary"
+        href="{{ "/about/installation-list.html" | absolute_url }}">
+        See who else uses Bugzilla &raquo;
+      </a>
     </div>
     <div>
       <ul>
@@ -139,7 +151,9 @@ header:
   <div class="inner">
     <h3>Ready to get started? Let's get you your own Bugzilla</h3>
     <div>
-      <a class="button primary" href="/download/">{% include icons/download.svg %}Installation Instructions</a>
+      <a class="button primary" href="{{ "/download/" | absolute_url }}">
+        {% include icons/download.svg %}Installation Instructions
+      </a>
     </div>
   </div>
 </section>

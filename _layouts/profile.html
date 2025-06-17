@@ -5,7 +5,7 @@ layout: base
   <div class="card">
     <h4 id="{{ page.nickname }}">{{ page.firstname }} {{ page.lastname }}</h4>
     {% if page.image %}
-    <img src="/assets/img/developers/{{ page.image }}">
+    <img src="{{ "/assets/img/developers/" | append: page.image | absolute_url }}">
     {% endif %}
     <ul>
     {% if page.irc %}
