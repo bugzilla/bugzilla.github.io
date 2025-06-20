@@ -12,6 +12,7 @@ report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
 theme: jekyll-theme-bugzilla
 plugins:
   - jekyll-include-cache
+  - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
 
