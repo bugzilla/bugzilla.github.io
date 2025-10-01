@@ -31,7 +31,7 @@ last_update: "2025/10/01"
 <li><strong>$58.00 per month</strong> - Server Hosting: 3 servers in Linode.</li>
 <li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
 <li><strong>$85.00 per year</strong> - IRS Form 990EZ e-filing fee. (÷12 = 7.08 per month)</li>
-<li><strong>$18.00 per year</strong> - domain registration. (÷12 = 1.50 per month)</li>
+<li><strong>$20.00 per year</strong> - domain registration. (÷12 = 1.67 per month)</li>
 </ul>
 
 <p>Funded by recurring donations.</p>
