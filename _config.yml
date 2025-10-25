@@ -9,7 +9,7 @@ url: "https://www.bugzilla.org"
 source_code: https://github.com/bugzilla/bugzilla
 list_bugs: https://bugzilla.mozilla.org/buglist.cgi?product=Bugzilla
 report_bug: https://bugzilla.mozilla.org/enter_bug.cgi?product=Bugzilla
-theme: jekyll-theme-bugzilla
+theme: bugzilla/jekyll-theme-bugzilla@main
 plugins:
   - jekyll-include-cache
   - jekyll-paginate
