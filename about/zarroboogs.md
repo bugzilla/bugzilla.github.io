@@ -44,6 +44,15 @@ The board of directors currently consists of the following people:
 {% endfor %}
 <div style="clear:both;"></div>
 
+## Annual Reports
+
+Our annual reports line up with the renewal period for our trademark agreement
+with Mozilla rather than our fiscal year, as they are a requirement of our
+trademark agreement. As such, they cover the period from July to June each
+year.
+
+* <a target="_blank" href="/assets/pdf/ZBC%20Annual%20Report%202024-25.pdf">July 2024-June 2025</a>
+
 ## Tax Information
 
 The US Internal Revenue Service requires that a Non-Profit Corporation must
