@@ -5,6 +5,6 @@ lastname: Colin
 image: dannycolin.jpg
 irc: sdk
 location: Montreal, Canada
-board_position: Secretary
+board_position: Board Member
 ---
 
