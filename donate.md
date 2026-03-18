@@ -9,59 +9,75 @@ redirect_from:
 addons:
 - type: css
   link: /assets/css/funding.css
-monthly_goal: 68
-monthly_balance: 68
+monthly_goal: 113
+monthly_balance: 113
 devfund_goal: 4000
-devfund_balance: 157
-general_balance: 5650
-last_update: "2026/03/14"
+devfund_balance: 112
+general_balance: 120
+b52rel_goal: 1000
+b52rel_balance: 1000
+b6rel_goal: 4000
+b6rel_balance: 4000
+last_update: "2026/03/20"
 ---
 
-<h2>What Bugzilla Spends Money On</h2>
+<h2>Why your $10 matters this month</h2>
+
+<p>Historically, Bugzilla grew because companies that used it let their
+developers contribute improvements upstream.</p>
+
+<p>That is much less common now. Many teams customize private copies for
+short-term speed and never contribute those changes back, which leaves the
+public project with less ongoing development capacity. (If your company uses
+Bugzilla and can spare a few developer hours each week, we would love that
+help, too.)</p>
+
+<p>That is why we are raising recurring funding to support a part-time
+developer and keep core Bugzilla work moving forward.</p>
+
+<h2>Thanks to our Sponsors!</h2>
+{% include sponsor-grid.html %}
+
+<h2>Where does your money get spent?</h2>
 
 <p>All monetary amounts listed on this page are in US Dollars (USD).</p>
 <p>Amounts last updated {{ page.last_update }}.</p>
 
-<h3>Thanks to our Sponsors!</h3>
-{% include sponsor-grid.html %}
+<h3>Keeping the Lights On</h3>
 
-<h3>Ongoing Necessary Expenses</h3>
+<p>The project currently has a number of operational expenses before we
+even get to funding developers. This includes hosting 3 servers in Linode,
+our annual filing fees both with the IRS and with the State of Michigan,
+domain registrations, and non-profit corporation liability insurance.</p>
 
-<ul>
-<li><strong>$58.00 per month</strong> - Server Hosting: 3 servers in Linode.</li>
-<li><strong>$20.00 per year</strong> - State of Michigan Non-profit filing fee. (÷12 = $1.67 per month)</li>
-<li><strong>$85.00 per year</strong> - IRS Form 990EZ e-filing fee. (÷12 = 7.08 per month)</li>
-<li><strong>$20.00 per year</strong> - domain registration. (÷12 = 1.67 per month)</li>
-</ul>
+<p>This currently averages ${{ page.monthly_goal }} per month, and is
+funded first from recurring donations before that money can be used
+towards development.</p>
 
-<p>Funded by recurring donations.</p>
-
-<div class="fundprogress">
-<span class="fundprogressbar_current">${{ page.monthly_balance }}</span>
-<progress class="fundprogressbar" max="{{ page.monthly_goal }}" value="{{ page.monthly_balance }}"></progress>
-<span class="fundprogressbar_total">${{ page.monthly_goal }}</span>
-</div>
-
-<p><b>This goal has been met! Thank you!</b></p>
-<p><b>Additional funding needed for other goals, please scroll down!</b></p>
-
-<h3>Ongoing "Nice to have" expenses</h3>
+<h3>Funding Development</h3>
 
 <h4>Permanent developer</h4>
 
-<p>Our pie-in-the-sky goal right now is to have a permanent part-time developer
-to work around 20 hours per per week on Bugzilla on whatever needs doing, and
-not just one-off projects. To do this, we anticipate needing about $4000 per
-month in recurring donations. <b>Until this goal is met, the balance will be
-contributed to the general project fund each month (see below).</b> Once the permanant
-developer goal is hit, then a permanent developer will be hired, instead.</p>
+<p>Our pie-in-the-sky goal right now is to have a permanent part-time
+developer to work around 20 hours per per week on Bugzilla on whatever needs
+doing, such as triaging bug reports, reviewing patches from volunteer
+contributors, and coding of high priority patches, and not just one-off
+projects. To do this, we anticipate needing about $4000 per month in
+recurring donations. <b>Until this goal is met, the balance will be
+contributed to the general project fund each month (see below).</b> Once the
+permanant developer goal is hit, then a permanent developer will be hired,
+instead.</p>
 
-<p>Single-month recurring donations exceeding the above necessary expenses:</p>
+<p>Single-month recurring donations exceeding the above "keeping the lights
+on" expenses:</p>
 
 <div class="fundprogress">
-<span class="fundprogressbar_current">${{ page.devfund_balance }}</span>
+<div><span class="fundprogressbar_current">${{ page.devfund_balance }}</span><br>raised</div>
+<div class="fundprogressbar_wrap">
 <progress class="fundprogressbar" max="{{ page.devfund_goal }}" value="{{ page.devfund_balance }}"></progress>
-<span class="fundprogressbar_total">${{ page.devfund_goal }}</span>
+<span class="fundprogressbar_percent">{{ page.devfund_balance | times: 100.0 | divided_by: page.devfund_goal | round }}%</span>
+</div>
+<div><span class="fundprogressbar_total">${{ page.devfund_goal }}</span><br>needed</div>
 </div>
 
 <p>
@@ -78,8 +94,35 @@ developer goal is hit, then a permanent developer will be hired, instead.</p>
 to work on code or review submitted patches for one-off projects. Once enough
 money collects to be worth funding a project, we'll have someone work on it.</p>
 
-<p>Current accumulated unspent balance of one-time and recurring donations
-exceeding the other goals:</p>
+<p>Current projects we want to fund:</p>
+
+<div class="fundwrapper">
+<p>Fund a developer for 20 hours to work on release blockers for Bugzilla 5.2.1, 5.0.4.2, and 5.9.2</p>
+<div class="fundprogress">
+<div><span class="fundprogressbar_current">${{ page.b52rel_balance }}</span><br>raised</div>
+<div class="fundprogressbar_wrap">
+<progress class="fundprogressbar" max="{{ page.b52rel_goal }}" value="{{ page.b52rel_balance }}"></progress>
+<span class="fundprogressbar_percent">{{ page.b52rel_balance | times: 100.0 | divided_by: page.b52rel_goal | round }}%</span>
+</div>
+<div><span class="fundprogressbar_total">${{ page.b52rel_goal }}</span><br>needed</div>
+</div>
+</div>
+
+<div class="fundwrapper">
+<p>Fund a developer for 80 hours to work on release blockers for Bugzilla 6</p>
+<div class="fundprogress">
+<div><span class="fundprogressbar_current">${{ page.b6rel_balance }}</span><br>raised</div>
+<div class="fundprogressbar_wrap">
+<progress class="fundprogressbar" max="{{ page.b6rel_goal }}" value="{{ page.b6rel_balance }}"></progress>
+<span class="fundprogressbar_percent">{{ page.b6rel_balance | times: 100.0 | divided_by: page.b6rel_goal | round }}%</span>
+</div>
+<div><span class="fundprogressbar_total">${{ page.b6rel_goal }}</span><br>needed</div>
+</div>
+</div>
+
+<p>Future projects will be decided once we get Bugzilla 6 released. There is also a possibility that Bugzilla 6 will require additional grants to complete.</p>
+
+<p>Money currently available towards our next project (TBD) :</p>
 <div class="fundprogress"><span class="fundprogressbar_current">${{ page.general_balance }}</span></div>
 
 <p>
@@ -89,28 +132,6 @@ exceeding the other goals:</p>
 <a href="https://donate.stripe.com/eVadTl5xa53RcIEeUV" class="button primary">Contribute</a> towards this goal via Stripe (credit, debit, Apple Pay, CashApp). Stripe will deduct 2.9% + 30¢ from your contribution as a transaction fee.
 </p>
 <p>If you give via Stripe and want to cover the fee (completely optional), here's the formula: Take the amount you want us to get, add 30¢, then divide by 0.971.  For example, if you want us to get $100, add 30¢ to make 100.30, then divide by 0.971 and round it to two places after the decimal, which gives you $103.30. To verify it, subtract 2.9% to get 100.3043, round to two digits after the decimal to get 100.30, then subtract 30¢ to get $100.</p>
-
-<h2>Why Bugzilla Now Needs Money</h2>
-
-<p>Historically, most of Bugzilla's development was done by coders who worked
-at companies who used Bugzilla, where those companies allowed them to spend
-time working on the public version of Bugzilla since it got their features
-included in future Bugzilla versions without them having to locally customize
-it.</p>
-
-<p>Sadly, this is no longer the case. In the name of immediate productivity,
-some companies decide that they can get the quickest results by customizing
-their local copy only for their own use, and not taking the time to contribute
-those changes to the public version. Being able to upgrade it down the line
-without losing their customizations is "someone else's problem in the future."
-(Incidentally, we'd love your help if you're a company that uses Bugzilla and
-can let one of your internal developers spend a couple hours per week on
-Bugzilla!)</p>
-
-<p>Because Bugzilla is now in this position, we are trying to raise enough
-money to directly pay at least one developer, so that it will actually be
-someone's job to work on Bugzilla, at least part time. That is our
-pie-in-the-sky goal.</p>
 
 <h2>The Legal Stuff</h2>
 

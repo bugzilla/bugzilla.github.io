@@ -1,17 +1,56 @@
+.fundwrapper {
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 0 12px 12px 12px;
+  margin-bottom: 1em;
+}
 .fundprogress {
   display: flex;
   text-align: center;
   vertical-align: middle;
 }
-.fundprogressbar {
+.fundprogressbar_wrap {
+  position: relative;
   flex-grow: 1;
   margin: 0 12px;
+  display: flex;
+  align-items: center;
+}
+.fundprogressbar {
+  width: 100%;
+  margin: 0;
   height: 2em;
   appearance: none;
+  border: none;
+  border-radius: 999px;
+  overflow: hidden;
   text-align: center;
   vertical-align: middle;
   color: white;
-  background-image: green;
+}
+.fundprogressbar::-webkit-progress-bar {
+  background: #d7d7d7;
+}
+.fundprogressbar::-webkit-progress-value {
+  background: #2f8f2f;
+}
+.fundprogressbar::-moz-progress-bar {
+  background: #2f8f2f;
+}
+.fundprogressbar_percent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  color: #111;
+  text-shadow:
+    0 0 4px #fff,
+    0 0 8px #fff,
+    0 0 14px #fff,
+    0 0 20px rgba(255, 255, 255, 0.95);
+  pointer-events: none;
+  white-space: nowrap;
 }
 .fundprogressbar_current {
   vertical-align: middle;
@@ -20,10 +59,5 @@
 .fundprogressbar_total {
   vertical-align: middle;
   font-size: x-large;
-}
-.fundprogress {
-}
-
-.fundprogressbar {
 }
 
