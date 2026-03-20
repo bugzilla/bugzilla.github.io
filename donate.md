@@ -71,6 +71,8 @@ instead.</p>
 <p>Single-month recurring donations exceeding the above "keeping the lights
 on" expenses:</p>
 
+<div class="fundwrapper">
+<p>Fund a permanent half-time developer on a monthly basis</p>
 <div class="fundprogress">
 <div><span class="fundprogressbar_current">${{ page.devfund_balance }}</span><br>raised</div>
 <div class="fundprogressbar_wrap">
@@ -78,6 +80,7 @@ on" expenses:</p>
 <span class="fundprogressbar_percent">{{ page.devfund_balance | times: 100.0 | divided_by: page.devfund_goal | round }}%</span>
 </div>
 <div><span class="fundprogressbar_total">${{ page.devfund_goal }}</span><br>needed</div>
+</div>
 </div>
 
 <p>
