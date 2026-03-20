@@ -109,6 +109,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 </div>
 <div><span class="fundprogressbar_total">${{ page.b52rel_goal }}</span><br>needed</div>
 </div>
+<p><b>This goal is funded, thank you!</b> Negotiations are currently in progress to get this project in motion.</p>
 </div>
 
 <div class="fundwrapper">
@@ -121,6 +122,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 </div>
 <div><span class="fundprogressbar_total">${{ page.b6rel_goal }}</span><br>needed</div>
 </div>
+<p><b>This goal is funded, thank you!</b> This project will commence after the project for Bugzilla 5.2.1 et al completes.</p>
 </div>
 
 <p>Future projects will be decided once we get Bugzilla 6 released. There is also a possibility that Bugzilla 6 will require additional grants to complete.</p>
