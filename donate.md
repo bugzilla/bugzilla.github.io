@@ -12,7 +12,7 @@ addons:
 monthly_goal: 113
 monthly_balance: 113
 devfund_goal: 4000
-devfund_balance: 112
+devfund_balance: 125
 general_balance: 467
 b52rel_goal: 1000
 b52rel_balance: 1000
