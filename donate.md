@@ -68,8 +68,7 @@ contributed to the general project fund each month (see below).</b> Once the
 permanant developer goal is hit, then a permanent developer will be hired,
 instead.</p>
 
-<p>Single-month recurring donations exceeding the above "keeping the lights
-on" expenses:</p>
+<p>Recurring donations exceeding the above "keeping the lights on" expenses:</p>
 
 <div class="fundwrapper">
 <p>Fund a permanent half-time developer on a monthly basis</p>
