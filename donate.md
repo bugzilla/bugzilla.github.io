@@ -12,13 +12,13 @@ addons:
 monthly_goal: 113
 monthly_balance: 113
 devfund_goal: 4000
-devfund_balance: 125
+devfund_balance: 146
 general_balance: 467
 b52rel_goal: 1000
 b52rel_balance: 1000
 b6rel_goal: 4000
 b6rel_balance: 4000
-last_update: "2026/06/05"
+last_update: "2026/06/11"
 ---
 
 <h2>Why your $10 matters this month</h2>
