@@ -13,12 +13,12 @@ monthly_goal: 113
 monthly_balance: 113
 devfund_goal: 4000
 devfund_balance: 146
-general_balance: 467
+general_balance: 470
 b52rel_goal: 1000
 b52rel_balance: 1000
 b6rel_goal: 4000
 b6rel_balance: 4000
-last_update: "2026/06/11"
+last_update: "2026/07/02"
 ---
 
 <h2>Why your $10 matters this month</h2>
@@ -108,7 +108,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 </div>
 <div><span class="fundprogressbar_total">${{ page.b52rel_goal }}</span><br>needed</div>
 </div>
-<p><b>This goal is funded, thank you!</b> A developer has been hired for this, look for progress soon!</p>
+<p><b>This goal is funded, thank you!</b> A developer has been hired for this, and a lot of work has been done already. You can watch the pull requests on GitHub for progress!</p>
 </div>
 
 <div class="fundwrapper">
