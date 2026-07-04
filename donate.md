@@ -124,7 +124,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 <p><b>This goal is funded, thank you!</b> This project will commence after the project for Bugzilla 5.2.1 et al completes.</p>
 </div>
 
-<p>Future projects will be decided once we get Bugzilla 6 released. There is also a possibility that Bugzilla 6 will require additional grants to complete.</p>
+<p>Future projects proposals are being discussed on the <a href="https://wiki.mozilla.org/Bugzilla:Project_Proposals">Project_Proposals</a> wiki page, and will be decided when we get closer to having Bugzilla 6 released. There is also a possibility that either of the above two will require additional grants to complete.</p>
 
 <p>Money currently available towards our next project (TBD) :</p>
 <div class="fundprogress"><span class="fundprogressbar_current">${{ page.general_balance }}</span></div>
