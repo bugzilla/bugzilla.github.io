@@ -14,12 +14,12 @@ approve/deny review on patches.
 All changes to this list must be approved by [Dave
 Miller](mailto:justdave@bugzilla.org).
 
-| Name            | Bugzilla User ID      |
-| --------------- | --------------------- |
-| Dave Lawrence   | dkl@mozilla.com       |
-| Teemu Mannermaa | wicked@sci.fi         |
-| Gervase Markham | gerv@mozilla.org      |
-| Dave Miller     | justdave@bugzilla.org |
+| Name            | Bugzilla User ID      | GitHub User ID |
+| --------------- | --------------------- | -------------- |
+| Dave Lawrence   | dkl@mozilla.com       | dklawren       |
+| Dave Miller     | justdave@bugzilla.org | justdave       |
+| Dylan Hardison  | dylan@hardison.net    | dylanwh        |
+| Martin Renvoize | ashimema@gmail.com    | mrenvoize      |
 
 ## Become a Reviewer\!
 
