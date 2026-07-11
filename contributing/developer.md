@@ -90,6 +90,10 @@ Currently, it primarily diagnoses problems in code similar to a “lint”
 like tool. However, it does do some tests on the small but growing “back
 end” of Bugzilla.
 
+If you have Docker installed, you can run the tests without installing
+the below-mentioned prerequisites by running
+`bash docker/run-tests-in-docker.sh`
+
 In order to run the tests, you must have the
 `Test::More` and
 `Test::Harness` Perl modules installed.
@@ -244,7 +248,8 @@ from the database will not be tainted.
     This style is only for Perl. For template style, see the template
     section.
 
-  - Indentation - Perl code should have 4-space indent.
+  - Indentation - Perl code should have 2-space indent in Bugzilla 5.2
+    and newer, and 4-space indent in Bugzilla 5.0.4.x
 
   - Curly Braces - The opening brace of a block should be on the same
     line as the statement that is causing the block and the closing
@@ -253,10 +258,10 @@ from the database will not be tainted.
     
     ```perl
     if ($var) {
-        print "The variable is true";
+      print "The variable is true";
     }
     else {
-        print "Try again";
+      print "Try again";
     }
     ```
     
@@ -264,9 +269,9 @@ from the database will not be tainted.
     
     ```perl
     if ($var) {
-        print "The variable is true";
+      print "The variable is true";
     } else {
-        print "Try again";
+      print "Try again";
     }
     ```
 
@@ -275,8 +280,8 @@ from the database will not be tainted.
 
 ### Cross-Platform Compatibility
 
-  - Bugzilla supports \*nix platforms, and both ActiveState Perl and
-    cygwin on Win32 platforms.
+  - Bugzilla supports \*nix platforms, and ActiveState Perl,
+    Strawberry Perl, and cygwin on Win32 platforms.
 
   - For this reason, \*nix-specific features should either be avoided,
     or only done if you have ensured the platform is Unix, and the code
@@ -287,7 +292,7 @@ from the database will not be tainted.
 
   - Similarly, some features are supported on cygwin, but not
     ActiveState Perl. You should only use these if you have ensured the
-    platform isn't ActiveState.
+    platform isn't ActiveState or Strawberry.
     
     Some examples of non-ActiveState features: fork, pipe open syntax
     (eg `open (DOT, '-|')`).
@@ -357,10 +362,10 @@ to be aware of:
 
   - **If you forget your =cut at the end of your POD section, Perl will
     ignore any code that follows until it sees an =cut, or the end of
-    the file - whichever comes first.** Many editors like Emacs and VIM
-    have syntax higlighting that understand POD. If you forget your =cut
-    in these editors, you'll see the POD color continue beyond where you
-    expected your POD to end.
+    the file - whichever comes first.** Many editors like Emacs, VIM, and
+    VSCode have syntax higlighting that understand POD. If you forget
+    your =cut in these editors, you'll see the POD color continue beyond
+    where you expected your POD to end.
 
   - Bugzilla PODs should have most (if not all) of the following head1
     sections:
@@ -479,6 +484,31 @@ if ($dbh->bz_column_info('bugs', 'qa_contact')->{NOTNULL}) {
     ## ... do other stuff here to fix up the new column ... ##
 }
 ```
+
+It is important that schema changes get made **in the same order
+they occurred over Bugzilla's history**. Do not alter older changes
+in the history without a **really good reason**. Please
+add your changes at the end of the section where changes are being
+made in:
+
+```perl
+sub update_table_definitions {
+```
+
+In general, you should check for the state being what you
+expect it to be before your change, and not check if it doesn't
+match what you're changing it to. There have been real-life
+examples of a type on a column being changed more than once in
+Bugzilla's history.  For example, a column changed from INT1
+to INT2 in version 2.10, and then we changed that same column
+to INT3 in version 5.2. If the change at the 2.10 section of
+the history checked if it wasn't INT2, then it would revert the
+later change from 5.2 every time it ran. By only checking if
+the current type is INT1 before changing it to INT2, you avoid
+the later change causing a loop. This way, someone upgrading
+from 2.8 to 5.2 would run both changes in sequence, while
+someone upgrading from 3.4 to 5.2 would only have the second
+change run (because they already had the first one).
 
 #### How Schema Updates Work
 
@@ -768,7 +798,7 @@ something else instead:
   - Columns of MySQL type `ENUM` or `TIMESTAMP`.
   - Any boolean comparison that is *inside the fields of a SELECT
     statement*. For example `SELECT (column IS NOT NULL) FROM b` will
-    *not* work. (Use `CASE WHEN column IS NOT NULL THEN 1 ELSE 0 END`
+    *not* work. (Use `SELECT CASE WHEN column IS NOT NULL THEN 1 ELSE 0 END FROM b`
     instead.)
   - `WHERE` statements without an operator. For example, `SELECT column
     FROM b WHERE a` will *not* work. That needs to have: `WHERE a = 1`.
@@ -803,27 +833,28 @@ worry about it too much. When in doubt, do an explicit join.
   - Bugzilla uses a capitalisation convention for SQL. SQL keywords such
     as `SELECT`, `WHERE` and `AND` should be all upper case. Even
     function names like `NOW()` should be upper-case. Database, table
-    and field names should be all lower case, for example:
+    and field names should be all lower case and quoted with backticks,
+    for example:
     
-    `SELECT fieldname1 FROM tablename WHERE fieldname2 = 2 AND
-    fieldname3 = 'HELLO' AND time = NOW()`
+    ``SELECT `fieldname1` FROM `tablename` WHERE `fieldname2` = 2 AND``
+    ``fieldname3` = 'HELLO' AND `time` = NOW()``
 
   - **Indentation:** For short SQL statements, you can indent them in
     whichever way you like. However, for long SQL statements, the
     recommended formatting is like this:
     
     ```sql
-    SELECT DISTINCT groups.id, groups.name, groups.description
-               FROM groups 
-                    CROSS JOIN user_group_map
-                    CROSS JOIN group_group_map AS ggm
-              WHERE user_group_map.user_id = ?
-                    AND ((user_group_map.isbless = 1
-                          AND groups.id = user_group_map.group_id)
-                         OR (groups.id = ggm.grantor_id
-                             AND ggm.grant_type = ?
-                             AND ggm.member_id IN(1, 2, 3))))
-           ORDER BY groups.id
+    SELECT DISTINCT `groups`.`id`, `groups`.`name`, `groups`.`description`
+               FROM `groups` 
+                    CROSS JOIN `user_group_map`
+                    CROSS JOIN `group_group_map` AS ggm
+              WHERE `user_group_map`.`user_id` = ?
+                    AND ((`user_group_map`.`isbless` = 1
+                          AND `groups`.`id` = `user_group_map`.`group_id`)
+                         OR (`groups`.`id` = `ggm`.`grantor_id`
+                             AND `ggm`.`grant_type` = ?
+                             AND `ggm`.`member_id` IN(1, 2, 3))))
+           ORDER BY `groups`.`id`
     ```
     
     Note how all the major keywords are right-aligned. This makes it
