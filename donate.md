@@ -99,7 +99,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 <p>Current projects we want to fund:</p>
 
 <div class="fundwrapper">
-<p>Fund a developer for 20 hours to work on release blockers for Bugzilla 5.2.1, 5.0.4.2, and 5.9.2</p>
+<p>Fund a developer for 30 hours to work on release blockers for Bugzilla 5.2.1, 5.0.4.2, and 5.9.2</p>
 <div class="fundprogress">
 <div><span class="fundprogressbar_current">${{ page.b52rel_balance }}</span><br>raised</div>
 <div class="fundprogressbar_wrap">
