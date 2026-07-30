@@ -13,12 +13,12 @@ monthly_goal: 113
 monthly_balance: 113
 devfund_goal: 4000
 devfund_balance: 146
-general_balance: 470
-b52rel_goal: 1000
-b52rel_balance: 1000
+general_balance: 0
+b52rel_goal: 1500
+b52rel_balance: 1500
 b6rel_goal: 4000
-b6rel_balance: 4000
-last_update: "2026/07/02"
+b6rel_balance: 3970
+last_update: "2026/07/29"
 ---
 
 <h2>Why your $10 matters this month</h2>
@@ -121,7 +121,7 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 </div>
 <div><span class="fundprogressbar_total">${{ page.b6rel_goal }}</span><br>needed</div>
 </div>
-<p><b>This goal is funded, thank you!</b> This project will commence after the project for Bugzilla 5.2.1 et al completes.</p>
+<p><b>This goal is almost there!</b> This project will commence after the project for Bugzilla 5.2.1 et al completes, if funded.</p>
 </div>
 
 <p>Future projects proposals are being discussed on the <a href="https://wiki.mozilla.org/Bugzilla:Project_Proposals">Project_Proposals</a> wiki page, and will be decided when we get closer to having Bugzilla 6 released. There is also a possibility that either of the above two will require additional grants to complete.</p>
