@@ -6,6 +6,8 @@ categories:
 - Development
 comments:
   enabled: true
+  mastodon: https://techhub.social/@bugzilla/117114478949785089
+  bluesky: https://bsky.app/profile/bugzilla.org/post/3mtdcv7kix223
 ---
 Many Years Ago™ Dylan created a ("temporary"!) repo to house an
 experiment with trying to merge bugzilla.mozilla.org's fork of Bugzilla
