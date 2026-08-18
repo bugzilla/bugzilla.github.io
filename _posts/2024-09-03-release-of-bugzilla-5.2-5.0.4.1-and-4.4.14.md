@@ -5,9 +5,10 @@ author: ["justdave"]
 categories:
 - Releases
 - Security
+comments:
+  enabled: true
+  mastodon: https://techhub.social/@bugzilla/113075108225527291
 ---
-_posted by [Dave Miller](https://twitter.com/justdavemiller) \- Bugzilla Project Lead_
-
 This has been a **long** time coming. Just over a year since we announced
 the [new nonprofit to manage Bugzilla](/about/zarroboogs), we finally have a
 set of releases to show for it. Our only excuse is that the lead developer is

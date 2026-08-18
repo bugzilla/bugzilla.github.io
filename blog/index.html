@@ -42,7 +42,10 @@ addons:
         </a>
         <h1 class="title" id="{{ post.id }}">{{ post.title }}</h1>
         {% include authors.html authors=post.author %}
-        {{ post.content }}
+        {{ post.excerpt }}
+        <a class="date muted" href="{{ post.url | absolute_url }}">
+          Read this post
+        </a>
       </div>
     {% endfor %}
     {% include pagination.html %}

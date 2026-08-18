@@ -5,8 +5,6 @@ author: ["justdave"]
 categories:
 - Updates
 ---
-_posted by [Dave Miller](https://twitter.com/justdavemiller) \- Bugzilla Project Lead_
-
 ## **Happy 25th Birthday to Bugzilla!**
 
 Today, August 26, marks the 25th anniversary of Bugzilla!

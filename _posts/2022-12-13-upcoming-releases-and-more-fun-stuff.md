@@ -5,8 +5,6 @@ author: ["justdave"]
 categories:
 - Updates
 ---
-_posted by [Dave Miller](https://twitter.com/justdavemiller) \- Bugzilla Project Lead_
-
 Surprise!  Bugzilla's not dead yet. :-)
 
 So I posted a bunch of this a few months ago on the developers mailing list but it's time to get it in front of a bigger audience. :-)
