@@ -50,13 +50,24 @@ Vulnerability Details
 {% for bug in page.bugs %}
 {% if bug.class %}Class:       {{ bug.class }}
 {% endif -%}
+{% if bug.severity %}Severity:    {{ bug.severity }}
+{% endif -%}
+{% if bug.cwe %}CWE:         {{ bug.cwe | replace: newline, linespace }}
+{% endif -%}
 {% if bug.affected %}Affected:    {{ bug.affected | replace: newline, linespace }}
 {% endif -%}
 {% if bug.fixed-in %}Fixed In:    {{ bug.fixed-in | replace: newline, linespace }}
 {% endif -%}
 {% if bug.description %}Description: {{ bug.description | replace: newline, linespace }}
 {% endif -%}
-{% if bug.references %}References:  {{ bug.references | replace: newline, linespace }}
+{% if bug.references %}References:  {% if bug.references.first.url or bug.references.first.text -%}
+{% for reference in bug.references -%}
+{% unless forloop.first %}{{ linespace }}{% endunless %}{% if reference.url %}<a href="{{ reference.url }}">{{ reference.label | default: reference.url }}</a>
+{% else %}{{ reference.text }}
+{% endif %}{% endfor -%}
+{% else -%}
+  {{ bug.references | replace: newline, linespace }}
+{% endif -%}
 {% endif -%}
 {% if bug.cve %}CVE Number:  {{ bug.cve }}
 {% endif %}
