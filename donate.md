@@ -14,11 +14,11 @@ monthly_balance: 113
 devfund_goal: 4000
 devfund_balance: 146
 general_balance: 0
-b52rel_goal: 1500
-b52rel_balance: 1500
+b52rel_goal: 2000
+b52rel_balance: 2000
 b6rel_goal: 4000
-b6rel_balance: 3970
-last_update: "2026/07/29"
+b6rel_balance: 3718
+last_update: "2026/11/26"
 ---
 
 <h2>Why your $10 matters this month</h2>
@@ -128,7 +128,6 @@ money collects to be worth funding a project, we'll have someone work on it.</p>
 
 <p>Money currently available towards our next project (TBD) :</p>
 <div class="fundprogress"><span class="fundprogressbar_current">${{ page.general_balance }}</span></div>
-
 <p>
 <a href="https://github.com/sponsors/bugzilla" class="button primary">Contribute</a> towards this goal at GitHub Sponsors (GitHub account required).
 </p>
